@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ — Perguntas Frequentes | Bora App</title>
-<meta name="description" content="Tudo o que precisas de saber sobre o Bora App: zonas de entrega, pagamentos, reservas, favores, parceiros e estafetas.">
+<title>Perguntas Frequentes | Bora App Guarda</title>
+<meta name="description" content="Tudo sobre o Bora App em Guarda: zonas de entrega, pagamentos, reservas de mesa, favores, como ser parceiro ou estafeta.">
 <link rel="canonical" href="https://bora-site.pages.dev/faq.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bora App">
-<meta property="og:title" content="FAQ — Perguntas Frequentes | Bora App">
+<meta property="og:title" content="Perguntas Frequentes | Bora App Guarda">
 <meta property="og:description" content="Respostas às perguntas mais comuns sobre o Bora App.">
 <meta property="og:image" content="https://bora-site.pages.dev/assets/img/og-image.png">
 <meta property="og:url" content="https://bora-site.pages.dev/faq.html">
@@ -17,6 +17,8 @@
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16A34A">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +26,80 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/css/custom.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o Bora App?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O Bora é uma app portuguesa que junta restaurantes, supermercados, farmácias, lojas, viagens, envio de encomendas, compras e favores num só sítio, na Guarda." }
+    },
+    {
+      "@type": "Question",
+      "name": "Em que zonas o Bora entrega?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Neste momento operamos na cidade da Guarda e arredores. Estamos a expandir para mais zonas." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que formas de pagamento posso usar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Podes pagar com cartão, MB Way ou dinheiro na entrega, consoante o serviço." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo demora uma entrega?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O tempo varia consoante o tipo de pedido e a distância, mas acompanhas sempre o estado em tempo real dentro da app." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como reservo mesa num restaurante?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Na categoria \"Reservar Mesa\" escolhes o restaurante, a data e a hora, diretamente na app." }
+    },
+    {
+      "@type": "Question",
+      "name": "O que são os \"Favores\"?",
+      "acceptedAnswer": { "@type": "Answer", "text": "É um pedido personalizado — descreves o que precisas e um estafeta trata disso por ti." }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso cancelar um pedido?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim, podes cancelar diretamente na app enquanto o pedido ainda não estiver a caminho. Consulta os Termos e Condições para mais detalhes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como me torno parceiro do Bora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Visita a página Parceiros e contacta-nos — a nossa equipa trata do resto." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como me torno estafeta ou motorista?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Visita a página Estafetas e contacta-nos para começares." }
+    },
+    {
+      "@type": "Question",
+      "name": "Os meus pagamentos estão seguros?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Os pagamentos por cartão e MB Way são processados através de fornecedores certificados, nunca guardamos os dados do teu cartão." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como contacto o suporte?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Escreve-nos para boraappbora@gmail.com ou usa o chat de suporte dentro da app." }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://bora-site.pages.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://bora-site.pages.dev/faq.html" }
+  ]
+}
+</script>
 </head>
 <body class="text-gray-800">
 
@@ -194,7 +270,7 @@
 <footer class="bg-[#065F46] text-white pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
     <div class="col-span-2 md:col-span-1">
-      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App">
+      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App" loading="lazy">
       <p class="text-sm text-white/70">Tudo o que precisas, num só toque.</p>
     </div>
     <div>
@@ -227,7 +303,8 @@
     </div>
   </div>
   <div class="text-center text-xs text-white/60 mt-12 border-t border-white/10 pt-6">
-    © 2026 Bora App · Guarda, Portugal · Todos os direitos reservados
+    <p>Bora App — serviço de entregas, viagens e reservas na cidade da Guarda, Portugal.</p>
+    <p class="mt-1">© 2026 Bora App · Guarda, Portugal · Todos os direitos reservados</p>
   </div>
 </footer>
 

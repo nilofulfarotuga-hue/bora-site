@@ -25,6 +25,8 @@
 <!-- Favicons -->
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16A34A">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +61,20 @@
   "url": "https://bora-site.pages.dev",
   "logo": "https://bora-site.pages.dev/assets/img/bora_logo.png",
   "areaServed": "Guarda, Portugal"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bora App",
+  "description": "App de entregas, viagens, reservas e favores na Guarda, Portugal.",
+  "url": "https://bora-site.pages.dev/",
+  "email": "boraappbora@gmail.com",
+  "areaServed": { "@type": "City", "name": "Guarda", "addressCountry": "PT" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Guarda", "addressRegion": "Guarda", "addressCountry": "PT" },
+  "priceRange": "€€",
+  "image": "https://bora-site.pages.dev/assets/img/og-image.png"
 }
 </script>
 </head>
@@ -132,37 +148,37 @@
   <!-- CATEGORIAS -->
   <section id="categorias" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="text-center mb-14">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">O que podes fazer com o Bora</h2>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">O que podes fazer com o Bora em Guarda</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Uma app, várias formas de facilitar o teu dia a dia na Guarda.</p>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_restaurantes.png" alt="Restaurantes" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_restaurantes.png" alt="Entrega de restaurantes na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
         <h3 class="font-bold text-[#065F46] mb-1">Restaurantes</h3>
         <p class="text-sm text-gray-600">Os teus pratos favoritos entregues quentinhos.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_supermercados.png" alt="Supermercados" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_supermercados.png" alt="Entrega de supermercado na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
         <h3 class="font-bold text-[#065F46] mb-1">Supermercados</h3>
         <p class="text-sm text-gray-600">Compras do Continente, Lidl, Auchan e mais, até à tua porta.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_farmacia.png" alt="Farmácia" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_farmacia.png" alt="Entrega de farmácia na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
         <h3 class="font-bold text-[#065F46] mb-1">Farmácia</h3>
         <p class="text-sm text-gray-600">Medicamentos e produtos de saúde sem sair de casa.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_motorista.png" alt="Bora Motorista — Viagens" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_motorista.png" alt="Viagens TVDE na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
         <h3 class="font-bold text-[#065F46] mb-1">Viagens</h3>
         <p class="text-sm text-gray-600">Pede uma viagem e chega onde precisas, ao melhor preço.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_encomenda.png" alt="Enviar Encomenda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_encomenda.png" alt="Enviar encomendas na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
         <h3 class="font-bold text-[#065F46] mb-1">Enviar Encomenda</h3>
         <p class="text-sm text-gray-600">Envia pacotes dentro da cidade em minutos.</p>
       </div>
@@ -301,7 +317,7 @@
 <footer class="bg-[#065F46] text-white pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
     <div class="col-span-2 md:col-span-1">
-      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App">
+      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App" loading="lazy">
       <p class="text-sm text-white/70">Tudo o que precisas, num só toque.</p>
     </div>
     <div>
@@ -336,7 +352,8 @@
     </div>
   </div>
   <div class="text-center text-xs text-white/60 mt-12 border-t border-white/10 pt-6">
-    © 2026 Bora App · Guarda, Portugal · Todos os direitos reservados
+    <p>Bora App — serviço de entregas, viagens e reservas na cidade da Guarda, Portugal.</p>
+    <p class="mt-1">© 2026 Bora App · Guarda, Portugal · Todos os direitos reservados</p>
   </div>
 </footer>
 
