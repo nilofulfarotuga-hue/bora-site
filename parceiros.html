@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parceiros — Vende com o Bora App na Guarda</title>
+<meta name="description" content="Junta o teu restaurante, supermercado, farmácia ou loja ao Bora App. Mais clientes, painel próprio e pagamentos automáticos.">
+<link rel="canonical" href="https://bora-site.pages.dev/parceiros.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bora App">
+<meta property="og:title" content="Parceiros — Vende com o Bora App na Guarda">
+<meta property="og:description" content="Junta o teu negócio ao Bora App e chega a mais clientes na Guarda.">
+<meta property="og:image" content="https://bora-site.pages.dev/assets/img/og-image.png">
+<meta property="og:url" content="https://bora-site.pages.dev/parceiros.html">
+<meta property="og:locale" content="pt_PT">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="assets/img/bora_logo.png" alt="Bora App" class="h-9 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <a href="index.html#inicio" class="hover:text-[#16A34A] transition">Início</a>
+      <a href="index.html#categorias" class="hover:text-[#16A34A] transition">Categorias</a>
+      <a href="index.html#como-funciona" class="hover:text-[#16A34A] transition">Como Funciona</a>
+      <a href="parceiros.html" class="text-[#16A34A]">Parceiros</a>
+      <a href="estafetas.html" class="hover:text-[#16A34A] transition">Estafetas</a>
+      <a href="faq.html" class="hover:text-[#16A34A] transition">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#download" class="hidden sm:inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#065F46] text-white font-semibold px-5 py-2.5 rounded-full transition">
+        📲 Baixar a App
+      </a>
+      <button id="menu-btn" class="md:hidden p-2" aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 md:hidden"></div>
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-xl md:hidden flex flex-col p-6">
+  <div class="flex justify-end">
+    <button id="drawer-close" aria-label="Fechar menu"><i data-lucide="x" class="w-6 h-6"></i></button>
+  </div>
+  <nav class="flex flex-col gap-6 mt-8 text-lg font-medium text-gray-800">
+    <a href="index.html#inicio">Início</a>
+    <a href="index.html#categorias">Categorias</a>
+    <a href="index.html#como-funciona">Como Funciona</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="estafetas.html">Estafetas</a>
+    <a href="faq.html">FAQ</a>
+    <a href="index.html#download" class="inline-flex items-center justify-center gap-2 bg-[#16A34A] text-white font-semibold px-5 py-3 rounded-full mt-2">📲 Baixar a App</a>
+  </nav>
+</div>
+
+<main class="pt-16">
+
+  <section class="bg-gradient-to-br from-[#F97316] to-orange-600 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white bora-fade-in">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Tens um negócio? Junta-te ao Bora.</h1>
+      <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Vende para toda a Guarda — restaurantes, supermercados, farmácias e lojas locais crescem com o Bora App.</p>
+      <a href="mailto:parceiros@boraapp.pt" class="inline-flex items-center gap-2 bg-white text-orange-600 font-bold px-6 py-3.5 rounded-full hover:bg-white/90 transition shadow-lg">
+        <i data-lucide="mail" class="w-5 h-5"></i> Contacta-nos
+      </a>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Porque vender no Bora?</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
+        <i data-lucide="users" class="w-8 h-8 text-[#F97316] mx-auto mb-3"></i>
+        <h3 class="font-bold mb-2">Mais clientes</h3>
+        <p class="text-sm text-gray-600">Aparece a milhares de pessoas que já usam o Bora na Guarda.</p>
+      </div>
+      <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
+        <i data-lucide="layout-dashboard" class="w-8 h-8 text-[#F97316] mx-auto mb-3"></i>
+        <h3 class="font-bold mb-2">Painel próprio</h3>
+        <p class="text-sm text-gray-600">Gere o teu menu, produtos e pedidos num painel dedicado.</p>
+      </div>
+      <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
+        <i data-lucide="credit-card" class="w-8 h-8 text-[#F97316] mx-auto mb-3"></i>
+        <h3 class="font-bold mb-2">Pagamentos automáticos</h3>
+        <p class="text-sm text-gray-600">Recebe de forma automática, condições transparentes — fala connosco.</p>
+      </div>
+      <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
+        <i data-lucide="calendar-check" class="w-8 h-8 text-[#F97316] mx-auto mb-3"></i>
+        <h3 class="font-bold mb-2">Reservas de mesa</h3>
+        <p class="text-sm text-gray-600">Restaurantes podem ainda receber reservas diretamente pela app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Como aderir</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center px-6">
+          <div class="w-16 h-16 rounded-full bg-[#F97316]/10 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="send" class="w-8 h-8 text-[#F97316]"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">1. Contacta-nos</h3>
+          <p class="text-gray-600 text-sm">Envia um email com o nome e tipo do teu negócio.</p>
+        </div>
+        <div class="text-center px-6">
+          <div class="w-16 h-16 rounded-full bg-[#F97316]/10 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="clipboard-list" class="w-8 h-8 text-[#F97316]"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">2. Configura o teu perfil</h3>
+          <p class="text-gray-600 text-sm">A nossa equipa ajuda-te a criar o menu ou catálogo.</p>
+        </div>
+        <div class="text-center px-6">
+          <div class="w-16 h-16 rounded-full bg-[#F97316]/10 flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="rocket" class="w-8 h-8 text-[#F97316]"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">3. Começa a vender</h3>
+          <p class="text-gray-600 text-sm">Fica visível no Bora e recebe os teus primeiros pedidos.</p>
+        </div>
+      </div>
+      <div class="text-center mt-14">
+        <a href="mailto:parceiros@boraapp.pt" class="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition">
+          Contacta-nos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-[#065F46] text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
+    <div class="col-span-2 md:col-span-1">
+      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App">
+      <p class="text-sm text-white/70">Tudo o que precisas, num só toque.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Categorias</h4>
+      <ul class="space-y-2 text-sm text-white/80">
+        <li><a href="index.html#categorias" class="hover:text-white">Restaurantes</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Supermercados</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Farmácia</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Viagens</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Favores</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Empresa</h4>
+      <ul class="space-y-2 text-sm text-white/80">
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+        <li><a href="termos.html" class="hover:text-white">Termos e Condições</a></li>
+        <li><a href="privacidade.html" class="hover:text-white">Privacidade</a></li>
+        <li><a href="parceiros.html" class="hover:text-white">Ser Parceiro</a></li>
+        <li><a href="estafetas.html" class="hover:text-white">Ser Estafeta</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Contacto</h4>
+      <p class="text-sm text-white/80"><a href="mailto:ola@boraapp.pt" class="hover:text-white">ola@boraapp.pt</a></p>
+      <div class="flex gap-4 mt-4">
+        <a href="#" aria-label="Facebook" class="hover:text-white/70"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-white/70"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-xs text-white/60 mt-12 border-t border-white/10 pt-6">
+    © 2026 Bora App · Guarda, Portugal · Todos os direitos reservados
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
