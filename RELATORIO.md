@@ -64,6 +64,57 @@ Ficheiros temporários gerados durante o processo (no repo `bora_app`, fora do `
 
 **Pendente:** nenhum. As duas tarefas desta missão foram concluídas sem bloqueios.
 
+## SEO 2026-07-05 — schema local + reforço "Guarda" + performance
+
+Objetivo: quem pesquisar "bora app guarda", "bora app", "entregas guarda", "delivery guarda" ou "reservar mesa guarda" encontra o site. "Bora" sozinho é uma palavra muito disputada (BORA blockchain, Bora Bora), por isso todo o trabalho ancorou em "Guarda, Portugal" + nomes de serviço.
+
+**1. Schema.org (JSON-LD) — 9 blocos, todos validados com `JSON.parse` (zero erros):**
+- `index.html`: mantidos `MobileApplication` e `Organization`, adicionado **`LocalBusiness`** (nome, descrição, área servida = cidade da Guarda, endereço só com `addressLocality`/`addressRegion`/`addressCountry` — **sem inventar `streetAddress`**, `priceRange`, imagem).
+- `faq.html`: adicionado **`FAQPage`** com as 11 perguntas/respostas reais da página (texto das respostas com HTML removido, só texto simples, como o Schema.org recomenda).
+- `parceiros.html`, `estafetas.html`, `faq.html`, `privacidade.html`, `termos.html`: adicionado **`BreadcrumbList`** (Início → página).
+- Verificado em produção via `curl -sL` (importante: `curl -s` sem `-L` só apanha o redirect 308 do clean-URL do Cloudflare Pages, não o HTML real — usar sempre `-L` para validar conteúdo de páginas que não sejam a home).
+
+**2. Reforço local nos textos:**
+- Titles atualizados: `parceiros.html` → "Torna-te Parceiro Bora \| Vende para toda a Guarda"; `estafetas.html` → "Ganha Dinheiro como Estafeta Bora na Guarda"; `faq.html` → "Perguntas Frequentes \| Bora App Guarda". `index.html` mantido (já tinha "Guarda" no title).
+- Meta descriptions reescritas (150–160 car.) mencionando Guarda + o serviço de cada página.
+- H2 da secção de categorias no `index.html`: "O que podes fazer com o Bora" → **"O que podes fazer com o Bora em Guarda"**.
+- Frase de rodapé nova em **todas as 6 páginas**: "Bora App — serviço de entregas, viagens e reservas na cidade da Guarda, Portugal."
+- `alt` de 5 categorias no hero (Restaurantes, Supermercados, Farmácia, Enviar Encomenda, Viagens/TVDE) passaram a incluir "na Guarda" — as restantes 5 categorias mantiveram `alt` descritivo simples, para não parecer keyword-stuffing aos olhos do Google.
+
+**3. Ficheiros técnicos:**
+- `sitemap.xml`: `<lastmod>2026-07-05</lastmod>` + `<changefreq>` (weekly na home, monthly nas páginas de conversão, yearly nas legais) em todas as 6 URLs.
+- `robots.txt`: confirmado `Allow: /` + `Sitemap:` (já estava correto).
+- `canonical`: já existia em todas as páginas (confirmado, nenhuma em falta).
+- Open Graph + Twitter Cards: **`privacidade.html` e `termos.html` não tinham OG** — adicionado (estavam em falta desde a v1, agora as 6 páginas têm og:type/title/description/image/url/locale=pt_PT).
+- `manifest.json` criado (nome "Bora App", `theme_color` #16A34A, ícones) e linkado (`<link rel="manifest">` + `<meta name="theme-color">`) nas 6 páginas.
+
+**4. Performance:**
+- Todas as imagens de conteúdo têm `loading="lazy"`, exceto o screenshot do hero (`loading="eager"`, correto por estar acima da dobra) e os logos do header (também eager de propósito — estão sempre visíveis no primeiro ecrã, lazy-load neles seria contraproducente). Adicionado `loading="lazy"` aos logos do rodapé (estavam sem atributo).
+- **Decisão consciente: NÃO foi adicionado `defer`/`async` ao script do Tailwind CDN.** O Tailwind Play CDN escreve estilos dinamicamente a partir do DOM logo no carregamento — adiar a sua execução causaria um "flash" visível de HTML sem estilo (pior para UX/performance percebida do que o pequeno custo de bloqueio atual). Se no futuro quiseres eliminar isto de vez, a solução correta é compilar Tailwind localmente (build step), não adiar o CDN.
+- Tamanhos de imagem confirmados <300KB: maior ficheiro é `bora_logo.png` (230KB), `og-image.png` 92KB, `screenshot-home.png` 74KB — todos dentro do limite.
+
+**Pendente:** nenhum bloqueio técnico. Os passos que faltam são só os que precisam de conta Google do Danilo — ver checklist abaixo.
+
+### ✅ CHECKLIST MANUAL DANILO (contas Google — só tu podes fazer isto)
+
+```
+1. Google Search Console → search.google.com/search-console
+   - Adicionar propriedade: https://bora-site.pages.dev
+   - Verificar (método: prefixo de URL, verificação por meta tag ou DNS)
+   - Submeter sitemap: sitemap.xml
+   - "Inspecionar URL" da home → "Pedir indexação"
+
+2. Google Business Profile → business.google.com
+   - Criar perfil "Bora - Entregas Guarda"
+   - Categoria: serviço de entrega / delivery
+   - Área servida: Guarda
+   - Adicionar site, email, logo
+   (Isto é o que faz aparecer no topo com mapa em buscas locais)
+
+3. Repetir "Pedir indexação" para as páginas principais no Search Console
+   (index, parceiros, estafetas, faq).
+```
+
 ## 5. Notas técnicas
 
 - Stack: HTML + Tailwind CSS (CDN, sem build) + JS vanilla + Lucide icons (CDN) + Google Fonts Inter.
