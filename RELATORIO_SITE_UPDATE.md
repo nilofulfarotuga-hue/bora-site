@@ -40,20 +40,17 @@ Renderizado localmente (servidor estático + Playwright):
 - **Desktop (1280px):** grelha com 11 categorias (Limpeza integra-se perfeitamente); secção "Porquê" com as 4 ilustrações + selos. 0 erros de consola.
 - **Mobile (390px):** grelha 2 colunas; cartões "Porquê" empilhados 1 por linha, ilustrações a renderizar, tudo legível e bonito. ✅
 
-## 4. Deploy — ⏳ PENDENTE (falta credencial)
+## 4. Deploy — ✅ PUBLICADO (2026-07-06)
 
-O deploy **não pôde ser executado autonomamente**: o `wrangler` não está autenticado e não existe `CLOUDFLARE_API_TOKEN` no ambiente. Não é possível inventar/expor o segredo.
+**Site no ar em https://bora-site.pages.dev/** com todas as mudanças. Verificado: `index` 200, secção "Porquê escolher o Bora" presente, cartão Limpeza presente, e as **5 imagens WebP a 200**.
 
-**Para publicar (corre TU, num terminal teu — NÃO com `!` aqui, para o token não voltar a ficar exposto no chat):**
+**Como foi publicado (para memória futura):**
+- O projeto Pages `bora-site` é **Direct Upload** (não ligado ao Git) → `git push` NÃO publica; só `wrangler pages deploy`.
+- O Chrome estava logado na conta **errada** (`Boraappbora@gmail.com`); `bora-site` vive na conta **`Nilofulfarotuga@gmail.com`** (`2cd0212b…`). Criar token via API interna deu bloqueio WAF/CSRF.
+- Solução que funcionou: **`wrangler login` (OAuth)** — o Danilo fez login na conta Nilo no Chrome, o ecrã de consentimento apareceu direto (sem password na 2.ª tentativa) e o Wrangler ficou autenticado (`nilofulfarotuga@gmail.com`, account `2cd0212b…`, scope `pages:write`). **O Wrangler fica autenticado na máquina** → deploys futuros: só `npx wrangler pages deploy <dir> --project-name=bora-site --branch=main`.
+- Git: commit `22c3724` enviado para `nilofulfarotuga-hue/bora-site` `main` (registo; não é o mecanismo de deploy).
 
-```powershell
-$env:CLOUDFLARE_API_TOKEN="<TOKEN_NOVO_DA_CONTA_NILO>"
-npx --yes wrangler pages deploy "C:\Users\danil\Desktop\bora-site" --project-name=bora-site --branch=main
-```
-
-Usa um **token novo** (custom "Editar Cloudflare Workers" na conta Nilo) — isto também trata do item de segurança abaixo (rotação do token antigo exposto).
-
-Depois do deploy, confirmar em: **https://bora-site.pages.dev/**
+**Nota de higiene:** `wrangler pages deploy` serve TODOS os ficheiros da pasta (incl. `.md`). Os relatórios foram **excluídos** publicando a partir de uma cópia filtrada. Cópias antigas de `RELATORIO*.md` podem ficar em cache no edge da Cloudflare até 7 dias (`s-maxage=604800`) e depois caem. Não contêm credenciais.
 
 ## 5. Pendentes registados
 
