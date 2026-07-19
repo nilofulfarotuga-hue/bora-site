@@ -127,44 +127,131 @@
   </nav>
 </div>
 
-<main class="pt-16">
+<main>
 
-  <!-- HERO -->
-  <section id="inicio" class="bora-hero-gradient relative overflow-hidden">
-    <div class="bora-blob w-72 h-72 -top-10 -left-16"></div>
-    <div class="bora-blob w-96 h-96 bottom-0 -right-20"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="text-white bora-fade-in">
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">Tudo o que a Guarda te dá,<br>agora num só toque.</h1>
-          <p class="text-lg sm:text-xl text-white/90 mb-8 max-w-lg">Restaurantes, supermercados, farmácia, viagens, limpeza, reservas e favores — entregue por gente da tua cidade.</p>
-          <div class="flex flex-wrap gap-4">
-            <a href="index.html#download" class="inline-flex items-center gap-2 bg-white text-[#065F46] font-bold px-6 py-3.5 rounded-full hover:bg-white/90 transition shadow-lg">
-              <i data-lucide="smartphone" class="w-5 h-5"></i> Baixar a App
+  <!-- CINEMA — capítulos controlados pelo scroll -->
+  <h1 class="sr-only">Bora App — entregas, viagens, limpeza e reservas na Guarda</h1>
+  <section id="inicio" class="cinema" aria-label="A história do Bora na Guarda">
+    <div class="cinema-stage">
+
+      <!-- C1 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c1_guarda_dawn.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">01 · A cidade</span>
+          <h2 class="cine-title"><span class="cine-word">A</span> <span class="cine-word accent">Guarda</span> <span class="cine-word">tem</span> <span class="cine-word">tudo</span> <span class="cine-word">perto.</span></h2>
+          <p class="cine-sub">Uma cidade de granito na serra — com tudo à distância de um toque.</p>
+        </div>
+      </div>
+
+      <!-- C2 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c2_estafeta_rua.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">02 · Entregas</span>
+          <h2 class="cine-title"><span class="cine-word">Entregas</span> <span class="cine-word">em</span> <span class="cine-word accent">minutos.</span></h2>
+          <p class="cine-sub">Restaurantes, farmácia e lojas, entregues por gente da cidade.</p>
+        </div>
+      </div>
+
+      <!-- C3 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c3_mercado_sacos.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">03 · Mercado</span>
+          <h2 class="cine-title"><span class="cine-word">O</span> <span class="cine-word">mercado</span> <span class="cine-word">até</span> <span class="cine-word">à</span> <span class="cine-word">tua</span> <span class="cine-word accent">porta.</span></h2>
+          <p class="cine-sub">Compras do supermercado, fresquinhas, sem sair de casa.</p>
+        </div>
+      </div>
+
+      <!-- C4 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c4_tvde_noite.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">04 · Viagens</span>
+          <h2 class="cine-title"><span class="cine-word">Viagens</span> <span class="cine-word">com</span> <span class="cine-word">motoristas</span> <span class="cine-word">da</span> <span class="cine-word accent">cidade.</span></h2>
+          <p class="cine-sub">Pede uma viagem e chega onde precisas, ao melhor preço.</p>
+        </div>
+      </div>
+
+      <!-- C5 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c5_limpeza_sala.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">05 · Limpeza</span>
+          <h2 class="cine-title"><span class="cine-word">A</span> <span class="cine-word">tua</span> <span class="cine-word">casa</span> <span class="cine-word accent">impecável.</span></h2>
+          <p class="cine-sub">Profissionais de confiança para limpeza doméstica, em tua casa.</p>
+        </div>
+      </div>
+
+      <!-- C6 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c6_reserva_mesa.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">06 · Reservas</span>
+          <h2 class="cine-title"><span class="cine-word">Reserva</span> <span class="cine-word">mesa.</span> <span class="cine-word">Marca</span> <span class="cine-word">o</span> <span class="cine-word">teu</span> <span class="cine-word accent">corte.</span></h2>
+          <p class="cine-sub">Mesa no restaurante ou hora no barbeiro — em segundos.</p>
+        </div>
+      </div>
+
+      <!-- C7 -->
+      <div class="cine-scene">
+        <div class="cine-img" style="background-image:url('assets/cinema/c7_maos_telemovel.webp')"></div>
+        <div class="cine-overlay"></div>
+        <div class="cine-caption">
+          <span class="cine-kicker">07 · Bora</span>
+          <h2 class="cine-title"><span class="cine-word accent">Bora.</span> <span class="cine-word">Uma</span> <span class="cine-word">app,</span> <span class="cine-word">a</span> <span class="cine-word">cidade</span> <span class="cine-word">inteira.</span></h2>
+          <div class="cine-cta">
+            <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" class="cine-btn cine-btn-primary">
+              <i data-lucide="smartphone" class="w-5 h-5"></i> Descarregar grátis
             </a>
-            <a href="index.html#download" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-white/10 transition">
+            <a href="index.html#download" class="cine-btn cine-btn-ghost">
               <i data-lucide="qr-code" class="w-5 h-5"></i> Aponta a câmara
             </a>
           </div>
         </div>
-        <div class="relative bora-fade-in bora-delay-2 flex justify-center">
-          <div class="bora-phone-frame">
-            <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora" loading="eager">
+      </div>
+
+      <div class="cine-dots" aria-hidden="true"></div>
+      <div class="cine-hint" aria-hidden="true">
+        <span>Desliza</span>
+        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SHOWCASE (ecrã real da app) -->
+  <section id="app" class="relative overflow-hidden bg-[#05140d] text-white">
+    <div class="absolute inset-0 bg-center bg-cover opacity-25" style="background-image:url('assets/cinema/c9_cidade_noite.webp')" aria-hidden="true"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(120deg, rgba(6,95,70,0.94) 0%, rgba(5,20,13,0.78) 100%)" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-5 leading-tight">Toda a cidade,<br>num só ecrã.</h2>
+        <p class="text-white/80 text-lg mb-10 max-w-lg">Do pequeno-almoço à boleia da noite, o Bora junta tudo o que a Guarda tem para oferecer numa app simples e rápida.</p>
+        <div class="grid grid-cols-3 gap-6 max-w-md">
+          <div>
+            <p class="text-4xl font-extrabold bora-counter" data-target="11">0</p>
+            <p class="text-xs text-white/70 mt-1">categorias num só app</p>
+          </div>
+          <div>
+            <p class="text-4xl font-extrabold bora-counter" data-target="1">0</p>
+            <p class="text-xs text-white/70 mt-1">cidade — a Guarda</p>
+          </div>
+          <div>
+            <p class="text-4xl font-extrabold bora-counter" data-target="2">0</p>
+            <p class="text-xs text-white/70 mt-1">pagamentos seguros</p>
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto text-center bora-fade-in bora-delay-3">
-        <div>
-          <p class="text-4xl font-extrabold text-white bora-counter" data-target="11">0</p>
-          <p class="text-xs sm:text-sm text-white/80 mt-1">categorias num só app</p>
-        </div>
-        <div>
-          <p class="text-4xl font-extrabold text-white bora-counter" data-target="1">0</p>
-          <p class="text-xs sm:text-sm text-white/80 mt-1">cidade servida — a Guarda</p>
-        </div>
-        <div>
-          <p class="text-4xl font-extrabold text-white bora-counter" data-target="2">0</p>
-          <p class="text-xs sm:text-sm text-white/80 mt-1">formas de pagamento seguras</p>
+      <div class="flex justify-center" data-reveal>
+        <div class="bora-phone-frame">
+          <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora com as categorias disponíveis na Guarda" loading="lazy">
         </div>
       </div>
     </div>
@@ -244,6 +331,15 @@
         <p class="text-sm text-gray-600">Profissionais de confiança para limpeza doméstica, em tua casa.</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- DIVISÓRIA CINEMÁTICA (granito + luz verde) -->
+  <section class="relative overflow-hidden py-24 md:py-32 bg-[#05140d] text-white text-center" aria-label="Feito na Guarda">
+    <div class="absolute left-0 right-0 top-[-12%] h-[124%] bg-center bg-cover" style="background-image:url('assets/cinema/c8_granito_verde.webp')" data-parallax aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-[#05140d]/75" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-6">
+      <p class="text-2xl sm:text-4xl font-extrabold leading-snug">Feito na Guarda.<br><span class="text-[#4ade80]">Movido por quem cá vive.</span></p>
     </div>
   </section>
 
@@ -427,5 +523,6 @@
 <script>lucide.createIcons();</script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/animations.js"></script>
+<script src="assets/js/cinema.js"></script>
 </body>
 </html>

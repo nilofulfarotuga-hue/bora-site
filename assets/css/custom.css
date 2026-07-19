@@ -142,3 +142,186 @@ body {
 .faq-chevron {
   transition: transform 0.25s ease;
 }
+
+/* =====================================================================
+   CINEMA — capítulos controlados pelo scroll (estilo Apple/Framer)
+   Default = pilha estática (funciona sem JS e com reduced-motion).
+   .is-live (adicionado pelo JS) = palco fixo + crossfade + Ken Burns.
+   ===================================================================== */
+.cinema {
+  position: relative;
+  background: #05140d;
+}
+.cinema-stage {
+  position: relative;
+}
+.cine-scene {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  overflow: hidden;
+}
+.cine-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  will-change: transform;
+}
+.cine-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(3, 15, 10, 0.88) 0%, rgba(3, 15, 10, 0.25) 42%, rgba(3, 15, 10, 0.05) 68%, rgba(3, 15, 10, 0.42) 100%),
+    linear-gradient(to right, rgba(3, 15, 10, 0.62) 0%, rgba(3, 15, 10, 0) 62%);
+}
+.cine-caption {
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  width: 100%;
+  max-width: 62rem;
+  padding: 0 clamp(1.25rem, 6vw, 6rem) clamp(3.5rem, 11vh, 8rem);
+  color: #fff;
+}
+.cine-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #86efac;
+  margin-bottom: 1.1rem;
+}
+.cine-kicker::before {
+  content: '';
+  width: 2.2rem;
+  height: 2px;
+  background: #16a34a;
+  display: inline-block;
+}
+.cine-title {
+  font-size: clamp(2.25rem, 6.2vw, 5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-shadow: 0 6px 34px rgba(0, 0, 0, 0.55);
+  margin: 0;
+}
+.cine-title .accent { color: #4ade80; }
+.cine-word {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+.cine-sub {
+  margin-top: 1.35rem;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 34rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+.cine-cta {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.cine-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  padding: 0.9rem 1.75rem;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.cine-btn-primary { background: #16a34a; color: #fff; }
+.cine-btn-primary:hover { background: #15803d; transform: translateY(-2px); }
+.cine-btn-ghost { border: 2px solid rgba(255, 255, 255, 0.6); color: #fff; }
+.cine-btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* Dots de capítulo (só no modo live/desktop) */
+.cine-dots {
+  display: none;
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.6rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.cine-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.cine-dot.active {
+  background: #22c55e;
+  transform: scale(1.55);
+  box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.18);
+}
+
+/* Sugestão de scroll */
+.cine-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  transition: opacity 0.4s ease;
+}
+.cine-hint svg { animation: cine-bounce 1.8s ease-in-out infinite; }
+@keyframes cine-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
+/* ---- Modo LIVE (JS + motion permitido) ---- */
+.cinema.is-live { height: 720vh; }
+.cinema.is-live .cinema-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+.cinema.is-live .cine-scene {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+}
+.cinema.is-live .cine-scene:not(:first-child) { opacity: 0; }
+.cinema.is-live .cine-dots { display: flex; }
+.cinema.is-live .cine-caption { align-self: center; margin-top: auto; margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  .cinema.is-live { height: 640vh; }
+  .cine-dots { display: none !important; }
+  .cine-caption { padding-bottom: clamp(4.5rem, 14vh, 7rem); }
+}
+
+/* ---- App showcase (ecrã real da app) ---- */
+.bora-showcase-band {
+  background: linear-gradient(160deg, #065f46 0%, #05140d 100%);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cine-img { transform: none; }
+  .cine-hint svg { animation: none; }
+}

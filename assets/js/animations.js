@@ -27,17 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    gsap.to('.bora-phone-frame', {
-      y: -40,
-      ease: 'none',
-      scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true }
-    });
-
-    gsap.to('.bora-blob', {
-      y: 60,
-      ease: 'none',
-      scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true }
-    });
   }
 
   document.querySelectorAll('.bora-counter').forEach(function (el) {
