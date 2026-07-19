@@ -6,12 +6,26 @@
 
 ---
 
-## TL;DR
+## ✅ RESOLVIDO — SITE NO AR (2026-07-20)
+
+O deploy **foi concluído com sucesso** com um API Token válido fornecido pelo Danilo.
+- **Deployment:** https://b17a933b.bora-site.pages.dev · **Produção:** https://bora-site.pages.dev
+- **Verificado por fetch** (produção, com e sem cache): `assets/cinema` ✅, `ScrollTrigger` ✅,
+  `cine-scene`/`cine-title`/`cine-kicker` ✅, headline "…cidade inteira." ✅, imagens
+  `assets/cinema/*.webp` → **HTTP 200** ✅, `google-site-verification` intacta ✅.
+- **Segurança:** publicado a partir de **cópia filtrada** → `bora-site.pages.dev/.env` **NÃO**
+  expõe o token (confirmado). O `.env` fica só local (gitignored).
+- **1ª tentativa falhou** porque o valor dado era o **Account ID** (`2cd0…`), não um token
+  (erro `6111`). Resolvido com token real. *(Histórico do diagnóstico abaixo, para referência.)*
+
+---
+
+## TL;DR (histórico do diagnóstico)
 
 - ✅ O código está **correto e no GitHub** (`62b46ab`): `index.html` + `/assets/cinema/` (9 WebP) + GSAP/ScrollTrigger.
-- ❌ O deploy **NÃO foi concluído** — bloqueado por **autenticação**: não existe `CLOUDFLARE_API_TOKEN` na máquina (env, `.env`, User/Machine, nem OAuth do wrangler). Provavelmente o token antigo foi **revogado** (tinha sido exposto).
-- 🔴 **O site no ar continua a versão ANTIGA** (confirmado por fetch — ver secção 4).
-- 👉 **Ação necessária do Danilo:** fornecer um token novo (Opção A) **ou** ligar o Pages ao GitHub (Opção B). Depois é 1 comando.
+- ⚠️ O deploy exigiu **autenticação**: não havia `CLOUDFLARE_API_TOKEN` na máquina (env, `.env`, User/Machine, nem OAuth do wrangler). Resolvido quando o Danilo forneceu um token válido.
+- ✅ **Site no ar atualizado** para a versão cinematográfica (confirmado por fetch).
+- 💡 **Recomendação futura (Opção B):** ligar o Pages ao GitHub para os pushes publicarem sozinhos.
 
 ---
 
