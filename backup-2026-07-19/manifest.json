@@ -1,0 +1,15 @@
+{
+  "name": "Bora App",
+  "short_name": "Bora",
+  "description": "Entregas, viagens, compras, reservas e favores na Guarda, Portugal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "pt-PT",
+  "background_color": "#F0F2EF",
+  "theme_color": "#16A34A",
+  "icons": [
+    { "src": "assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
