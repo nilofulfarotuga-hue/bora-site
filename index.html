@@ -37,6 +37,10 @@
 <!-- Tailwind (Play CDN, sem build step) -->
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- GSAP (animações de scroll) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <link rel="stylesheet" href="assets/css/custom.css">
 
 <script type="application/ld+json">
@@ -127,32 +131,52 @@
 
   <!-- HERO -->
   <section id="inicio" class="bora-hero-gradient relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-white bora-fade-in">
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">Tudo o que precisas,<br>num só toque.</h1>
-        <p class="text-lg sm:text-xl text-white/90 mb-8 max-w-lg">Entregas, viagens, compras, limpeza, reservas e favores na Guarda — tudo num só app.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="index.html#download" class="inline-flex items-center gap-2 bg-white text-[#065F46] font-bold px-6 py-3.5 rounded-full hover:bg-white/90 transition shadow-lg">
-            <i data-lucide="smartphone" class="w-5 h-5"></i> Baixar a App
-          </a>
-          <a href="index.html#download" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-white/10 transition">
-            <i data-lucide="qr-code" class="w-5 h-5"></i> Aponta a câmara
-          </a>
+    <div class="bora-blob w-72 h-72 -top-10 -left-16"></div>
+    <div class="bora-blob w-96 h-96 bottom-0 -right-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-white bora-fade-in">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">Tudo o que a Guarda te dá,<br>agora num só toque.</h1>
+          <p class="text-lg sm:text-xl text-white/90 mb-8 max-w-lg">Restaurantes, supermercados, farmácia, viagens, limpeza, reservas e favores — entregue por gente da tua cidade.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="index.html#download" class="inline-flex items-center gap-2 bg-white text-[#065F46] font-bold px-6 py-3.5 rounded-full hover:bg-white/90 transition shadow-lg">
+              <i data-lucide="smartphone" class="w-5 h-5"></i> Baixar a App
+            </a>
+            <a href="index.html#download" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-white/10 transition">
+              <i data-lucide="qr-code" class="w-5 h-5"></i> Aponta a câmara
+            </a>
+          </div>
+        </div>
+        <div class="relative bora-fade-in bora-delay-2 flex justify-center">
+          <div class="bora-phone-frame">
+            <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora" loading="eager">
+          </div>
         </div>
       </div>
-      <div class="relative bora-fade-in bora-delay-2 flex justify-center">
-        <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora" loading="eager" class="w-64 sm:w-72 h-auto drop-shadow-2xl">
+      <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto text-center bora-fade-in bora-delay-3">
+        <div>
+          <p class="text-4xl font-extrabold text-white bora-counter" data-target="11">0</p>
+          <p class="text-xs sm:text-sm text-white/80 mt-1">categorias num só app</p>
+        </div>
+        <div>
+          <p class="text-4xl font-extrabold text-white bora-counter" data-target="1">0</p>
+          <p class="text-xs sm:text-sm text-white/80 mt-1">cidade servida — a Guarda</p>
+        </div>
+        <div>
+          <p class="text-4xl font-extrabold text-white bora-counter" data-target="2">0</p>
+          <p class="text-xs sm:text-sm text-white/80 mt-1">formas de pagamento seguras</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CATEGORIAS -->
   <section id="categorias" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" data-reveal>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">O que podes fazer com o Bora em Guarda</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Uma app, várias formas de facilitar o teu dia a dia na Guarda.</p>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" data-reveal-stagger>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
         <img src="assets/img/cat_restaurantes.png" alt="Entrega de restaurantes na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
@@ -226,12 +250,12 @@
   <!-- PORQUÊ O BORA -->
   <section id="porque-bora" class="bg-[#F0FDF4] border-y border-green-100 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
+      <div class="text-center mb-14" data-reveal>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Porquê escolher o Bora?</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">O Bora é o super-app local da Guarda: entregas, viagens, limpeza, reservas e favores num só sítio — feito por quem é daqui.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-reveal-stagger>
 
         <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
           <img src="assets/img/why_app_unico.webp" alt="Vários serviços num só app" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain">
@@ -269,11 +293,11 @@
   <!-- COMO FUNCIONA -->
   <section id="como-funciona" class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
+      <div class="text-center mb-14" data-reveal>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Como funciona</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">Em três passos simples, tens tudo o que precisas a caminho.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8" data-reveal-stagger>
         <div class="text-center px-6">
           <div class="w-16 h-16 rounded-full bg-[#16A34A]/10 flex items-center justify-center mx-auto mb-5">
             <i data-lucide="download" class="w-8 h-8 text-[#16A34A]"></i>
@@ -299,6 +323,22 @@
     </div>
   </section>
 
+  <!-- WEB EM BREVE -->
+  <section id="web-em-breve" class="bg-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bora-card bg-gradient-to-br from-[#16A34A] to-[#065F46] rounded-3xl p-10 text-center text-white shadow-lg" data-reveal>
+        <span class="inline-flex items-center gap-2 bg-white/15 text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-4">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Em breve
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Não tens Android?</h2>
+        <p class="text-white/90 max-w-xl mx-auto mb-6">Em breve vais poder pedir tudo o que o Bora tem para oferecer diretamente pelo site, sem precisar de instalar nada.</p>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/30 text-white/70 font-semibold px-6 py-3 rounded-full cursor-not-allowed select-none">
+          <i data-lucide="clock" class="w-4 h-4"></i> Disponível brevemente
+        </span>
+      </div>
+    </div>
+  </section>
+
   <!-- DOWNLOAD -->
   <section id="download" class="bg-[#FFF7ED] border-y border-orange-100 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,7 +358,7 @@
 
   <!-- CTA DUPLO -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-6" data-reveal-stagger>
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-orange-100">
         <h3 class="text-xl font-bold text-[#065F46] mb-2">Tens um negócio?</h3>
         <p class="text-gray-600 mb-6">Junta-te ao Bora e vende para toda a Guarda.</p>
@@ -386,5 +426,6 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
 </body>
 </html>
