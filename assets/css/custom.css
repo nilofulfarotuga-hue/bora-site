@@ -7,6 +7,19 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* compensa o header fixo nos saltos de âncora */
+}
+
+/* Foco visível para navegação por teclado (a11y) */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #16a34a;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.cine-btn:focus-visible,
+.cine-btn-ghost:focus-visible {
+  outline-color: #ffffff;
 }
 
 body {
