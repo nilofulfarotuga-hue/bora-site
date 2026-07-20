@@ -113,3 +113,11 @@ A partir daí, **todos os `git push` publicam sozinhos** e este problema nunca m
 ## 7. Anexos
 - Redesign e testes: ver `relatorio-site-cinematografico-2026-07-19.md` + `docs/preview/`.
 - Backup pré-redesign: `backup-2026-07-19/`.
+
+---
+
+**FASE 5 fechada em 2026-07-20 07:16 — site liga ao web app.**
+"Pedir pelo site" na navbar (sempre visível, também a 390px) e no herói do
+capítulo 01, além do botão do fundo que já existia; "Portal do Parceiro —
+Entrar" em `parceiros.html`. Todos apontam a https://bora-app-web.pages.dev.
+Commit `dd7807b`, publicado e verificado por fetch.
