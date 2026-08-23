@@ -934,8 +934,8 @@
    "address": null,
    "phone": "+351937402120",
    "whatsapp": "+351937402120",
-   "photo_url": "",
-   "hero_image_url": null,
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/sabores-brasil-guarda/logo-quadrado.jpg",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/sabores-brasil-guarda/hero-mesa-cheia.jpg",
    "about_text": "O verdadeiro sabor do Brasil em Portugal. Salgados crocantes e doces feitos com amor - no mercado ha 3 anos. Encomendas para festa, com aviso previo.",
    "social_instagram": null,
    "social_facebook": null,
@@ -982,7 +982,44 @@
    "lat": 40.5364,
    "lng": -7.2683,
    "n_produtos": 6,
-   "amostra": [],
+   "amostra": [
+    {
+     "name": "Bolo de Cenoura",
+     "price": 12.6,
+     "photo_url": null,
+     "category": "Doces e Estrelas da Casa"
+    },
+    {
+     "name": "Brigadeiro ou Beijinho de Coco",
+     "price": 1.05,
+     "photo_url": null,
+     "category": "Doces e Estrelas da Casa"
+    },
+    {
+     "name": "Cento de Salgados (ate 2 sabores)",
+     "price": 47.25,
+     "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/sabores-brasil-guarda/cento-salgados.jpg",
+     "category": "Salgados"
+    },
+    {
+     "name": "Pudim de Leite",
+     "price": 10.5,
+     "photo_url": null,
+     "category": "Doces e Estrelas da Casa"
+    },
+    {
+     "name": "Salgados Grandes",
+     "price": 2.1,
+     "photo_url": null,
+     "category": "Salgados"
+    },
+    {
+     "name": "Salgados Variados (unidade)",
+     "price": 0.53,
+     "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/sabores-brasil-guarda/salgados-variados.jpg",
+     "category": "Salgados"
+    }
+   ],
    "slug": "sabores-do-brasil-keli-barbosa"
   },
   {

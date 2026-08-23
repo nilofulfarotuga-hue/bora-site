@@ -294,6 +294,7 @@ def rodape():
     <div class="rod-fim">© 2026 Bora · Guarda, Portugal</div>
   </div>
 </footer>
+<script src="/assets/js/bora-anim.js" defer></script>
 </body>
 </html>
 """

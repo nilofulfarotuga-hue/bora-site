@@ -229,3 +229,96 @@ h3{font-size:1.05rem;font-weight:700;margin-bottom:10px}
   html{scroll-behavior:auto}
   .btn,.cartao-loja{transition:none}
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANIMAÇÃO
+   Só transform e opacity — o compositor faz de graça, e o Chromium sem
+   ecrã do estúdio consegue filmar. Nada de WebGL, nada a piscar, nada a
+   mexer sem parar por trás de texto.
+   Tudo o que esconde está atrás de `html.anim`, que só existe se o JS
+   correu E o utilizador não pediu menos movimento. Sem JS o site aparece
+   completo.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ---------- fundo com deriva lenta no topo ---------- */
+.cat-topo, .capa { position: relative; overflow: hidden; isolation: isolate; }
+.cat-topo::before, .capa::before {
+  content: ""; position: absolute; inset: -35%; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(34,197,94,.34), transparent 72%);
+  animation: bora-derivar 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.capa::before { background: radial-gradient(closest-side, rgba(249,115,22,.20), transparent 70%); }
+@keyframes bora-derivar {
+  from { transform: translate3d(-7%, -5%, 0) scale(1); }
+  to   { transform: translate3d(9%, 7%, 0) scale(1.16); }
+}
+
+/* ---------- entrada do título (uma vez, ao carregar) ---------- */
+html.anim .cat-topo .chapeu,
+html.anim .cat-topo h1,
+html.anim .cat-topo .lead,
+html.anim .capa-txt > * {
+  animation: bora-entrar .6s cubic-bezier(.22,1,.36,1) backwards;
+}
+html.anim .cat-topo h1,      html.anim .capa-txt > *:nth-child(2) { animation-delay: .07s; }
+html.anim .cat-topo .lead,   html.anim .capa-txt > *:nth-child(3) { animation-delay: .14s; }
+html.anim .capa-txt > *:nth-child(4) { animation-delay: .21s; }
+html.anim .capa-txt > *:nth-child(5) { animation-delay: .28s; }
+@keyframes bora-entrar {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- revelação ao rolar (0,5 s, uma vez só) ---------- */
+html.anim .rev { opacity: 0; transform: translateY(22px); }
+html.anim .rev.on {
+  opacity: 1; transform: none;
+  transition: opacity .5s cubic-bezier(.22,1,.36,1), transform .5s cubic-bezier(.22,1,.36,1);
+}
+
+/* filhos entram escalonados depois do bloco */
+html.anim .bloco.rev .grelha-lojas > *,
+html.anim .bloco.rev .cadeias > *,
+html.anim .bloco.rev .pontos > *,
+html.anim .bloco.rev .festa-g > *,
+html.anim .bloco.rev .numeros > * { opacity: 0; transform: translateY(14px); }
+html.anim .bloco.rev.on .grelha-lojas > *,
+html.anim .bloco.rev.on .cadeias > *,
+html.anim .bloco.rev.on .pontos > *,
+html.anim .bloco.rev.on .festa-g > *,
+html.anim .bloco.rev.on .numeros > * {
+  opacity: 1; transform: none;
+  transition: opacity .45s ease, transform .45s cubic-bezier(.22,1,.36,1);
+}
+html.anim .bloco.rev.on :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > *:nth-child(2) { transition-delay: .05s; }
+html.anim .bloco.rev.on :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > *:nth-child(3) { transition-delay: .10s; }
+html.anim .bloco.rev.on :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > *:nth-child(4) { transition-delay: .15s; }
+html.anim .bloco.rev.on :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > *:nth-child(5) { transition-delay: .20s; }
+html.anim .bloco.rev.on :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > *:nth-child(n+6) { transition-delay: .25s; }
+
+/* ---------- cartões reagem ao rato E ao toque ---------- */
+.cartao-loja, .cadeia, .ponto, .festa-i {
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.ponto:hover, .festa-i:hover { border-color: rgba(34,197,94,.38); transform: translateY(-2px); }
+.cartao-loja:active, .cadeia:active, .ponto:active, .festa-i:active { transform: scale(.985); }
+.cartao-loja:hover { box-shadow: 0 18px 40px -22px rgba(0,0,0,.9); }
+
+/* ---------- encaixe da mascote (à espera dos PNG) ----------
+   Fica ao LADO do texto, nunca por cima. No telemóvel só a do topo. */
+.mascote { pointer-events: none; user-select: none; }
+.mascote img { width: 100%; max-width: 300px; height: auto; margin: 0 auto; }
+html.anim .mascote img { animation: bora-flutuar 6.5s ease-in-out infinite alternate; will-change: transform; }
+@keyframes bora-flutuar { from { transform: translateY(0); } to { transform: translateY(-13px); } }
+@media (max-width: 860px) { .mascote:not(.mascote-topo) { display: none; } }
+
+/* ---------- quem pediu menos movimento vê tudo quieto ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cat-topo::before, .capa::before { animation: none; }
+  html.anim .rev, html.anim .rev.on,
+  html.anim .bloco.rev :is(.grelha-lojas,.cadeias,.pontos,.festa-g,.numeros) > * {
+    opacity: 1; transform: none; transition: none; animation: none;
+  }
+  html.anim .mascote img { animation: none; }
+}
