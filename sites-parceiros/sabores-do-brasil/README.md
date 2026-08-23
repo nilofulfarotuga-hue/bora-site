@@ -1,63 +1,78 @@
 # Sabores do Brasil — Keli Barbosa
 
-Site-presente + demonstração da categoria **Festas**, feito para a Keli entrar na Bora.
+**São duas coisas separadas, dois links. Não voltar a juntar.**
 
-- **No ar:** https://sabores-do-brasil.pages.dev/
-- **Projeto Cloudflare Pages:** `sabores-do-brasil` (upload directo por wrangler, sem ligação ao git)
+| | Link | O que é |
+|---|---|---|
+| 1 | https://sabores-do-brasil.pages.dev/ | O site dela. Montra. Sem demo lá dentro. |
+| 2 | https://demo-festas.pages.dev/ | A demo da categoria Festas dentro da app. |
+
 - **Loja na base:** `restaurants.id = 'sabores-brasil-guarda'` (`coming_soon = true`)
-
-## Porque é que isto vive aqui
-
-O `beunique.html` e o `sabores-de-casa.html` já desapareceram do PC uma vez cada,
-e travaram publicações durante semanas. As pastas soltas `Desktop\mr-kebab` e
-`Desktop\ouro-e-prata` continuam fora do git — esta não fica.
-
-`sites-parceiros/` **não** entra no deploy do bora-site: o `deploy-cloudflare.sh`
-monta a pasta a publicar por lista de permissões (só `loja/`, `dados/`, `assets/`
-e alguns ficheiros da raiz). Fica versionado sem ir para o ar.
+- **Projectos Cloudflare Pages:** `sabores-do-brasil` e `demo-festas` — upload directo por
+  wrangler, sem ligação ao git.
+- Fonte da demo em `../demo-festas/`.
 
 ## Ligar a loja quando a Keli disser sim
 
-Uma linha só, no topo do `index.html` (e do `fonte/template.html`):
+Uma linha, no topo de **cada** um dos dois `index.html` (e do `fonte/template_site.html`):
 
 ```js
 var LOJA_ATIVA = false;   // -> true
 ```
 
-`false` mostra "Criar conta e ficar a par — a Sabores do Brasil abre em breve".
-`true` passa a "Encomendar agora". Depois é recompilar e voltar a publicar.
+`false` → o site diz "Cria conta e fica a par" e a demo trava no pagamento.
+`true` → o site diz "Encomendar agora" e a demo deixa passar. Recompilar e republicar.
 
-## Refazer a página
-
-O `index.html` é auto-contido (imagens em base64, um ficheiro só).
+## Refazer o site
 
 ```bash
-python fonte/mkassets.py   # trata imagens + QR (correcao M) -> assets_b64.json
-python fonte/build.py      # injecta no template -> index.html
+python fonte/prep_site.py    # imagens -> media/*.webp + assets_site.json
+python fonte/build_site.py   # injecta o QR e o logo Bora -> index.html + verificações
 ```
-
-O `fonte/extract.py` volta a tirar fotogramas do vídeo original da Keli
-(`WhatsApp Video 2026-08-23 at 16.16.07.mp4`) e o `fonte/treat.py` trata-os.
-As imagens já tratadas estão em `fonte/tratadas/`, por isso os dois primeiros
-passos só são precisos se houver material novo.
 
 ## Publicar
 
 ```bash
 npx wrangler pages deploy "C:/Users/danil/Desktop/sabores-do-brasil" --project-name sabores-do-brasil --branch main
+npx wrangler pages deploy "C:/Users/danil/Desktop/demo-festas"      --project-name demo-festas      --branch main
 ```
 
-**Caminho absoluto, sempre.** Com `.` publica-se a pasta onde a shell estiver —
-foi assim que os ficheiros de trabalho foram parar ao ar durante uns minutos
-a 23/08/2026. A pasta a publicar só pode ter o `index.html` lá dentro.
+**Caminho absoluto, sempre.** Com `.` publica-se a pasta onde a shell estiver — foi assim que
+a pasta de rascunho foi ao ar durante uns minutos a 23/08/2026. E depois de publicar, confirmar
+o **conteúdo** de caminhos que não deviam existir: o Cloudflare Pages devolve 200 com o
+`index.html` em rotas inexistentes, por isso o código HTTP sozinho não prova nada.
 
-## As fotos
+## O vídeo
 
-Só material real dela. O vídeo que ela mandou é, na maior parte, publicidade
-gerada por IA (pessoas de camisola do Brasil, bolo com calda impossível, e o
-logótipo na caixa sai ilegível). Nada disso foi usado.
+`media/sabores.mp4` (5,2 MB, H.264, 720×1280, 58 s) é a versão comprimida do vídeo que a Keli
+mandou. O original está em `C:\Users\danil\Downloads`. O `sabores.webm` **não** está no git
+(é regenerável); se for preciso:
 
-As únicas cenas verdadeiras são a bancada de granito com os tabuleiros e o monte
-de salgados — desse segundo teve de se cortar a faixa onde o telefone dela está
-queimado por cima. Por isso só 2 dos 6 produtos têm foto na base; os outros
-ficam com `needs_photo = true` até ela mandar fotografias.
+```bash
+ffmpeg -i original.mp4 -c:v libvpx-vp9 -crf 40 -b:v 0 -row-mt 1 -cpu-used 5 \
+       -vf scale=720:-2 -c:a libopus -b:a 56k media/sabores.webm
+```
+
+## As imagens
+
+**Fotos reais dela** (`fonte/tratadas/`) — a bancada de granito e o monte de salgados, tirados
+do vídeo. No site levam etiqueta amarela "foto real".
+
+**Ilustrativas** (`fonte/geradas/`) — bolo com calda, pudim, mesa de doces, salgado partido e
+salgados dourados. Vieram das partes **geradas por IA do próprio vídeo dela**, recortadas e
+tratadas. No site levam etiqueta "ilustrativa".
+
+Porquê do vídeo e não geradas de novo: as três APIs de geração estavam sem crédito no dia
+(Higgsfield sem créditos, Gemini com a quota diária do plano grátis esgotada, OpenAI sem
+créditos). Se algum dia houver crédito, o `fonte/gen_fotos.py` (Gemini) e o `fonte/gen_openai.py`
+já têm os prompts escritos e prontos a correr.
+
+## A demo (link 2)
+
+O **ecrã inicial é uma captura real** da app web em viewport de telemóvel — a categoria Festas
+está composta por cima, no 12.º lugar vazio da grelha. Os restantes ecrãs estão desenhados com o
+mesmo sistema visual, a partir das capturas em `../demo-festas/fonte/ecras-reais/`.
+
+Não foi possível capturar com `adb`: no dia não havia telemóvel ligado por USB (o Windows também
+não via nenhum dispositivo Android). O plano B — app web em viewport de telemóvel — está previsto
+no próprio pedido.

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Festas na Bora App — Sabores do Brasil</title>
+<meta name="description" content="Demonstração da categoria Festas na Bora App, com a loja Sabores do Brasil da Keli Barbosa.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%A5%9F%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#16A34A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   TROCAR AQUI QUANDO A LOJA DA KELI ABRIR:
+     false = ainda em "coming_soon"  ->  pagamento travado
+     true  = loja activa             ->  pagamento a funcionar
+   ══════════════════════════════════════════════════════════════ */
+var LOJA_ATIVA = false;
+
+var WA_DANILO = "351937501673";                       // +351 937 501 673
+var LINK_PLAY = "https://play.google.com/store/apps/details?id=pt.boraapp.bora";
+var LINK_WEB  = "https://bora-app-web.pages.dev/#/registo-cliente";
+var LINK_SITE = "https://sabores-do-brasil.pages.dev/";
+
+/* Valores lidos da base do Bora (platform_settings + restaurants) */
+var TAXAS = { entregaBase: 2.50, kmBase: 4, porKm: 0.50, servicoPct: 0.05, saco: 0.30 };
+var DIST_KM = 2.4;
+var AVISO_HORAS = 48;          // restaurants.about_text
+var HORARIO = "9h–20h, todos os dias";
+</script>
+
+<style>
+:root{
+  --verde:#16A34A; --verde-esc:#0F7A37; --laranja:#F97316;
+  --fundo:#F0F2EF; --branco:#fff; --texto:#111111; --texto2:#6B7280;
+  --borda:#E5E7EB; --cinza:#9CA3AF;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:#0E1512; color:#fff; line-height:1.5;
+  -webkit-font-smoothing:antialiased; min-height:100vh;
+  display:flex; flex-direction:column; align-items:center; padding:22px 14px 40px;
+}
+img{display:block;max-width:100%}
+
+/* ---------- moldura ---------- */
+.intro{max-width:560px;text-align:center;margin-bottom:20px}
+.intro .olá{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:#7DE0A4;background:rgba(125,224,164,.13);padding:6px 13px;border-radius:999px;display:inline-block}
+.intro h1{font-size:clamp(21px,5vw,29px);font-weight:900;letter-spacing:-.02em;margin:13px 0 9px}
+.intro p{color:rgba(255,255,255,.62);font-size:14.5px}
+.passos{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:600px;margin:16px 0 18px}
+.passo{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 11px;transition:.2s}
+.passo.on{color:#0B1F13;background:#7DE0A4;border-color:#7DE0A4;font-weight:800}
+
+.telemovel{width:min(390px,94vw);background:#0B0B0C;border-radius:40px;padding:10px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 2px #2A2A2E inset;position:relative}
+.ecra{position:relative;border-radius:31px;overflow:hidden;background:var(--fundo);
+  height:min(760px,80vh);min-height:600px;display:flex;flex-direction:column;color:var(--texto)}
+.entalhe{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:100px;height:21px;
+  background:#0B0B0C;border-radius:0 0 13px 13px;z-index:80}
+.vista{display:none;flex-direction:column;height:100%;animation:entra .24s ease}
+.vista.on{display:flex}
+@keyframes entra{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
+.rolo{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.rolo::-webkit-scrollbar{width:0}
+
+/* ---------- cabeçalho verde da app ---------- */
+.estado{display:flex;justify-content:space-between;align-items:flex-end;
+  padding:13px 18px 4px;font-size:11.5px;font-weight:700;color:#fff;height:34px}
+.cab{background:var(--verde);color:#fff;padding:0 0 14px}
+.cab-l{display:flex;align-items:center;gap:12px;padding:4px 16px 0}
+.cab-l h2{font-size:18px;font-weight:800;letter-spacing:-.01em;flex:1;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.volta{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);border:0;color:#fff;
+  font-size:19px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 30px}
+.faixa-breve{background:var(--laranja);color:#fff;font-size:12.5px;font-weight:700;
+  padding:8px 16px;display:flex;align-items:center;gap:7px}
+.corpo{padding:14px 16px}
+
+/* ---------- ecrã inicial real ---------- */
+.real{position:relative}
+.real img{width:100%}
+.marca-real{position:absolute;left:8px;bottom:8px;background:rgba(11,20,15,.8);color:#7DE0A4;
+  font-size:9px;font-weight:800;padding:4px 9px;border-radius:999px;letter-spacing:.05em;z-index:5}
+/* ladrilho Festas no 12.º lugar vazio da grelha real */
+.tile-festas{position:absolute;left:67.7%;top:58.75%;width:28.5%;height:9.2%;
+  border-radius:14px;overflow:hidden;cursor:pointer;border:0;padding:0;
+  box-shadow:0 0 0 3px #F97316, 0 6px 18px rgba(249,115,22,.55);
+  animation:pisca 1.9s ease-in-out infinite}
+@keyframes pisca{0%,100%{box-shadow:0 0 0 3px #F97316,0 6px 18px rgba(249,115,22,.5)}
+                 50%{box-shadow:0 0 0 3px #FDBA74,0 8px 26px rgba(249,115,22,.85)}}
+.tile-festas img{width:100%;height:100%;object-fit:cover}
+.tile-festas .véu{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(249,115,22,.30) 0%,rgba(234,88,12,.42) 46%,rgba(154,52,18,.86) 100%)}
+.tile-festas .txt{position:absolute;left:6px;bottom:5px;color:#fff;font-size:11px;font-weight:800;
+  text-shadow:0 1px 3px rgba(0,0,0,.5);z-index:2}
+.tile-festas .novo{position:absolute;top:4px;right:4px;background:#fff;color:var(--laranja);
+  font-size:7.5px;font-weight:900;padding:2px 5px;border-radius:999px;z-index:2;letter-spacing:.04em}
+.dica{position:sticky;bottom:12px;left:0;right:0;text-align:center;z-index:6;pointer-events:none}
+.dica span{background:rgba(11,20,15,.92);color:#fff;font-size:12px;font-weight:700;
+  padding:8px 15px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.45);display:inline-block}
+
+/* ---------- cartões e listas no estilo da app ---------- */
+.cartao{background:#fff;border-radius:14px;padding:13px;margin-bottom:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.loja-cartao{background:#fff;border-radius:14px;overflow:hidden;cursor:pointer;
+  box-shadow:0 1px 4px rgba(0,0,0,.09);margin-bottom:12px}
+.loja-cartao:active{transform:scale(.99)}
+.loja-cartao .capa{width:100%;height:112px;object-fit:cover}
+.loja-linha{display:flex;gap:11px;align-items:center;padding:12px}
+.loja-linha img.av{width:44px;height:44px;border-radius:11px;flex:0 0 44px;border:1px solid var(--borda)}
+.loja-nome{font-weight:800;font-size:14.5px}
+.loja-meta{font-size:11.5px;color:var(--texto2);margin-top:2px;display:flex;gap:9px;flex-wrap:wrap}
+.selo{display:inline-block;font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px}
+.selo.verde{background:#DCFCE7;color:#15803D}
+.selo.laranja{background:#FFEDD5;color:#C2410C}
+
+.sec-tit{font-size:14.5px;font-weight:800;margin:16px 0 9px;display:flex;align-items:center;gap:7px}
+.prods{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.prod{background:#fff;border-radius:13px;overflow:hidden;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.prod:active{transform:scale(.98)}
+.prod img{width:100%;height:96px;object-fit:cover}
+.prod .info{padding:9px 10px 11px}
+.prod .n{font-size:12px;font-weight:600;line-height:1.3;min-height:31px;color:#374151}
+.prod .base{display:flex;align-items:center;justify-content:space-between;margin-top:7px}
+.prod .p{font-weight:900;color:var(--verde);font-size:14px}
+.prod .mais{width:26px;height:26px;border-radius:8px;background:var(--verde);color:#fff;border:0;
+  font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer}
+
+/* ---------- ficha de produto ---------- */
+.p-capa{width:100%;height:200px;object-fit:cover}
+.grupo{background:#fff;border-radius:13px;padding:13px;margin-bottom:10px}
+.grupo-cab{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:3px}
+.grupo-cab b{font-size:14.5px;font-weight:800}
+.obrig{background:#FFEDD5;color:#C2410C;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.escolhe{font-size:11.5px;color:var(--texto2)}
+.contagem{font-size:11.5px;font-weight:700;color:var(--verde);text-align:right}
+.opcao{display:flex;align-items:center;gap:11px;padding:10px 0;cursor:pointer;border-top:1px solid #F3F4F6}
+.opcao:first-of-type{border-top:0}
+.radio{width:19px;height:19px;border-radius:50%;border:2px solid #D1D5DB;flex:0 0 19px;position:relative}
+.opcao.on .radio{border-color:var(--verde)}
+.opcao.on .radio::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--verde)}
+.opcao span{font-size:13.5px}
+textarea,input[type=text]{width:100%;border:1.5px solid var(--borda);border-radius:11px;padding:11px;
+  font:inherit;font-size:13.5px;background:#fff;color:var(--texto);resize:vertical}
+textarea:focus,input:focus{outline:0;border-color:var(--verde)}
+.contador{font-size:11px;color:var(--cinza);text-align:right;margin-top:4px}
+.anexo{display:flex;align-items:center;gap:10px;border:1.5px dashed var(--borda);border-radius:11px;
+  padding:12px;cursor:pointer;background:#FAFAFA;margin-top:8px}
+.anexo.on{border-style:solid;border-color:var(--verde);background:#F0FDF4}
+.anexo .ic{font-size:20px}
+.anexo b{font-size:13px;display:block}
+.anexo small{font-size:11px;color:var(--texto2)}
+.qtd{display:flex;align-items:center;justify-content:center;gap:20px;padding:6px 0}
+.qtd button{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--borda);background:#fff;
+  font-size:19px;cursor:pointer;color:var(--texto);display:flex;align-items:center;justify-content:center}
+.qtd b{font-size:18px;min-width:26px;text-align:center}
+
+/* ---------- rodapé de acção ---------- */
+.rodape{padding:11px 14px calc(13px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--borda)}
+.btn{width:100%;border:0;border-radius:12px;padding:14px;font:inherit;font-size:15px;font-weight:800;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-l{background:var(--laranja);color:#fff}
+.btn-v{background:var(--verde);color:#fff}
+.btn-c{background:#F3F4F6;color:var(--texto)}
+.btn+.btn{margin-top:8px}
+
+/* ---------- pessoas ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--borda);background:#fff;border-radius:11px;padding:11px 16px;
+  font:inherit;font-size:14px;font-weight:700;cursor:pointer;color:var(--texto)}
+.chip.on{background:var(--verde);border-color:var(--verde);color:#fff}
+.ajuda{font-size:12.5px;color:var(--texto2);margin-top:6px;line-height:1.5}
+
+/* ---------- calendário ---------- */
+.mes{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:800;font-size:14px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .dh{font-size:10px;font-weight:800;color:var(--texto2);text-align:center;padding:3px 0}
+.dia{aspect-ratio:1;border:0;background:#fff;border-radius:9px;font:inherit;font-size:12.5px;font-weight:700;
+  cursor:pointer;color:var(--texto);display:flex;align-items:center;justify-content:center;position:relative}
+.dia:disabled{color:#D1D5DB;background:#F7F7F6;cursor:not-allowed;font-weight:500}
+.dia:disabled::after{content:"";position:absolute;left:22%;right:22%;top:50%;height:1.5px;background:#E5E7EB}
+.dia.on{background:var(--verde);color:#fff}
+.horas{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.hora{border:1.5px solid var(--borda);background:#fff;border-radius:9px;padding:9px 0;font:inherit;
+  font-size:12.5px;font-weight:700;cursor:pointer;color:var(--texto)}
+.hora.on{background:var(--verde);border-color:var(--verde);color:#fff}
+.nota{font-size:11.5px;color:var(--texto2);background:#FFF7ED;border:1px solid #FED7AA;color:#9A3412;
+  border-radius:10px;padding:10px;margin-top:12px;line-height:1.5}
+
+/* ---------- entrega ---------- */
+.modo{display:flex;gap:12px;align-items:center;background:#fff;border:2px solid var(--borda);
+  border-radius:14px;padding:14px;cursor:pointer;margin-bottom:10px}
+.modo.on{border-color:var(--verde);background:#F0FDF4}
+.modo .ic{font-size:25px;flex:0 0 32px;text-align:center}
+.modo b{font-size:14.5px;display:block}
+.modo small{color:var(--texto2);font-size:12px}
+.modo .v{font-weight:800;color:var(--verde);font-size:13.5px}
+
+/* ---------- carrinho / resumo ---------- */
+.item{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid #F3F4F6}
+.item:last-child{border-bottom:0}
+.item img{width:46px;height:46px;border-radius:9px;object-fit:cover;flex:0 0 46px}
+.item .n{font-size:13px;font-weight:700;line-height:1.3}
+.item .o{font-size:11px;color:var(--texto2);font-style:italic;margin-top:3px}
+.item .p{font-weight:800;font-size:13px;white-space:nowrap}
+.linha{display:flex;justify-content:space-between;padding:7px 0;font-size:13.5px}
+.linha .l{color:var(--texto2)}
+.linha.tot{border-top:1px solid var(--borda);margin-top:6px;padding-top:11px;font-size:16px;font-weight:900}
+.linha.tot .l{color:var(--texto)}
+.alerta{display:flex;gap:9px;background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;
+  border-radius:11px;padding:11px;font-size:12.5px;margin:10px 0;line-height:1.5}
+.alerta b{display:block;margin-bottom:2px}
+
+/* ---------- pagamento ---------- */
+.pag{display:flex;gap:12px;align-items:center;background:#fff;border:2px solid var(--borda);
+  border-radius:13px;padding:14px;cursor:pointer;margin-bottom:9px;width:100%;text-align:left;font:inherit;color:var(--texto)}
+.pag.on{border-color:var(--verde)}
+.pag b{font-size:14px;display:block}
+.pag small{color:var(--texto2);font-size:11.5px}
+.pag .ic{margin-left:auto;font-size:19px;opacity:.55}
+
+/* ---------- estados da encomenda ---------- */
+.passo-e{display:flex;gap:13px;padding:14px 0;position:relative}
+.passo-e:not(:last-child)::before{content:"";position:absolute;left:15px;top:44px;bottom:-4px;width:2px;background:var(--borda)}
+.passo-e.feito:not(:last-child)::before{background:var(--verde)}
+.bola{width:32px;height:32px;border-radius:50%;background:#E5E7EB;color:#9CA3AF;flex:0 0 32px;
+  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;z-index:2}
+.passo-e.feito .bola{background:var(--verde);color:#fff}
+.passo-e.agora .bola{background:var(--laranja);color:#fff;animation:bate 1.6s ease-in-out infinite}
+@keyframes bate{0%,100%{box-shadow:0 0 0 0 rgba(249,115,22,.5)}50%{box-shadow:0 0 0 9px rgba(249,115,22,0)}}
+.passo-e b{font-size:14px;display:block}
+.passo-e small{font-size:12px;color:var(--texto2);display:block;margin-top:2px;line-height:1.45}
+.passo-e.futuro b,.passo-e.futuro small{color:var(--cinza)}
+
+/* ---------- folha de bloqueio ---------- */
+.folha{position:absolute;inset:0;background:rgba(8,14,10,.6);display:none;align-items:flex-end;z-index:90;border-radius:31px}
+.folha.on{display:flex}
+.folha-cx{background:#fff;width:100%;border-radius:22px 22px 0 0;padding:24px 18px calc(20px + env(safe-area-inset-bottom));
+  animation:sobe .28s cubic-bezier(.2,.8,.3,1);text-align:center;color:var(--texto)}
+@keyframes sobe{from{transform:translateY(100%)}to{transform:none}}
+.folha-cx .ic{font-size:40px;margin-bottom:8px}
+.folha-cx h3{font-size:18px;font-weight:900;margin-bottom:8px}
+.folha-cx p{font-size:13.5px;color:var(--texto2);margin-bottom:15px;line-height:1.55}
+
+/* ---------- barra inferior ---------- */
+.acoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.acao{background:transparent;border:1px solid rgba(255,255,255,.26);color:rgba(255,255,255,.85);
+  border-radius:999px;padding:10px 20px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none}
+.acao:hover{background:rgba(255,255,255,.09)}
+.acao.forte{background:#7DE0A4;border-color:#7DE0A4;color:#0B1F13;font-weight:800}
+.rodape-nota{margin-top:22px;max-width:560px;text-align:center;font-size:11.5px;
+  color:rgba(255,255,255,.38);line-height:1.7}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <span class="olá">Pré-estreia</span>
+  <h1>A tua loja dentro da Bora App</h1>
+  <p>Keli, isto é o percurso que um cliente teu vai fazer — do primeiro toque até ao pagamento.
+     Carrega e experimenta. Nada aqui cobra dinheiro.</p>
+</div>
+
+<div class="passos" id="passos"></div>
+
+<div class="telemovel">
+  <div class="ecra" id="ecra">
+    <div class="entalhe"></div>
+
+    <!-- 1 · ECRÃ INICIAL REAL DA APP -->
+    <div class="vista on" data-v="inicio">
+      <div class="rolo">
+        <div class="real">
+          <span class="marca-real">ecrã real da app</span>
+          <img id="img-inicio" src="img/ecra-inicio.webp" onload="centraFestas()"
+               alt="Ecrã inicial da Bora App com as categorias">
+          <button class="tile-festas" onclick="ir('pessoas')" aria-label="Categoria Festas">
+            <img src="img/tile-festas.webp" alt="">
+            <span class="véu"></span>
+            <span class="novo">NOVO</span>
+            <span class="txt">Festas</span>
+          </button>
+          <div class="dica"><span>👆 Toca em <b style="color:#FDBA74">Festas</b></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 · PARA QUANTAS PESSOAS -->
+    <div class="vista" data-v="pessoas">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('inicio')">‹</button><h2>🎉 Festas</h2></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="cartao">
+          <b style="font-size:16px">Para quantas pessoas?</b>
+          <p class="ajuda">Ajuda-nos a sugerir a quantidade certa. Podes saltar e decidir depois.</p>
+          <div class="chips" style="margin-top:13px" id="chips-pessoas"></div>
+        </div>
+        <div class="alerta" id="dica-pessoas" style="display:none">
+          <span>💡</span><span id="dica-pessoas-txt"></span>
+        </div>
+      </div></div>
+      <div class="rodape">
+        <button class="btn btn-v" onclick="ir('festas')">Continuar</button>
+        <button class="btn btn-c" onclick="pessoas=null;pintaPessoas();ir('festas')">Saltar este passo</button>
+      </div>
+    </div>
+
+    <!-- 3 · LOJAS DA CATEGORIA FESTAS -->
+    <div class="vista" data-v="festas">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('pessoas')">‹</button><h2>🎉 Festas</h2></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <p style="font-size:12.5px;color:var(--texto2);margin-bottom:11px" id="festas-sub">
+          Salgados, doces e bolos por encomenda na Guarda.
+        </p>
+        <div class="loja-cartao" onclick="ir('loja')">
+          <img class="capa" src="img/ecra-loja-menu.webp" alt="" style="object-position:0 -160px">
+          <div class="loja-linha">
+            <img class="av" src="img/logo-loja.webp" alt="Logótipo Sabores do Brasil">
+            <div style="flex:1;min-width:0">
+              <div class="loja-nome">Sabores do Brasil</div>
+              <div class="loja-meta"><span>Keli Barbosa</span><span>·</span><span>Guarda</span></div>
+              <div style="margin-top:5px">
+                <span class="selo verde">Nova na Bora</span>
+                <span class="selo laranja">Encomenda 48h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:11.5px;color:var(--texto2);text-align:center;margin-top:14px">
+          Mais casas de festa a caminho da Guarda.
+        </p>
+      </div></div>
+    </div>
+
+    <!-- 4 · LOJA -->
+    <div class="vista" data-v="loja">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('festas')">‹</button><h2>Sabores do Brasil</h2></div>
+      </div>
+      <div class="faixa-breve">⏳ Encomenda com <b>48 horas</b> de antecedência</div>
+      <div class="rolo">
+        <img src="img/ecra-loja-menu.webp" alt="" style="width:100%;height:118px;object-fit:cover;object-position:0 -155px">
+        <div class="corpo" style="margin-top:-26px;background:var(--fundo);border-radius:18px 18px 0 0;position:relative">
+          <img src="img/logo-loja.webp" alt="" style="width:56px;height:56px;border-radius:14px;border:3px solid #fff;margin-top:-34px;box-shadow:0 3px 10px rgba(0,0,0,.15)">
+          <div style="font-size:18px;font-weight:900;margin-top:7px">Sabores do Brasil</div>
+          <div style="font-size:12px;color:var(--texto2);margin-top:3px">Salgados e doces brasileiros · Keli Barbosa</div>
+          <div style="margin-top:7px"><span class="selo verde">Nova na Bora</span> <span class="selo laranja">9h–20h</span></div>
+
+          <div class="sec-tit">🥟 Salgados</div>
+          <div class="prods" id="lista-salgados"></div>
+          <div class="sec-tit">🍮 Doces e Estrelas da Casa</div>
+          <div class="prods" id="lista-doces"></div>
+          <div style="height:8px"></div>
+        </div>
+      </div>
+      <div class="rodape" id="barra-loja" style="display:none">
+        <button class="btn btn-l" onclick="ir('data')">Ver carrinho · <span id="bl-total">€0,00</span></button>
+      </div>
+    </div>
+
+    <!-- 5 · FICHA DE PRODUTO -->
+    <div class="vista" data-v="produto">
+      <div class="rolo">
+        <div style="position:relative">
+          <img class="p-capa" id="pr-img" alt="" hidden>
+          <button class="volta" style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,.45)" onclick="ir('loja')">‹</button>
+        </div>
+        <div style="background:#fff;padding:15px 16px">
+          <div style="font-size:19px;font-weight:900" id="pr-nome"></div>
+          <div style="font-size:13px;color:var(--texto2);margin-top:6px" id="pr-desc"></div>
+          <div style="font-size:11.5px;color:var(--cinza);font-style:italic;margin-top:8px">
+            Consulte o estabelecimento para informações sobre alergénios.
+          </div>
+        </div>
+        <div class="corpo">
+          <div class="grupo" id="pr-sabores-cx">
+            <div class="grupo-cab">
+              <div><b>Sabores</b><div class="escolhe" id="pr-escolhe"></div></div>
+              <span class="obrig" id="pr-obrig">Obrigatório</span>
+            </div>
+            <div class="contagem" id="pr-contagem"></div>
+            <div id="pr-sabores"></div>
+          </div>
+
+          <div class="grupo">
+            <b style="font-size:14.5px">Quantidade</b>
+            <div class="qtd">
+              <button onclick="mudaQtd(-1)">−</button><b id="pr-qtd">1</b><button onclick="mudaQtd(1)">+</button>
+            </div>
+          </div>
+
+          <div class="grupo">
+            <b style="font-size:14.5px">Observações</b>
+            <div class="escolhe" style="margin:3px 0 9px">
+              Recheio, nome no bolo, alergias, tema da festa — escreve tudo aqui.
+            </div>
+            <textarea id="pr-obs" rows="3" maxlength="300"
+              placeholder="Ex.: metade coxinha, metade rissol. No bolo escrever «Parabéns Mariana». Uma pessoa é alérgica a amendoim."
+              oninput="document.getElementById('pr-cont').textContent=this.value.length+'/300'"></textarea>
+            <div class="contador" id="pr-cont">0/300</div>
+
+            <div class="anexo" id="pr-anexo" onclick="anexar()">
+              <span class="ic" id="pr-anexo-ic">📎</span>
+              <div><b id="pr-anexo-t">Anexar foto de inspiração</b>
+                   <small id="pr-anexo-s">Uma foto do bolo ou da mesa que imaginas</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rodape">
+        <button class="btn btn-l" id="pr-add" onclick="adicionar()">
+          Adicionar ao carrinho · <span id="pr-sub">€0,00</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 6 · DATA E HORA -->
+    <div class="vista" data-v="data">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('loja')">‹</button>
+          <div style="flex:1;min-width:0"><h2>Quando queres?</h2>
+            <div style="font-size:11.5px;opacity:.85">Aviso prévio de 48 horas</div></div></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="cartao">
+          <div class="mes" id="cal-mes"></div>
+          <div class="cal" id="cal"></div>
+        </div>
+        <div class="cartao">
+          <b style="font-size:14.5px">Hora</b>
+          <div class="escolhe" style="margin-top:3px">A loja está aberta das 9h às 20h, todos os dias.</div>
+          <div class="horas" id="horas"></div>
+        </div>
+        <div class="nota">⏳ Os dias riscados estão fechados porque não cumprem as
+          <b>48 horas</b> de aviso que a Keli precisa para preparar a encomenda.</div>
+      </div></div>
+      <div class="rodape">
+        <button class="btn btn-v" id="btn-data" disabled onclick="ir('entrega')">Continuar</button>
+      </div>
+    </div>
+
+    <!-- 7 · ENTREGA OU IR BUSCAR -->
+    <div class="vista" data-v="entrega">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('data')">‹</button>
+          <div style="flex:1;min-width:0"><h2>Como queres receber?</h2>
+            <div style="font-size:11.5px;opacity:.85" id="e-quando"></div></div></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="modo on" id="m-entrega" onclick="setModo('entrega')">
+          <span class="ic">🛵</span>
+          <div style="flex:1"><b>Entrega</b><small>Um estafeta leva a tua encomenda</small></div>
+          <span class="v">€2,50</span>
+        </div>
+        <div class="modo" id="m-buscar" onclick="setModo('buscar')">
+          <span class="ic">🏠</span>
+          <div style="flex:1"><b>Ir buscar</b><small>Vais buscar ao local combinado</small></div>
+          <span class="v">Grátis</span>
+        </div>
+        <div class="nota" style="background:#F8F9F8;border-color:var(--borda);color:var(--texto2)">
+          🛵 Entrega €2,50 até 4&nbsp;km, mais €0,50 por cada km acima.
+          Quem vai buscar não paga entrega nem saco.
+        </div>
+      </div></div>
+      <div class="rodape"><button class="btn btn-v" onclick="ir('resumo')">Continuar</button></div>
+    </div>
+
+    <!-- 8 · RESUMO -->
+    <div class="vista" data-v="resumo">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('entrega')">‹</button><h2>Carrinho</h2></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="cartao" id="r-itens"></div>
+        <div id="r-coerencia"></div>
+        <div class="cartao" id="r-quando"></div>
+        <div class="cartao" id="r-contas"></div>
+        <p style="font-size:11px;color:var(--cinza);text-align:center;margin-top:10px;line-height:1.6">
+          A taxa de serviço é a taxa da Bora ao cliente. A comissão da loja não aparece aqui —
+          é acertada contigo no fecho semanal.
+        </p>
+      </div></div>
+      <div class="rodape">
+        <button class="btn btn-l" onclick="ir('pagamento')">Finalizar pedido · <span id="r-total-btn">€0,00</span></button>
+      </div>
+    </div>
+
+    <!-- 9 · PAGAMENTO -->
+    <div class="vista" data-v="pagamento">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('resumo')">‹</button><h2>Pagamento</h2></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="cartao">
+          <b style="font-size:15px">Resumo do pedido</b>
+          <div id="pg-contas" style="margin-top:9px"></div>
+        </div>
+        <div class="cartao">
+          <b style="font-size:14.5px">Nota para o estafeta (opcional)</b>
+          <textarea rows="2" maxlength="200" style="margin-top:8px"
+            placeholder="Ex.: deixar na portaria, não tocar à campainha"></textarea>
+        </div>
+        <b style="font-size:14px;display:block;margin:4px 0 10px">Escolha o método de pagamento</b>
+        <button class="pag" onclick="travar()"><div><b>Cartão (Stripe)</b><small>Pague com cartão de crédito ou débito.</small></div><span class="ic">💳</span></button>
+        <button class="pag" onclick="travar()"><div><b>MBWay</b><small>Receba uma notificação e confirme no MBWay.</small></div><span class="ic">📱</span></button>
+        <button class="pag" onclick="travar()"><div><b>Dinheiro</b><small>Pague na entrega.</small></div><span class="ic">💶</span></button>
+      </div></div>
+      <div class="rodape"><button class="btn btn-v" onclick="travar()">Confirmar pagamento</button></div>
+
+      <div class="folha" id="folha">
+        <div class="folha-cx">
+          <div class="ic">🔒</div>
+          <h3 id="folha-tit">Esta loja ainda não está ativa</h3>
+          <p id="folha-txt">Assim que a Keli confirmar, os pedidos começam a entrar aqui —
+             e o pagamento fica logo a funcionar.</p>
+          <button class="btn btn-v" onclick="ir('estados')">Ver o que acontece a seguir →</button>
+          <a class="btn btn-c" style="text-decoration:none" target="_blank" rel="noopener"
+             id="wa-danilo">💬 Falar com o Danilo</a>
+          <button class="btn btn-c" onclick="fecha()">Continuar a ver</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 · ESTADOS DA ENCOMENDA -->
+    <div class="vista" data-v="estados">
+      <div class="cab">
+        <div class="estado"><span>9:41</span><span>▮▮▮ 100%</span></div>
+        <div class="cab-l"><button class="volta" onclick="ir('pagamento')">‹</button>
+          <div style="flex:1;min-width:0"><h2>A tua encomenda</h2>
+            <div style="font-size:11.5px;opacity:.85">Sabores do Brasil</div></div></div>
+      </div>
+      <div class="rolo"><div class="corpo">
+        <div class="alerta" style="background:#EFF6FF;border-color:#BFDBFE;color:#1E40AF">
+          <span>ℹ️</span>
+          <span><b>Uma encomenda de festa não fica confirmada logo.</b>
+          Fica à espera de a Keli dizer que sim — é assim que trabalham as plataformas
+          sérias de catering, e protege os dois lados.</span>
+        </div>
+        <div class="cartao" style="padding:6px 14px">
+          <div class="passo-e feito"><div class="bola">✓</div>
+            <div><b>Enviada</b><small>O pedido chegou à Keli. Ainda não foi cobrado nada.</small></div></div>
+          <div class="passo-e agora"><div class="bola">⏳</div>
+            <div><b>À espera da confirmação da Keli</b>
+            <small>Ela vê a encomenda no painel dela e decide. Recebes aviso quando responder.</small></div></div>
+          <div class="passo-e futuro"><div class="bola">✓</div>
+            <div><b>Aceite</b><small>A Keli aceitou. Só aqui é que o pagamento é cobrado.</small></div></div>
+          <div class="passo-e futuro"><div class="bola">🥟</div>
+            <div><b>Encomenda pronta</b><small>Ela carrega no botão dela e um estafeta vai buscar — ou vais tu.</small></div></div>
+        </div>
+        <div class="cartao" style="margin-top:12px">
+          <b style="font-size:14px">O botão é teu, Keli</b>
+          <p class="ajuda">No teu painel carregas em <b>Aceitar</b> e depois em
+          <b>Encomenda pronta</b>. Sem isso, nada avança. Ninguém te obriga a aceitar uma encomenda.</p>
+        </div>
+      </div></div>
+      <div class="rodape">
+        <button class="btn btn-v" onclick="reiniciar()">↺ Começar de novo</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="acoes">
+  <button class="acao" onclick="reiniciar()">↺ Começar de novo</button>
+  <a class="acao forte" href="https://sabores-do-brasil.pages.dev/">Ver o site da Sabores do Brasil</a>
+  <a class="acao" id="wa-danilo-2" target="_blank" rel="noopener">💬 Falar com o Danilo</a>
+</div>
+
+<p class="rodape-nota">
+  O ecrã inicial é uma captura real da Bora App. Os restantes ecrãs estão desenhados
+  com o mesmo sistema visual da app e com os preços verdadeiros da base de dados.
+  A categoria Festas ainda está por construir dentro da app — é isto que ela vai ser.
+</p>
+
+<script>
+/* ---------- produtos: nome, preço e foto vêm da base do Bora ---------- */
+var PRODUTOS = [
+  { id:"cento",   sec:"S", nome:"Cento de Salgados (até 2 sabores)", preco:47.25, img:"img/p-cento.webp",
+    desc:"Sabores à escolha: coxinha, quibe, rissóis de carne, enroladinho de salsinha, bolinha de queijo.",
+    sabores:2, unidades:100 },
+  { id:"grandes", sec:"S", nome:"Salgados Grandes", preco:2.10, img:"img/p-grandes.webp",
+    desc:"Salgado tamanho grande.", sabores:1, unidades:1 },
+  { id:"unidade", sec:"S", nome:"Salgados Variados (unidade)", preco:0.53, img:"img/p-variados.webp",
+    desc:"Sabores à escolha: coxinha, quibe, rissóis de carne, enroladinho de salsinha, bolinha de queijo.",
+    sabores:1, unidades:1 },
+  { id:"bolo",    sec:"D", nome:"Bolo de Cenoura", preco:12.60, img:"img/p-bolo.webp",
+    desc:"Com cobertura de brigadeiro.", sabores:0, unidades:0 },
+  { id:"pudim",   sec:"D", nome:"Pudim de Leite", preco:10.50, img:"img/p-pudim.webp",
+    desc:"Pudim de leite tradicional.", sabores:0, unidades:0 },
+  { id:"docinho", sec:"D", nome:"Brigadeiro ou Beijinho de Coco", preco:1.05, img:"img/p-docinho.webp",
+    desc:"Docinho tamanho festa. Indica o sabor nas observações.", sabores:0, unidades:1 }
+];
+var SABORES = ["Coxinha","Quibe","Rissóis de carne","Enroladinho de salsinha","Bolinha de queijo"];
+
+function eur(v){ return "€" + v.toFixed(2).replace(".", ","); }
+
+document.getElementById("wa-danilo").href =
+  "https://wa.me/" + WA_DANILO + "?text=" +
+  encodeURIComponent("Olá Danilo! Sou a Keli do Sabores do Brasil. Vi a demonstração e quero falar sobre entrar na Bora.");
+document.getElementById("wa-danilo-2").href = document.getElementById("wa-danilo").href;
+
+/* ---------- estado ---------- */
+var vista="inicio", carrinho=[], modo="entrega", diaSel=null, horaSel=null,
+    pessoas=null, atual=null, qtd=1, saboresSel=[], temFoto=false;
+
+var PASSOS=[["inicio","Início"],["pessoas","Pessoas"],["festas","Festas"],["loja","Loja"],
+            ["produto","Produto"],["data","Data"],["entrega","Entrega"],["resumo","Resumo"],
+            ["pagamento","Pagamento"],["estados","Estados"]];
+document.getElementById("passos").innerHTML =
+  PASSOS.map(function(p){ return '<span class="passo" data-p="'+p[0]+'">'+p[1]+'</span>'; }).join("");
+
+/* leva a vista até ao ladrilho Festas — só depois de a imagem ter medidas reais */
+function centraFestas(){
+  var r=document.querySelector('.vista[data-v="inicio"] .rolo');
+  var t=document.querySelector(".tile-festas");
+  if(!r||!t) return;
+  requestAnimationFrame(function(){
+    var alvo = t.offsetTop + t.offsetHeight/2 - r.clientHeight*0.58;
+    r.scrollTop = Math.max(0, alvo);
+  });
+}
+
+function ir(v){
+  vista=v;
+  document.querySelectorAll(".vista").forEach(function(e){ e.classList.toggle("on", e.dataset.v===v); });
+  var r=document.querySelector('.vista[data-v="'+v+'"] .rolo'); if(r) r.scrollTop=0;
+  if(v==="inicio") centraFestas();
+  document.querySelectorAll(".passo").forEach(function(e){ e.classList.toggle("on", e.dataset.p===v); });
+  if(v==="resumo") pintaResumo();
+  if(v==="entrega") document.getElementById("e-quando").textContent =
+      (diaSel&&horaSel) ? diaSel+" às "+horaSel : "Escolhe como recebes";
+  if(v==="pagamento") pintaPagamento();
+  fecha();
+}
+
+/* ---------- pessoas ---------- */
+var OPCOES_PESSOAS=[10,20,30,50,100];
+function pintaPessoas(){
+  document.getElementById("chips-pessoas").innerHTML = OPCOES_PESSOAS.map(function(n){
+    return '<button class="chip'+(pessoas===n?" on":"")+'" onclick="escolhePessoas('+n+')">'+n+'</button>';
+  }).join("");
+  var cx=document.getElementById("dica-pessoas");
+  if(pessoas){
+    cx.style.display="flex";
+    document.getElementById("dica-pessoas-txt").innerHTML =
+      "Para <b>"+pessoas+" pessoas</b> costuma contar-se 4 a 6 salgados por pessoa — cerca de <b>"+
+      (pessoas*5)+" salgados</b>. Vamos lembrar-te disto no resumo.";
+  } else { cx.style.display="none"; }
+  document.getElementById("festas-sub").textContent = pessoas
+    ? "Festa para "+pessoas+" pessoas · Guarda"
+    : "Salgados, doces e bolos por encomenda na Guarda.";
+}
+function escolhePessoas(n){ pessoas = (pessoas===n?null:n); pintaPessoas(); }
+pintaPessoas();
+
+/* ---------- lista da loja ---------- */
+(function(){
+  function cartao(p){
+    return '<div class="prod" onclick="abrir(\''+p.id+'\')">'+
+      '<img src="'+p.img+'" alt="'+p.nome+'">'+
+      '<div class="info"><div class="n">'+p.nome+'</div>'+
+      '<div class="base"><span class="p">'+eur(p.preco)+'</span>'+
+      '<span class="mais">+</span></div></div></div>';
+  }
+  document.getElementById("lista-salgados").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec==="S";}).map(cartao).join("");
+  document.getElementById("lista-doces").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec==="D";}).map(cartao).join("");
+})();
+
+function acha(id){ for(var i=0;i<PRODUTOS.length;i++) if(PRODUTOS[i].id===id) return PRODUTOS[i]; }
+
+function abrir(id){
+  atual=acha(id); qtd=1; saboresSel=[]; temFoto=false;
+  var cap=document.getElementById("pr-img"); cap.src=atual.img; cap.hidden=false;
+  document.getElementById("pr-nome").textContent=atual.nome;
+  document.getElementById("pr-desc").textContent=atual.desc;
+  document.getElementById("pr-obs").value="";
+  document.getElementById("pr-cont").textContent="0/300";
+  document.getElementById("pr-qtd").textContent="1";
+  var an=document.getElementById("pr-anexo");
+  an.classList.remove("on");
+  document.getElementById("pr-anexo-ic").textContent="📎";
+  document.getElementById("pr-anexo-t").textContent="Anexar foto de inspiração";
+  document.getElementById("pr-anexo-s").textContent="Uma foto do bolo ou da mesa que imaginas";
+  var cx=document.getElementById("pr-sabores-cx");
+  cx.style.display = atual.sabores>0 ? "block" : "none";
+  if(atual.sabores>0){
+    document.getElementById("pr-escolhe").textContent =
+      atual.sabores===1 ? "Escolhe 1" : "Escolhe até "+atual.sabores;
+    document.getElementById("pr-sabores").innerHTML = SABORES.map(function(s,i){
+      return '<div class="opcao" onclick="tocaSabor(this,'+i+')"><span class="radio"></span><span>'+s+'</span></div>';
+    }).join("");
+    contaSabores();
+  }
+  actualiza();
+  ir("produto");
+}
+function tocaSabor(el,i){
+  var s=SABORES[i], k=saboresSel.indexOf(s);
+  if(k>=0){ saboresSel.splice(k,1); el.classList.remove("on"); }
+  else{
+    if(saboresSel.length>=atual.sabores){
+      var fora=saboresSel.shift();
+      document.querySelectorAll("#pr-sabores .opcao").forEach(function(o){
+        if(o.textContent.trim()===fora) o.classList.remove("on");
+      });
+    }
+    saboresSel.push(s); el.classList.add("on");
+  }
+  contaSabores(); actualiza();
+}
+function contaSabores(){
+  document.getElementById("pr-contagem").textContent =
+    "Escolheste "+saboresSel.length+" de "+atual.sabores;
+}
+function mudaQtd(d){ qtd=Math.max(1,qtd+d); document.getElementById("pr-qtd").textContent=qtd; actualiza(); }
+function anexar(){
+  temFoto=!temFoto;
+  var an=document.getElementById("pr-anexo");
+  an.classList.toggle("on",temFoto);
+  document.getElementById("pr-anexo-ic").textContent = temFoto?"🖼️":"📎";
+  document.getElementById("pr-anexo-t").textContent = temFoto?"Foto anexada":"Anexar foto de inspiração";
+  document.getElementById("pr-anexo-s").textContent = temFoto
+    ? "bolo-da-mariana.jpg · a Keli vê esta foto"
+    : "Uma foto do bolo ou da mesa que imaginas";
+}
+/* o preço acompanha a escolha, ao vivo */
+function precoAtual(){ return atual.preco * qtd; }
+function actualiza(){
+  document.getElementById("pr-sub").textContent = eur(precoAtual());
+  var falta = atual.sabores>0 && saboresSel.length===0;
+  document.getElementById("pr-add").disabled = falta;
+  document.getElementById("pr-add").firstChild.textContent =
+    falta ? "Escolhe o sabor para continuar · " : "Adicionar ao carrinho · ";
+}
+function adicionar(){
+  var obs=document.getElementById("pr-obs").value.trim(), notas=[];
+  if(saboresSel.length) notas.push("Sabor: "+saboresSel.join(" + "));
+  if(obs) notas.push(obs);
+  if(temFoto) notas.push("📎 foto de inspiração anexada");
+  carrinho.push({ nome:atual.nome, preco:atual.preco, qtd:qtd, img:atual.img,
+                  obs:notas.join(" · "), unidades:atual.unidades*qtd });
+  document.getElementById("barra-loja").style.display="block";
+  document.getElementById("bl-total").textContent=eur(subtotal());
+  ir("loja");
+}
+
+/* ---------- contas (valores lidos da base) ---------- */
+function subtotal(){ var s=0; for(var i=0;i<carrinho.length;i++) s+=carrinho[i].preco*carrinho[i].qtd; return s; }
+function taxaEntrega(){ return modo!=="entrega" ? 0 :
+  TAXAS.entregaBase + Math.max(0, DIST_KM-TAXAS.kmBase)*TAXAS.porKm; }
+function taxaServico(){ return subtotal()*TAXAS.servicoPct; }
+function taxaSaco(){ return modo==="entrega" ? TAXAS.saco : 0; }
+function total(){ return subtotal()+taxaEntrega()+taxaServico()+taxaSaco(); }
+function unidades(){ var u=0; for(var i=0;i<carrinho.length;i++) u+=carrinho[i].unidades; return u; }
+
+function setModo(m){
+  modo=m;
+  document.getElementById("m-entrega").classList.toggle("on",m==="entrega");
+  document.getElementById("m-buscar").classList.toggle("on",m==="buscar");
+}
+
+function linhasContas(){
+  var h='<div class="linha"><span class="l">Subtotal</span><span>'+eur(subtotal())+'</span></div>';
+  if(modo==="entrega"){
+    h+='<div class="linha"><span class="l">Entrega</span><span>'+eur(taxaEntrega())+'</span></div>';
+    h+='<div class="linha"><span class="l">Saco para viagem</span><span>'+eur(taxaSaco())+'</span></div>';
+  } else {
+    h+='<div class="linha"><span class="l">Ir buscar</span><span>Grátis</span></div>';
+  }
+  h+='<div class="linha"><span class="l">Taxa de serviço</span><span>'+eur(taxaServico())+'</span></div>';
+  h+='<div class="linha tot"><span class="l">Total a pagar</span><span>'+eur(total())+'</span></div>';
+  return h;
+}
+
+function pintaResumo(){
+  if(!carrinho.length){
+    document.getElementById("r-itens").innerHTML =
+      '<p style="text-align:center;color:var(--texto2);padding:16px 0">O carrinho está vazio.</p>';
+    document.getElementById("r-contas").innerHTML="";
+    document.getElementById("r-quando").innerHTML="";
+    document.getElementById("r-coerencia").innerHTML="";
+    document.getElementById("r-total-btn").textContent=eur(0);
+    return;
+  }
+  document.getElementById("r-itens").innerHTML = carrinho.map(function(it){
+    return '<div class="item"><img src="'+it.img+'" alt="">'+
+      '<div style="flex:1;min-width:0"><div class="n">'+it.qtd+'× '+it.nome+'</div>'+
+      (it.obs?'<div class="o">'+it.obs+'</div>':'')+'</div>'+
+      '<div class="p">'+eur(it.preco*it.qtd)+'</div></div>';
+  }).join("");
+
+  /* aviso de coerência: encomendou pouco para o número de pessoas? */
+  var c=document.getElementById("r-coerencia"); c.innerHTML="";
+  if(pessoas){
+    var precisa=pessoas*4, tem=unidades();
+    if(tem<precisa){
+      c.innerHTML='<div class="alerta"><span>⚠️</span><span><b>Talvez seja pouco.</b>'+
+        'Para '+pessoas+' pessoas costuma contar-se 4 a 6 salgados por pessoa — cerca de <b>'+
+        (pessoas*5)+'</b>. Tens <b>'+tem+'</b>. Podes continuar na mesma.</span></div>';
+    } else {
+      c.innerHTML='<div class="alerta" style="background:#F0FDF4;border-color:#BBF7D0;color:#166534">'+
+        '<span>✅</span><span><b>Dá bem para '+pessoas+' pessoas.</b> Tens '+tem+' salgados.</span></div>';
+    }
+  }
+  document.getElementById("r-quando").innerHTML =
+    '<div style="display:flex;gap:10px;align-items:center"><span style="font-size:20px">📅</span>'+
+    '<div><b style="font-size:13.5px">'+(diaSel||"—")+' às '+(horaSel||"—")+'</b>'+
+    '<div style="font-size:11.5px;color:var(--texto2)">'+
+    (modo==="entrega"?"Entrega na Guarda":"Vais buscar")+'</div></div></div>';
+  document.getElementById("r-contas").innerHTML = linhasContas();
+  document.getElementById("r-total-btn").textContent = eur(total());
+  document.getElementById("bl-total").textContent = eur(subtotal());
+}
+function pintaPagamento(){ document.getElementById("pg-contas").innerHTML = linhasContas(); }
+
+/* ---------- calendário: dias que não cumprem as 48h ficam riscados ---------- */
+var MESES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto",
+           "setembro","outubro","novembro","dezembro"];
+var HOJE=new Date();
+var MIN=new Date(HOJE.getFullYear(),HOJE.getMonth(),HOJE.getDate());
+MIN.setHours(MIN.getHours()+AVISO_HORAS);
+var calAno=HOJE.getFullYear(), calMes=HOJE.getMonth();
+
+function desenhaCal(ano,mes){
+  calAno=ano; calMes=mes;
+  var podeAtras=(ano>MIN.getFullYear())||(ano===MIN.getFullYear()&&mes>MIN.getMonth());
+  document.getElementById("cal-mes").innerHTML =
+    '<button class="volta" style="background:#F3F4F6;color:#111" '+(podeAtras?'':'disabled style="opacity:.25;background:#F3F4F6;color:#111"')+
+    ' onclick="mudaMes(-1)">‹</button><span>'+MESES[mes]+' de '+ano+
+    '</span><button class="volta" style="background:#F3F4F6;color:#111" onclick="mudaMes(1)">›</button>';
+  var desloca=(new Date(ano,mes,1).getDay()+6)%7, dias=new Date(ano,mes+1,0).getDate();
+  var h=["S","T","Q","Q","S","S","D"].map(function(d){return '<div class="dh">'+d+'</div>';}).join("");
+  for(var i=0;i<desloca;i++) h+='<div></div>';
+  for(var d=1;d<=dias;d++){
+    var cedo=new Date(ano,mes,d,20,0,0)<MIN;
+    var sel=(diaSel===d+" de "+MESES[mes]);
+    h+='<button class="dia'+(sel?" on":"")+'" '+(cedo?"disabled":"")+
+       ' onclick="escolheDia(this,'+d+')">'+d+'</button>';
+  }
+  document.getElementById("cal").innerHTML=h;
+}
+function mudaMes(p){
+  var m=calMes+p,a=calAno;
+  if(m<0){m=11;a--;} if(m>11){m=0;a++;}
+  if(a<MIN.getFullYear()||(a===MIN.getFullYear()&&m<MIN.getMonth())) return;
+  desenhaCal(a,m);
+}
+function escolheDia(el,d){
+  document.querySelectorAll(".dia").forEach(function(x){x.classList.remove("on");});
+  el.classList.add("on"); diaSel=d+" de "+MESES[calMes]; valida();
+}
+function escolheHora(el,h){
+  document.querySelectorAll(".hora").forEach(function(x){x.classList.remove("on");});
+  el.classList.add("on"); horaSel=h; valida();
+}
+function valida(){ document.getElementById("btn-data").disabled = !(diaSel&&horaSel); }
+desenhaCal(calAno,calMes);
+document.getElementById("horas").innerHTML =
+  ["10:00","11:00","12:00","14:00","15:00","16:00","17:00","19:00"].map(function(h){
+    return '<button class="hora" data-h="'+h+'">'+h+'</button>';
+  }).join("");
+document.getElementById("horas").addEventListener("click", function(e){
+  var b=e.target.closest(".hora"); if(b) escolheHora(b,b.getAttribute("data-h"));
+});
+
+/* ---------- trava do pagamento ---------- */
+function travar(){
+  if(LOJA_ATIVA){ ir("estados"); return; }
+  document.getElementById("folha").classList.add("on");
+}
+function fecha(){ document.getElementById("folha").classList.remove("on"); }
+
+function reiniciar(){
+  carrinho=[]; modo="entrega"; diaSel=null; horaSel=null; pessoas=null; saboresSel=[]; temFoto=false;
+  document.getElementById("barra-loja").style.display="none";
+  setModo("entrega"); pintaPessoas(); desenhaCal(HOJE.getFullYear(),HOJE.getMonth());
+  document.querySelectorAll(".hora.on").forEach(function(x){x.classList.remove("on");});
+  valida(); ir("inicio");
+}
+ir("inicio");
+</script>
+</body>
+</html>
