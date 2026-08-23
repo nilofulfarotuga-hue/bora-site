@@ -34,7 +34,7 @@ STAGE_ROOT="$(mktemp -d)"
 STAGE="$STAGE_ROOT/site"
 mkdir -p "$STAGE"
 
-for f in index.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
+for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
          manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
