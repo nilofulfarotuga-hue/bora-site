@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sabores do Brasil · Keli Barbosa · Guarda</title>
+<meta name="description" content="Salgados e doces brasileiros por encomenda na Guarda. Coxinha, quibe, rissóis, brigadeiro, bolo de cenoura e pudim. Peça pelo Bora App.">
+<meta name="theme-color" content="#16A34A">
+<meta property="og:title" content="Sabores do Brasil · Keli Barbosa">
+<meta property="og:description" content="Salgados e doces brasileiros por encomenda na Guarda. No mercado há 3 anos.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+/* ══════════════════════════════════════════════════════════════════
+   ÚNICO SÍTIO A MEXER QUANDO A LOJA ABRIR
+   ──────────────────────────────────────────────────────────────────
+   LOJA_ATIVA = false  ->  "Criar conta e ficar a par — a Sabores do
+                            Brasil abre em breve"   (coming_soon)
+   LOJA_ATIVA = true   ->  "Encomendar agora"
+   ══════════════════════════════════════════════════════════════════ */
+var LOJA_ATIVA = false;
+
+var LINK_PLAY = "https://play.google.com/store/apps/details?id=pt.boraapp.bora";
+var LINK_WEB  = "https://bora-app-web.pages.dev/#/registo-cliente";
+var TXT_CTA   = LOJA_ATIVA
+  ? "Encomendar agora"
+  : "Criar conta e ficar a par — a Sabores do Brasil abre em breve";
+</script>
+
+<style>
+:root{
+  /* design system Bora */
+  --verde:#16A34A; --verde-esc:#0F7A37; --laranja:#F97316; --laranja-cl:#FB923C;
+  --fundo:#F0F2EF; --superficie:#FFFFFF; --texto:#111111; --texto2:#6B7280;
+  --borda:#E5E7EB;
+  /* acentos da marca dela */
+  --br-verde:#0A6B32; --br-amarelo:#F5C518; --creme:#F6EEE0; --creme-esc:#E7D8BE;
+  --raio:18px; --sombra:0 6px 24px rgba(16,24,20,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--fundo); color:var(--texto); line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.centro{text-align:center}
+
+/* ---------- topo / vitrine ---------- */
+.topo{
+  position:relative; overflow:hidden; padding:44px 0 54px;
+  background:
+    radial-gradient(1100px 520px at 50% -12%, rgba(245,197,24,.28), transparent 60%),
+    linear-gradient(168deg,#0A6B32 0%,#0B5C2C 52%,#08421F 100%);
+  color:#fff;
+}
+.topo::after{
+  content:""; position:absolute; left:-6%; right:-6%; bottom:-2px; height:70px;
+  background:var(--fundo); border-radius:50% 50% 0 0 / 100% 100% 0 0;
+}
+.topo .wrap{position:relative;z-index:2}
+.selo-marca{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.24);
+  padding:7px 15px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.02em;
+  backdrop-filter:blur(6px);
+}
+.logo-dela{
+  width:min(260px,66vw);margin:22px auto 18px;border-radius:24px;
+  border:3px solid rgba(255,255,255,.5);box-shadow:0 18px 44px rgba(0,0,0,.42);
+}
+h1.nome{font-size:clamp(30px,7.4vw,46px);font-weight:900;letter-spacing:-.025em;line-height:1.08}
+.assinatura{
+  font-size:clamp(15px,3.6vw,18px);font-weight:600;color:var(--br-amarelo);
+  margin-top:8px;letter-spacing:.03em;
+}
+.tagline{margin:16px auto 0;max-width:560px;font-size:clamp(15px,3.7vw,17.5px);color:rgba(255,255,255,.9)}
+.factos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.facto{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;padding:10px 16px;font-size:13.5px;font-weight:600;
+}
+.facto b{color:var(--br-amarelo);font-weight:800}
+
+/* botoes */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  border:0;border-radius:999px;padding:15px 28px;font:inherit;font-weight:700;font-size:16px;
+  cursor:pointer;text-decoration:none;transition:transform .16s ease,box-shadow .16s ease,filter .16s;
+}
+.btn:active{transform:scale(.97)}
+.btn-verde{background:var(--verde);color:#fff;box-shadow:0 10px 26px rgba(22,163,74,.3)}
+.btn-laranja{background:var(--laranja);color:#fff;box-shadow:0 10px 26px rgba(249,115,22,.32)}
+.btn-linha{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.acoes-topo{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+
+/* ---------- seccoes ---------- */
+section{padding:56px 0}
+.titulo{font-size:clamp(23px,5.4vw,33px);font-weight:900;letter-spacing:-.02em}
+.subtitulo{color:var(--texto2);margin-top:10px;font-size:16px;max-width:620px}
+.cabeca{margin-bottom:30px}
+.cabeca.centro .subtitulo{margin-left:auto;margin-right:auto}
+.etiqueta{
+  display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--verde);background:rgba(22,163,74,.1);padding:6px 13px;border-radius:999px;margin-bottom:12px;
+}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.foto{
+  position:relative;border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);
+  background:var(--creme);aspect-ratio:4/3;
+}
+.foto.alta{aspect-ratio:3/4}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.foto:hover img{transform:scale(1.05)}
+.foto figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;color:#fff;font-size:13.5px;font-weight:600;
+  background:linear-gradient(transparent,rgba(0,0,0,.72));
+}
+
+/* cardapio */
+.menu-bloco{margin-bottom:34px}
+.menu-titulo{
+  display:flex;align-items:center;gap:12px;font-size:19px;font-weight:800;margin-bottom:6px;
+}
+.menu-titulo::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--creme-esc),transparent)}
+.menu-nota{font-size:14px;color:var(--texto2);margin-bottom:16px}
+.sabores{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.sabor{
+  background:#fff;border:1px solid var(--borda);border-radius:999px;padding:8px 15px;
+  font-size:13.5px;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+.sabor span{color:var(--laranja)}
+.itens{display:grid;gap:12px}
+.item{
+  display:flex;gap:14px;align-items:center;background:var(--superficie);
+  border:1px solid var(--borda);border-radius:var(--raio);padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+.item-foto{width:88px;height:88px;border-radius:13px;object-fit:cover;flex:0 0 88px;background:var(--creme)}
+.item-sem{
+  width:88px;height:88px;border-radius:13px;flex:0 0 88px;
+  background:repeating-linear-gradient(45deg,var(--creme),var(--creme) 9px,var(--creme-esc) 9px,var(--creme-esc) 18px);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:10px;font-weight:700;color:#8A7A5E;padding:6px;line-height:1.3;
+}
+.item-txt{flex:1;min-width:0}
+.item-nome{font-weight:700;font-size:16px}
+.item-desc{font-size:13.5px;color:var(--texto2);margin-top:4px}
+.item-preco{font-weight:900;font-size:18px;color:var(--verde);white-space:nowrap}
+
+/* ---------- demo ---------- */
+.demo{background:linear-gradient(180deg,#0E1512 0%,#131C18 100%);color:#fff}
+.demo .titulo{color:#fff}
+.demo .subtitulo{color:rgba(255,255,255,.62)}
+.demo .etiqueta{color:#7DE0A4;background:rgba(125,224,164,.13)}
+.palco{display:flex;flex-direction:column;align-items:center;gap:22px}
+.telemovel{
+  width:min(360px,92vw); background:#0B0B0C; border-radius:42px; padding:11px;
+  box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 2px #2A2A2E inset;
+  position:relative;
+}
+.ecra{
+  position:relative;border-radius:32px;overflow:hidden;background:var(--fundo);
+  height:min(690px,76vh);min-height:560px;display:flex;flex-direction:column;
+  /* o ecrã do telemóvel é claro: fixa a cor de texto da app, senão herda o
+     branco da secção .demo e fica texto branco sobre fundo branco */
+  color:var(--texto);
+}
+.entalhe{
+  position:absolute;top:10px;left:50%;transform:translateX(-50%);
+  width:104px;height:22px;background:#0B0B0C;border-radius:0 0 14px 14px;z-index:60;
+}
+.vista{display:none;flex-direction:column;height:100%;animation:entra .26s ease}
+.vista.on{display:flex}
+@keyframes entra{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.rolo{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.rolo::-webkit-scrollbar{width:0}
+
+/* barra de estado + cabecalhos da app */
+.estado{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  padding:14px 20px 6px;font-size:12px;font-weight:700;color:#fff;height:38px;
+}
+.estado.escuro{color:var(--texto)}
+.cab-verde{background:linear-gradient(150deg,#16A34A,#0F7A37);color:#fff;padding:0 0 18px}
+.cab-linha{display:flex;align-items:center;gap:12px;padding:4px 18px 0}
+.cab-tit{font-size:19px;font-weight:800}
+.cab-sub{font-size:13px;opacity:.85}
+.voltar{
+  width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);border:0;color:#fff;
+  font-size:19px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 34px;
+}
+.voltar.escuro{background:rgba(0,0,0,.07);color:var(--texto)}
+.morada{
+  display:flex;align-items:center;gap:7px;margin:12px 18px 0;background:rgba(255,255,255,.16);
+  border-radius:12px;padding:9px 13px;font-size:13px;font-weight:600;
+}
+.corpo{padding:18px}
+
+/* grelha de categorias */
+.grelha{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.cat{
+  border:0;border-radius:16px;padding:12px 6px 10px;color:#fff;cursor:pointer;font:inherit;
+  display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;
+  min-height:92px;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.13);
+  transition:transform .16s ease;
+}
+.cat:active{transform:scale(.95)}
+.cat .ic{font-size:23px;line-height:1}
+.cat .tx{font-size:11.5px;font-weight:700;text-align:center;line-height:1.22}
+.cat.festas{
+  grid-column:span 3;flex-direction:row;justify-content:flex-start;gap:14px;padding:15px 17px;
+  background:linear-gradient(135deg,#F97316,#FB923C);
+  box-shadow:0 8px 22px rgba(249,115,22,.44);animation:pisca 2.4s ease-in-out infinite;
+}
+@keyframes pisca{0%,100%{box-shadow:0 8px 22px rgba(249,115,22,.44)}50%{box-shadow:0 8px 30px rgba(249,115,22,.72)}}
+.cat.festas .ic{font-size:31px}
+.cat.festas .tx{font-size:16px;font-weight:800;text-align:left}
+.cat.festas .tx small{display:block;font-size:11.5px;font-weight:600;opacity:.94;margin-top:2px}
+.novo{
+  position:absolute;top:8px;right:10px;background:#fff;color:var(--laranja);
+  font-size:9.5px;font-weight:900;padding:3px 8px;border-radius:999px;letter-spacing:.06em;
+}
+.dica{
+  display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;
+  font-size:12.5px;color:var(--texto2);font-weight:600;
+}
+.dica i{animation:desce 1.3s ease-in-out infinite;font-style:normal}
+@keyframes desce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* lista de lojas */
+.loja-cartao{
+  background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--sombra);cursor:pointer;
+  border:1px solid var(--borda);transition:transform .16s;
+}
+.loja-cartao:active{transform:scale(.98)}
+.loja-capa{height:118px;width:100%;object-fit:cover}
+.loja-info{padding:13px;display:flex;gap:11px;align-items:center}
+.loja-logo{width:46px;height:46px;border-radius:12px;object-fit:cover;flex:0 0 46px;border:1px solid var(--borda)}
+.loja-nome{font-weight:800;font-size:15px}
+.loja-meta{font-size:12px;color:var(--texto2);margin-top:2px}
+.estrela{color:#F59E0B;font-weight:700}
+.emblema{
+  display:inline-block;background:rgba(22,163,74,.11);color:var(--verde);
+  font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:999px;margin-left:6px;
+}
+
+/* pagina da loja */
+.capa{position:relative;height:150px}
+.capa img{width:100%;height:100%;object-fit:cover}
+.capa .voltar{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.42);z-index:5}
+.loja-cabeca{background:#fff;padding:0 18px 16px;margin-top:-30px;position:relative;border-radius:20px 20px 0 0}
+.loja-avatar{
+  width:64px;height:64px;border-radius:17px;object-fit:cover;border:3px solid #fff;
+  box-shadow:0 4px 14px rgba(0,0,0,.16);margin-top:-26px;background:#fff;
+}
+.aviso-loja{
+  display:flex;gap:9px;align-items:flex-start;background:#FFF7ED;border:1px solid #FED7AA;
+  color:#9A3412;border-radius:12px;padding:11px 13px;font-size:12.5px;font-weight:600;margin-top:12px;
+}
+.sec-titulo{font-size:15px;font-weight:800;margin:18px 0 10px;display:flex;align-items:center;gap:9px}
+.sec-titulo::after{content:"";flex:1;height:1px;background:var(--borda)}
+.prod{
+  display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--borda);
+  border-radius:14px;padding:11px;margin-bottom:9px;cursor:pointer;transition:transform .16s,border-color .16s;
+}
+.prod:active{transform:scale(.98)}
+.prod:hover{border-color:#C9D3CC}
+.prod-img{width:66px;height:66px;border-radius:11px;object-fit:cover;flex:0 0 66px}
+.prod-sem{
+  width:66px;height:66px;border-radius:11px;flex:0 0 66px;background:var(--creme);
+  display:flex;align-items:center;justify-content:center;font-size:24px;
+}
+.prod-nome{font-weight:700;font-size:14.5px}
+.prod-desc{font-size:12px;color:var(--texto2);margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prod-preco{font-weight:900;color:var(--verde);font-size:15.5px;white-space:nowrap}
+
+/* produto aberto */
+.p-heroi{width:100%;height:190px;object-fit:cover}
+.p-heroi-sem{width:100%;height:150px;background:var(--creme);display:flex;align-items:center;justify-content:center;font-size:56px}
+.campo{margin-top:16px}
+.campo label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}
+.campo .ajuda{font-size:11.5px;color:var(--texto2);font-weight:500;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  border:1.5px solid var(--borda);background:#fff;border-radius:999px;padding:8px 14px;
+  font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;transition:.16s;
+}
+.chip.on{background:var(--verde);border-color:var(--verde);color:#fff}
+textarea,input[type=text]{
+  width:100%;border:1.5px solid var(--borda);border-radius:12px;padding:12px;
+  font:inherit;font-size:14px;resize:vertical;background:#fff;color:var(--texto);
+}
+textarea:focus,input:focus{outline:0;border-color:var(--verde)}
+.qtd{display:flex;align-items:center;gap:16px}
+.qtd button{
+  width:40px;height:40px;border-radius:12px;border:1.5px solid var(--borda);background:#fff;
+  font-size:20px;font-weight:700;cursor:pointer;color:var(--texto);
+}
+.qtd span{font-size:19px;font-weight:800;min-width:28px;text-align:center}
+.rodape-ecra{
+  padding:13px 18px calc(15px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--borda);
+}
+.btn-largo{width:100%;border:0;border-radius:14px;padding:15px;font:inherit;font-size:15.5px;font-weight:800;cursor:pointer}
+.btn-largo:disabled{opacity:.45;cursor:not-allowed}
+.btn-p{background:var(--verde);color:#fff}
+.btn-l{background:var(--laranja);color:#fff}
+
+/* calendario */
+.mes{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:800;font-size:14.5px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal .dh{font-size:10.5px;font-weight:800;color:var(--texto2);text-align:center;padding:4px 0}
+.dia{
+  aspect-ratio:1;border:1.5px solid transparent;background:#fff;border-radius:11px;font:inherit;font-size:13px;
+  font-weight:700;cursor:pointer;color:var(--texto);display:flex;align-items:center;justify-content:center;
+}
+.dia:disabled{color:#C7CDC9;background:transparent;cursor:not-allowed;font-weight:500}
+.dia.on{background:var(--verde);color:#fff}
+.dia.vazio{background:transparent;border:0;cursor:default}
+.horas{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:6px}
+.hora{
+  border:1.5px solid var(--borda);background:#fff;border-radius:10px;padding:9px 0;
+  font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;color:var(--texto);
+}
+.hora.on{background:var(--verde);border-color:var(--verde);color:#fff}
+
+/* entrega / recolha */
+.opcao{
+  display:flex;gap:13px;align-items:center;background:#fff;border:2px solid var(--borda);
+  border-radius:16px;padding:16px;cursor:pointer;margin-bottom:11px;transition:.16s;
+}
+.opcao.on{border-color:var(--verde);background:#F0FDF4}
+.opcao .oic{font-size:27px;flex:0 0 34px;text-align:center}
+.opcao b{font-size:15px;display:block}
+.opcao small{color:var(--texto2);font-size:12.5px}
+
+/* carrinho */
+.linha{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:14px}
+.linha.tot{border-top:2px solid var(--borda);margin-top:8px;padding-top:14px;font-size:18px;font-weight:900}
+.vista[data-v="carrinho"] .corpo{padding-bottom:26px}
+.linha .lbl{color:var(--texto2)}
+.linha .lbl b{color:var(--texto);font-weight:700}
+.linha.tot .lbl{color:var(--texto)}
+.cart-item{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--borda)}
+.cart-q{
+  background:var(--verde);color:#fff;border-radius:9px;min-width:27px;height:27px;
+  display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800;flex:0 0 27px;
+}
+.cart-obs{font-size:11.5px;color:var(--texto2);font-style:italic;margin-top:3px;
+  background:#F8F7F4;border-left:2px solid var(--creme-esc);padding:5px 8px;border-radius:0 6px 6px 0}
+.nota-fees{font-size:11px;color:var(--texto2);margin-top:12px;line-height:1.5;
+  background:#F8F9F8;border-radius:10px;padding:10px}
+
+/* pagamento */
+.pag{
+  display:flex;gap:13px;align-items:center;background:#fff;border:2px solid var(--borda);
+  border-radius:16px;padding:16px;cursor:pointer;margin-bottom:11px;width:100%;font:inherit;text-align:left;
+  transition:.16s;color:var(--texto);
+}
+.pag:active{transform:scale(.98)}
+.pag .pic{font-size:25px;flex:0 0 32px;text-align:center}
+.pag b{font-size:15px;display:block}
+.pag small{color:var(--texto2);font-size:12.5px}
+.cadeado{margin-left:auto;font-size:16px;opacity:.5}
+
+/* aviso final */
+.folha{
+  position:absolute;inset:0;background:rgba(8,14,10,.62);display:none;align-items:flex-end;z-index:70;
+  border-radius:32px;overflow:hidden;
+}
+.folha.on{display:flex;animation:entra .22s ease}
+.folha-cx{
+  background:#fff;width:100%;border-radius:24px 24px 0 0;padding:26px 20px calc(22px + env(safe-area-inset-bottom));
+  animation:sobe .3s cubic-bezier(.2,.8,.3,1);text-align:center;
+}
+@keyframes sobe{from{transform:translateY(100%)}to{transform:none}}
+.folha-ic{font-size:44px;margin-bottom:10px}
+.folha-cx h3{font-size:19px;font-weight:900;margin-bottom:9px}
+.folha-cx p{font-size:14px;color:var(--texto2);margin-bottom:18px;line-height:1.6}
+.folha-cx .btn-largo+.btn-largo{margin-top:9px}
+.btn-fantasma{background:#F3F4F6;color:var(--texto)}
+
+/* legenda do palco */
+.passos{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:600px}
+.passo{
+  font-size:12px;font-weight:600;color:rgba(255,255,255,.55);background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:6px 13px;transition:.2s;
+}
+.passo.on{color:#0B1F13;background:#7DE0A4;border-color:#7DE0A4;font-weight:800}
+.reiniciar{
+  background:transparent;border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.85);
+  border-radius:999px;padding:10px 22px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer;
+}
+.reiniciar:hover{background:rgba(255,255,255,.09)}
+
+/* dois destinos: Android / iPhone-computador */
+.destinos{display:grid;gap:9px;margin:4px 0 0}
+.destino{
+  display:flex;align-items:center;gap:12px;text-decoration:none;text-align:left;
+  border:1.5px solid var(--borda);background:#fff;border-radius:14px;padding:13px 15px;
+  color:var(--texto);transition:.16s;position:relative;
+}
+.destino:active{transform:scale(.98)}
+.destino .dic{font-size:22px;flex:0 0 26px;text-align:center}
+.destino b{display:block;font-size:14px;font-weight:800;line-height:1.25}
+.destino small{display:block;font-size:11.5px;color:var(--texto2);margin-top:2px}
+.destino.destaque{border-color:var(--verde);background:#F0FDF4;box-shadow:0 4px 14px rgba(22,163,74,.16)}
+.destino .teu{
+  margin-left:auto;background:var(--verde);color:#fff;font-size:9.5px;font-weight:900;
+  padding:4px 9px;border-radius:999px;letter-spacing:.06em;white-space:nowrap;flex:0 0 auto;
+}
+
+/* faixa final de chamada */
+.faixa{background:linear-gradient(165deg,#16A34A 0%,#0F7A37 60%,#0B5C2C 100%);color:#fff;padding:54px 0}
+.faixa h3{font-size:clamp(19px,4.6vw,27px);font-weight:900;letter-spacing:-.02em;max-width:660px;margin:0 auto}
+.faixa p{color:rgba(255,255,255,.82);margin-top:12px;font-size:15px;max-width:560px;margin-left:auto;margin-right:auto}
+.faixa-cx{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;padding:22px;margin-top:28px;text-align:left;
+}
+.faixa-cx .destinos{margin:0}
+@media (max-width:640px){ .faixa-cx{grid-template-columns:1fr;justify-items:center} }
+
+/* rodape */
+.rodape{background:#0B1410;color:rgba(255,255,255,.72);padding:52px 0 40px}
+.rodape-grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;align-items:center}
+.qr-cx{background:#fff;border-radius:20px;padding:18px;text-align:center;max-width:250px}
+.qr-cx img{width:100%;border-radius:8px}
+.qr-cx p{color:var(--texto);font-size:12.5px;font-weight:800;margin-top:11px}
+.qr-cx small{color:var(--texto2);font-size:11px;display:block;margin-top:3px}
+.bora-marca{width:130px;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.92}
+.rodape h4{color:#fff;font-size:17px;font-weight:800;margin-bottom:9px}
+.rodape a{color:#7DE0A4;text-decoration:none;font-weight:600}
+.rodape a:hover{text-decoration:underline}
+.credito{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:20px;
+  font-size:12px;text-align:center;color:rgba(255,255,255,.42);line-height:1.7;
+}
+
+@media (max-width:600px){
+  section{padding:42px 0}
+  .wrap{padding:0 16px}
+  .grelha{gap:9px}
+  .item-foto,.item-sem{width:72px;height:72px;flex:0 0 72px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= VITRINE ================= -->
+<header class="topo">
+  <div class="wrap centro">
+    <span class="selo-marca">🇧🇷 Guarda · Portugal</span>
+    <img class="logo-dela" data-img="logo" alt="Sabores do Brasil — logótipo">
+    <h1 class="nome">Sabores do Brasil</h1>
+    <div class="assinatura">por Keli Barbosa</div>
+    <p class="tagline">
+      Salgados e doces brasileiros feitos por encomenda. Coxinha, quibe, rissóis,
+      brigadeiro, bolo de cenoura e pudim — do jeito que se faz lá.
+    </p>
+    <div class="factos">
+      <div class="facto"><b>3 anos</b> no mercado</div>
+      <div class="facto">Encomendas para <b>festa</b></div>
+      <div class="facto">Entrega na <b>Guarda</b></div>
+    </div>
+    <div class="acoes-topo">
+      <a class="btn btn-laranja" href="#demo">
+        <span style="font-size:20px">🛵</span> Encomendar pelo Bora App
+      </a>
+      <a class="btn btn-linha" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">
+        <span style="font-size:17px">▶</span> Instalar da Google Play
+      </a>
+      <a class="btn btn-linha" href="#cardapio">Ver o cardápio</a>
+    </div>
+  </div>
+</header>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="cabeca centro">
+      <span class="etiqueta">Feito por ela</span>
+      <h2 class="titulo">Sai da cozinha dela, assim</h2>
+      <p class="subtitulo">Fotografias reais das encomendas da Keli — nada de imagens de catálogo.</p>
+    </div>
+    <div class="galeria">
+      <figure class="foto"><img data-img="hero" alt="Tabuleiros de salgados prontos para entrega" loading="lazy"><figcaption>Tabuleiros prontos a sair</figcaption></figure>
+      <figure class="foto"><img data-img="cento" alt="Muitos salgados fritos acabados de fazer" loading="lazy"><figcaption>Cento de salgados</figcaption></figure>
+      <figure class="foto alta"><img data-img="coxinhas" alt="Coxinhas alinhadas no tabuleiro" loading="lazy"><figcaption>Coxinha, a estrela da casa</figcaption></figure>
+      <figure class="foto alta"><img data-img="variados" alt="Variedade de salgados: coxinha, enroladinho e quibe" loading="lazy"><figcaption>Salgados variados</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio" style="background:var(--superficie)">
+  <div class="wrap">
+    <div class="cabeca centro">
+      <span class="etiqueta">Cardápio</span>
+      <h2 class="titulo">O que a Keli faz</h2>
+      <p class="subtitulo">Preços por encomenda. A quantidade, os sabores e a data escolhem-se no pedido, dentro da Bora App.</p>
+    </div>
+
+    <div class="menu-bloco">
+      <div class="menu-titulo">🥟 Salgados</div>
+      <p class="menu-nota">Sabores à escolha:</p>
+      <div class="sabores">
+        <span class="sabor">Coxinha</span>
+        <span class="sabor">Quibe</span>
+        <span class="sabor">Rissóis de carne</span>
+        <span class="sabor">Enroladinho de salsinha</span>
+        <span class="sabor">Bolinha de queijo</span>
+      </div>
+      <div class="itens" id="menu-salgados"></div>
+    </div>
+
+    <div class="menu-bloco">
+      <div class="menu-titulo">🍮 Doces e Estrelas da Casa</div>
+      <div class="itens" id="menu-doces"></div>
+    </div>
+
+    <div class="centro" style="margin-top:30px">
+      <a class="btn btn-verde" href="#demo">
+        <span style="font-size:20px">🛵</span> Encomendar pelo Bora App
+      </a>
+      <p style="font-size:13px;color:var(--texto2);margin-top:13px">
+        Vê aqui em baixo como vai ser o pedido, do princípio ao fim.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEMO ================= -->
+<section class="demo" id="demo">
+  <div class="wrap">
+    <div class="cabeca centro">
+      <span class="etiqueta">Pré-estreia</span>
+      <h2 class="titulo">Como vai ser no Bora App</h2>
+      <p class="subtitulo">
+        Isto é o teu lugar dentro da app, Keli. Carrega no telemóvel e percorre tudo,
+        do princípio ao fim — tal como um cliente teu vai fazer.
+      </p>
+    </div>
+
+    <div class="palco">
+      <div class="passos" id="passos"></div>
+
+      <div class="telemovel">
+        <div class="ecra" id="ecra">
+          <div class="entalhe"></div>
+
+          <!-- 1. HOME -->
+          <div class="vista on" data-v="home">
+            <div class="cab-verde">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <div>
+                  <div class="cab-tit">Olá! 👋</div>
+                  <div class="cab-sub">O que precisas hoje?</div>
+                </div>
+              </div>
+              <div class="morada">📍 Entrega em <b>Guarda</b></div>
+            </div>
+            <div class="rolo">
+              <div class="corpo">
+                <div class="grelha">
+                  <button class="cat festas" onclick="ir('festas')">
+                    <span class="novo">NOVO</span>
+                    <span class="ic">🎉</span>
+                    <span class="tx">Festas<small>Salgados, doces e bolos por encomenda</small></span>
+                  </button>
+                  <button class="cat" style="background:linear-gradient(135deg,#F97316,#FB923C)"><span class="ic">🍔</span><span class="tx">Restaurantes</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#16A34A,#22C55E)"><span class="ic">🛒</span><span class="tx">Super-<br>mercados</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#1C6EF2,#48CAE4)"><span class="ic">💊</span><span class="tx">Farmácia</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#455A64,#607D8B)"><span class="ic">🛍️</span><span class="tx">Lojas</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#4338CA,#6366F1)"><span class="ic">💇</span><span class="tx">Beleza</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#0284C7,#38BDF8)"><span class="ic">🧹</span><span class="tx">Limpeza</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#14B8A6,#2DD4BF)"><span class="ic">🤝</span><span class="tx">Favores</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#6A1B9A,#8E24AA)"><span class="ic">🍽️</span><span class="tx">Reservar<br>Mesa</span></button>
+                  <button class="cat" style="background:linear-gradient(135deg,#16A34A,#4ADE80)"><span class="ic">🚗</span><span class="tx">Bora<br>Motorista</span></button>
+                </div>
+                <div class="dica"><i>👆</i> Toca em <b style="color:var(--laranja);margin:0 3px">Festas</b> para começar</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. FESTAS -->
+          <div class="vista" data-v="festas">
+            <div class="cab-verde" style="background:linear-gradient(150deg,#F97316,#EA580C)">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <button class="voltar" onclick="ir('home')">‹</button>
+                <div><div class="cab-tit">🎉 Festas</div><div class="cab-sub">Encomendas com antecedência</div></div>
+              </div>
+            </div>
+            <div class="rolo"><div class="corpo">
+              <div class="loja-cartao" onclick="ir('loja')">
+                <img class="loja-capa" data-img="hero" alt="Salgados da Sabores do Brasil">
+                <div class="loja-info">
+                  <img class="loja-logo" data-img="logoq" alt="Logótipo Sabores do Brasil">
+                  <div style="flex:1;min-width:0">
+                    <div class="loja-nome">Sabores do Brasil <span class="emblema">Parceiro</span></div>
+                    <div class="loja-meta">Salgados e doces brasileiros · Guarda</div>
+                    <div class="loja-meta"><span class="estrela">★ Nova na Bora</span> · Encomenda com aviso prévio</div>
+                  </div>
+                </div>
+              </div>
+              <p style="font-size:12.5px;color:var(--texto2);margin-top:16px;text-align:center">
+                Mais casas de festa a caminho da Guarda.
+              </p>
+            </div></div>
+          </div>
+
+          <!-- 3. LOJA -->
+          <div class="vista" data-v="loja">
+            <div class="rolo">
+              <div class="capa">
+                <img data-img="hero" alt="Capa da loja Sabores do Brasil">
+                <button class="voltar" onclick="ir('festas')">‹</button>
+              </div>
+              <div class="loja-cabeca">
+                <img class="loja-avatar" data-img="logoq" alt="Logótipo">
+                <div style="margin-top:9px">
+                  <div style="font-size:20px;font-weight:900">Sabores do Brasil</div>
+                  <div style="font-size:12.5px;color:var(--texto2);margin-top:3px">
+                    Salgados e doces brasileiros por encomenda
+                  </div>
+                  <div style="font-size:12.5px;margin-top:7px">
+                    <span class="estrela">★ Nova</span> ·
+                    <span style="color:var(--texto2)">Guarda</span> ·
+                    <span class="emblema">Parceiro</span>
+                  </div>
+                </div>
+                <div class="aviso-loja">
+                  <span>⏳</span>
+                  <span>Encomenda com aviso prévio. Escolhes o dia e a hora no passo seguinte.</span>
+                </div>
+                <div class="sec-titulo">Salgados</div>
+                <div id="loja-salgados"></div>
+                <div class="sec-titulo">Doces e Estrelas da Casa</div>
+                <div id="loja-doces"></div>
+                <div style="height:10px"></div>
+              </div>
+            </div>
+            <div class="rodape-ecra" id="barra-carrinho" style="display:none">
+              <button class="btn-largo btn-p" onclick="ir('carrinho')">
+                Ver carrinho · <span id="bc-total">€0,00</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. PRODUTO -->
+          <div class="vista" data-v="produto">
+            <div class="rolo">
+              <div style="position:relative">
+                <div id="p-img"></div>
+                <button class="voltar" style="position:absolute;top:14px;left:14px;background:rgba(0,0,0,.42)" onclick="ir('loja')">‹</button>
+              </div>
+              <div class="corpo" style="background:#fff">
+                <div style="font-size:20px;font-weight:900" id="p-nome"></div>
+                <div style="font-size:13.5px;color:var(--texto2);margin-top:6px" id="p-desc"></div>
+                <div style="font-size:23px;font-weight:900;color:var(--verde);margin-top:11px" id="p-preco"></div>
+
+                <div class="campo" id="p-sabores-cx">
+                  <label>Sabor</label>
+                  <div class="ajuda">Escolhe os sabores. Podes detalhar tudo nas observações.</div>
+                  <div class="chips" id="p-sabores"></div>
+                </div>
+
+                <div class="campo">
+                  <label>Quantidade</label>
+                  <div class="qtd">
+                    <button onclick="mudaQtd(-1)">−</button>
+                    <span id="p-qtd">1</span>
+                    <button onclick="mudaQtd(1)">+</button>
+                  </div>
+                </div>
+
+                <div class="campo">
+                  <label>Observações</label>
+                  <div class="ajuda">Recheio, nome no bolo, alergias, tema da festa — escreve aqui tudo o que a Keli precisa de saber.</div>
+                  <textarea id="p-obs" rows="3" placeholder="Ex.: 50 coxinhas e 50 rissóis. No bolo escrever «Parabéns Mariana». Uma pessoa é alérgica a amendoim."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="rodape-ecra">
+              <button class="btn-largo btn-p" onclick="adicionar()">
+                Adicionar ao carrinho · <span id="p-sub">€0,00</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. DATA E HORA -->
+          <div class="vista" data-v="data">
+            <div class="cab-verde">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <button class="voltar" onclick="ir('carrinho')">‹</button>
+                <div><div class="cab-tit">Quando queres?</div><div class="cab-sub">Encomenda com aviso prévio</div></div>
+              </div>
+            </div>
+            <div class="rolo"><div class="corpo">
+              <div class="mes" id="cal-mes"></div>
+              <div class="cal" id="cal"></div>
+              <div class="campo">
+                <label>Hora</label>
+                <div class="horas" id="horas"></div>
+              </div>
+              <p style="font-size:11.5px;color:var(--texto2);margin-top:14px;background:#F8F9F8;padding:10px;border-radius:10px">
+                ⏳ Os dias mais próximos aparecem fechados porque a encomenda precisa de aviso prévio.
+                O prazo certinho é a Keli que define.
+              </p>
+            </div></div>
+            <div class="rodape-ecra">
+              <button class="btn-largo btn-p" id="btn-data" disabled onclick="ir('entrega')">Continuar</button>
+            </div>
+          </div>
+
+          <!-- 6. ENTREGA OU RECOLHA -->
+          <div class="vista" data-v="entrega">
+            <div class="cab-verde">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <button class="voltar" onclick="ir('data')">‹</button>
+                <div><div class="cab-tit">Como queres receber?</div><div class="cab-sub" id="e-quando"></div></div>
+              </div>
+            </div>
+            <div class="rolo"><div class="corpo">
+              <div class="opcao on" id="op-entrega" onclick="setModo('entrega')">
+                <span class="oic">🛵</span>
+                <div style="flex:1"><b>Entrega</b><small>Um estafeta leva a tua encomenda a casa</small></div>
+                <span style="font-weight:800;color:var(--verde)">€2,50</span>
+              </div>
+              <div class="opcao" id="op-recolha" onclick="setModo('recolha')">
+                <span class="oic">🏠</span>
+                <div style="flex:1"><b>Recolha</b><small>Vais buscar no local combinado</small></div>
+                <span style="font-weight:800;color:var(--verde)">Grátis</span>
+              </div>
+              <p style="font-size:11.5px;color:var(--texto2);margin-top:14px;background:#F8F9F8;padding:10px;border-radius:10px">
+                🛵 Entrega €2,50 até 4&nbsp;km, mais €0,50 por cada km acima disso.
+                Na recolha não há taxa de entrega nem saco.
+              </p>
+            </div></div>
+            <div class="rodape-ecra">
+              <button class="btn-largo btn-p" onclick="ir('carrinho')">Continuar</button>
+            </div>
+          </div>
+
+          <!-- 7. CARRINHO -->
+          <div class="vista" data-v="carrinho">
+            <div class="cab-verde">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <button class="voltar" onclick="ir('loja')">‹</button>
+                <div><div class="cab-tit">O teu carrinho</div><div class="cab-sub">Sabores do Brasil</div></div>
+              </div>
+            </div>
+            <div class="rolo"><div class="corpo">
+              <div id="c-itens"></div>
+              <div id="c-quando" style="margin-top:14px"></div>
+              <div style="margin-top:14px" id="c-contas"></div>
+              <div class="nota-fees">
+                A taxa de serviço (5%) é a taxa da Bora ao cliente. A comissão da loja
+                não aparece aqui — é acertada contigo no fecho semanal.
+              </div>
+            </div></div>
+            <div class="rodape-ecra">
+              <button class="btn-largo btn-p" onclick="irPagar()">
+                Escolher pagamento · <span id="c-total-btn">€0,00</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 8. PAGAMENTO -->
+          <div class="vista" data-v="pagamento">
+            <div class="cab-verde">
+              <div class="estado"><span>9:41</span><span>▮▮▮ 􀙇 100%</span></div>
+              <div class="cab-linha" style="margin-top:6px">
+                <button class="voltar" onclick="ir('carrinho')">‹</button>
+                <div><div class="cab-tit">Pagamento</div><div class="cab-sub" id="pg-total"></div></div>
+              </div>
+            </div>
+            <div class="rolo"><div class="corpo">
+              <button class="pag" onclick="travar()"><span class="pic">💳</span><div><b>Cartão</b><small>Visa, Mastercard</small></div><span class="cadeado">🔒</span></button>
+              <button class="pag" onclick="travar()"><span class="pic">📱</span><div><b>MB WAY</b><small>Pagas no telemóvel</small></div><span class="cadeado">🔒</span></button>
+              <button class="pag" onclick="travar()"><span class="pic">💶</span><div><b>Dinheiro</b><small>Pagas na entrega</small></div><span class="cadeado">🔒</span></button>
+              <p style="font-size:11.5px;color:var(--texto2);margin-top:14px;text-align:center">
+                Toca numa opção para veres o que acontece.
+              </p>
+            </div></div>
+            <div class="folha" id="folha">
+              <div class="folha-cx">
+                <div class="folha-ic">🔒</div>
+                <h3>Esta loja ainda não está ativa</h3>
+                <p>
+                  Assim que a Keli confirmar, os pedidos começam a entrar aqui —
+                  e o pagamento fica logo a funcionar.
+                </p>
+                <div style="font-size:12.5px;font-weight:800;text-align:left;margin-bottom:8px" data-cta-texto></div>
+                <div class="destinos" data-destinos></div>
+                <a class="btn-largo btn-fantasma" style="display:block;text-decoration:none;line-height:1.4;margin-top:10px"
+                   href="https://wa.me/351937501673?text=Ol%C3%A1%20Danilo!%20Sou%20a%20Keli%20do%20Sabores%20do%20Brasil.%20Vi%20a%20p%C3%A1gina%20e%20quero%20falar%20sobre%20entrar%20na%20Bora." target="_blank" rel="noopener">
+                  💬 Falar com o Danilo
+                </a>
+                <button class="btn-largo btn-fantasma" onclick="fechaFolha()">Continuar a ver</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="reiniciar" onclick="reiniciar()">↺ Começar de novo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAIXA FINAL ================= -->
+<section class="faixa">
+  <div class="wrap centro">
+    <h3 data-cta-texto></h3>
+    <p>Escolhe por onde entras. A app é a mesma — no telemóvel Android ou no computador.</p>
+    <div class="faixa-cx">
+      <div class="destinos" data-destinos></div>
+      <a class="qr-cx" style="text-decoration:none;display:block;flex:0 0 auto"
+         href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">
+        <img data-img="qr" alt="Código QR para instalar a Bora App na Google Play">
+        <p>Peça pelo Bora App</p>
+        <small>Aponta a câmara do telemóvel</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grelha">
+      <div>
+        <img class="bora-marca" data-img="boralogo" alt="Bora App">
+        <h4>Sabores do Brasil na Bora</h4>
+        <p style="font-size:14px;line-height:1.7">
+          Uma app só, para a Guarda inteira: comida, mercado, farmácia,
+          boleias, limpeza — e agora festas.
+        </p>
+      </div>
+      <div>
+        <h4>Sabores do Brasil</h4>
+        <p style="font-size:14px;line-height:1.9">
+          📍 Guarda, Portugal<br>
+          🥟 Salgados e doces por encomenda<br>
+          🎉 Na categoria Festas da Bora App
+        </p>
+        <p style="font-size:12px;color:rgba(255,255,255,.42);margin-top:14px">
+          Falar com a Keli —
+          <a style="color:rgba(255,255,255,.58);font-weight:500" href="https://wa.me/351937402120" target="_blank" rel="noopener">+351 937 402 120</a>
+        </p>
+      </div>
+      <div>
+        <h4>Entrar na Bora</h4>
+        <p style="font-size:14px;line-height:1.9">
+          ▶ <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">Android — Google Play</a><br>
+          💻 <a href="https://bora-app-web.pages.dev/#/registo-cliente" target="_blank" rel="noopener">iPhone ou computador</a>
+        </p>
+      </div>
+    </div>
+    <div class="credito">
+      Página feita para a Keli Barbosa pela equipa Bora · Guarda, Portugal<br>
+      As fotografias são do material dela. Preços do cardápio da casa.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- dados (exactamente como estão na base do Bora) ---------- */
+var IMG = {
+  logo:"{{logo}}", logoq:"{{logoq}}", hero:"{{hero}}", variados:"{{variados}}",
+  cento:"{{cento}}", coxinhas:"{{coxinhas}}", boralogo:"{{boralogo}}", qr:"{{qr}}"
+};
+(function(){
+  var els = document.querySelectorAll("[data-img]");
+  for (var i=0;i<els.length;i++) els[i].src = IMG[els[i].getAttribute("data-img")];
+})();
+var SABORES = ["Coxinha","Quibe","Rissóis de carne","Enroladinho de salsinha","Bolinha de queijo"];
+
+var PRODUTOS = [
+  { id:"cento", sec:"Salgados", nome:"Cento de Salgados (até 2 sabores)", preco:47.25,
+    desc:"Sabores à escolha: coxinha, quibe, rissóis de carne, enroladinho de salsinha, bolinha de queijo. Indica os 2 sabores nas observações.",
+    img:"cento", sabores:true, max:2 },
+  { id:"grandes", sec:"Salgados", nome:"Salgados Grandes", preco:2.10,
+    desc:"Salgado tamanho grande.", img:null, sabores:true, max:1, emoji:"🥟" },
+  { id:"unidade", sec:"Salgados", nome:"Salgados Variados (unidade)", preco:0.53,
+    desc:"Sabores à escolha: coxinha, quibe, rissóis de carne, enroladinho de salsinha, bolinha de queijo. Indica o sabor nas observações.",
+    img:"variados", sabores:true, max:1 },
+  { id:"bolo", sec:"Doces e Estrelas da Casa", nome:"Bolo de Cenoura", preco:12.60,
+    desc:"Com cobertura de brigadeiro.", img:null, sabores:false, emoji:"🍰" },
+  { id:"pudim", sec:"Doces e Estrelas da Casa", nome:"Pudim de Leite", preco:10.50,
+    desc:"Pudim de leite tradicional.", img:null, sabores:false, emoji:"🍮" },
+  { id:"docinho", sec:"Doces e Estrelas da Casa", nome:"Brigadeiro ou Beijinho de Coco", preco:1.05,
+    desc:"Docinho tamanho festa. Indica o sabor (brigadeiro ou beijinho) nas observações.",
+    img:null, sabores:false, emoji:"🍫" }
+];
+
+/* taxas — lidas de platform_settings do Bora */
+var TAXAS = { entregaBase:2.50, kmBase:4, porKm:0.50, servicoPct:0.05, saco:0.30 };
+var DIST_KM = 2.4;
+
+function eur(v){ return "€" + v.toFixed(2).replace(".", ","); }
+
+/* ---------- os dois destinos (Android / iPhone-computador) ---------- */
+var E_ANDROID = /android/i.test(navigator.userAgent || "");
+
+function pintaDestinos(){
+  function bloco(destaque, href, ic, tit, sub){
+    return '<a class="destino'+(destaque?" destaque":"")+'" href="'+href+'" target="_blank" rel="noopener">'+
+           '<span class="dic">'+ic+'</span>'+
+           '<span style="min-width:0"><b>'+tit+'</b><small>'+sub+'</small></span>'+
+           (destaque ? '<span class="teu">O TEU</span>' : '')+
+           '</a>';
+  }
+  var android = bloco(E_ANDROID, LINK_PLAY, "▶", "Android", "Instalar da Google Play");
+  var web = bloco(!E_ANDROID, LINK_WEB, "💻", "iPhone ou computador", "Criar conta no bora-app-web");
+  var html = E_ANDROID ? android + web : web + android;   // o sistema detectado vem primeiro
+
+  var cxs = document.querySelectorAll("[data-destinos]");
+  for (var i=0;i<cxs.length;i++) cxs[i].innerHTML = html;
+  var txts = document.querySelectorAll("[data-cta-texto]");
+  for (var j=0;j<txts.length;j++) txts[j].textContent = TXT_CTA;
+}
+pintaDestinos();
+
+/* ---------- cardápio da vitrine ---------- */
+(function(){
+  function cartao(p){
+    var foto = p.img
+      ? '<img class="item-foto" src="'+IMG[p.img]+'" alt="'+p.nome+'" loading="lazy">'
+      : '<div class="item-sem">Foto<br>em breve</div>';
+    return '<div class="item">'+foto+
+      '<div class="item-txt"><div class="item-nome">'+p.nome+'</div>'+
+      '<div class="item-desc">'+p.desc+'</div></div>'+
+      '<div class="item-preco">'+eur(p.preco)+'</div></div>';
+  }
+  document.getElementById("menu-salgados").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec==="Salgados";}).map(cartao).join("");
+  document.getElementById("menu-doces").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec!=="Salgados";}).map(cartao).join("");
+})();
+
+/* ---------- demo ---------- */
+var vista = "home", carrinho = [], modo = "entrega", diaSel = null, horaSel = null, atual = null, qtd = 1;
+var PASSOS = [
+  ["home","Início"],["festas","Festas"],["loja","Loja"],["produto","Produto"],
+  ["carrinho","Carrinho"],["data","Data"],["entrega","Entrega"],["pagamento","Pagamento"]
+];
+
+document.getElementById("passos").innerHTML = PASSOS.map(function(p){
+  return '<span class="passo" data-p="'+p[0]+'">'+p[1]+'</span>';
+}).join("");
+
+function ir(v){
+  vista = v;
+  var todas = document.querySelectorAll(".vista");
+  for (var i=0;i<todas.length;i++){
+    todas[i].classList.toggle("on", todas[i].getAttribute("data-v")===v);
+  }
+  var rolo = document.querySelector('.vista[data-v="'+v+'"] .rolo');
+  if (rolo) rolo.scrollTop = 0;
+  var ps = document.querySelectorAll(".passo");
+  for (var j=0;j<ps.length;j++){
+    ps[j].classList.toggle("on", ps[j].getAttribute("data-p")===v);
+  }
+  if (v==="carrinho") pintaCarrinho();
+  if (v==="entrega") pintaEntrega();
+  if (v==="pagamento") document.getElementById("pg-total").textContent = "Total " + eur(total());
+  fechaFolha();
+}
+
+/* lista de produtos da loja */
+(function(){
+  function linha(p){
+    var foto = p.img
+      ? '<img class="prod-img" src="'+IMG[p.img]+'" alt="'+p.nome+'">'
+      : '<div class="prod-sem">'+(p.emoji||"🥟")+'</div>';
+    return '<div class="prod" onclick="abrir(\''+p.id+'\')">'+foto+
+      '<div style="flex:1;min-width:0"><div class="prod-nome">'+p.nome+'</div>'+
+      '<div class="prod-desc">'+p.desc+'</div></div>'+
+      '<div class="prod-preco">'+eur(p.preco)+'</div></div>';
+  }
+  document.getElementById("loja-salgados").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec==="Salgados";}).map(linha).join("");
+  document.getElementById("loja-doces").innerHTML =
+    PRODUTOS.filter(function(p){return p.sec!=="Salgados";}).map(linha).join("");
+})();
+
+function acha(id){
+  for (var i=0;i<PRODUTOS.length;i++) if (PRODUTOS[i].id===id) return PRODUTOS[i];
+  return null;
+}
+
+var saboresSel = [];
+function abrir(id){
+  atual = acha(id); qtd = 1; saboresSel = [];
+  document.getElementById("p-img").innerHTML = atual.img
+    ? '<img class="p-heroi" src="'+IMG[atual.img]+'" alt="'+atual.nome+'">'
+    : '<div class="p-heroi-sem">'+(atual.emoji||"🥟")+'</div>';
+  document.getElementById("p-nome").textContent = atual.nome;
+  document.getElementById("p-desc").textContent = atual.desc;
+  document.getElementById("p-preco").textContent = eur(atual.preco);
+  document.getElementById("p-obs").value = "";
+  document.getElementById("p-qtd").textContent = "1";
+  var cx = document.getElementById("p-sabores-cx");
+  cx.style.display = atual.sabores ? "block" : "none";
+  if (atual.sabores){
+    document.getElementById("p-sabores").innerHTML = SABORES.map(function(s){
+      return '<button class="chip" onclick="tocaSabor(this,\''+s.replace(/'/g,"\\'")+'\')">'+s+'</button>';
+    }).join("");
+  }
+  atualizaSub();
+  ir("produto");
+}
+
+function tocaSabor(el, s){
+  var i = saboresSel.indexOf(s);
+  if (i >= 0){ saboresSel.splice(i,1); el.classList.remove("on"); }
+  else {
+    var max = atual.max || 1;
+    if (saboresSel.length >= max){
+      var primeiro = saboresSel.shift();
+      var chips = document.querySelectorAll("#p-sabores .chip");
+      for (var k=0;k<chips.length;k++){
+        if (chips[k].textContent === primeiro) chips[k].classList.remove("on");
+      }
+    }
+    saboresSel.push(s); el.classList.add("on");
+  }
+}
+
+function mudaQtd(d){
+  qtd = Math.max(1, qtd + d);
+  document.getElementById("p-qtd").textContent = qtd;
+  atualizaSub();
+}
+function atualizaSub(){
+  document.getElementById("p-sub").textContent = eur(atual.preco * qtd);
+}
+
+function adicionar(){
+  var obs = document.getElementById("p-obs").value.trim();
+  var notas = [];
+  if (saboresSel.length) notas.push("Sabor: " + saboresSel.join(" + "));
+  if (obs) notas.push(obs);
+  carrinho.push({ nome: atual.nome, preco: atual.preco, qtd: qtd, obs: notas.join(" · ") });
+  var barra = document.getElementById("barra-carrinho");
+  barra.style.display = "block";
+  document.getElementById("bc-total").textContent = eur(subtotal());
+  ir("loja");
+}
+
+function subtotal(){
+  var s = 0;
+  for (var i=0;i<carrinho.length;i++) s += carrinho[i].preco * carrinho[i].qtd;
+  return s;
+}
+function taxaEntrega(){
+  if (modo !== "entrega") return 0;
+  return TAXAS.entregaBase + Math.max(0, DIST_KM - TAXAS.kmBase) * TAXAS.porKm;
+}
+function taxaServico(){ return subtotal() * TAXAS.servicoPct; }
+function taxaSaco(){ return modo === "entrega" ? TAXAS.saco : 0; }
+function total(){ return subtotal() + taxaEntrega() + taxaServico() + taxaSaco(); }
+
+function pintaCarrinho(){
+  if (!carrinho.length){
+    document.getElementById("c-itens").innerHTML =
+      '<p style="text-align:center;color:var(--texto2);padding:24px 0">O carrinho está vazio.</p>';
+    document.getElementById("c-contas").innerHTML = "";
+    document.getElementById("c-quando").innerHTML = "";
+    document.getElementById("c-total-btn").textContent = eur(0);
+    return;
+  }
+  document.getElementById("c-itens").innerHTML = carrinho.map(function(it){
+    return '<div class="cart-item"><div class="cart-q">'+it.qtd+'×</div>'+
+      '<div style="flex:1"><div style="font-weight:700;font-size:14px">'+it.nome+'</div>'+
+      (it.obs ? '<div class="cart-obs">'+it.obs+'</div>' : '') + '</div>'+
+      '<div style="font-weight:800;font-size:14px">'+eur(it.preco*it.qtd)+'</div></div>';
+  }).join("");
+
+  var quando = (diaSel && horaSel)
+    ? '<div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:11px 13px;font-size:13px;font-weight:700;color:#166534">📅 '+diaSel+' às '+horaSel+' · '+(modo==="entrega"?"Entrega":"Recolha")+'</div>'
+    : '<button class="btn-largo" style="background:#FFF7ED;color:#9A3412;border:1px solid #FED7AA" onclick="ir(\'data\')">📅 Escolher dia e hora da encomenda</button>';
+  document.getElementById("c-quando").innerHTML = quando;
+
+  var linhas = '<div class="linha"><span class="lbl">Subtotal</span><span>'+eur(subtotal())+'</span></div>';
+  if (modo === "entrega"){
+    linhas += '<div class="linha"><span class="lbl">Taxa de entrega</span><span>'+eur(taxaEntrega())+'</span></div>';
+    linhas += '<div class="linha"><span class="lbl">Sacos</span><span>'+eur(taxaSaco())+'</span></div>';
+  } else {
+    linhas += '<div class="linha"><span class="lbl">Recolha na loja</span><span>Grátis</span></div>';
+  }
+  linhas += '<div class="linha"><span class="lbl">Taxa de serviço (5%)</span><span>'+eur(taxaServico())+'</span></div>';
+  linhas += '<div class="linha tot"><span class="lbl">Total</span><span>'+eur(total())+'</span></div>';
+  document.getElementById("c-contas").innerHTML = linhas;
+  document.getElementById("c-total-btn").textContent = eur(total());
+  document.getElementById("bc-total").textContent = eur(subtotal());
+}
+
+function irPagar(){
+  if (!carrinho.length){ ir("loja"); return; }
+  if (!diaSel || !horaSel){ ir("data"); return; }
+  ir("pagamento");
+}
+
+/* calendário com navegação de mês (a encomenda pode cair no mês seguinte) */
+var MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+var HOJE = new Date();
+var MIN = new Date(HOJE.getFullYear(), HOJE.getMonth(), HOJE.getDate() + 2);  // aviso prévio
+var calAno = HOJE.getFullYear(), calMes = HOJE.getMonth();
+
+function desenhaCal(ano, mes){
+  calAno = ano; calMes = mes;
+  var podeAtras = (ano > MIN.getFullYear()) || (ano === MIN.getFullYear() && mes > MIN.getMonth());
+  document.getElementById("cal-mes").innerHTML =
+    '<button class="voltar escuro" '+(podeAtras ? '' : 'disabled style="opacity:.22"')+' onclick="mudaMes(-1)">‹</button>'+
+    '<span>'+MESES[mes]+' de '+ano+'</span>'+
+    '<button class="voltar escuro" onclick="mudaMes(1)">›</button>';
+  var desloca = (new Date(ano, mes, 1).getDay() + 6) % 7;   // semana começa à segunda
+  var dias = new Date(ano, mes+1, 0).getDate();
+  var html = ["S","T","Q","Q","S","S","D"].map(function(d){ return '<div class="dh">'+d+'</div>'; }).join("");
+  for (var i=0;i<desloca;i++) html += '<div class="dia vazio"></div>';
+  for (var d=1; d<=dias; d++){
+    var cedo = new Date(ano, mes, d) < MIN;
+    var sel = (diaSel === d + " de " + MESES[mes]);
+    html += '<button class="dia'+(sel?" on":"")+'" '+(cedo?"disabled":"")+' onclick="escolheDia(this,'+d+')">'+d+'</button>';
+  }
+  document.getElementById("cal").innerHTML = html;
+}
+function mudaMes(passo){
+  var m = calMes + passo, a = calAno;
+  if (m < 0){ m = 11; a--; }
+  if (m > 11){ m = 0; a++; }
+  if (a < MIN.getFullYear() || (a === MIN.getFullYear() && m < MIN.getMonth())) return;
+  desenhaCal(a, m);
+}
+desenhaCal(calAno, calMes);
+document.getElementById("horas").innerHTML =
+  ["10:00","11:00","12:00","14:00","15:00","16:00","17:00","18:00"].map(function(h){
+    return '<button class="hora" data-h="' + h + '">' + h + '</button>';
+  }).join("");
+document.getElementById("horas").addEventListener("click", function(e){
+  var b = e.target.closest ? e.target.closest(".hora") : null;
+  if (b) escolheHora(b, b.getAttribute("data-h"));
+});
+
+function escolheDia(el, d){
+  var ds = document.querySelectorAll(".dia");
+  for (var i=0;i<ds.length;i++) ds[i].classList.remove("on");
+  el.classList.add("on");
+  diaSel = d + " de " + MESES[calMes];
+  validaData();
+}
+function escolheHora(el, h){
+  var hs = document.querySelectorAll(".hora");
+  for (var i=0;i<hs.length;i++) hs[i].classList.remove("on");
+  el.classList.add("on");
+  horaSel = h;
+  validaData();
+}
+function validaData(){
+  document.getElementById("btn-data").disabled = !(diaSel && horaSel);
+}
+
+function setModo(m){
+  modo = m;
+  document.getElementById("op-entrega").classList.toggle("on", m==="entrega");
+  document.getElementById("op-recolha").classList.toggle("on", m==="recolha");
+}
+function pintaEntrega(){
+  document.getElementById("e-quando").textContent =
+    (diaSel && horaSel) ? diaSel + " às " + horaSel : "Escolhe como recebes";
+}
+
+function travar(){ document.getElementById("folha").classList.add("on"); }
+function fechaFolha(){ document.getElementById("folha").classList.remove("on"); }
+
+function reiniciar(){
+  carrinho = []; modo = "entrega"; diaSel = null; horaSel = null; saboresSel = [];
+  document.getElementById("barra-carrinho").style.display = "none";
+  setModo("entrega");
+  var sel = document.querySelectorAll(".dia.on, .hora.on");
+  for (var i=0;i<sel.length;i++) sel[i].classList.remove("on");
+  validaData();
+  ir("home");
+}
+ir("home");
+</script>
+</body>
+</html>
