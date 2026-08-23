@@ -219,7 +219,7 @@ def cartao_cadeia(item):
     página própria — não é parceira e não se faz publicidade a marca alheia."""
     destino = f"{APP}/#/loja/{urllib.parse.quote(str(item['id']))}"
     n = item.get("n_produtos") or 0
-    extra = f"{n} produtos" if n else O_QUE.get(item.get("category"), "")
+    extra = f"{n:,}".replace(",", " ") + " produtos" if n else O_QUE.get(item.get("category"), "")
     return (f'<a class="cadeia" href="{e(destino)}" rel="noopener">'
             f'<b>{e(item["name"])}</b><span>{e(extra)}</span></a>')
 

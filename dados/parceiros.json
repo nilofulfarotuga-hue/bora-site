@@ -55,7 +55,7 @@
    },
    "lat": 40.540592,
    "lng": -7.266362,
-   "n_produtos": 1000,
+   "n_produtos": 6240,
    "amostra": [],
    "slug": "auchan"
   },
@@ -173,7 +173,7 @@
    },
    "lat": 40.546172,
    "lng": -7.265104,
-   "n_produtos": 1000,
+   "n_produtos": 17956,
    "amostra": [],
    "slug": "continente"
   },
@@ -232,7 +232,7 @@
    },
    "lat": 40.528717,
    "lng": -7.251905,
-   "n_produtos": 1000,
+   "n_produtos": 5824,
    "amostra": [],
    "slug": "intermarche"
   },
@@ -350,7 +350,7 @@
    },
    "lat": 40.551102,
    "lng": -7.246662,
-   "n_produtos": 1000,
+   "n_produtos": 1540,
    "amostra": [],
    "slug": "kiwoko"
   },
@@ -409,7 +409,7 @@
    },
    "lat": 40.5379511,
    "lng": -7.2400623,
-   "n_produtos": 1000,
+   "n_produtos": 2201,
    "amostra": [],
    "slug": "leroy-merlin"
   },
@@ -586,7 +586,7 @@
    },
    "lat": 40.552119,
    "lng": -7.246661,
-   "n_produtos": 1000,
+   "n_produtos": 8115,
    "amostra": [],
    "slug": "mercadona"
   },
@@ -753,7 +753,7 @@
    },
    "lat": 40.550762,
    "lng": -7.247019,
-   "n_produtos": 1000,
+   "n_produtos": 5023,
    "amostra": [],
    "slug": "pingo-doce"
   },
@@ -1040,7 +1040,7 @@
    },
    "lat": 40.5461722,
    "lng": -7.2651042,
-   "n_produtos": 1000,
+   "n_produtos": 1310,
    "amostra": [],
    "slug": "wells"
   },

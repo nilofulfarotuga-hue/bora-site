@@ -119,6 +119,18 @@ def rest(caminho):
         return json.loads(r.read().decode())
 
 
+def contar(caminho):
+    """Total exato via PostgREST (Content-Range), sem trazer as linhas todas."""
+    req = urllib.request.Request(
+        URL + "/rest/v1/" + caminho,
+        headers={"apikey": ANON, "Authorization": "Bearer " + ANON,
+                 "Prefer": "count=exact"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        r.read()
+        total = r.headers.get("Content-Range", "").split("/")[-1]
+        return int(total) if total.isdigit() else 0
+
+
 def slug(texto):
     t = unicodedata.normalize("NFKD", texto or "")
     t = "".join(c for c in t if not unicodedata.combining(c))
@@ -145,9 +157,9 @@ def recolher():
             % urllib.parse.quote(p["id"]))
 
     for l in lojas:
-        l["n_produtos"] = len(rest(
-            "products?restaurant_id=eq.%s&select=id&limit=1000"
-            % urllib.parse.quote(l["id"])))
+        l["n_produtos"] = contar(
+            "products?restaurant_id=eq.%s&select=id&limit=1"
+            % urllib.parse.quote(l["id"]))
         # amostra: só parceiros levam vitrine de produtos na página
         l["amostra"] = rest(
             "products?restaurant_id=eq.%s&is_available=eq.true"
