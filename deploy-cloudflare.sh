@@ -35,9 +35,13 @@ STAGE="$STAGE_ROOT/site"
 mkdir -p "$STAGE"
 
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
+         viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
          manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
+# Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
+[ -d loja ]  && cp -r loja  "$STAGE"/loja
+[ -d dados ] && cp -r dados "$STAGE"/dados
 cp -r assets "$STAGE"/assets
 rm -rf "$STAGE"/assets/cinema/src   # PNG originais nao sao servidos (~7MB)
 

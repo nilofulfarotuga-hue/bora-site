@@ -1,0 +1,1476 @@
+{
+ "lojas": [
+  {
+   "id": "auchan-guarda",
+   "name": "Auchan",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Centro Comercial La Vie, Av. dos Bombeiros Voluntários Egitanienses 5, 6300-523 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/auchan-guarda/logo-1785605796991.jpg",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/auchan-guarda/hero-1785605809679.jpg",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.540592,
+   "lng": -7.266362,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "auchan"
+  },
+  {
+   "id": "burgerking-guarda",
+   "name": "Burger King",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": "Quinta da Torre, 6300-625 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.google.com/s2/favicons?domain=burgerking.pt&sz=128",
+   "hero_image_url": "https://cdn.sanity.io/images/czqk28jt/prod_bk_es/be23e16445dc594939b148723329400dfe9c0a95-2000x1333.png",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.534021,
+   "lng": -7.243637,
+   "n_produtos": 173,
+   "amostra": [],
+   "slug": "burger-king"
+  },
+  {
+   "id": "continente-guarda",
+   "name": "Continente",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Rua do Ferrinho, 6300-566 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/continente-guarda/logo.jpg?v=1779381008660",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.546172,
+   "lng": -7.265104,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "continente"
+  },
+  {
+   "id": "intermarche-guarda",
+   "name": "Intermarché",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Bairro Senhora dos Remédios, Estrada do Barracão, 6300-309 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/intermarche-guarda/logo-1785605561577.jpg",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/intermarche-guarda/hero-1785605633866.jpg",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.528717,
+   "lng": -7.251905,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "intermarche"
+  },
+  {
+   "id": "kfc-guarda",
+   "name": "KFC",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": "Quinta Nova Lote 5, 6300-115 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.kfc.pt/wp-content/uploads/2025/01/cropped-favicon-180x180.png",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.551987,
+   "lng": -7.24888,
+   "n_produtos": 176,
+   "amostra": [],
+   "slug": "kfc"
+  },
+  {
+   "id": "kiwoko-guarda",
+   "name": "Kiwoko",
+   "category": "store",
+   "extra_categories": [],
+   "address": "Av. de São Miguel 3, 6300-865 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/ab0e88201f7ccd3d3942d217d558982acab5276bc83289d34e87d6a5a90b9c2c",
+   "hero_image_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/ab0e88201f7ccd3d3942d217d558982acab5276bc83289d34e87d6a5a90b9c2c",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.551102,
+   "lng": -7.246662,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "kiwoko"
+  },
+  {
+   "id": "leroy-merlin-guarda",
+   "name": "Leroy Merlin",
+   "category": "store",
+   "extra_categories": [],
+   "address": "Guarda Retail Park, Via de Cintura Externa, 6300-653 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/c8c423bf7caf31999581e5f3c49a10d1b3b5b6c84be3c9214f51c3c1c4186b3b",
+   "hero_image_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/c8c423bf7caf31999581e5f3c49a10d1b3b5b6c84be3c9214f51c3c1c4186b3b",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.5379511,
+   "lng": -7.2400623,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "leroy-merlin"
+  },
+  {
+   "id": "lidl-guarda",
+   "name": "Lidl",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Rua Vila de Manteigas 1, 6300-617 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.lidl.pt/apple-touch-icon.png",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.54423,
+   "lng": -7.25876,
+   "n_produtos": 697,
+   "amostra": [],
+   "slug": "lidl"
+  },
+  {
+   "id": "mcdonalds-guarda",
+   "name": "McDonald's",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": "Quinta do Pinheiro, Rotunda VICEG, 6300-501 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.mcdonalds.pt/media/3650/logotipo-mcdonalds-portugal.png?mode=pad",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.542704,
+   "lng": -7.239618,
+   "n_produtos": 111,
+   "amostra": [],
+   "slug": "mcdonald-s"
+  },
+  {
+   "id": "mercadona-guarda",
+   "name": "Mercadona",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Guarda, Portugal",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.google.com/s2/favicons?domain=mercadona.pt&sz=128",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.552119,
+   "lng": -7.246661,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "mercadona"
+  },
+  {
+   "id": "mrkebab-guarda",
+   "name": "Mr Kebab & Restaurant",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": "R. 31 de Janeiro nº 1, 6300-769 Guarda",
+   "phone": "+351271211317",
+   "whatsapp": "+351920101026",
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/mrkebab-guarda/logo3d-1785964767011.png",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/mrkebab-guarda/hero-fb-1785955080471.jpeg",
+   "about_text": "Kebab feito na hora na Guarda. Doner, durum, pratos, hambúrgueres e menus com batata e bebida — para comer no restaurante, levantar ou receber em casa.",
+   "social_instagram": null,
+   "social_facebook": "https://www.facebook.com/mrkebabandrestaurant",
+   "coming_soon": true,
+   "coming_soon_text": "Em breve no Bora — a loja está a ser preparada.",
+   "is_partner": true,
+   "business_hours": {
+    "fri": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "18:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "11:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.5390589,
+   "lng": -7.2697393,
+   "n_produtos": 47,
+   "amostra": [
+    {
+     "name": "Água 1,5L",
+     "price": 1.73,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Água 33cl",
+     "price": 0.92,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Água 50cl",
+     "price": 1.15,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Água das Pedras",
+     "price": 1.61,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Água das Pedras Limão",
+     "price": 1.61,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Burguer Vegetariano",
+     "price": 5.75,
+     "photo_url": null,
+     "category": "Hambúrgueres"
+    },
+    {
+     "name": "Café",
+     "price": 1.04,
+     "photo_url": null,
+     "category": "Bebidas"
+    },
+    {
+     "name": "Cheese Burguer",
+     "price": 7.13,
+     "photo_url": null,
+     "category": "Hambúrgueres"
+    }
+   ],
+   "slug": "mr-kebab-restaurant"
+  },
+  {
+   "id": "pingodoce-guarda",
+   "name": "Pingo Doce",
+   "category": "supermarket",
+   "extra_categories": [],
+   "address": "Avenida de São Miguel 26, 6300-864 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.pingodoce.pt/on/demandware.static/Sites-pingo-doce-Site/-/default/dw514eb86b/images/favicons/favicon-32x32.png",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.550762,
+   "lng": -7.247019,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "pingo-doce"
+  },
+  {
+   "id": "pizzahut-guarda",
+   "name": "Pizza Hut",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": "Centro Comercial La Vie, Loja 2.03, Av. dos Bombeiros Voluntários Egitanienses 5, 6300-523 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://www.google.com/s2/favicons?domain=pizzahut.pt&sz=128",
+   "hero_image_url": null,
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.540592,
+   "lng": -7.266362,
+   "n_produtos": 78,
+   "amostra": [],
+   "slug": "pizza-hut"
+  },
+  {
+   "id": "12aa2cbb-01bd-443b-a17e-633c169d4864",
+   "name": "Sabores de Casa Açaí",
+   "category": "restaurant",
+   "extra_categories": [
+    "supermarket"
+   ],
+   "address": "Guarda, Portugal",
+   "phone": "",
+   "whatsapp": null,
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/12aa2cbb-01bd-443b-a17e-633c169d4864/logo-1784054625620.png",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/12aa2cbb-01bd-443b-a17e-633c169d4864/hero-1784054746773.png",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": true,
+   "coming_soon_text": "Em breve nesta loja",
+   "is_partner": true,
+   "business_hours": {
+    "fri": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "mon": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "sat": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "sun": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "thu": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "tue": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "wed": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    }
+   },
+   "lat": 40.5369,
+   "lng": -7.2681,
+   "n_produtos": 10,
+   "amostra": [
+    {
+     "name": "Água",
+     "price": 2,
+     "photo_url": "https://glovo.dhmedia.io/image/menus-glovo/products/c5b4e1cb9ea004f5fccb068ddfa2691697fb33ef61020b4ae94bc61aa6b46c9a?t=W3siYXV0byI6eyJxIjoibG93In19XQ==",
+     "category": "Bebidas"
+    },
+    {
+     "name": "Copo Grande",
+     "price": 8,
+     "photo_url": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/937558/product/42362712031/d5fdebf3-9a2b-4485-8c38-fb145cb2194f.jpg",
+     "category": "Açaí"
+    },
+    {
+     "name": "Copo Médio 330ml",
+     "price": 5,
+     "photo_url": null,
+     "category": "Açaí"
+    },
+    {
+     "name": "Copo Mega 500ml",
+     "price": 12,
+     "photo_url": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/937558/product/42362712031/d5fdebf3-9a2b-4485-8c38-fb145cb2194f.jpg",
+     "category": "Açaí"
+    },
+    {
+     "name": "Copo Pequeno 250ml",
+     "price": 3.5,
+     "photo_url": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/937558/product/42362712013/9896d0e2-01e5-4f97-9b81-523ffb2d7aea.jpg",
+     "category": "Açaí"
+    },
+    {
+     "name": "Goma Jujuba Gomets",
+     "price": 2,
+     "photo_url": null,
+     "category": "Doces"
+    },
+    {
+     "name": "Guaraná Antarctica",
+     "price": 2,
+     "photo_url": "https://glovo.dhmedia.io/image/menus-glovo/products/6603e07fe38930625f8635ca2946363f658e5ed5f9b1d09a48cd51a8c871aec0?t=W3siYXV0byI6eyJxIjoibG93In19XQ==",
+     "category": "Bebidas"
+    },
+    {
+     "name": "Paçoca Moreninha do Rio",
+     "price": 1,
+     "photo_url": null,
+     "category": "Doces"
+    }
+   ],
+   "slug": "sabores-de-casa-acai"
+  },
+  {
+   "id": "sabores-brasil-guarda",
+   "name": "Sabores do Brasil - Keli Barbosa",
+   "category": "restaurant",
+   "extra_categories": [],
+   "address": null,
+   "phone": "+351937402120",
+   "whatsapp": "+351937402120",
+   "photo_url": "",
+   "hero_image_url": null,
+   "about_text": "O verdadeiro sabor do Brasil em Portugal. Salgados crocantes e doces feitos com amor - no mercado ha 3 anos. Encomendas para festa, com aviso previo.",
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": true,
+   "coming_soon_text": "Em breve",
+   "is_partner": true,
+   "business_hours": {
+    "fri": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "mon": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "sat": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "sun": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "thu": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "tue": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    },
+    "wed": {
+     "open": "09:00",
+     "close": "22:00",
+     "closed": false
+    }
+   },
+   "lat": 40.5364,
+   "lng": -7.2683,
+   "n_produtos": 6,
+   "amostra": [],
+   "slug": "sabores-do-brasil-keli-barbosa"
+  },
+  {
+   "id": "wells-guarda",
+   "name": "Wells",
+   "category": "pharmacy",
+   "extra_categories": [],
+   "address": "Continente Modelo, R. do Ferrinho, 6300-566 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/d7c347fe753508b380ad7bdf1773e821185708b02a4c50e7d29595c69c5a1383",
+   "hero_image_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/d7c347fe753508b380ad7bdf1773e821185708b02a4c50e7d29595c69c5a1383",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.5461722,
+   "lng": -7.2651042,
+   "n_produtos": 1000,
+   "amostra": [],
+   "slug": "wells"
+  },
+  {
+   "id": "worten-guarda",
+   "name": "Worten",
+   "category": "store",
+   "extra_categories": [],
+   "address": "La Vie Guarda, Av. Bombeiros Vol. Egitanienses 5, Loja 1.01 Piso 1, 6300-523 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/7fc69372aab37a0f631ec35779f95db1e8d8fbff047d420b34c3da23c76fb1a6",
+   "hero_image_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/7fc69372aab37a0f631ec35779f95db1e8d8fbff047d420b34c3da23c76fb1a6",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.5409643,
+   "lng": -7.2662019,
+   "n_produtos": 728,
+   "amostra": [],
+   "slug": "worten"
+  },
+  {
+   "id": "zippy-guarda",
+   "name": "Zippy",
+   "category": "store",
+   "extra_categories": [],
+   "address": "La Vie Guarda, Av. Bombeiros Vol. Egitanienses 5, Piso 3 Loja 997, 6300-523 Guarda",
+   "phone": null,
+   "whatsapp": null,
+   "photo_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/25bc4583943a3023f20bc118f988b1f091c773ea471202df66694c53852f1c32",
+   "hero_image_url": "https://glovo.dhmedia.io/image/stores-glovo/stores/25bc4583943a3023f20bc118f988b1f091c773ea471202df66694c53852f1c32",
+   "about_text": null,
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "is_partner": false,
+   "business_hours": {
+    "fri": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "mon": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sat": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "sun": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "thu": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "tue": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    },
+    "wed": {
+     "open": "00:00",
+     "close": "23:59",
+     "closed": false
+    }
+   },
+   "lat": 40.5405916,
+   "lng": -7.2663615,
+   "n_produtos": 982,
+   "amostra": [],
+   "slug": "zippy"
+  }
+ ],
+ "provedores": [
+  {
+   "id": "82e3162c-0560-443a-a44a-104dc71a95ef",
+   "name": "Barbearia Ouro e Prata",
+   "category": "barbershop",
+   "description": "Barbearia de referência na Guarda. Cortes, degradês e barba com acabamento profissional. Atendimento pelo Gilberto.",
+   "address": "R. António Sérgio 52, CAVE, 6300-665 Guarda",
+   "phone": "917506729",
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/82e3162c-0560-443a-a44a-104dc71a95ef/logo-1784442556809.png",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/82e3162c-0560-443a-a44a-104dc71a95ef/hero-1784442568773.jpg",
+   "about_text": "Tudo começou ainda na adolescência, num salão de beleza. Na altura eu nem percebia, mas aquele mundo — o som da tesoura, o cuidado com cada cliente — ficou guardado dentro de mim.\n\nAnos mais tarde, fiz o curso de cabeleireiro no SENAC e foi como se tudo fizesse sentido de repente. Percebi que não era apenas uma profissão: era aquilo a que eu queria dedicar a minha vida.\n\nEm 2024 atravessei o oceano rumo a Portugal. Vivi no Porto, passei pelo Algarve e, há mais de um ano, encontrei o meu lugar na Guarda — onde hoje me sinto verdadeiramente feliz.\n\nFoi aqui que nasceu a Barbearia Ouro e Prata. O nome não é por acaso: são dois metais que fascinam a humanidade há milénios. É esse brilho, esse cuidado e essa dedicação que quero deixar em cada corte.",
+   "gallery_urls": [],
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": false,
+   "coming_soon_text": null,
+   "business_hours": {
+    "fri": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    },
+    "mon": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    },
+    "sat": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    },
+    "sun": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": true
+    },
+    "thu": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    },
+    "tue": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    },
+    "wed": {
+     "open": "09:00",
+     "close": "20:00",
+     "closed": false,
+     "break_end": "14:00",
+     "break_start": "13:00"
+    }
+   },
+   "lat": 40.5385944,
+   "lng": -7.2620744,
+   "servicos": [
+    {
+     "name": "Freestyle",
+     "description": "risco no cabelo",
+     "price_cents": 300,
+     "duration_minutes": 10
+    },
+    {
+     "name": "Sobrancelha",
+     "description": "Design e limpeza de sobrancelha.",
+     "price_cents": 300,
+     "duration_minutes": 10
+    },
+    {
+     "name": "Barba",
+     "description": "Barba alinhada com toalha quente e acabamento.",
+     "price_cents": 800,
+     "duration_minutes": 20
+    },
+    {
+     "name": "Corte Criança",
+     "description": "Corte para os mais novos (até 12 anos).",
+     "price_cents": 1200,
+     "duration_minutes": 30
+    },
+    {
+     "name": "Corte de Cabelo",
+     "description": "Corte à máquina e tesoura, ao estilo do cliente.",
+     "price_cents": 1200,
+     "duration_minutes": 30
+    },
+    {
+     "name": "Degradê",
+     "description": "Degradê trabalhado com transições limpas.",
+     "price_cents": 1500,
+     "duration_minutes": 45
+    },
+    {
+     "name": "Combo Cabelo + Barba",
+     "description": "O mais pedido — corte completo e barba num só serviço. Poupa 2€.",
+     "price_cents": 1800,
+     "duration_minutes": 50
+    },
+    {
+     "name": "PROMO Combo Completo",
+     "description": "Cabelo + Barba + Sobrancelha+freestyle por 20€ (poupa 4€). Fica a matar!",
+     "price_cents": 2000,
+     "duration_minutes": 60
+    }
+   ],
+   "slug": "barbearia-ouro-e-prata"
+  },
+  {
+   "id": "192c7d0b-b8ef-4d52-bac3-307895fbbf8e",
+   "name": "BeUnique Beauty and Academy",
+   "category": "beauty",
+   "description": "Salao e academia de beleza na Guarda. Equipa multidisciplinar: cabelo, unhas, estetica, sobrancelhas, pestanas, micropigmentacao, massagem, depilacao e medicina estetica.",
+   "address": "R. Calouste Gulbenkian, Lote 11, 6300-670 Guarda",
+   "phone": "966383255",
+   "photo_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/192c7d0b-b8ef-4d52-bac3-307895fbbf8e/logo-1784473769249.png",
+   "hero_image_url": "https://ojykpzwqrtusfeakzrna.supabase.co/storage/v1/object/public/restaurant-assets/192c7d0b-b8ef-4d52-bac3-307895fbbf8e/hero-1784416088923.jpeg",
+   "about_text": null,
+   "gallery_urls": [],
+   "social_instagram": null,
+   "social_facebook": null,
+   "coming_soon": true,
+   "coming_soon_text": "Em breve neste parceiro",
+   "business_hours": {
+    "fri": {
+     "open": "09:00",
+     "close": "19:00",
+     "closed": false
+    },
+    "mon": {
+     "open": "09:00",
+     "close": "19:00",
+     "closed": true
+    },
+    "sat": {
+     "open": "09:00",
+     "close": "17:00",
+     "closed": false
+    },
+    "sun": {
+     "open": "09:00",
+     "close": "17:00",
+     "closed": true
+    },
+    "thu": {
+     "open": "09:00",
+     "close": "19:00",
+     "closed": false
+    },
+    "tue": {
+     "open": "09:00",
+     "close": "19:00",
+     "closed": false
+    },
+    "wed": {
+     "open": "09:00",
+     "close": "19:00",
+     "closed": false
+    }
+   },
+   "lat": 40.5407575,
+   "lng": -7.263176,
+   "servicos": [
+    {
+     "name": "Sobrancelhas",
+     "description": "Profissionais Bruna Frias / Priscila.",
+     "price_cents": 800,
+     "duration_minutes": 30
+    },
+    {
+     "name": "Depilacao a Cera",
+     "description": "Depilacao a cera.",
+     "price_cents": 1000,
+     "duration_minutes": 30
+    },
+    {
+     "name": "Brushing (Lavar e Secar)",
+     "description": "Profissionais: Camila e Amalia.",
+     "price_cents": 1200,
+     "duration_minutes": 40
+    },
+    {
+     "name": "Manicure",
+     "description": "Nail Designers Diana / Jenniffer.",
+     "price_cents": 1200,
+     "duration_minutes": 45
+    },
+    {
+     "name": "Corte de Cabelo",
+     "description": "Cabeleireira Camila Pissarra.",
+     "price_cents": 1500,
+     "duration_minutes": 45
+    },
+    {
+     "name": "Pedicure",
+     "description": "Nail Designers Diana / Jenniffer.",
+     "price_cents": 1500,
+     "duration_minutes": 50
+    },
+    {
+     "name": "SPA dos Pes",
+     "description": "Nail Designers Diana / Jenniffer.",
+     "price_cents": 2000,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Tratamentos Capilares",
+     "description": "Cabeleireira Amalia.",
+     "price_cents": 2500,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Penteado",
+     "description": "Penteado para eventos.",
+     "price_cents": 2500,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Massagem",
+     "description": "Terapeuta Viviane Torres.",
+     "price_cents": 3000,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Maquilhagem",
+     "description": "Maquilhagem para eventos.",
+     "price_cents": 3000,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Pestanas",
+     "description": "Profissional Priscila.",
+     "price_cents": 3000,
+     "duration_minutes": 90
+    },
+    {
+     "name": "Limpeza de Pele",
+     "description": "Profissional Bruna Frias.",
+     "price_cents": 3000,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Tratamento Estetico",
+     "description": "Terapeuta Viviane Torres.",
+     "price_cents": 3500,
+     "duration_minutes": 60
+    },
+    {
+     "name": "Coloracao",
+     "description": "Profissionais: Camila e Amalia.",
+     "price_cents": 3500,
+     "duration_minutes": 90
+    },
+    {
+     "name": "Depilacao a Laser",
+     "description": "Profissional Liliana Elias (laser de iodo).",
+     "price_cents": 4000,
+     "duration_minutes": 45
+    },
+    {
+     "name": "Alisamento e Botox Capilar",
+     "description": "Cabeleireira Amalia.",
+     "price_cents": 4500,
+     "duration_minutes": 120
+    },
+    {
+     "name": "Remocao a Laser",
+     "description": "Profissional Liliana Elias.",
+     "price_cents": 5000,
+     "duration_minutes": 45
+    },
+    {
+     "name": "Madeixas e Coloracao",
+     "description": "Cabeleireira Camila Pissarra.",
+     "price_cents": 5500,
+     "duration_minutes": 120
+    },
+    {
+     "name": "Labios (Micropigmentacao)",
+     "description": "Profissional Bruna Frias.",
+     "price_cents": 12000,
+     "duration_minutes": 120
+    },
+    {
+     "name": "Micropigmentacao",
+     "description": "Profissional Bruna Frias.",
+     "price_cents": 12000,
+     "duration_minutes": 120
+    },
+    {
+     "name": "Botox - Medicina Estetica",
+     "description": "Dra. Bianca Melo.",
+     "price_cents": 15000,
+     "duration_minutes": 45
+    }
+   ],
+   "slug": "beunique-beauty-and-academy"
+  }
+ ]
+}
