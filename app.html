@@ -135,6 +135,18 @@ section{padding:clamp(88px,11vw,150px) 0;position:relative;scroll-margin-top:0}
 .ic.l{background:rgba(249,115,22,.14);border-color:rgba(249,115,22,.30)}
 .ponto p{color:var(--texto-2);font-size:.99rem;line-height:1.55}
 
+/* ---------- vídeo ---------- */
+#video{padding-top:0}
+.video-caixa{
+  max-width:940px;margin:0 auto;border-radius:20px;overflow:hidden;
+  border:1px solid var(--linha);background:#000;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.95);
+}
+.video-caixa video{width:100%;height:auto;display:block}
+.video-legenda{
+  text-align:center;color:var(--texto-2);font-size:.92rem;margin-top:16px;
+}
+
 /* ---------- motorista (a maior) ---------- */
 #motorista{background:linear-gradient(180deg,#0B3D24 0%,#0C1512 62%,var(--tinta) 100%)}
 .arg{
@@ -257,6 +269,23 @@ footer{padding:44px 0;border-top:1px solid var(--linha);color:var(--texto-2);fon
         <div class="tlm tlm-r"><img src="assets/img/app/motorista-preco.png" alt="Bora Motorista com o preço fechado antes da viagem" width="640" height="1180" loading="eager"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 1.5 ─────────── VÍDEO ───────────
+     data-nocapture: o estúdio de anúncios esconde isto antes de gravar,
+     senão o próximo render filmava o vídeo dentro do vídeo. -->
+<section id="video" data-nocapture>
+  <div class="wrap">
+    <div class="video-caixa">
+      <video controls preload="none"
+             poster="assets/video/bora-apresentacao-poster.jpg"
+             width="1920" height="1080">
+        <source src="assets/video/bora-apresentacao.mp4" type="video/mp4">
+        O teu navegador não consegue mostrar este vídeo.
+      </video>
+    </div>
+    <p class="video-legenda">1 minuto e meio a ver o Bora por dentro.</p>
   </div>
 </section>
 
