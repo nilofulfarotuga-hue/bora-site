@@ -21,7 +21,7 @@ open(SAIDA, "w", encoding="utf-8").write(html)
 print(f"escrito: {SAIDA}  {os.path.getsize(SAIDA)//1024} KB")
 
 print("\n== os 6 precos da base estao na fonte? ==")
-for p in ["47.25", "2.10", "0.53", "12.60", "10.50", "1.05"]:
+for p in ["52.50", "3.68", "3.15", "0.53", "29.40", "26.25", "12.60", "1.05"]:
     print(f"  preco:{p}: {'SIM' if 'preco:' + p in html else 'NAO'}")
 
 print("== conteudo obrigatorio ==")
@@ -30,9 +30,11 @@ checks = {
   "video webm":       'media/sabores.webm' in html,
   "poster":           'poster="media/poster.webp"' in html,
   "muted+playsinline":'muted' in html and 'playsinline' in html,
-  "48 horas":         '48 horas' in html or 'AVISO_HORAS' in html,
+  "aviso 1/3 dias":   '1 dia de aviso' in html and '3 dias' in html,
   "horario 9h-20h":   '9h às 20h' in html,
-  "sem limite":       'Sem limite' in html,
+  "sem minimo":       'Sem mínimo' in html,
+  "instagram":        'instagram.com/sabores_do_brasil.pt' in html,
+  "sem Para a Keli":  'Para a Keli' not in html,
   "pagamentos":       'MB WAY' in html,
   "Play Store":       'pt.boraapp.bora' in html,
   "registo web":      'registo-cliente' in html,

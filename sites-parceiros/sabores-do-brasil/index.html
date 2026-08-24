@@ -24,7 +24,8 @@ var LOJA_ATIVA = false;
 
 /* Valores lidos da base do Bora (restaurants + platform_settings) */
 var HORARIO      = "Todos os dias, das 9h às 20h";
-var AVISO_HORAS  = 48;
+var AVISO_NORMAL = "1 dia";
+var AVISO_GRANDE = "3 dias";
 var LIMITE_DIA   = "Sem limite de encomendas por dia";
 var PAGAMENTOS   = "Cartão, MB WAY ou dinheiro";
 var ENTREGA      = "Entrega na Guarda ou vais buscar";
@@ -32,6 +33,7 @@ var WA_KELI      = "351937402120";
 var LINK_PLAY    = "https://play.google.com/store/apps/details?id=pt.boraapp.bora";
 var LINK_WEB     = "https://bora-app-web.pages.dev/#/registo-cliente";
 var LINK_DEMO    = "https://demo-festas.pages.dev/";
+var LINK_INSTA   = "https://www.instagram.com/sabores_do_brasil.pt";
 </script>
 
 <style>
@@ -160,15 +162,6 @@ section{padding:clamp(72px,11vw,132px) 0;position:relative}
 .facto b{font-family:var(--serif);font-size:21px;font-weight:500;display:block;margin-bottom:5px}
 .facto span{color:var(--mudo);font-size:13.5px}
 
-/* ---------- PAINEL DELA ---------- */
-.painel-sec{background:var(--painel)}
-.lista{list-style:none;margin-top:26px}
-.lista li{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid rgba(247,239,225,.08);
-  color:var(--mudo);font-size:15px}
-.lista li:last-child{border-bottom:0}
-.lista .n{font-family:var(--serif);font-size:19px;color:var(--amarelo);flex:0 0 30px;line-height:1.3}
-.lista b{color:var(--creme);font-weight:600}
-
 /* ---------- FAIXA FINAL ---------- */
 .faixa{background:
   radial-gradient(70% 100% at 50% 0%,rgba(245,197,24,.14),transparent 62%),
@@ -240,8 +233,8 @@ footer a:hover{color:var(--amarelo)}
       <p>A massa é feita no dia. A coxinha fecha-se à mão, uma a uma. O brigadeiro cozinha-se
          no tacho até ao ponto certo — aquele que só se aprende a olhar.</p>
       <p>Não há vitrine nem montra. Há <strong>encomenda</strong>: diz-se o dia, diz-se quantos,
-         e ela prepara. É por isso que precisa de <strong>48 horas</strong> — porque nada aqui
-         sai de uma arca.</p>
+         e ela prepara. É por isso que pede <strong>1 dia de aviso</strong> — e 3 para as
+         encomendas grandes — porque nada aqui sai de uma arca.</p>
     </div>
     <div class="retrato rev"><img src="media/real-mesa.webp" alt="Tabuleiros de salgados prontos, na cozinha da Keli" width="1000" height="1069" loading="lazy"></div>
   </div>
@@ -255,7 +248,7 @@ footer a:hover{color:var(--amarelo)}
     <div class="rev" style="max-width:640px;margin-bottom:52px">
       <span class="sobrancelha">Cardápio</span>
       <h2>O que ela faz</h2>
-      <p class="sub">Tudo por encomenda, com 48 horas de aviso. Os preços são os da casa.</p>
+      <p class="sub">Tudo por encomenda: 1 dia de aviso, 3 para encomendas grandes. Os preços são os da casa.</p>
     </div>
 
     <div class="menu-bloco rev">
@@ -286,20 +279,20 @@ footer a:hover{color:var(--amarelo)}
          bolo com a cobertura ainda a escorrer.</p>
     </div>
     <div class="grelha">
-      <figure class="foto g1 rev"><img src="media/ilu-bolo.webp" alt="Bolo de cenoura com cobertura de brigadeiro a escorrer" loading="lazy">
-        <figcaption><span>Bolo de cenoura, cobertura de brigadeiro</span></figcaption></figure>
-      <figure class="foto g2 rev"><img src="media/real-coxinhas.webp" alt="Coxinhas alinhadas no tabuleiro" loading="lazy">
-        <figcaption><span>Coxinhas, tabuleiro dela</span></figcaption></figure>
-      <figure class="foto g3 rev"><img src="media/ilu-partido.webp" alt="Salgado partido ao meio a mostrar o recheio" loading="lazy">
-        <figcaption><span>Partido ao meio</span></figcaption></figure>
-      <figure class="foto g4 rev"><img src="media/real-variados.webp" alt="Salgados variados: coxinha, enroladinho e quibe" loading="lazy">
-        <figcaption><span>Variados</span></figcaption></figure>
-      <figure class="foto g5 rev"><img src="media/ilu-pudim.webp" alt="Pudim de leite com calda de caramelo" loading="lazy">
-        <figcaption><span>Pudim de leite</span></figcaption></figure>
-      <figure class="foto g6 rev"><img src="media/real-cento.webp" alt="Muitos salgados acabados de fritar" loading="lazy">
-        <figcaption><span>Cento de salgados</span></figcaption></figure>
-      <figure class="foto g7 rev"><img src="media/ilu-doces.webp" alt="Mesa de festa com brigadeiros, beijinhos e salgados" loading="lazy">
-        <figcaption><span>Mesa de festa</span></figcaption></figure>
+      <figure class="foto g1 rev"><img src="media/real-brigadeiros.webp" alt="Brigadeiros feitos pela Keli" loading="lazy">
+        <figcaption><span>Brigadeiros da casa</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g2 rev"><img src="media/real-cento.webp" alt="Tabuleiro do cento de salgados" loading="lazy">
+        <figcaption><span>O cento, pronto a sair</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g3 rev"><img src="media/real-coxinhas.webp" alt="Coxinhas com catupiri" loading="lazy">
+        <figcaption><span>Coxinha com catupiri</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g4 rev"><img src="media/real-beijinhos.webp" alt="Beijinhos de coco" loading="lazy">
+        <figcaption><span>Beijinhos de coco</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g5 rev"><img src="media/real-pudim.webp" alt="Pudim de leite desenformado" loading="lazy">
+        <figcaption><span>Pudim de leite</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g6 rev"><img src="media/real-bolo-brig.webp" alt="Bolo de cenoura com recheio e cobertura de brigadeiro" loading="lazy">
+        <figcaption><span>Bolo com recheio de brigadeiro</span><span class="etiq real">foto real</span></figcaption></figure>
+      <figure class="foto g7 rev"><img src="media/real-mista.webp" alt="Caixa de salgados variados" loading="lazy">
+        <figcaption><span>Variados, acabados de fritar</span><span class="etiq real">foto real</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -316,33 +309,12 @@ footer a:hover{color:var(--amarelo)}
     </div>
     <div class="factos rev">
       <div class="facto"><div class="ic">🕘</div><b>9h – 20h</b><span id="f-horario"></span></div>
-      <div class="facto"><div class="ic">⏳</div><b>48 horas</b><span>De aviso prévio, para ela ter tempo de preparar</span></div>
+      <div class="facto"><div class="ic">⏳</div><b>1 dia de aviso</b><span>Encomendas grandes (cento ou €40+) pedem 3 dias</span></div>
+      <div class="facto"><div class="ic">🥟</div><b>Sem mínimo</b><span>Encomenda a quantidade que quiseres</span></div>
       <div class="facto"><div class="ic">∞</div><b>Sem limite</b><span id="f-limite"></span></div>
       <div class="facto"><div class="ic">💳</div><b>Como pagas</b><span id="f-pag"></span></div>
       <div class="facto"><div class="ic">🛵</div><b>Entrega ou recolha</b><span id="f-entrega"></span></div>
     </div>
-  </div>
-</section>
-
-<!-- ═══════════ O PAINEL DELA ═══════════ -->
-<section class="painel-sec" id="painel">
-  <div class="wrap duas">
-    <div class="rev">
-      <span class="sobrancelha">Para a Keli</span>
-      <h2>O teu painel,<br>só teu</h2>
-      <p class="sub">Entras em <b style="color:var(--creme)">bora-app-web.pages.dev</b> e mandas na tua loja.
-         Sem pedir nada a ninguém.</p>
-      <ul class="lista">
-        <li><span class="n">1</span><span>Vês as <b>encomendas a entrar</b>, com o dia, a hora e as observações do cliente.</span></li>
-        <li><span class="n">2</span><span><b>Aceitas</b> ou recusas. Nada avança sem o teu sim — e só aí é que o cliente é cobrado.</span></li>
-        <li><span class="n">3</span><span>Carregas em <b>Encomenda pronta</b> quando estiver feita. O estafeta é chamado sozinho.</span></li>
-        <li><span class="n">4</span><span>Mudas <b>preços e produtos</b>, pões <b>fotos</b>, escreves as descrições.</span></li>
-        <li><span class="n">5</span><span><b>Abres e fechas</b> a loja quando quiseres — férias, dia cheio, o que for.</span></li>
-        <li><span class="n">6</span><span>Vês o <b>fecho semanal</b>: quanto vendeste e quanto recebes.</span></li>
-      </ul>
-      <a class="ver-app" href="https://demo-festas.pages.dev/">📱 Ver como fica na app →</a>
-    </div>
-    <div class="retrato rev"><img src="media/ilu-doces.webp" alt="Mesa de festa com doces e salgados" width="1000" height="576" loading="lazy"></div>
   </div>
 </section>
 
@@ -375,6 +347,8 @@ footer a:hover{color:var(--amarelo)}
       <div>
         <h4>Sabores do Brasil</h4>
         <p>Keli Barbosa<br>Guarda, Portugal<br>Salgados e doces por encomenda</p>
+        <p style="margin-top:10px"><a href="https://www.instagram.com/sabores_do_brasil.pt"
+          target="_blank" rel="noopener">📷 @sabores_do_brasil.pt</a></p>
         <p class="contacto-discreto">Falar com a Keli —
           <a href="https://wa.me/351937402120" target="_blank" rel="noopener">+351 937 402 120</a></p>
       </div>
@@ -404,17 +378,21 @@ document.getElementById("f-entrega").textContent = ENTREGA;
 
 /* cardápio: nomes e preços da base do Bora */
 var PRODUTOS = [
-  { sec:"S", nome:"Cento de Salgados (até 2 sabores)", preco:47.25, img:"media/real-cento.webp",
-    desc:"Até dois sabores à escolha. Diz quais nas observações." },
-  { sec:"S", nome:"Salgados Grandes", preco:2.10, img:"media/ilu-partido.webp",
-    desc:"Salgado tamanho grande." },
+  { sec:"S", nome:"Cento de Salgados (qualquer sabor)", preco:52.50, img:"media/real-cento.webp",
+    desc:"Cem salgados, os sabores que quiseres." },
+  { sec:"S", nome:"Coxinha com Catupiri (grande)", preco:3.68, img:"media/real-coxinhas.webp",
+    desc:"A estrela da casa, com catupiri." },
+  { sec:"S", nome:"Salgados Grandes", preco:3.15, img:"media/real-grandes.webp",
+    desc:"Tamanho lanche: coxinha, rissol, enroladinho." },
   { sec:"S", nome:"Salgados Variados (unidade)", preco:0.53, img:"media/real-variados.webp",
     desc:"Ao preço da unidade. Diz o sabor nas observações." },
-  { sec:"D", nome:"Bolo de Cenoura", preco:12.60, img:"media/ilu-bolo.webp",
-    desc:"Com cobertura de brigadeiro." },
-  { sec:"D", nome:"Pudim de Leite", preco:10.50, img:"media/ilu-pudim.webp",
+  { sec:"D", nome:"Bolo de Cenoura com recheio e cobertura de brigadeiro", preco:29.40, img:"media/real-bolo-brig.webp",
+    desc:"O bolo de festa completo." },
+  { sec:"D", nome:"Pudim de Leite (~500 g)", preco:26.25, img:"media/real-pudim.webp",
     desc:"Pudim de leite tradicional." },
-  { sec:"D", nome:"Brigadeiro ou Beijinho de Coco", preco:1.05, img:"media/ilu-doces.webp",
+  { sec:"D", nome:"Bolo de Cenoura simples", preco:12.60, img:"media/ilu-bolo.webp",
+    desc:"Com cobertura de brigadeiro." },
+  { sec:"D", nome:"Brigadeiro ou Beijinho de Coco", preco:1.05, img:"media/real-brigadeiros.webp",
     desc:"Docinho tamanho festa." }
 ];
 function eur(v){ return "€" + v.toFixed(2).replace(".", ","); }
