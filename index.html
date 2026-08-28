@@ -489,11 +489,26 @@
         <span class="inline-flex items-center gap-2 bg-white/15 text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-4">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Já disponível
         </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Não tens Android?</h2>
-        <p class="text-white/90 max-w-xl mx-auto mb-6">Pede tudo o que o Bora tem para oferecer diretamente pelo site, no teu iPhone ou no computador, sem instalar nada.</p>
-        <a href="https://app.boraguarda.com" class="inline-flex items-center gap-2 bg-white text-[#16A34A] hover:bg-white/90 font-bold px-6 py-3 rounded-full transition">
-          <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
-        </a>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">Há dois caminhos para pedir</h2>
+        <p class="text-white/90 max-w-xl mx-auto mb-8">Escolhe o que te dá mais jeito. Os dois dão acesso a tudo o que o Bora tem.</p>
+        <!-- Dois caminhos com o MESMO peso: metade das pessoas anda de iPhone ou
+             esta no computador, e a web em letra miudinha mandava-as embora. -->
+        <div class="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto text-left">
+          <div class="flex flex-col gap-2">
+            <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-white text-[#16A34A] hover:bg-white/90 font-bold px-6 py-4 rounded-full transition">
+              <i data-lucide="download" class="w-4 h-4"></i> Descarregar a app
+            </a>
+            <span class="text-sm text-white/85 text-center">Android. Instala e recebe os avisos do pedido.</span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="https://app.boraguarda.com" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-white text-[#16A34A] hover:bg-white/90 font-bold px-6 py-4 rounded-full transition">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
+            </a>
+            <span class="text-sm text-white/85 text-center">Funciona no iPhone e no computador, sem instalar nada.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -386,8 +386,8 @@ document.getElementById('videobtn').addEventListener('click', function () {
       <div>
         <h4>Ver por dentro</h4>
         <p><a href="https://festas.boraguarda.com/">Como fica na Bora App</a><br>
-           <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">Instalar no Android</a><br>
-           <a href="https://app.boraguarda.com/#/registo-cliente" target="_blank" rel="noopener">Entrar no computador</a></p>
+           <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">Descarregar a app (Android)</a><br>
+           <a href="https://app.boraguarda.com/#/registo-cliente" target="_blank" rel="noopener">Pedir pelo site (iPhone e computador)</a></p>
       </div>
     </div>
     <div class="credito">
@@ -445,8 +445,9 @@ var E_ANDROID = /android/i.test(navigator.userAgent || "");
       '<span class="ic">'+ic+'</span><span style="min-width:0"><b>'+tit+'</b><small>'+sub+'</small></span>'+
       (d?'<span class="teu">O TEU</span>':'')+'</a>';
   }
-  var a = bloco(E_ANDROID, LINK_PLAY, "▶", "Android", "Instalar da Google Play");
-  var w = bloco(!E_ANDROID, LINK_WEB, "💻", "iPhone ou computador", "Criar conta no bora-app-web");
+  // Os dois caminhos com o MESMO peso: fica a ordem por aparelho, sai o realce.
+  var a = bloco(false, LINK_PLAY, "▶", "Descarregar a app", "Android. Instala e recebe os avisos do pedido.");
+  var w = bloco(false, LINK_WEB, "💻", "Pedir pelo site", "Funciona no iPhone e no computador, sem instalar nada.");
   document.querySelectorAll("[data-destinos]").forEach(function(c){
     c.innerHTML = E_ANDROID ? a + w : w + a;
   });
