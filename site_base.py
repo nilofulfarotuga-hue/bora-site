@@ -40,8 +40,8 @@ RAIZ = os.path.dirname(os.path.abspath(__file__))
 DEFINES_FALLBACK = os.path.join(
     RAIZ, "..", "projetosflutter", "bora_app", ".dart_defines")
 
-SITE = "https://bora-site.pages.dev"
-APP = "https://bora-app-web.pages.dev"
+SITE = "https://boraguarda.com"
+APP = "https://app.boraguarda.com"
 PLAY = "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
 EMAIL = "boraappbora@gmail.com"
 TELEFONE = "+351937501673"
@@ -51,8 +51,8 @@ LARANJA = "#F97316"
 
 # Mini-sites já publicados (confirmados a 200 antes de entrarem na página).
 MINISITES = {
-    "barbearia ouro e prata": "https://ouro-e-prata.pages.dev/",
-    "mr kebab & restaurant": "https://mr-kebab.pages.dev/",
+    "barbearia ouro e prata": "https://ouroeprata.boraguarda.com/",
+    "mr kebab & restaurant": "https://mrkebab.boraguarda.com/",
 }
 
 CATEGORIAS = {

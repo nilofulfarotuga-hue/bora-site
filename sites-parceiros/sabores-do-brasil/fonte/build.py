@@ -76,7 +76,7 @@ print(f"  aponta para #demo: {sem_b64.count('href=\"#demo\"')}x")
 print("\n== dois destinos (adendo 2) ==")
 print(f"  LOJA_ATIVA no topo do ficheiro: "
       f"{'SIM' if 'var LOJA_ATIVA' in sem_b64[:3000] else 'NAO'}")
-print(f"  link web registo-cliente: {'SIM' if 'bora-app-web.pages.dev/#/registo-cliente' in sem_b64 else 'NAO'}")
+print(f"  link web registo-cliente: {'SIM' if 'app.boraguarda.com/#/registo-cliente' in sem_b64 else 'NAO'}")
 print(f"  texto coming_soon: {'SIM' if 'abre em breve' in sem_b64 else 'NAO'}")
 print(f"  texto loja activa: {'SIM' if 'Encomendar agora' in sem_b64 else 'NAO'}")
 print(f"  caixas [data-destinos]: {sem_b64.count('data-destinos')}x (folha de pagamento + faixa)")

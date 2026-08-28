@@ -4,8 +4,8 @@
 
 | | Link | O que é |
 |---|---|---|
-| 1 | https://sabores-do-brasil.pages.dev/ | O site dela. Montra. Sem demo lá dentro. |
-| 2 | https://demo-festas.pages.dev/ | A demo da categoria Festas dentro da app. |
+| 1 | https://saboresdobrasil.boraguarda.com/ | O site dela. Montra. Sem demo lá dentro. |
+| 2 | https://festas.boraguarda.com/ | A demo da categoria Festas dentro da app. |
 
 - **Loja na base:** `restaurants.id = 'sabores-brasil-guarda'` (`coming_soon = true`)
 - **Projectos Cloudflare Pages:** `sabores-do-brasil` e `demo-festas` — upload directo por

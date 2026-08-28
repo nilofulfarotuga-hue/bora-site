@@ -39,7 +39,7 @@ checks = {
   "pagamentos":       'MB WAY' in html,
   "Play Store":       'pt.boraapp.bora' in html,
   "registo web":      'registo-cliente' in html,
-  "link para a demo": 'demo-festas.pages.dev' in html,
+  "link para a demo": 'festas.boraguarda.com' in html,
   "LOJA_ATIVA":       'var LOJA_ATIVA' in html[:2600],
   "Cormorant":        'Cormorant+Garamond' in html,
 }

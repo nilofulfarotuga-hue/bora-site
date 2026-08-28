@@ -15,7 +15,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://bora-site.pages.dev").rstrip("/")
+BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://boraguarda.com").rstrip("/")
 UA = {"User-Agent": "Mozilla/5.0 (verificador do bora-site)"}
 
 # Domínios que bloqueiam robôs — testam-se, mas um 403 aqui não é link partido.
