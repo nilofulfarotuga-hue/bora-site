@@ -1,2 +1,9 @@
 __pycache__/
 *.pyc
+
+# Trabalho intermedio: previews, zooms de inspeccao, sondas de logo e o fundo
+# gerado. Tudo isto volta a nascer com `python build_flyer.py`.
+assets/_*
+assets/logos/_*
+assets/fundo_script.png
+assets/fundo_gemini.png
