@@ -136,10 +136,8 @@ def gerar_fundo(W, H, seed=20260828):
         cor_img, mask = _brilho_radial(w, h, cx, cy, rx, ry, cor, f)
         base = Image.composite(Image.blend(base, cor_img, 0.55), base, mask)
 
-    # 3 — halo claro no topo, para o logo e o titulo assentarem
-    cor_img, mask = _brilho_radial(w, h, w * 0.5, h * 0.115, w * 0.72, h * 0.15,
-                                   (236, 250, 240), 210)
-    base = Image.composite(cor_img, base, mask)
+    # 3 — sem halo claro: o titulo passou a ser BRANCO sobre fundo escuro
+    #     (visual aprovado a 28/08). O escurecimento do topo entra no fim.
 
     base = base.convert("RGBA")
 
@@ -155,31 +153,42 @@ def gerar_fundo(W, H, seed=20260828):
     ruas = ruas.filter(ImageFilter.GaussianBlur(2.2))
     base = Image.alpha_composite(base, ruas)
 
-    # 5 — skyline: faixa distante (topo) e faixa proxima (fundo)
-    longe = _faixa_cidade(w, h, y_base=int(h * 0.255), escala=0.62,
-                          densidade=0.80, seed=seed + 1, alt_max=78)
-    longe = longe.filter(ImageFilter.GaussianBlur(1.6))
-    base = Image.alpha_composite(base, longe)
+    # 5 — cidade em MOLDURA: densa nas bordas, ausente no centro. O centro fica
+    #     calmo porque e' onde assentam os cartoes de cor — foi o visual
+    #     aprovado a 28/08.
+    cidade = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    for k, (yb, esc, dens, alt) in enumerate([
+            (0.16, 0.55, 0.85, 62), (0.30, 0.70, 0.80, 86),
+            (0.46, 0.85, 0.75, 100), (0.62, 0.95, 0.75, 110),
+            (0.78, 1.10, 0.72, 120), (0.94, 1.30, 0.68, 130),
+            (1.08, 1.50, 0.62, 140)]):
+        cam = _faixa_cidade(w, h, y_base=int(h * yb), escala=esc,
+                            densidade=dens, seed=seed + 10 + k, alt_max=alt)
+        if k < 2:
+            cam = cam.filter(ImageFilter.GaussianBlur(1.4))
+        cidade = Image.alpha_composite(cidade, cam)
 
-    media = _faixa_cidade(w, h, y_base=int(h * 0.865), escala=0.95,
-                          densidade=0.70, seed=seed + 2, alt_max=110)
-    media = media.filter(ImageFilter.GaussianBlur(0.8))
-    base = Image.alpha_composite(base, media)
-
-    perto = _faixa_cidade(w, h, y_base=int(h * 0.995), escala=1.45,
-                          densidade=0.62, seed=seed + 3, alt_max=128)
-    base = Image.alpha_composite(base, perto)
+    # mascara: 255 nas bordas, 0 no miolo (com transicao larga e suave)
+    mask = Image.new("L", (w, h), 255)
+    dm = ImageDraw.Draw(mask)
+    mx, my = int(w * 0.135), int(h * 0.115)
+    dm.rectangle([mx, my, w - mx, h - my], fill=0)
+    mask = mask.filter(ImageFilter.GaussianBlur(min(w, h) * 0.055))
+    cidade.putalpha(Image.composite(cidade.getchannel("A"),
+                                    Image.new("L", (w, h), 0), mask))
+    base = Image.alpha_composite(base, cidade)
 
     # 6 — rastos de entrega (as linhas que "correm" pelas ruas) com brilho
     glow = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     dg = ImageDraw.Draw(glow)
-    # colocados nas zonas que ficam a' vista (topo e rodape); o miolo fica calmo
-    # porque e' onde assentam os cartoes.
-    faixas = [(0.20, 0.30), (0.22, 0.32), (0.79, 0.88), (0.82, 0.92),
-              (0.86, 0.96), (0.90, 0.99)]
+    # rastos so' nas bordas, acompanhando a cidade; o miolo fica limpo
+    faixas = [(0.10, 0.16), (0.24, 0.34), (0.44, 0.54), (0.62, 0.70),
+              (0.78, 0.86), (0.88, 0.96)]
     for idx, (fa, fb) in enumerate(faixas):
         cor = VERDE if idx % 2 == 0 else LARANJA
-        x0 = rng.uniform(-w * 0.05, w * 0.75)
+        # alterna entre a margem esquerda e a direita
+        x0 = rng.uniform(-w * 0.06, w * 0.10) if idx % 2 == 0 \
+            else rng.uniform(w * 0.72, w * 0.95)
         y0 = rng.uniform(h * fa, h * fb)
         comp = rng.uniform(w * 0.14, w * 0.30)
         sinal = 1 if rng.random() < 0.5 else -1
@@ -218,6 +227,18 @@ def gerar_fundo(W, H, seed=20260828):
                      width=max(2, int(w * 0.012)))
     vin = vin.filter(ImageFilter.GaussianBlur(w * 0.035))
     base = Image.composite(Image.new("RGBA", (w, h), (6, 14, 26, 255)), base, vin)
+
+    # 9 — escurecimento suave atras do topo e do rodape, para o texto branco
+    #     ler bem por cima do cenario
+    escuro = Image.new("L", (w, h), 0)
+    de = ImageDraw.Draw(escuro)
+    for i in range(int(h * 0.30)):
+        de.line([(0, i), (w, i)], fill=int(178 * (1 - i / (h * 0.30)) ** 1.25))
+    for i in range(int(h * 0.30)):
+        yy = h - 1 - i
+        de.line([(0, yy), (w, yy)], fill=int(168 * (1 - i / (h * 0.30)) ** 1.25))
+    escuro = escuro.filter(ImageFilter.GaussianBlur(w * 0.02))
+    base = Image.composite(Image.new("RGBA", (w, h), (5, 12, 22, 255)), base, escuro)
 
     return base.convert("RGB").resize((W, H), Image.LANCZOS)
 

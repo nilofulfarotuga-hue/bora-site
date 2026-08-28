@@ -19,12 +19,14 @@ from fundo import gerar_fundo
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 A = lambda *p: os.path.join(AQUI, "assets", *p)
-SAIDA = os.path.join(os.path.expanduser("~"), "Downloads")
+_DOWNLOADS_DANILO = r"C:\Users\danil\Downloads"
+SAIDA = _DOWNLOADS_DANILO if os.path.isdir(_DOWNLOADS_DANILO) else os.path.join(
+    os.path.expanduser("~"), "Downloads")
 
 # ---------------------------------------------------------------- dimensoes
 W, H = 2480, 3508          # A4 a 300dpi
 BLEED = 95                 # margem branca de 8mm para a grafica
-PAD = 72
+PAD = 90                   # menos aperto lateral (pedido do Danilo, v3)
 CX0, CX1 = BLEED + PAD, W - BLEED - PAD
 LARG = CX1 - CX0
 
@@ -35,12 +37,12 @@ TINTA_SUAVE = (71, 85, 105)
 BRANCO = (255, 255, 255)
 
 QR_LADO = int(os.environ.get("QR_LADO", 500))
-ALT_RODAPE = 736
+ALT_RODAPE = 700
 QR_OFFSET_Y = 40      # do topo do cartao do rodape ate' ao topo do QR
 QR_MARGEM_X = 54      # da margem do cartao ate' ao QR   # ver prova de leitura em verificar.py
 
 PLAY_URL = "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
-WEB_URL = "https://bora-app-web.pages.dev/#/registo-cliente"
+WEB_URL = "https://app.boraguarda.com/#/registo-cliente"
 
 # ------------------------------------------------------------------ fontes
 _FONTE = A("fonts", "Inter-VariableFont.ttf")
@@ -139,13 +141,61 @@ def cantos_redondos(im, raio):
     return out
 
 
+def _compor(tela, cam, x, y):
+    """
+    Cola uma camada PEQUENA na tela, cortando o que sai fora.
+
+    Existe porque desenhar cada sombra/borda numa camada do tamanho da pagina
+    (2480x3508 = 35 MB cada) estourava a RAM do PC (4 GB) a meio do flyer.
+    """
+    x, y = int(round(x)), int(round(y))
+    lw, lh = cam.size
+    W_, H_ = tela.size
+    sx0, sy0 = max(0, -x), max(0, -y)
+    sx1, sy1 = min(lw, W_ - x), min(lh, H_ - y)
+    if sx1 <= sx0 or sy1 <= sy0:
+        return tela
+    tela.alpha_composite(cam.crop((sx0, sy0, sx1, sy1)),
+                         (max(0, x), max(0, y)))
+    return tela
+
+
+def camada(w, h):
+    return Image.new("RGBA", (max(1, int(w)), max(1, int(h))), (0, 0, 0, 0))
+
+
 def sombra(tela, caixa, raio, desfoque, opacidade, desloc=(0, 10)):
-    x0, y0, x1, y1 = caixa
-    cam = Image.new("RGBA", tela.size, (0, 0, 0, 0))
+    x0, y0, x1, y1 = [int(round(v)) for v in caixa]
+    pad = int(desfoque * 3) + 6
+    cam = camada((x1 - x0) + 2 * pad, (y1 - y0) + 2 * pad)
     ImageDraw.Draw(cam).rounded_rectangle(
-        [x0 + desloc[0], y0 + desloc[1], x1 + desloc[0], y1 + desloc[1]],
+        [pad, pad, pad + (x1 - x0), pad + (y1 - y0)],
         radius=raio, fill=(2, 10, 22, opacidade))
-    return Image.alpha_composite(tela, cam.filter(ImageFilter.GaussianBlur(desfoque)))
+    cam = cam.filter(ImageFilter.GaussianBlur(desfoque))
+    return _compor(tela, cam, x0 - pad + desloc[0], y0 - pad + desloc[1])
+
+
+def _lerp_cor(a, b, t):
+    return tuple(int(round(a[i] + (b[i] - a[i]) * t)) for i in range(3))
+
+
+def escurecer_faixa(tela, y0, y1, alpha_pico):
+    """
+    Escurecimento suave (scrim) SO' atras do topo/rodape, para o texto ler bem
+    seja qual for o fundo (script hoje; foto do Danilo no dia em que existir).
+    """
+    W_, H_ = tela.size
+    col = Image.new("L", (1, H_), 0)
+    px = col.load()
+    alt = max(1, y1 - y0)
+    for i in range(H_):
+        if y0 <= i < y1:
+            t = (i - y0) / alt
+            px[0, i] = int(alpha_pico * math.sin(t * math.pi))
+    faixa = col.resize((W_, H_), Image.NEAREST).filter(ImageFilter.GaussianBlur(34))
+    overlay = Image.new("RGBA", (W_, H_), (4, 10, 20, 0))
+    overlay.putalpha(faixa)
+    return Image.alpha_composite(tela, overlay)
 
 
 # ----------------------------------------------------------------- conteudo
@@ -202,119 +252,150 @@ def logo(nome):
 
 # ------------------------------------------------------------------ cartoes
 def desenhar_cartao(tela, caixa, cor):
-    """Cartao de vidro: branco translucido, cantos redondos, orla da categoria."""
-    x0, y0, x1, y1 = caixa
-    r = 46
-    tela = sombra(tela, caixa, r, 22, 120, (0, 14))
-    cam = Image.new("RGBA", tela.size, (0, 0, 0, 0))
+    """
+    Cartao premium de cor cheia da categoria: degrade (claro em cima, escuro
+    em baixo), borda luminosa e cantos bem redondos. Substitui o cartao de
+    vidro branco do V2 — pedido do Danilo depois de ver o estilo do Gemini.
+    """
+    x0, y0, x1, y1 = [int(round(v)) for v in caixa]
+    r = 64
+    tela = sombra(tela, (x0, y0, x1, y1), r, 34, 165, (0, 18))
+
+    w, h = x1 - x0, y1 - y0
+    claro = _lerp_cor(cor, (255, 255, 255), 0.30)
+    escuro = _lerp_cor(cor, (0, 0, 0), 0.30)
+    col = Image.new("RGB", (1, h))
+    px = col.load()
+    for i in range(h):
+        px[0, i] = _lerp_cor(claro, escuro, (i / max(1, h - 1)) ** 1.3)
+    grad = col.resize((w, h), Image.NEAREST)
+    masc = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(masc).rounded_rectangle([0, 0, w - 1, h - 1], radius=r, fill=255)
+    grad_rgba = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    grad_rgba.paste(grad, (0, 0))
+    grad_rgba.putalpha(masc)
+    tela.alpha_composite(grad_rgba, (x0, y0))
+
+    cam = camada(w, h)
     d = ImageDraw.Draw(cam)
-    d.rounded_rectangle(caixa, radius=r, fill=(255, 255, 255, 240))
-    d.rounded_rectangle(caixa, radius=r, outline=cor + (235,), width=5)
-    d.rounded_rectangle([x0 + 8, y0 + 8, x1 - 8, y1 - 8], radius=r - 8,
-                        outline=(255, 255, 255, 180), width=3)
-    return Image.alpha_composite(tela, cam)
+    luminoso = _lerp_cor(cor, (255, 255, 255), 0.55)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=r, outline=luminoso + (235,), width=7)
+    d.rounded_rectangle([10, 10, w - 11, h - 11], radius=r - 10,
+                        outline=(255, 255, 255, 100), width=3)
+    return _compor(tela, cam, x0, y0)
 
 
 def desenhar_icone(tela, b, x, y_topo, lado):
-    """Ladrilho cat_*.png a cavalgar a aresta de cima do cartao."""
+    """Ladrilho cat_*.png grande, a sair do canto superior esquerdo do cartao."""
     ic = Image.open(A("icons", b["icone"])).convert("RGBA").resize(
         (lado, lado), Image.LANCZOS)
     ic = cantos_redondos(ic, int(lado * 0.26))
-    cx, cy = int(x), int(y_topo - lado // 2)
-    tela = sombra(tela, (cx, cy, cx + lado, cy + lado), int(lado * 0.26), 16, 130, (0, 9))
-    aro = Image.new("RGBA", tela.size, (0, 0, 0, 0))
+    cx, cy = int(x), int(y_topo - lado * 0.60)   # 60% ca' fora: salta mais
+    tela = sombra(tela, (cx, cy, cx + lado, cy + lado), int(lado * 0.26), 18, 150, (0, 10))
+    aro = camada(lado + 16, lado + 16)
     ImageDraw.Draw(aro).rounded_rectangle(
-        [cx - 7, cy - 7, cx + lado + 7, cy + lado + 7],
+        [0, 0, lado + 15, lado + 15],
         radius=int(lado * 0.30), fill=(255, 255, 255, 250))
-    tela = Image.alpha_composite(tela, aro)
+    tela = _compor(tela, aro, cx - 8, cy - 8)
     tela.alpha_composite(ic, (cx, cy))
     return tela
+
+
+PASTILHA_MIN_H = 200  # px na tela A4 (2480x3508) — pedido do Danilo: logo grande e nitido
 
 
 def desenhar_bloco(tela, b, caixa):
     x0, y0, x1, y1 = [int(round(v)) for v in caixa]
     caixa = (x0, y0, x1, y1)
     tela = desenhar_cartao(tela, caixa, b["cor"])
-    lado_ic = int(min(104, (y1 - y0) * 0.34))
-    tela = desenhar_icone(tela, b, x0 + 46, y0, lado_ic)
+    lado_ic = int(min(132, (y1 - y0) * 0.30))
+    inset = 20
+    tela = desenhar_icone(tela, b, x0 + inset, y0, lado_ic)
 
     d = ImageDraw.Draw(tela)
     larg_i = x1 - x0
-    # nome da categoria, a' direita do icone
+    # nome da categoria, a' direita do icone — branco em negrito, com sombra
+    # (o cartao agora e' de cor cheia, texto escuro nao lia).
     tam = 46 if larg_i > 1400 else (40 if larg_i > 900 else 34)
     f_nome = fonte(tam, "Black")
-    tx = x0 + 46 + lado_ic + 34
-    ty = y0 + int(lado_ic * 0.5) - tam // 2 + 4
+    tx = x0 + inset + lado_ic + 26
+    ty = y0 + int(lado_ic * 0.40) - tam // 2 + 4
     while larg_texto(d, b["nome"], f_nome)[0] > (x1 - 40) - tx and tam > 24:
         tam -= 2
         f_nome = fonte(tam, "Black")
-    d.text((tx, ty), b["nome"], font=f_nome, fill=TINTA)
-    y_sublinhado = ty + tam + 14
-    d.line([tx, y_sublinhado, min(tx + 120, x1 - 40), y_sublinhado],
-           fill=b["cor"], width=6)
+    d.text((tx + 3, ty + 4), b["nome"], font=f_nome, fill=(2, 8, 16, 150))
+    d.text((tx, ty), b["nome"], font=f_nome, fill=BRANCO)
 
-    # a zona de conteudo comeca DEPOIS do nome e do sublinhado — senao, nos
-    # blocos baixos, o texto e os logos escrevem por cima do nome.
-    y = max(y0 + lado_ic * 0.5 + 18, y_sublinhado + 16)
-    zona_baixo = y1 - 26
+    # "Em breve: ..." vai para o canto superior direito, na mesma faixa do nome.
+    # Por baixo dos logos roubava 52px de altura e empurrava a pastilha para
+    # cima do nome.
+    if b.get("nota"):
+        fn = fonte(28, "Black")
+        wn = larg_texto(d, b["nota"], fn)[0]
+        nw, nh = wn + 44, fn.size + 20
+        nx, ny = x1 - 30 - nw, y0 + int(lado_ic * 0.40) - nh // 2 + 4
+        pil = camada(nw, nh)
+        ImageDraw.Draw(pil).rounded_rectangle([0, 0, nw - 1, nh - 1], radius=nh // 2,
+                                              fill=(255, 255, 255, 240))
+        tela = _compor(tela, pil, nx, ny)
+        d = ImageDraw.Draw(tela)
+        d.text((nx + 22, ny + 8), b["nota"], font=fn, fill=b["cor"])
+
+    # a zona de conteudo comeca DEPOIS do nome — senao, nos blocos baixos, o
+    # texto e os logos escrevem por cima do nome.
+    y = max(y0 + lado_ic * 0.40 + 12, ty + tam + 18)
+    zona_baixo = y1 - 22
 
     if b.get("logos"):
         n = len(b["logos"])
-        # a nota "Em breve" tem faixa propria: nunca por cima dos logos
-        alt_nota = 66 if b.get("nota") else 0
+        alt_nota = 0        # a nota subiu para junto do nome
         alt_txt = 54 if b.get("texto") else 0
         disp_y = (zona_baixo - alt_nota - alt_txt) - y
-        cel_w = (larg_i - 72) / n
-        # Pastilhas TODAS do mesmo tamanho dentro do bloco — e' o que faz a fila
-        # parecer arrumada. O logo e' que se ajusta por AREA la' dentro, para um
-        # logo largo (Pingo Doce) e um quadrado (KFC) pesarem o mesmo ao olho.
-        ph = disp_y * (0.98 if n == 1 else 0.96)
-        pad = 24
+        cel_w = (larg_i - 60) / n
+        # Pastilha branca: altura MINIMA de 200px (pedido do Danilo — logos
+        # pequenos era a queixa). So' cresce acima disso se houver espaco.
+        ph = max(PASTILHA_MIN_H, disp_y * (0.98 if n == 1 else 0.97))
+        if os.environ.get("DEBUG_FLYER"):
+            print(f"bloco {b['n']:>2} {b['nome']:<14} disp_y={disp_y:6.1f} ph={ph:6.1f} "
+                  f"{'OVERFLOW!' if ph > disp_y + 4 else 'ok'}")
+        pad = 18
         util_h = ph - 2 * pad
-        util_w = cel_w * 0.92 - 2 * pad
-        # area alvo em funcao da ALTURA util: um logo quadrado enche a pastilha
-        # em altura; um logo largo fica mais baixo mas mais comprido, e os dois
-        # acabam com o mesmo peso visual.
-        area = util_h * util_h * 1.55
+        util_w = cel_w * 0.95 - 2 * pad
         for i, nome in enumerate(b["logos"]):
-            im = por_area(logo(nome), area, util_w, util_h)
+            # escala pela ALTURA (logo enche pelo menos ~70% da pastilha em pe'),
+            # so' recua se a largura da celula nao deixar — nunca esticado.
+            im0 = logo(nome)
+            w0, h0 = im0.size
+            alvo_h = util_h        # enche a area util toda (~85% da pastilha)
+            esc = min(alvo_h / h0, util_w / w0)
+            im = im0.resize((max(1, int(w0 * esc)), max(1, int(h0 * esc))), Image.LANCZOS)
             # a pastilha acompanha a largura do logo, mas a ALTURA e' igual para
             # todos — e' isso que alinha a fila.
-            pw = min(max(im.width + 2 * pad, ph), cel_w * 0.96)
-            cxp = x0 + 36 + cel_w * i + cel_w / 2
+            pw = min(max(im.width + 2 * pad, ph), cel_w * 0.98)
+            cxp = x0 + 30 + cel_w * i + cel_w / 2
             cyp = y + disp_y / 2
             cor_pastilha = FUNDO_PASTILHA.get(nome, (255, 255, 255))
             orla = cor_pastilha if nome in FUNDO_PASTILHA else (226, 232, 240)
-            pil = Image.new("RGBA", tela.size, (0, 0, 0, 0))
+            tela = sombra(tela, (cxp - pw / 2, cyp - ph / 2, cxp + pw / 2, cyp + ph / 2),
+                          24, 14, 90, (0, 6))
+            pil = camada(pw, ph)
             ImageDraw.Draw(pil).rounded_rectangle(
-                [cxp - pw / 2, cyp - ph / 2, cxp + pw / 2, cyp + ph / 2],
+                [0, 0, int(pw) - 1, int(ph) - 1],
                 radius=24, fill=cor_pastilha + (255,), outline=orla + (255,), width=3)
-            tela = Image.alpha_composite(tela, pil)
+            tela = _compor(tela, pil, cxp - pw / 2, cyp - ph / 2)
             tela.alpha_composite(im, (int(cxp - im.width / 2), int(cyp - im.height / 2)))
         d = ImageDraw.Draw(tela)
         y += disp_y
 
     if b.get("texto"):
-        f = fonte(30 if larg_i < 900 else 34, "Medium")
-        linhas = quebrar(d, b["texto"], f, larg_i - 96)
-        alt = len(linhas) * (f.size + 12)
-        yy = y + max(0, ((zona_baixo - (46 if b.get("nota") else 0)) - y - alt) / 2)
+        f = fonte(26 if larg_i < 900 else 30, "SemiBold")
+        linhas = quebrar(d, b["texto"], f, larg_i - 88)
+        alt = len(linhas) * (f.size + 9)
+        yy = y + max(0, (zona_baixo - y - alt) / 2)
         for ln in linhas:
-            texto_centrado(d, (x0 + x1) / 2, yy, ln, f, TINTA_SUAVE)
-            yy += f.size + 12
-
-    if b.get("nota"):
-        f = fonte(31, "SemiBold")
-        w_n, _ = larg_texto(d, b["nota"], f)
-        cy = zona_baixo - 48
-        pil = Image.new("RGBA", tela.size, (0, 0, 0, 0))
-        ImageDraw.Draw(pil).rounded_rectangle(
-            [(x0 + x1) / 2 - w_n / 2 - 26, cy - 10,
-             (x0 + x1) / 2 + w_n / 2 + 26, cy + f.size + 14],
-            radius=26, fill=b["cor"] + (32,), outline=b["cor"] + (140,), width=3)
-        tela = Image.alpha_composite(tela, pil)
-        d = ImageDraw.Draw(tela)
-        texto_centrado(d, (x0 + x1) / 2, cy, b["nota"], f, b["cor"])
+            texto_centrado(d, (x0 + x1) / 2, yy, ln, f, (255, 255, 255),
+                           sombra=(0, 3, (2, 8, 16, 130)))
+            yy += f.size + 9
 
     return tela
 
@@ -335,42 +416,77 @@ def fazer_qr(url, lado):
 # ------------------------------------------------------------------ montar
 def montar():
     tela = gerar_fundo(W, H).convert("RGBA")
+    y_rodape = H - BLEED - ALT_RODAPE
+    tela = escurecer_faixa(tela, BLEED, BLEED + 620, 100)
+    tela = escurecer_faixa(tela, y_rodape - 60, H - BLEED, 70)
     d = ImageDraw.Draw(tela)
 
     # ---------------- topo
-    y = BLEED + 44
+    y = BLEED + 30
     lg = aparar(recortar_fundo_branco(Image.open(A("brand", "bora_logo.png"))))
-    lg_w = 620
+    lg_w = 470
     lg = lg.resize((lg_w, int(lg.height * lg_w / lg.width)), Image.LANCZOS)
     tela.alpha_composite(lg, ((W - lg_w) // 2, y))
-    y += lg.height + 26
+    y += lg.height + 16
 
-    f_tit = fonte(112, "Black")
-    texto_centrado(d, W / 2, y, "TUDO NUM APP SÓ", f_tit, VERDE,
-                   sombra=(0, 6, (255, 255, 255, 200)))
+    # titulo BRANCO com sombra escura: o fundo passou a ser noturno (o verde
+    # #16A34A so' lia quando havia um halo claro por tras)
+    f_tit = fonte(116, "Black")
+    texto_centrado(d, W / 2, y, "TUDO NUM APP SÓ", f_tit, BRANCO,
+                   sombra=(0, 7, (2, 10, 20, 190)))
     y += 128
 
-    f_sub = fonte(43, "Medium")
+    f_sub = fonte(42, "Medium")
     texto_centrado(d, W / 2, y,
-                   "Comida, mercado, motorista e limpeza —", f_sub, (226, 240, 232))
-    y += 56
+                   "Comida, mercado, motorista e limpeza —", f_sub, (223, 238, 230),
+                   sombra=(0, 3, (2, 10, 20, 150)))
+    y += 52
     texto_centrado(d, W / 2, y,
-                   "o Bora App resolve com certeza.", f_sub, (226, 240, 232))
-    y += 58
-
-    # ---------------- rodape (reservado primeiro, para o corpo saber o limite)
-    y_rodape = H - BLEED - ALT_RODAPE
+                   "o Bora App resolve com certeza.", f_sub, (223, 238, 230),
+                   sombra=(0, 3, (2, 10, 20, 150)))
+    y += 46
 
     # ---------------- corpo: 6 linhas, 13 blocos
-    GAP_V, GAP_H = 40, 30
+    # (y_rodape ja' reservado no topo da funcao, antes do escurecimento)
+    GAP_V, GAP_H = 52, 42
     disp = (y_rodape - 30) - y
-    soma = sum(p for _, p in LINHAS)
-    unidade = (disp - GAP_V * (len(LINHAS) - 1)) / soma
-
     por_n = {b["n"]: b for b in BLOCOS}
+
+    # Altura POR NECESSIDADE, nao por peso arbitrario: uma linha com logos tem
+    # de caber cabecalho + pastilha de 200px + margens, senao a pastilha
+    # transborda por cima do nome (era o que acontecia em 5 dos 13 blocos).
+    def altura_minima(indices):
+        pior = 0
+        larg_col = LARG / len(indices)
+        tam_nome = 46 if larg_col > 1400 else (40 if larg_col > 900 else 34)
+        for idx in indices:
+            b = por_n[idx]
+            cab = 53 + tam_nome + 16                # icone dentro + nome + folga
+            corpo = 0
+            if b.get("logos"):
+                corpo += PASTILHA_MIN_H + 16
+            if b.get("texto"):
+                corpo += 46 if b.get("logos") else 78
+            pior = max(pior, cab + corpo + 22)
+        return pior
+
+    minimos = [altura_minima(ix) for ix, _ in LINHAS]
+    folga = disp - sum(minimos) - GAP_V * (len(LINHAS) - 1)
+    if folga < 0:                       # nao cabe: aperta os intervalos primeiro
+        GAP_V = max(30, GAP_V + int(folga / (len(LINHAS) - 1)))
+        folga = disp - sum(minimos) - GAP_V * (len(LINHAS) - 1)
+    if os.environ.get("DEBUG_FLYER"):
+        print(f"[layout] disp={disp:.0f} minimos={sum(minimos):.0f} "
+              f"gap={GAP_V} folga={folga:.0f}")
+    # o que sobra distribui-se pelas linhas com logos (e' onde faz diferenca)
+    peso_folga = [2.0 if any(por_n[i].get("logos") for i in ix) else 1.0
+                  for ix, _ in LINHAS]
+    tot_pf = sum(peso_folga)
+    alturas = [m + max(0, folga) * pf / tot_pf for m, pf in zip(minimos, peso_folga)]
+
     yy = y
-    for indices, peso in LINHAS:
-        alt = unidade * peso
+    for li, (indices, _peso) in enumerate(LINHAS):
+        alt = alturas[li]
         fracoes = LARGURAS.get(indices[0], [1.0 / len(indices)] * len(indices))
         xx = CX0
         for k, idx in enumerate(indices):
@@ -384,12 +500,14 @@ def montar():
     d = ImageDraw.Draw(tela)
     cx_r0, cx_r1 = CX0, CX1
     caixa_r = (cx_r0, y_rodape, cx_r1, H - BLEED - 24)
-    tela = sombra(tela, caixa_r, 46, 24, 130, (0, 14))
-    cam = Image.new("RGBA", tela.size, (0, 0, 0, 0))
-    ImageDraw.Draw(cam).rounded_rectangle(caixa_r, radius=46,
-                                          fill=(255, 255, 255, 245),
-                                          outline=VERDE + (235,), width=5)
-    tela = Image.alpha_composite(tela, cam)
+    tela = sombra(tela, caixa_r, 46, 26, 150, (0, 16))
+    # rodape ESCURO, como no visual aprovado a 28/08 (era branco no V2)
+    rw, rh = cx_r1 - cx_r0, (H - BLEED - 24) - y_rodape
+    cam = camada(rw, rh)
+    ImageDraw.Draw(cam).rounded_rectangle([0, 0, rw - 1, rh - 1], radius=46,
+                                          fill=(18, 26, 32, 246),
+                                          outline=VERDE + (235,), width=6)
+    tela = _compor(tela, cam, cx_r0, y_rodape)
     d = ImageDraw.Draw(tela)
 
     # Tres colunas: QR | app | QR. Ganha-se pela LARGURA, o que deixa os QR
@@ -405,16 +523,19 @@ def montar():
             (PLAY_URL, "ANDROID", "Play Store", VERDE),
             (WEB_URL, "iPHONE / PC", "abre no browser", LARANJA)]):
         qx = (CX0 + QR_MARGEM_X) if i == 0 else (CX1 - QR_MARGEM_X - qr_lado)
-        moldura = Image.new("RGBA", tela.size, (0, 0, 0, 0))
+        mw = qr_lado + 2 * margem_qr
+        moldura = camada(mw, mw)
         ImageDraw.Draw(moldura).rounded_rectangle(
-            [qx - margem_qr, qy - margem_qr,
-             qx + qr_lado + margem_qr, qy + qr_lado + margem_qr],
+            [0, 0, mw - 1, mw - 1],
             radius=26, fill=(255, 255, 255, 255), outline=cor + (255,), width=5)
-        tela = Image.alpha_composite(tela, moldura)
+        tela = _compor(tela, moldura, qx - margem_qr, qy - margem_qr)
         tela.alpha_composite(fazer_qr(url, qr_lado), (int(qx), int(qy)))
         d = ImageDraw.Draw(tela)
-        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 38, et, f_et, cor)
-        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 84, et2, f_et2, TINTA_SUAVE)
+        # etiquetas em claro: o rodape agora e' escuro
+        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 38, et, f_et,
+                       _lerp_cor(cor, (255, 255, 255), 0.35))
+        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 84, et2, f_et2,
+                       (176, 190, 200))
 
     # coluna do meio: icone do aplicativo + nome
     ic_lado = 190
@@ -430,9 +551,11 @@ def montar():
     f_app = fonte(54, "Black")
     f_app2 = fonte(37, "SemiBold")
     ty2 = iy + ic_lado + 26
-    texto_centrado(d, cxm, ty2, "BORA APP", f_app, TINTA)
-    texto_centrado(d, cxm, ty2 + 64, "GUARDA", f_app, VERDE)
-    texto_centrado(d, cxm, ty2 + 134, "descarrega na Play Store", f_app2, TINTA_SUAVE)
+    texto_centrado(d, cxm, ty2, "BORA APP", f_app, BRANCO)
+    texto_centrado(d, cxm, ty2 + 64, "GUARDA", f_app,
+                   _lerp_cor(VERDE, (255, 255, 255), 0.35))
+    texto_centrado(d, cxm, ty2 + 134, "descarrega na Play Store", f_app2,
+                   (186, 199, 208))
 
     # ---------------- margem branca da grafica (8mm)
     moldura = Image.new("RGBA", (W, H), (255, 255, 255, 255))

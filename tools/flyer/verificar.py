@@ -18,7 +18,7 @@ from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_flyer import BLOCOS, PLAY_URL, WEB_URL
 
-DOWN = os.path.join(os.path.expanduser("~"), "Downloads")
+from build_flyer import SAIDA as DOWN
 P_GRAFICA = os.path.join(DOWN, "flyer-bora-app-A4-grafica.png")
 P_WHATS = os.path.join(DOWN, "flyer-bora-app-whatsapp.jpg")
 
