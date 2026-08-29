@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sites que já fizemos — Bora, Guarda</title>
+<meta name="description" content="Sites feitos na Guarda para clubes, barbearias, restaurantes e marcas pessoais. Cada um com o problema que resolveu e o link para o ver.">
+<link rel="canonical" href="https://boraguarda.com/trabalhos">
+<meta name="theme-color" content="#0B0F0D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Bora">
+<meta property="og:title" content="Sites que já fizemos — Bora, Guarda">
+<meta property="og:description" content="Clubes, barbearias, restaurantes e marcas pessoais. O problema de cada um, o que foi feito, e o link para ver.">
+<meta property="og:url" content="https://boraguarda.com/trabalhos">
+<meta property="og:image" content="https://boraguarda.com/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sites que já fizemos — Bora, Guarda">
+<meta name="twitter:description" content="O problema de cada um, o que foi feito, e o link para ver.">
+<meta name="twitter:image" content="https://boraguarda.com/assets/img/og-image.png">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/bora.css">
+<style>
+  /* -------- portfólio: a grelha de trabalhos -------- */
+  .tr-lista{display:grid;gap:26px;margin-top:34px}
+  .tr{
+    background:var(--tinta-2);border:1px solid var(--linha);border-radius:20px;
+    overflow:hidden;display:grid;
+  }
+  .tr-foto{position:relative;background:#0a0d0b;aspect-ratio:16/10;overflow:hidden}
+  .tr-foto img{width:100%;height:100%;object-fit:cover;object-position:top center;
+               transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+  .tr:hover .tr-foto img{transform:scale(1.03)}
+  .tr-selo{
+    position:absolute;left:14px;top:14px;z-index:2;
+    background:rgba(11,15,13,.86);border:1px solid var(--linha);border-radius:999px;
+    padding:7px 14px;font-size:.82rem;font-weight:800;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--verde-claro);backdrop-filter:blur(6px);
+  }
+  .tr-selo.fechado{color:var(--texto-2)}
+  .tr-corpo{padding:26px 24px 28px}
+  .tr-corpo h2{font-size:1.28rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+  .tr-tipo{font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--laranja);margin-bottom:14px}
+  .tr-l{margin:14px 0 0}
+  .tr-l dt{font-size:.84rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+           color:var(--texto-3);margin-bottom:5px}
+  .tr-l dd{margin:0 0 16px;color:var(--texto-2);font-size:.97rem}
+  .tr-ir{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+  .tr-nada{color:var(--texto-3);font-size:.88rem;font-style:normal}
+  @media (min-width:820px){
+    .tr{grid-template-columns:1.15fr .85fr;align-items:stretch}
+    .tr-foto{aspect-ratio:auto;height:100%;min-height:290px}
+    .tr:nth-child(even) .tr-foto{order:2}
+  }
+
+  /* -------- o formulário que abre o WhatsApp -------- */
+  .orc{background:var(--tinta-2);border:1px solid var(--linha);border-radius:22px;
+       padding:clamp(24px,4vw,40px);margin-top:14px}
+  .orc h2{margin-bottom:6px}
+  .campo{margin-bottom:18px}
+  .campo label{display:block;font-weight:700;font-size:.94rem;margin-bottom:8px}
+  .campo .op{color:var(--texto-2);font-weight:500;font-size:.86rem}
+  input,select,textarea{
+    width:100%;font:inherit;font-size:1rem;color:var(--texto);
+    background:var(--tinta-3);border:1px solid var(--linha);
+    border-radius:12px;padding:14px 15px;min-height:50px;
+  }
+  textarea{min-height:96px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--verde-claro);outline:none}
+  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+  select{appearance:none;padding-right:44px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A9B5AE' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:20px}
+  .escolhas{display:flex;flex-wrap:wrap;gap:9px}
+  .escolhas input{position:absolute;opacity:0;width:1px;height:1px}
+  .escolhas label{margin:0;padding:12px 18px;border-radius:999px;cursor:pointer;font-size:.93rem;
+    background:var(--tinta-3);border:1px solid var(--linha);color:var(--texto-2);min-height:46px;
+    display:inline-flex;align-items:center;transition:border-color .18s ease,color .18s ease,background .18s ease}
+  .escolhas input:checked + label{border-color:var(--verde-claro);color:#fff;background:rgba(22,163,74,.18)}
+  .escolhas input:focus-visible + label{outline:3px solid var(--laranja);outline-offset:2px}
+  .resumo{background:var(--tinta-3);border:1px dashed var(--linha);border-radius:14px;
+    padding:16px 18px;margin:20px 0;font-size:.92rem;color:var(--texto-2);white-space:pre-wrap;word-break:break-word}
+  .resumo b{color:var(--texto);display:block;margin-bottom:8px;font-size:.84rem;
+    letter-spacing:.14em;text-transform:uppercase}
+  .enviar{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+    background:#25D366;color:#06281a;border:0;border-radius:999px;padding:17px 24px;
+    font:inherit;font-size:1.05rem;font-weight:800;cursor:pointer;min-height:56px;
+    box-shadow:0 12px 30px -12px rgba(37,211,102,.7);transition:transform .18s ease}
+  .enviar:hover{transform:translateY(-2px)}
+  .saidas-alt{margin-top:16px;text-align:center;color:var(--texto-2);font-size:.9rem}
+  .saidas-alt a{color:var(--verde-claro);font-weight:600}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:8px}
+  @media (prefers-reduced-motion: reduce){
+    .tr:hover .tr-foto img{transform:none}
+    .enviar:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="/">
+    <img src="/assets/img/bora_logo.png" alt="Bora" width="40" height="40">
+    <span>Bora</span>
+  </a>
+  <nav class="menu">
+    <a href="/viagens">Viagens</a>
+    <a href="/entregas">Entregas</a>
+    <a href="/beleza">Beleza</a>
+    <a href="/festas">Festas</a>
+    <a href="/mais">E ainda</a>
+    <a href="/trabalhos" aria-current="page">Trabalhos</a>
+    <a href="/ser-parceiro">Ser parceiro</a>
+  </nav>
+  <a class="btn btn-p pequeno" href="/orcamento">Pedir orçamento</a>
+</header>
+
+<main>
+  <section class="cat-topo">
+    <div class="wrap">
+      <nav class="migalhas"><a href="/">Início</a><i>›</i><span>Trabalhos</span></nav>
+      <div class="chapeu">Sites feitos na Guarda</div>
+      <h1>Sites que já fizemos.</h1>
+      <p class="lead">Cada um começou por um problema concreto. Aqui está o problema,
+      o que foi feito, e o link para veres com os teus olhos. Sem números inventados
+      e sem testemunhos que ninguém escreveu.</p>
+    </div>
+  </section>
+
+  <div class="wrap conteudo">
+    <div class="tr-lista">
+
+      <!-- 1. GUARDA FC — atrás de portão, por isso só a imagem -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo fechado">Fechado ao público</span>
+          <img src="/assets/img/trabalhos/guarda-fc.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site do Guarda Futebol Clube, com a equipa a levantar a Supertaça da Beira Interior">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Clube de futebol</div>
+          <h2>Guarda Futebol Clube</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>A SAD nova precisava de uma casa oficial antes de abrir ao público — e o
+            clube não tinha onde pôr o plantel, o calendário e o palmarés.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Site do clube com plantel, calendário, resultados, classificação, palmarés,
+            galeria, notícias, loja e patrocinadores. Em três idiomas.</dd>
+            <dt>Ver</dt>
+            <dd class="tr-nada">Ainda está atrás de portão de acesso, por isso não há link
+            para dar. Fica a captura.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 2. JAI -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/jai.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site pessoal de Jai Agarwal">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Marca pessoal</div>
+          <h2>Jai Agarwal</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>Quem procurava o nome não encontrava nada oficial — só notícias de terceiros,
+            cada uma a contar a história à sua maneira.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Site pessoal com percurso, projectos e contacto, em domínio próprio, para ser
+            a primeira coisa que aparece a quem procura.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="https://jaiagarwala.com/" target="_blank" rel="noopener">jaiagarwala.com ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 3. OURO E PRATA -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/ouro-e-prata.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site da Barbearia Ouro e Prata, com um barbeiro a cortar cabelo">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Barbearia</div>
+          <h2>Barbearia Ouro &amp; Prata</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>As marcações entravam por mensagem e por telefone, a meio de um corte. Quem
+            ligava a meio da tarde não tinha resposta.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Site com a tabela de serviços, preços e duração, e marcação directa pelo Bora
+            App — a hora fica guardada sem ninguém atender o telefone.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="https://ouroeprata.boraguarda.com/" target="_blank" rel="noopener">ouroeprata.boraguarda.com ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 4. SABORES DE CASA -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/sabores-de-casa.webp" width="1200" height="750" loading="lazy"
+               alt="Página do Sabores de Casa Açaí no site do Bora, com o catálogo e os preços">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Restaurante e açaí</div>
+          <h2>Sabores de Casa Açaí</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>Os produtos e os preços só existiam dentro da app. Quem chegava pelo Google não
+            via nada e ia-se embora.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Página própria com o catálogo, os preços verdadeiros e os dois botões de pedir
+            — o da app e o do site, do mesmo tamanho.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="/loja/sabores-de-casa-acai">Ver a página ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 5. GOOLA -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/goola.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site da Goola Açaí, na Guarda">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Açaí</div>
+          <h2>Goola Açaí</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>A loja não tinha site nenhum. A montra digital era o Instagram, onde um preço
+            publicado há três meses desaparece na grelha.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Mini-site com fotografias reais dos copos, vídeo e os dois caminhos para pedir,
+            em subdomínio próprio.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="https://goola.boraguarda.com/" target="_blank" rel="noopener">goola.boraguarda.com ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 6. MR KEBAB -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/mr-kebab.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site do Mr Kebab and Restaurant, na Guarda">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Restaurante</div>
+          <h2>Mr Kebab &amp; Restaurant</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>O menu andava em fotografias de papel plastificado partilhadas por mensagem.
+            Ninguém sabia ao certo o que havia nem quanto custava.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Mini-site com o menu e os preços verdadeiros, fotografias dos pratos e o
+            caminho para pedir pelo Bora.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="https://mrkebab.boraguarda.com/" target="_blank" rel="noopener">mrkebab.boraguarda.com ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- 7. SABORES DO BRASIL -->
+      <article class="tr">
+        <div class="tr-foto">
+          <span class="tr-selo">No ar</span>
+          <img src="/assets/img/trabalhos/sabores-do-brasil.webp" width="1200" height="750" loading="lazy"
+               alt="Página inicial do site do Sabores do Brasil, de Keli Barbosa, na Guarda">
+        </div>
+        <div class="tr-corpo">
+          <div class="tr-tipo">Salgados e encomendas</div>
+          <h2>Sabores do Brasil · Keli Barbosa</h2>
+          <dl class="tr-l">
+            <dt>O problema</dt>
+            <dd>As encomendas de festa combinavam-se por mensagem, uma a uma, e a data ficava
+            num caderno. Faltava sítio onde ver o que há e para quando.</dd>
+            <dt>O que foi feito</dt>
+            <dd>Mini-site com vídeo, os produtos por encomenda e os dois botões de pedir. As
+            festas ficam com data marcada dentro do Bora.</dd>
+            <dt>Ver</dt>
+            <dd><a class="btn btn-s pequeno" href="https://saboresdobrasil.boraguarda.com/" target="_blank" rel="noopener">saboresdobrasil.boraguarda.com ↗</a></dd>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ================= o formulário que abre o WhatsApp ================= -->
+    <section class="bloco" id="falar" style="margin-top:56px">
+      <div class="orc">
+        <div class="chapeu">Falar sobre o teu</div>
+        <h2>Diz-me o que precisas.</h2>
+        <p class="nota" style="margin-bottom:22px">Preenche e carrega. O WhatsApp abre com a
+        mensagem já escrita — só tens de carregar em enviar.</p>
+
+        <form id="fwa">
+          <div class="campo">
+            <label for="nome">O teu nome</label>
+            <input id="nome" name="nome" type="text" required autocomplete="name"
+                   placeholder="Ex.: Ana Rodrigues" data-msg="Nome">
+          </div>
+
+          <div class="campo">
+            <label id="lbl-serv">O que precisas</label>
+            <div class="escolhas" role="radiogroup" aria-labelledby="lbl-serv">
+              <input type="radio" id="s1" name="servico" value="Site novo" checked data-msg="Serviço">
+              <label for="s1">Site novo</label>
+              <input type="radio" id="s2" name="servico" value="Refazer o site que já tenho" data-msg="Serviço">
+              <label for="s2">Refazer o que tenho</label>
+              <input type="radio" id="s3" name="servico" value="Loja com pagamento" data-msg="Serviço">
+              <label for="s3">Loja com pagamento</label>
+              <input type="radio" id="s4" name="servico" value="Marcações online" data-msg="Serviço">
+              <label for="s4">Marcações online</label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="negocio">Negócio <span class="op">(opcional)</span></label>
+            <input id="negocio" name="negocio" type="text" placeholder="Ex.: Barbearia da Sé" data-msg="Negócio">
+          </div>
+
+          <div class="campo">
+            <label for="zona">Zona</label>
+            <select id="zona" name="zona" data-msg="Zona">
+              <option>Guarda</option><option>Covilhã</option><option>Seia</option>
+              <option>Gouveia</option><option>Celorico da Beira</option><option>Outra</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="notas">Alguma coisa a acrescentar <span class="op">(opcional)</span></label>
+            <textarea id="notas" name="notas" placeholder="Ex.: quero receber marcações sem estar ao telefone" data-msg="Notas"></textarea>
+          </div>
+
+          <div class="resumo" aria-live="polite" aria-atomic="true">
+            <b>Vai ser enviado</b><span id="resumo-txt"></span>
+          </div>
+
+          <button class="enviar" type="submit">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+        </form>
+
+        <p class="saidas-alt">
+          Sem WhatsApp? <a href="tel:+351937501673">937 501 673</a>
+          ou <a href="mailto:boraappbora@gmail.com">boraappbora@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section class="saidas">
+    <div class="wrap saidas-in">
+      <a class="btn btn-s" href="/">← Voltar ao Bora</a>
+      <a class="btn btn-p" href="/orcamento">Responder às perguntas do orçamento</a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod-grelha">
+      <div>
+        <div class="rod-t">O que dá para pedir</div>
+        <a href="/viagens">Viagens</a>
+        <a href="/entregas">Entregas</a>
+        <a href="/beleza">Beleza e serviços</a>
+        <a href="/festas">Festas</a>
+        <a href="/mais">Farmácia, limpeza, favores</a>
+      </div>
+      <div>
+        <div class="rod-t">Trabalhar com o Bora</div>
+        <a href="/ser-parceiro">Pôr o meu negócio</a>
+        <a href="/parceiros.html">Parceiros</a>
+        <a href="/estafetas.html">Estafetas</a>
+        <a href="/trabalhos">Sites que fizemos</a>
+        <a href="/orcamento">Pedir orçamento</a>
+      </div>
+      <div>
+        <div class="rod-t">Ajuda</div>
+        <a href="/faq.html">Perguntas frequentes</a>
+        <a href="mailto:boraappbora@gmail.com">boraappbora@gmail.com</a>
+        <a href="tel:+351937501673">+351937501673</a>
+      </div>
+      <div>
+        <div class="rod-t">Legal</div>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/termos.html">Termos</a>
+      </div>
+    </div>
+    <div class="rod-fim">© 2026 Bora · Guarda, Portugal</div>
+  </div>
+</footer>
+
+<script src="/assets/js/bora-anim.js" defer></script>
+<script src="/assets/js/whatsapp-form.js" defer></script>
+</body>
+</html>

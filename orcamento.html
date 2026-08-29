@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedir orçamento de site — Bora, Guarda</title>
+<meta name="description" content="Quatro perguntas curtas sobre o teu negócio e o que o site tem de fazer. No fim abre o WhatsApp com tudo escrito.">
+<link rel="canonical" href="https://boraguarda.com/orcamento">
+<meta name="theme-color" content="#0B0F0D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Bora">
+<meta property="og:title" content="Pedir orçamento de site — Bora, Guarda">
+<meta property="og:description" content="Quatro perguntas curtas. No fim abre o WhatsApp com tudo escrito.">
+<meta property="og:url" content="https://boraguarda.com/orcamento">
+<meta property="og:image" content="https://boraguarda.com/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pedir orçamento de site — Bora, Guarda">
+<meta name="twitter:description" content="Quatro perguntas curtas. No fim abre o WhatsApp com tudo escrito.">
+<meta name="twitter:image" content="https://boraguarda.com/assets/img/og-image.png">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/bora.css">
+<style>
+  /* Esta página NÃO mostra preços. O preço vai na proposta em PDF, depois de
+     haver conversa — mandar preço solto por mensagem baixa o valor do trabalho. */
+  .form-cx{max-width:720px;margin:0 auto}
+  .pergunta{
+    background:var(--tinta-2);border:1px solid var(--linha);border-radius:20px;
+    padding:clamp(22px,3.4vw,32px);margin-bottom:20px;
+  }
+  .p-num{font-size:.84rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+         color:var(--laranja);margin-bottom:10px}
+  .pergunta h2{font-size:1.16rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+  .pergunta .dica{color:var(--texto-2);font-size:.92rem;margin-bottom:18px}
+  fieldset{border:0;padding:0;margin:0}
+  legend{padding:0}
+  .escolhas{display:flex;flex-wrap:wrap;gap:9px}
+  .escolhas input{position:absolute;opacity:0;width:1px;height:1px}
+  .escolhas label{
+    margin:0;padding:12px 18px;border-radius:999px;cursor:pointer;font-size:.94rem;
+    background:var(--tinta-3);border:1px solid var(--linha);color:var(--texto-2);
+    min-height:46px;display:inline-flex;align-items:center;
+    transition:border-color .18s ease,color .18s ease,background .18s ease;
+  }
+  .escolhas input:checked + label{border-color:var(--verde-claro);color:#fff;background:rgba(22,163,74,.18)}
+  .escolhas input:focus-visible + label{outline:3px solid var(--laranja);outline-offset:2px}
+  .campo{margin-bottom:16px}
+  .campo:last-child{margin-bottom:0}
+  .campo label{display:block;font-weight:700;font-size:.94rem;margin-bottom:8px}
+  .campo .op{color:var(--texto-2);font-weight:500;font-size:.86rem}
+  input,select,textarea{
+    width:100%;font:inherit;font-size:1rem;color:var(--texto);
+    background:var(--tinta-3);border:1px solid var(--linha);
+    border-radius:12px;padding:14px 15px;min-height:50px;
+  }
+  textarea{min-height:96px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--verde-claro);outline:none}
+  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+  select{appearance:none;padding-right:44px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A9B5AE' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:20px}
+  .resumo{background:var(--tinta-3);border:1px dashed var(--linha);border-radius:14px;
+    padding:16px 18px;margin:0 0 18px;font-size:.92rem;color:var(--texto-2);
+    white-space:pre-wrap;word-break:break-word}
+  .resumo b{color:var(--texto);display:block;margin-bottom:8px;font-size:.84rem;
+    letter-spacing:.14em;text-transform:uppercase}
+  .enviar{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+    background:#25D366;color:#06281a;border:0;border-radius:999px;padding:17px 24px;
+    font:inherit;font-size:1.05rem;font-weight:800;cursor:pointer;min-height:56px;
+    box-shadow:0 12px 30px -12px rgba(37,211,102,.7);transition:transform .18s ease}
+  .enviar:hover{transform:translateY(-2px)}
+  .saidas-alt{margin-top:16px;text-align:center;color:var(--texto-2);font-size:.9rem}
+  .saidas-alt a{color:var(--verde-claro);font-weight:600}
+  .semprecos{
+    background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.28);
+    border-radius:16px;padding:18px 20px;color:var(--texto-2);font-size:.95rem;margin-bottom:26px;
+  }
+  .semprecos b{color:var(--texto)}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:8px}
+  @media (prefers-reduced-motion: reduce){ .enviar:hover{transform:none} }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="/">
+    <img src="/assets/img/bora_logo.png" alt="Bora" width="40" height="40">
+    <span>Bora</span>
+  </a>
+  <nav class="menu">
+    <a href="/viagens">Viagens</a>
+    <a href="/entregas">Entregas</a>
+    <a href="/beleza">Beleza</a>
+    <a href="/festas">Festas</a>
+    <a href="/mais">E ainda</a>
+    <a href="/trabalhos">Trabalhos</a>
+    <a href="/ser-parceiro">Ser parceiro</a>
+  </nav>
+  <a class="btn btn-s pequeno" href="/trabalhos">Ver trabalhos</a>
+</header>
+
+<main>
+  <section class="cat-topo">
+    <div class="wrap">
+      <nav class="migalhas"><a href="/">Início</a><i>›</i><span>Pedir orçamento</span></nav>
+      <div class="chapeu">Quatro perguntas</div>
+      <h1>Diz-me o que o site tem de fazer.</h1>
+      <p class="lead">Leva menos de um minuto. No fim abre o WhatsApp com tudo escrito —
+      só tens de carregar em enviar.</p>
+    </div>
+  </section>
+
+  <div class="wrap conteudo">
+    <div class="form-cx">
+
+      <p class="semprecos"><b>Aqui não há tabela de preços, e é de propósito.</b>
+      Um site para uma barbearia e um site que cobra dinheiro sozinho não custam o mesmo,
+      e um número atirado sem perceber o teu caso só engana os dois lados. Primeiro
+      falamos, depois recebes uma proposta escrita, com o preço, o prazo e o que está
+      incluído.</p>
+
+      <form id="fwa" data-whatsapp
+            data-abertura="Olá! Respondi às perguntas do orçamento no site.">
+
+        <div class="pergunta">
+          <div class="p-num">Pergunta 1</div>
+          <fieldset>
+            <legend><h2>Que tipo de negócio tens?</h2></legend>
+            <p class="dica">Escolhe o que mais se aproxima.</p>
+            <div class="escolhas">
+              <input type="radio" id="n1" name="negocio_tipo" value="Restaurante ou café" checked data-msg="Tipo de negócio">
+              <label for="n1">Restaurante ou café</label>
+              <input type="radio" id="n2" name="negocio_tipo" value="Barbearia, cabeleireiro ou estética" data-msg="Tipo de negócio">
+              <label for="n2">Barbearia ou estética</label>
+              <input type="radio" id="n3" name="negocio_tipo" value="Loja" data-msg="Tipo de negócio">
+              <label for="n3">Loja</label>
+              <input type="radio" id="n4" name="negocio_tipo" value="Clínica ou consultório" data-msg="Tipo de negócio">
+              <label for="n4">Clínica ou consultório</label>
+              <input type="radio" id="n5" name="negocio_tipo" value="Alojamento ou turismo" data-msg="Tipo de negócio">
+              <label for="n5">Alojamento ou turismo</label>
+              <input type="radio" id="n6" name="negocio_tipo" value="Serviços (advogado, contabilista, oficina)" data-msg="Tipo de negócio">
+              <label for="n6">Serviços</label>
+              <input type="radio" id="n7" name="negocio_tipo" value="Clube ou associação" data-msg="Tipo de negócio">
+              <label for="n7">Clube ou associação</label>
+              <input type="radio" id="n8" name="negocio_tipo" value="Marca pessoal" data-msg="Tipo de negócio">
+              <label for="n8">Marca pessoal</label>
+              <input type="radio" id="n9" name="negocio_tipo" value="Outra coisa" data-msg="Tipo de negócio">
+              <label for="n9">Outra coisa</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="pergunta">
+          <div class="p-num">Pergunta 2</div>
+          <fieldset>
+            <legend><h2>O que é que o site tem de fazer?</h2></legend>
+            <p class="dica">Podes escolher mais do que uma. Isto é o que decide o trabalho todo.</p>
+            <div class="escolhas">
+              <input type="checkbox" id="f1" name="fazer" value="Mostrar o negócio e dar credibilidade" data-msg="O site tem de">
+              <label for="f1">Mostrar o negócio</label>
+              <input type="checkbox" id="f2" name="fazer" value="Receber marcações" data-msg="O site tem de">
+              <label for="f2">Receber marcações</label>
+              <input type="checkbox" id="f3" name="fazer" value="Vender online com pagamento por cartão" data-msg="O site tem de">
+              <label for="f3">Vender com pagamento</label>
+              <input type="checkbox" id="f4" name="fazer" value="Receber pedidos pelo Bora" data-msg="O site tem de">
+              <label for="f4">Receber pedidos pelo Bora</label>
+              <input type="checkbox" id="f5" name="fazer" value="Ter área privada ou conteúdo só para membros" data-msg="O site tem de">
+              <label for="f5">Área só para membros</label>
+              <input type="checkbox" id="f6" name="fazer" value="Aparecer no Google quando procuram o nome" data-msg="O site tem de">
+              <label for="f6">Aparecer no Google</label>
+              <input type="checkbox" id="f7" name="fazer" value="Mostrar menu, tabela de serviços ou catálogo com preços" data-msg="O site tem de">
+              <label for="f7">Mostrar preços e catálogo</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="pergunta">
+          <div class="p-num">Pergunta 3</div>
+          <fieldset>
+            <legend><h2>Já tens site?</h2></legend>
+            <p class="dica">Se já tens, deixa o endereço na última pergunta — vou vê-lo antes de falarmos.</p>
+            <div class="escolhas">
+              <input type="radio" id="j1" name="ja_tem" value="Não tenho site nenhum" checked data-msg="Já tem site">
+              <label for="j1">Não tenho</label>
+              <input type="radio" id="j2" name="ja_tem" value="Tenho, mas está velho ou não funciona bem" data-msg="Já tem site">
+              <label for="j2">Tenho, mas está velho</label>
+              <input type="radio" id="j3" name="ja_tem" value="Só tenho Instagram ou Facebook" data-msg="Já tem site">
+              <label for="j3">Só redes sociais</label>
+              <input type="radio" id="j4" name="ja_tem" value="Tenho e está bom, quero acrescentar coisas" data-msg="Já tem site">
+              <label for="j4">Tenho e quero acrescentar</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="pergunta">
+          <div class="p-num">Pergunta 4</div>
+          <h2>Quem és tu?</h2>
+          <p class="dica">Só o que preciso para te responder.</p>
+
+          <div class="campo">
+            <label for="nome">O teu nome</label>
+            <input id="nome" name="nome" type="text" required autocomplete="name"
+                   placeholder="Ex.: Ana Rodrigues" data-msg="Nome">
+          </div>
+          <div class="campo">
+            <label for="marca">Nome do negócio <span class="op">(opcional)</span></label>
+            <input id="marca" name="marca" type="text" placeholder="Ex.: Barbearia da Sé" data-msg="Negócio">
+          </div>
+          <div class="campo">
+            <label for="zona">Zona</label>
+            <select id="zona" name="zona" data-msg="Zona">
+              <option>Guarda</option><option>Covilhã</option><option>Seia</option>
+              <option>Gouveia</option><option>Celorico da Beira</option>
+              <option>Outro sítio em Portugal</option><option>Fora de Portugal</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="notas">O endereço do site que já tens, ou alguma coisa a acrescentar <span class="op">(opcional)</span></label>
+            <textarea id="notas" name="notas" placeholder="Ex.: o meu site é oxxx.pt e nem se vê bem no telemóvel" data-msg="Notas"></textarea>
+          </div>
+        </div>
+
+        <div class="resumo" aria-live="polite" aria-atomic="true">
+          <b>Vai ser enviado</b><span id="resumo-txt"></span>
+        </div>
+
+        <button class="enviar" type="submit">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2m0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+      </form>
+
+      <p class="saidas-alt">
+        Sem WhatsApp? <a href="tel:+351937501673">937 501 673</a>
+        ou <a href="mailto:boraappbora@gmail.com">boraappbora@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <section class="saidas">
+    <div class="wrap saidas-in">
+      <a class="btn btn-s" href="/">← Voltar ao Bora</a>
+      <a class="btn btn-p" href="/trabalhos">Ver os sites que já fizemos</a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod-grelha">
+      <div>
+        <div class="rod-t">O que dá para pedir</div>
+        <a href="/viagens">Viagens</a>
+        <a href="/entregas">Entregas</a>
+        <a href="/beleza">Beleza e serviços</a>
+        <a href="/festas">Festas</a>
+        <a href="/mais">Farmácia, limpeza, favores</a>
+      </div>
+      <div>
+        <div class="rod-t">Trabalhar com o Bora</div>
+        <a href="/ser-parceiro">Pôr o meu negócio</a>
+        <a href="/parceiros.html">Parceiros</a>
+        <a href="/estafetas.html">Estafetas</a>
+        <a href="/trabalhos">Sites que fizemos</a>
+        <a href="/orcamento">Pedir orçamento</a>
+      </div>
+      <div>
+        <div class="rod-t">Ajuda</div>
+        <a href="/faq.html">Perguntas frequentes</a>
+        <a href="mailto:boraappbora@gmail.com">boraappbora@gmail.com</a>
+        <a href="tel:+351937501673">+351937501673</a>
+      </div>
+      <div>
+        <div class="rod-t">Legal</div>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/termos.html">Termos</a>
+      </div>
+    </div>
+    <div class="rod-fim">© 2026 Bora · Guarda, Portugal</div>
+  </div>
+</footer>
+
+<script src="/assets/js/bora-anim.js" defer></script>
+<script src="/assets/js/whatsapp-form.js" defer></script>
+</body>
+</html>

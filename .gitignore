@@ -3,3 +3,6 @@ node_modules/
 .mcp.json
 .env
 *.key
+
+# saida do fiscal visual: capturas PNG, pesadas e regeneraveis
+tools/fiscal-visual/saida/

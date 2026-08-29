@@ -202,7 +202,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-size: 0.78rem;
+  /* 0.78rem dava 12.5px e o fiscal visual apanhou-o: abaixo de 13px nao se
+     le no telemovel. 0.85rem da 13.6px. (missao site-premio, 2026-08-29) */
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -337,4 +339,137 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .cine-img { transform: none; }
   .cine-hint svg { animation: none; }
+}
+
+/* =========================================================================
+   A HISTÓRIA DO PEDIDO — a cena assinatura (missão site-premio, 2026-08-29)
+   A secção fixa-se e o pedido acontece à frente de quem desce.
+   Estado por omissão: TUDO VISÍVEL, em lista normal. A classe .js-pedido
+   (posta pelo script) é que passa a fixar e a esconder. Sem JavaScript
+   lê-se a história inteira, com as fotografias todas.
+   ========================================================================= */
+.pedido { position: relative; background: #05140d; }
+.pedido-alt { }
+.pedido-fixa { padding: 56px 0; }
+.pedido-grelha {
+  max-width: 1140px; margin: 0 auto; padding: 0 20px;
+  display: grid; gap: 40px; align-items: center;
+}
+.pedido-titulo {
+  color: #fff; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800;
+  letter-spacing: -.03em; line-height: 1.1; margin-bottom: 10px;
+}
+.pedido-lead { color: rgba(255,255,255,.62); max-width: 46ch; margin-bottom: 30px; }
+
+.pedido-passo {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px 0; border-top: 1px solid rgba(255,255,255,.10);
+}
+.pedido-passo:first-of-type { border-top: 0; }
+.pedido-num {
+  flex: 0 0 auto; width: 34px; height: 34px; border-radius: 999px;
+  display: grid; place-items: center; font-weight: 800; font-size: .85rem;
+  background: rgba(255,255,255,.08); color: #4ade80;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.pedido-passo h3 { color: #fff; font-size: 1.05rem; font-weight: 700; margin: 4px 0 4px; }
+.pedido-passo p  { color: rgba(255,255,255,.60); font-size: .95rem; margin: 0; }
+
+.pedido-palco { display: grid; gap: 18px; }
+.pedido-foto {
+  border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,.12);
+  background: #0a1a12;
+}
+.pedido-foto img { width: 100%; height: auto; display: block; }
+.pedido-legenda {
+  color: rgba(255,255,255,.5); font-size: .82rem; text-align: center; margin-top: 8px;
+}
+
+/* ---- a partir daqui só existe quando o JavaScript confirma que pode ---- */
+.js-pedido .pedido-alt   { height: 560vh; }
+.js-pedido .pedido-fixa  {
+  position: sticky; top: 0; min-height: 100vh; padding: 0;
+  display: grid; align-items: center; overflow: hidden;
+}
+.js-pedido .pedido-grelha { grid-template-columns: 1fr; }
+.js-pedido .pedido-passo {
+  opacity: .28; transform: translateY(6px);
+  transition: opacity .45s ease, transform .45s ease, border-color .45s ease;
+}
+.js-pedido .pedido-passo.activo { opacity: 1; transform: none; }
+.js-pedido .pedido-passo.activo .pedido-num {
+  background: #16a34a; color: #fff; border-color: #16a34a;
+}
+/* 4/5 e nao 3/4: os ecras da app sao 640x1336 e num 3/4 o corte comia
+   metade da frase de baixo. Com object-position no topo, o que se perde
+   e sempre o fundo do ecra, nunca o titulo. (visto em captura, 2026-08-29) */
+.js-pedido .pedido-palco {
+  position: relative; aspect-ratio: 4 / 5; max-width: 340px; margin: 0 auto; width: 100%;
+}
+.js-pedido .pedido-foto {
+  position: absolute; inset: 0; opacity: 0; transform: scale(.965) translateY(14px);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.3,1);
+}
+.js-pedido .pedido-foto.activa { opacity: 1; transform: none; }
+.js-pedido .pedido-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.js-pedido .pedido-legenda { display: none; }
+
+.pedido-barra {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: rgba(255,255,255,.10); display: none;
+}
+.js-pedido .pedido-barra { display: block; }
+.pedido-barra i { display: block; height: 100%; width: 0; background: #f97316; }
+
+@media (min-width: 900px) {
+  .js-pedido .pedido-grelha { grid-template-columns: 1.05fr .95fr; gap: 56px; }
+  .js-pedido .pedido-palco  { max-width: 360px; }
+}
+
+/* quem pediu menos movimento vê a história toda, parada e por ordem */
+@media (prefers-reduced-motion: reduce) {
+  .js-pedido .pedido-alt   { height: auto; }
+  .js-pedido .pedido-fixa  { position: static; min-height: 0; padding: 56px 0; }
+  .js-pedido .pedido-grelha { grid-template-columns: 1fr; }
+  .js-pedido .pedido-passo { opacity: 1 !important; transform: none !important; }
+  .js-pedido .pedido-palco { position: static; aspect-ratio: auto; max-width: 340px; }
+  .js-pedido .pedido-foto  { position: static; opacity: 1 !important; transform: none !important; margin-bottom: 18px; }
+  .js-pedido .pedido-legenda { display: block; }
+  .pedido-barra { display: none !important; }
+}
+
+/* =========================================================================
+   AS DUAS PORTAS coladas ao fundo, no telemóvel (componente 10)
+   Do MESMO tamanho, nenhuma secundária. Cicatriz de 28/08: um botão grande
+   para a Play Store com a web em letra miudinha mandava embora metade das
+   pessoas, que anda de iPhone.
+   ========================================================================= */
+.portas-fixas {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: none;
+  gap: 10px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(6, 20, 14, .97);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.portas-fixas a {
+  flex: 1 1 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2px; text-decoration: none;
+  border-radius: 14px; padding: 10px 8px; min-height: 52px;
+  font-weight: 800; font-size: .95rem; text-align: center; line-height: 1.15;
+}
+.portas-fixas a small { font-weight: 500; font-size: .7rem; opacity: .95; }
+.portas-fixas .p-app { background: #15803d; color: #fff; }   /* 5.02:1 com branco */
+.portas-fixas .p-web { background: #f97316; color: #431407; } /* 5.58:1, laranja da marca */
+
+@media (max-width: 767px) {
+  .portas-fixas { display: flex; }
+  body { padding-bottom: 78px; }   /* não tapar o rodapé */
+}
+/* A barra das duas portas esta la desde o primeiro segundo. Ja tinha um
+   atraso ate a pessoa descer meio ecra, mas isso deixava o heroi do
+   telemovel sem as duas portas — que sao a accao principal do site. */
+@media (max-width: 767px) {
+  /* "Pedir pelo site" aparecia duas vezes no mesmo ecra: no cabecalho e
+     na barra. Fica so na barra, onde tem o mesmo peso que a outra porta. */
+  .topo-porta-web { display: none !important; }
 }

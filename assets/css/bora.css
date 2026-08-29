@@ -28,21 +28,29 @@ a{color:inherit;text-decoration:none}
   position:sticky;top:0;z-index:50;
   background:rgba(11,15,13,.92);backdrop-filter:blur(12px);
 }
-.marca{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem}
-.marca img{width:38px;height:38px;border-radius:11px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;
+       min-height:44px}
+/* O ficheiro do logotipo e 1376x768. Forcado a um quadrado de 38px
+   esticava 44,2% fora de proporcao — o fiscal visual mediu-o.
+   Altura fixa e largura livre respeita a proporcao. (2026-08-29) */
+.marca img{height:38px;width:auto;border-radius:6px}
 .menu{display:flex;gap:20px;flex-wrap:wrap;margin-left:auto;font-size:.95rem}
-.menu a{color:var(--texto-2);font-weight:500}
+/* 44px de altura minima: e o alvo de toque abaixo do qual o dedo falha. */
+.menu a{color:var(--texto-2);font-weight:500;display:inline-flex;align-items:center;
+        min-height:44px;padding:0 2px}
 .menu a:hover{color:var(--verde-claro)}
 
 /* ---------- botões ---------- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;
+  padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;min-height:48px;
   border:0;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;
   text-align:center;
 }
-.btn.pequeno{padding:10px 20px;font-size:.92rem}
-.btn-p{background:var(--laranja);color:#fff;box-shadow:0 10px 28px -10px rgba(249,115,22,.65)}
+.btn.pequeno{padding:10px 20px;font-size:.92rem;min-height:44px}
+/* Branco sobre #F97316 da 2.8:1 e o minimo e 4.5. Escurecer o TEXTO em vez
+   do fundo passa a 5.58:1 e mantem o laranja da marca. (2026-08-29) */
+.btn-p{background:var(--laranja);color:#431407;box-shadow:0 10px 28px -10px rgba(249,115,22,.65)}
 .btn-p:hover{transform:translateY(-2px)}
 .btn-s{background:transparent;color:var(--texto);border:1.5px solid var(--linha)}
 .btn-s:hover{border-color:var(--verde-claro);color:var(--verde-claro)}
@@ -58,7 +66,8 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- topos ---------- */
 .chapeu{
-  font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  /* .78rem dava 12.5px. O fiscal visual apanhou-o. (2026-08-29) */
+  font-size:.85rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
   color:var(--verde-claro);margin-bottom:14px;display:flex;align-items:center;gap:10px;
 }
 .chapeu::before{content:"";width:24px;height:2px;background:var(--laranja);border-radius:2px}

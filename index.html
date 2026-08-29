@@ -92,7 +92,7 @@
 <header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-2">
-      <img src="assets/img/bora_logo.png" alt="Bora App" class="h-9 w-auto">
+      <img src="assets/img/bora_logo.png" alt="Bora App" class="h-9 w-auto" width="1376" height="768">
     </a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
       <a href="index.html#inicio" class="hover:text-[#16A34A] transition">Início</a>
@@ -101,19 +101,25 @@
       <a href="parceiros.html" class="hover:text-[#16A34A] transition">Parceiros</a>
       <a href="estafetas.html" class="hover:text-[#16A34A] transition">Estafetas</a>
       <a href="faq.html" class="hover:text-[#16A34A] transition">FAQ</a>
+      <a href="trabalhos.html" class="hover:text-[#16A34A] transition">Trabalhos</a>
       <a href="https://app.boraguarda.com" class="text-gray-500 hover:text-[#16A34A] transition">Entrar</a>
     </nav>
     <div class="flex items-center gap-2 sm:gap-3">
       <!-- CTA principal — nunca escondido, nem a 390px: é o que a pessoa vê
            no segundo em que abre o site. -->
+      <!-- AS DUAS PORTAS, do mesmo tamanho. No telemovel vivem na barra
+           colada ao fundo (.portas-fixas), que e onde ficam mesmo iguais.
+           Verde #15803D e nao #16A34A: branco sobre #16A34A da 3.3:1 e o
+           minimo e 4.5. O verde da marca fica nos acentos. (2026-08-29) -->
       <a href="https://app.boraguarda.com" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1.5 bg-[#16A34A] hover:bg-[#065F46] text-white font-bold text-sm sm:text-base px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-md shadow-green-600/25 whitespace-nowrap">
+         class="topo-porta-web inline-flex items-center justify-center gap-1.5 bg-[#15803D] hover:bg-[#166534] text-white font-bold text-sm sm:text-base px-4 sm:px-5 min-h-[44px] rounded-full transition shadow-md shadow-green-900/25 whitespace-nowrap">
         <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
       </a>
-      <a href="index.html#download" class="hidden sm:inline-flex items-center gap-2 border-2 border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A] hover:text-white font-semibold px-5 py-2 rounded-full transition">
-        📲 Baixar a App
+      <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-[#431407] font-bold text-sm sm:text-base px-4 sm:px-5 min-h-[44px] rounded-full transition whitespace-nowrap">
+        <i data-lucide="download" class="w-4 h-4"></i> Descarregar a app
       </a>
-      <button id="menu-btn" class="md:hidden p-2" aria-label="Abrir menu">
+      <button id="menu-btn" class="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-1" aria-label="Abrir menu">
         <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
       </button>
     </div>
@@ -124,7 +130,7 @@
 <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 md:hidden"></div>
 <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-xl md:hidden flex flex-col p-6">
   <div class="flex justify-end">
-    <button id="drawer-close" aria-label="Fechar menu"><i data-lucide="x" class="w-6 h-6"></i></button>
+    <button id="drawer-close" aria-label="Fechar menu" class="inline-flex items-center justify-center w-11 h-11 -mr-2"><i data-lucide="x" class="w-6 h-6"></i></button>
   </div>
   <nav class="flex flex-col gap-6 mt-8 text-lg font-medium text-gray-800">
     <a href="index.html#inicio">Início</a>
@@ -133,9 +139,12 @@
     <a href="parceiros.html">Parceiros</a>
     <a href="estafetas.html">Estafetas</a>
     <a href="faq.html">FAQ</a>
+    <a href="trabalhos.html">Trabalhos</a>
+    <a href="orcamento.html">Pedir orcamento</a>
     <a href="https://app.boraguarda.com" class="text-gray-500">Entrar</a>
-    <a href="https://app.boraguarda.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#16A34A] text-white font-bold px-5 py-3 rounded-full mt-2">🛍️ Pedir pelo site</a>
-    <a href="index.html#download" class="inline-flex items-center justify-center gap-2 border-2 border-[#16A34A] text-[#16A34A] font-semibold px-5 py-3 rounded-full">📲 Baixar a App</a>
+    <!-- As duas portas, do mesmo tamanho. Nenhuma e secundaria. -->
+    <a href="https://app.boraguarda.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#15803D] text-white font-bold px-5 py-3 min-h-[52px] rounded-full mt-2">🛍️ Pedir pelo site</a>
+    <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#F97316] text-[#431407] font-bold px-5 py-3 min-h-[52px] rounded-full">📲 Descarregar a app</a>
   </nav>
 </div>
 
@@ -153,7 +162,7 @@
         <div class="cine-caption">
           <span class="cine-kicker">01 · A cidade</span>
           <h2 class="cine-title"><span class="cine-word">A</span> <span class="cine-word accent">Guarda</span> <span class="cine-word">tem</span> <span class="cine-word">tudo</span> <span class="cine-word">perto.</span></h2>
-          <p class="cine-sub">Uma cidade de granito na serra — com tudo à distância de um toque.</p>
+          <p class="cine-sub">Uma cidade pequena não precisa de dez aplicações estrangeiras. Precisa de uma que seja daqui — e que conheça as ruas, as lojas e as pessoas.</p>
           <div class="cine-cta">
             <a href="https://app.boraguarda.com" target="_blank" rel="noopener" class="cine-btn cine-btn-primary">
               <i data-lucide="shopping-bag" class="w-5 h-5"></i> Pedir pelo site →
@@ -243,6 +252,77 @@
     </div>
   </section>
 
+
+  <!-- ======================================================================
+       A HISTÓRIA DO PEDIDO — cena assinatura (missão site-premio, 2026-08-29)
+       A pessoa desce e o pedido acontece à frente dela, com ecrãs reais da app.
+       Sem JavaScript: fica uma lista normal, com as fotografias todas visíveis.
+       ====================================================================== -->
+  <section class="pedido" id="historia-do-pedido" aria-label="Como um pedido acontece, do princípio ao fim">
+    <div class="pedido-alt">
+      <div class="pedido-fixa">
+        <div class="pedido-grelha">
+
+          <div>
+            <h2 class="pedido-titulo">Um pedido, do princípio ao fim.</h2>
+            <p class="pedido-lead">Não é uma promessa. É o que acontece a cada pedido feito na Guarda, tal como aparece no telemóvel.</p>
+
+            <div class="pedido-passo" data-passo="0">
+              <span class="pedido-num">1</span>
+              <div><h3>Abres e escolhes</h3><p>Restaurantes, mercados, farmácia, viagens, limpeza e marcações. Tudo no mesmo sítio.</p></div>
+            </div>
+            <div class="pedido-passo" data-passo="1">
+              <span class="pedido-num">2</span>
+              <div><h3>Enches o carrinho</h3><p>Os produtos das lojas da cidade, com o preço à frente antes de confirmares.</p></div>
+            </div>
+            <div class="pedido-passo" data-passo="2">
+              <span class="pedido-num">3</span>
+              <div><h3>Pagas como te der jeito</h3><p>Cartão, MB Way ou dinheiro à porta. Os três funcionam desde o primeiro dia.</p></div>
+            </div>
+            <div class="pedido-passo" data-passo="3">
+              <span class="pedido-num">4</span>
+              <div><h3>Um estafeta da cidade recolhe</h3><p>Gente daqui, que conhece as ruas e sabe onde é a tua porta.</p></div>
+            </div>
+            <div class="pedido-passo" data-passo="4">
+              <span class="pedido-num">5</span>
+              <div><h3>Chega a tua casa</h3><p>Segues o caminho no mapa até bater à porta. Sem ligar a ninguém a perguntar.</p></div>
+            </div>
+          </div>
+
+          <div class="pedido-palco">
+            <figure class="pedido-foto" data-foto="0">
+              <img src="assets/img/app/home-categorias.png" width="640" height="1289" loading="lazy"
+                   alt="Ecrã inicial do Bora App com as categorias da Guarda">
+              <figcaption class="pedido-legenda">1 · Abres e escolhes</figcaption>
+            </figure>
+            <figure class="pedido-foto" data-foto="1">
+              <img src="assets/img/app/mercado-produtos.png" width="640" height="1178" loading="lazy"
+                   alt="Lista de produtos de mercado dentro do Bora App">
+              <figcaption class="pedido-legenda">2 · Enches o carrinho</figcaption>
+            </figure>
+            <figure class="pedido-foto" data-foto="2">
+              <img src="assets/img/app/motorista-pagamento.png" width="640" height="1336" loading="lazy"
+                   alt="Ecrã de pagamento do Bora App com cartão, MB Way e dinheiro">
+              <figcaption class="pedido-legenda">3 · Pagas como te der jeito</figcaption>
+            </figure>
+            <figure class="pedido-foto" data-foto="3">
+              <img src="assets/cinema/c2_estafeta_rua.webp" width="1376" height="768" loading="lazy"
+                   alt="Estafeta do Bora numa rua da Guarda">
+              <figcaption class="pedido-legenda">4 · Um estafeta da cidade recolhe</figcaption>
+            </figure>
+            <figure class="pedido-foto" data-foto="4">
+              <img src="assets/cinema/c7_maos_telemovel.webp" width="1376" height="768" loading="lazy"
+                   alt="Mãos a seguir o pedido no telemóvel">
+              <figcaption class="pedido-legenda">5 · Chega a tua casa</figcaption>
+            </figure>
+          </div>
+
+        </div>
+        <div class="pedido-barra" aria-hidden="true"><i id="pedido-progresso"></i></div>
+      </div>
+    </div>
+  </section>
+
   <!-- VIDEO + ATALHOS (2026-08-23) — data-nocapture: o estudio de anuncios
        esconde o player antes de gravar, senao filmava o video dentro do video. -->
   <section id="video" class="bg-[#05140d] py-14 sm:py-20" data-nocapture>
@@ -264,23 +344,23 @@
       <p class="text-white/60 mb-8">Cada uma tem a sua pagina, com as casas que ja estao no Bora.</p>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         <a href="/viagens" class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-emerald-400/50 transition">
-          <img src="assets/img/cat_motorista.png" alt="Viagens" class="w-full h-28 object-cover" loading="lazy">
+          <img src="assets/img/cat_motorista.png" alt="Viagens" class="w-full h-28 object-cover" loading="lazy" width="600" height="600">
           <div class="p-4"><b class="block text-white">Viagens</b><span class="text-white/50 text-sm">Preco fechado</span></div>
         </a>
         <a href="/entregas" class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-emerald-400/50 transition">
-          <img src="assets/img/cat_supermercados.png" alt="Entregas" class="w-full h-28 object-cover" loading="lazy">
+          <img src="assets/img/cat_supermercados.png" alt="Entregas" class="w-full h-28 object-cover" loading="lazy" width="1024" height="1024">
           <div class="p-4"><b class="block text-white">Entregas</b><span class="text-white/50 text-sm">Mercados e restaurantes</span></div>
         </a>
         <a href="/beleza" class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-emerald-400/50 transition">
-          <img src="assets/img/cat_beleza.png" alt="Beleza" class="w-full h-28 object-cover" loading="lazy">
+          <img src="assets/img/cat_beleza.png" alt="Beleza" class="w-full h-28 object-cover" loading="lazy" width="1024" height="1024">
           <div class="p-4"><b class="block text-white">Beleza</b><span class="text-white/50 text-sm">Marca a tua hora</span></div>
         </a>
         <a href="/festas" class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-emerald-400/50 transition">
-          <img src="assets/img/cat_encomenda.png" alt="Festas" class="w-full h-28 object-cover" loading="lazy">
+          <img src="assets/img/cat_encomenda.png" alt="Festas" class="w-full h-28 object-cover" loading="lazy" width="1024" height="1024">
           <div class="p-4"><b class="block text-white">Festas</b><span class="text-white/50 text-sm">Em breve</span></div>
         </a>
         <a href="/mais" class="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-emerald-400/50 transition">
-          <img src="assets/img/cat_favores.png" alt="E ainda" class="w-full h-28 object-cover" loading="lazy">
+          <img src="assets/img/cat_favores.png" alt="E ainda" class="w-full h-28 object-cover" loading="lazy" width="600" height="600">
           <div class="p-4"><b class="block text-white">E ainda</b><span class="text-white/50 text-sm">Farmacia, limpeza, favores</span></div>
         </a>
       </div>
@@ -314,7 +394,7 @@
       </div>
       <div class="flex justify-center" data-reveal>
         <div class="bora-phone-frame">
-          <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora com as categorias disponíveis na Guarda" loading="lazy">
+          <img src="assets/img/screenshot-home.png" alt="Ecrã principal da app Bora com as categorias disponíveis na Guarda" loading="lazy" width="390" height="844">
         </div>
       </div>
     </div>
@@ -329,67 +409,67 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" data-reveal-stagger>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_restaurantes.png" alt="Entrega de restaurantes na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_restaurantes.png" alt="Entrega de restaurantes na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Restaurantes</h3>
         <p class="text-sm text-gray-600">Os teus pratos favoritos entregues quentinhos.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_supermercados.png" alt="Entrega de supermercado na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_supermercados.png" alt="Entrega de supermercado na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Supermercados</h3>
         <p class="text-sm text-gray-600">Compras do Continente, Lidl, Auchan e mais, até à tua porta.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_farmacia.png" alt="Entrega de farmácia na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_farmacia.png" alt="Entrega de farmácia na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Farmácia</h3>
         <p class="text-sm text-gray-600">Medicamentos e produtos de saúde sem sair de casa.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_motorista.png" alt="Viagens TVDE na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_motorista.png" alt="Viagens TVDE na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="600" height="600">
         <h3 class="font-bold text-[#065F46] mb-1">Viagens</h3>
         <p class="text-sm text-gray-600">Pede uma viagem e chega onde precisas, ao melhor preço.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_encomenda.png" alt="Enviar encomendas na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_encomenda.png" alt="Enviar encomendas na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Enviar Encomenda</h3>
         <p class="text-sm text-gray-600">Envia pacotes dentro da cidade em minutos.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_compras.png" alt="Levar Compras" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_compras.png" alt="Levar Compras" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Levar Compras</h3>
         <p class="text-sm text-gray-600">Um estafeta faz as tuas compras por ti.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_reservar_mesa.png" alt="Reservar Mesa" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_reservar_mesa.png" alt="Reservar Mesa" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Reservar Mesa</h3>
         <p class="text-sm text-gray-600">Reserva mesa nos melhores restaurantes da Guarda.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_favores.png" alt="Favores" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_favores.png" alt="Favores" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="600" height="600">
         <h3 class="font-bold text-[#065F46] mb-1">Favores</h3>
         <p class="text-sm text-gray-600">Precisas de algo? Pede um favor, nós tratamos.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_lojas.png" alt="Lojas" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_lojas.png" alt="Lojas" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Lojas</h3>
         <p class="text-sm text-gray-600">Produtos de lojas locais e marcas conhecidas.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_beleza.png" alt="Beleza" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_beleza.png" alt="Beleza" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="1024" height="1024">
         <h3 class="font-bold text-[#065F46] mb-1">Beleza</h3>
         <p class="text-sm text-gray-600">Marca cabeleireiro, barbeiro ou estética em segundos.</p>
       </div>
 
       <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-        <img src="assets/img/cat_limpeza.webp" alt="Limpeza doméstica na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain">
+        <img src="assets/img/cat_limpeza.webp" alt="Limpeza doméstica na Guarda" loading="lazy" class="w-20 h-20 mx-auto mb-4 object-contain" width="512" height="512">
         <h3 class="font-bold text-[#065F46] mb-1">Limpeza</h3>
         <p class="text-sm text-gray-600">Profissionais de confiança para limpeza doméstica, em tua casa.</p>
       </div>
@@ -417,25 +497,25 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-reveal-stagger>
 
         <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-          <img src="assets/img/why_app_unico.webp" alt="Vários serviços num só app" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain">
+          <img src="assets/img/why_app_unico.webp" alt="Vários serviços num só app" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain" width="512" height="512">
           <h3 class="font-bold text-[#065F46] mb-2">Tudo num só app</h3>
           <p class="text-sm text-gray-600">Comida, mercado, farmácia, viagens, limpeza, reservas e favores no mesmo sítio. Em vez de teres o Uber, o Glovo e apps de reservas à parte, está tudo no Bora.</p>
         </div>
 
         <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-          <img src="assets/img/why_suporte.webp" alt="Suporte humano local" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain">
+          <img src="assets/img/why_suporte.webp" alt="Suporte humano local" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain" width="512" height="512">
           <h3 class="font-bold text-[#065F46] mb-2">Suporte humano e local</h3>
           <p class="text-sm text-gray-600">Quando precisas de ajuda, falas com uma pessoa real da Guarda — rápido, sem andar às voltas com robôs. Para clientes, parceiros e estafetas.</p>
         </div>
 
         <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-          <img src="assets/img/why_viagens.webp" alt="Viagens com menos espera" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain">
+          <img src="assets/img/why_viagens.webp" alt="Viagens com menos espera" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain" width="512" height="512">
           <h3 class="font-bold text-[#065F46] mb-2">Viagens com menos espera</h3>
           <p class="text-sm text-gray-600">Os motoristas são da própria cidade, por isso o carro chega mais depressa até ti.</p>
         </div>
 
         <div class="bora-card bg-white rounded-2xl p-6 text-center shadow-sm">
-          <img src="assets/img/why_guarda.webp" alt="Feito na Guarda" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain">
+          <img src="assets/img/why_guarda.webp" alt="Feito na Guarda" loading="lazy" class="w-24 h-24 mx-auto mb-4 object-contain" width="512" height="512">
           <h3 class="font-bold text-[#065F46] mb-2">Feito na Guarda, para a Guarda</h3>
           <p class="text-sm text-gray-600">Um projeto local, pensado à medida da cidade e de quem cá vive.</p>
         </div>
@@ -496,14 +576,14 @@
         <div class="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto text-left">
           <div class="flex flex-col gap-2">
             <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center gap-2 bg-white text-[#16A34A] hover:bg-white/90 font-bold px-6 py-4 rounded-full transition">
+               class="inline-flex items-center justify-center gap-2 bg-white text-[#15803D] hover:bg-white/90 font-bold px-6 py-4 min-h-[52px] rounded-full transition">
               <i data-lucide="download" class="w-4 h-4"></i> Descarregar a app
             </a>
             <span class="text-sm text-white/85 text-center">Android. Instala e recebe os avisos do pedido.</span>
           </div>
           <div class="flex flex-col gap-2">
             <a href="https://app.boraguarda.com" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center gap-2 bg-white text-[#16A34A] hover:bg-white/90 font-bold px-6 py-4 rounded-full transition">
+               class="inline-flex items-center justify-center gap-2 bg-white text-[#15803D] hover:bg-white/90 font-bold px-6 py-4 min-h-[52px] rounded-full transition">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
             </a>
             <span class="text-sm text-white/85 text-center">Funciona no iPhone e no computador, sem instalar nada.</span>
@@ -519,10 +599,10 @@
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Descarrega o Bora agora</h2>
       <p class="text-gray-600 mb-10">Aponta a câmara do telemóvel ao QR code ou toca no botão da Play Store.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
-        <img src="assets/img/qr-playstore.png" alt="QR code para descarregar o Bora App na Play Store" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md">
+        <img src="assets/img/qr-playstore.png" alt="QR code para descarregar o Bora App na Play Store" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md" width="512" height="512">
         <div class="flex flex-col items-center gap-4">
           <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora">
-            <img src="assets/img/google-play-badge.png" alt="Disponível no Google Play" loading="lazy" class="h-16 w-auto">
+            <img src="assets/img/google-play-badge.png" alt="Disponível no Google Play" loading="lazy" class="h-16 w-auto" width="646" height="250">
           </a>
           <p class="text-sm text-gray-500">Disponível para Android. iOS brevemente.</p>
         </div>
@@ -536,14 +616,14 @@
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-orange-100">
         <h3 class="text-xl font-bold text-[#065F46] mb-2">Tens um negócio?</h3>
         <p class="text-gray-600 mb-6">Junta-te ao Bora e vende para toda a Guarda.</p>
-        <a href="parceiros.html" class="inline-flex items-center gap-2 bg-[#F97316] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition">
+        <a href="parceiros.html" class="inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-[#431407] font-bold px-6 py-3 min-h-[48px] rounded-full transition">
           Ser Parceiro <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
       <div class="bg-white rounded-2xl p-8 shadow-sm border border-green-100">
         <h3 class="text-xl font-bold text-[#065F46] mb-2">Queres ganhar dinheiro a entregar?</h3>
         <p class="text-gray-600 mb-6">Torna-te estafeta ou motorista Bora.</p>
-        <a href="estafetas.html" class="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#065F46] text-white font-semibold px-6 py-3 rounded-full transition">
+        <a href="estafetas.html" class="inline-flex items-center gap-2 bg-[#15803D] hover:bg-[#166534] text-white font-bold px-6 py-3 min-h-[48px] rounded-full transition">
           Ser Estafeta <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
@@ -556,7 +636,7 @@
 <footer class="bg-[#065F46] text-white pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
     <div class="col-span-2 md:col-span-1">
-      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App" loading="lazy">
+      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App" loading="lazy" width="1376" height="768">
       <p class="text-sm text-white/70">Tudo o que precisas, num só toque.</p>
     </div>
     <div>
@@ -578,21 +658,24 @@
         <li><a href="privacidade.html" class="hover:text-white">Privacidade</a></li>
         <li><a href="parceiros.html" class="hover:text-white">Ser Parceiro</a></li>
         <li><a href="estafetas.html" class="hover:text-white">Ser Estafeta</a></li>
+        <li><a href="trabalhos.html" class="hover:text-white">Sites que fizemos</a></li>
+        <li><a href="orcamento.html" class="hover:text-white">Pedir orçamento</a></li>
       </ul>
     </div>
     <div>
       <h4 class="font-semibold mb-4">Contacto</h4>
       <p class="text-sm text-white/80"><a href="mailto:boraappbora@gmail.com?subject=Contacto%20Site%20Bora" class="hover:text-white">boraappbora@gmail.com</a></p>
       <!-- TODO Danilo: confirmar email de contacto oficial -->
-      <div class="flex gap-4 mt-4">
-        <a href="#" aria-label="Facebook do Bora" class="hover:text-white/70 transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram do Bora" class="hover:text-white/70 transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <!-- TODO_DANILO_CONFIRMAR: preencher os links reais das redes sociais -->
-      </div>
+      <!-- O Bora nao tem contas de redes sociais confirmadas. Dois links
+           mortos (href="#") viviam aqui e o fiscal visual apanhou-os: sao
+           becos sem saida. Ficam os caminhos que existem mesmo. Quando as
+           contas existirem, acrescentam-se aqui. (2026-08-29) -->
+      <p class="text-sm text-white/80 mt-3">
+        <a href="https://api.whatsapp.com/send?phone=351937501673" target="_blank" rel="noopener" class="hover:text-white">WhatsApp 937 501 673</a>
+      </p>
+      <p class="text-sm text-white/80 mt-1">
+        <a href="tel:+351937501673" class="hover:text-white">Telefone 937 501 673</a>
+      </p>
     </div>
   </div>
   <div class="text-center text-xs text-white/60 mt-12 border-t border-white/10 pt-6">
@@ -601,10 +684,23 @@
   </div>
 </footer>
 
+<!-- AS DUAS PORTAS coladas ao fundo, no telemovel. Do MESMO tamanho.
+     Cicatriz de 28/08: um botao grande da Play Store com a web em letra
+     miudinha por baixo mandava embora metade das pessoas, que anda de iPhone. -->
+<nav class="portas-fixas" aria-label="Pedir pelo Bora">
+  <a class="p-app" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">
+    Descarregar a app<small>Android · recebe os avisos</small>
+  </a>
+  <a class="p-web" href="https://app.boraguarda.com" target="_blank" rel="noopener">
+    Pedir pelo site<small>iPhone e computador · sem instalar</small>
+  </a>
+</nav>
+
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/animations.js"></script>
 <script src="assets/js/cinema.js"></script>
+<script src="assets/js/pedido.js"></script>
 </body>
 </html>

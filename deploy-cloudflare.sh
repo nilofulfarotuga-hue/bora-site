@@ -36,12 +36,16 @@ mkdir -p "$STAGE"
 
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
          viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
+         trabalhos.html orcamento.html 404.html \
          manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
 # Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
+# assets/ vai INTEIRO: e onde vivem os videos (assets/video/*.mp4) e os
+# posters. Video nunca em base64, e nunca fora desta copia — se ficar
+# de fora nao e publicado e ninguem da por isso. (site-premio 2026-08-29)
 cp -r assets "$STAGE"/assets
 rm -rf "$STAGE"/assets/cinema/src   # PNG originais nao sao servidos (~7MB)
 

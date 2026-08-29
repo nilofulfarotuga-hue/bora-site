@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Página não encontrada — Bora</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0F0D">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/bora.css">
+<!--
+  Um 404 a sério existe por duas razões.
+  A primeira e obvia: quem se engana no endereco tem de ter por onde ir.
+  A segunda e para o Cloudflare Pages parar de devolver 200 com a pagina do
+  site para enderecos que nao existem — que e o que fazia o codigo de resposta
+  mentir a quem audita. (PADRAO_BORA 3.3 · site-premio 2026-08-29)
+-->
+<style>
+  .quatro{min-height:78vh;display:grid;place-items:center;text-align:center;
+          padding:60px 20px;
+          background:radial-gradient(900px 520px at 50% 10%,rgba(22,163,74,.20),transparent 62%)}
+  .quatro .num{font-size:clamp(4rem,16vw,9rem);font-weight:900;letter-spacing:-.06em;
+               line-height:1;color:var(--verde-claro);margin-bottom:8px}
+  .quatro h1{font-size:clamp(1.5rem,4.4vw,2.4rem);margin-bottom:14px}
+  .quatro p{color:var(--texto-2);max-width:46ch;margin:0 auto 30px}
+  .saltos{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="/">
+    <img src="/assets/img/bora_logo.png" alt="Bora" width="40" height="40">
+    <span>Bora</span>
+  </a>
+  <nav class="menu">
+    <a href="/viagens">Viagens</a>
+    <a href="/entregas">Entregas</a>
+    <a href="/beleza">Beleza</a>
+    <a href="/festas">Festas</a>
+    <a href="/mais">E ainda</a>
+    <a href="/trabalhos">Trabalhos</a>
+    <a href="/ser-parceiro">Ser parceiro</a>
+  </nav>
+  <a class="btn btn-p pequeno" href="https://app.boraguarda.com" rel="noopener">Pedir pelo site</a>
+</header>
+
+<main class="quatro">
+  <div>
+    <div class="num">404</div>
+    <h1>Esta página não existe.</h1>
+    <p>Ou mudou de sítio, ou o endereço veio com um engano pelo caminho.
+    Aqui em baixo estão os caminhos que existem mesmo.</p>
+    <div class="saltos">
+      <a class="btn btn-p" href="/">Início</a>
+      <a class="btn btn-s" href="/entregas">Entregas</a>
+      <a class="btn btn-s" href="/viagens">Viagens</a>
+      <a class="btn btn-s" href="/beleza">Beleza</a>
+      <a class="btn btn-s" href="/trabalhos">Sites que fizemos</a>
+      <a class="btn btn-s" href="/faq.html">Perguntas frequentes</a>
+    </div>
+  </div>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod-fim">© 2026 Bora · Guarda, Portugal ·
+      <a href="mailto:boraappbora@gmail.com">boraappbora@gmail.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
