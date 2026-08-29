@@ -6,3 +6,7 @@ node_modules/
 
 # saida do fiscal visual: capturas PNG, pesadas e regeneraveis
 tools/fiscal-visual/saida/
+
+# propostas geradas: levam dados de clientes, nao entram em git
+tools/proposta/saida/
+__pycache__/

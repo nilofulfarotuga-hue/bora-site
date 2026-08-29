@@ -1,0 +1,52 @@
+{
+  "_nota": "EXEMPLO. Negócio inventado de propósito, para ninguém confundir com um cliente real. Copia este ficheiro, muda os campos, e corre: python proposta.py o-teu-ficheiro.json",
+
+  "cliente": "Barbearia da Sé",
+  "titulo": "Um site que recebe as marcações por si.",
+  "resumo": "Uma página feita para telemóvel, com a tabela de serviços, os preços e a marcação online, para as horas deixarem de se combinar ao telefone a meio de um corte.",
+
+  "problema": [
+    "Hoje as marcações entram por três caminhos diferentes: mensagem no Instagram, chamada, e gente que aparece à porta. Nenhum deles deixa registo, e os três interrompem quem está a trabalhar.",
+    "Quem procura \"barbearia Guarda\" no Google encontra o mapa e o número, mas não encontra os preços nem os horários. Uma parte dessas pessoas não liga a perguntar: escolhe a que tem a informação à vista.",
+    "As fotografias dos cortes estão no Instagram, onde uma publicação de há três meses desaparece na grelha e ninguém volta a encontrá-la."
+  ],
+  "custo": [
+    "Cada chamada a meio de um corte custa atenção ao cliente que está na cadeira, e o telefone toca na mesma quando ninguém pode atender.",
+    "Não é possível saber quantas marcações se perdem, porque as que se perdem não deixam rasto — é exactamente esse o problema."
+  ],
+
+  "nivel": 2,
+  "proposta": [
+    "Um site de uma página, pensado primeiro para telemóvel, porque é aí que as pessoas procuram uma barbearia.",
+    "A tabela de serviços com preço e duração à vista logo no primeiro ecrã, sem ser preciso ligar a perguntar.",
+    "Marcação online ligada ao Bora App: a pessoa escolhe o serviço, o barbeiro e a hora, e a hora fica guardada. O telefone deixa de ser o único caminho.",
+    "Galeria com fotografias reais dos cortes, que ficam sempre no mesmo sítio em vez de desaparecerem na grelha do Instagram.",
+    "Endereço próprio, para poder ir no cartão, na montra e na descrição do Instagram."
+  ],
+
+  "incluido": [
+    "Site de uma página, feito primeiro para telemóvel e testado a 360 pixéis de largura",
+    "Tabela de serviços com preço e duração",
+    "Marcação online ligada ao Bora App",
+    "Galeria com as fotografias que a barbearia já tem",
+    "Horário, morada e mapa",
+    "Botão de ligar sempre à vista no telemóvel",
+    "Endereço próprio, com certificado de segurança e renovação automática",
+    "Cartão de partilha para o WhatsApp, favicon e página de erro",
+    "Aparecer no Google com o nome, a morada e o horário certos",
+    "Duas rondas de alterações depois de veres a primeira versão"
+  ],
+  "excluido": [
+    "Fotografias novas tiradas por fotógrafo (usam-se as que já existem)",
+    "Loja online com pagamento por cartão",
+    "Texto em mais do que um idioma",
+    "Gestão das redes sociais",
+    "Campanhas pagas de publicidade"
+  ],
+
+  "prazo": "2 a 3 semanas depois de receber as fotografias e a tabela de preços",
+  "preco": "",
+  "manutencao": "",
+  "manutencao_inclui": [],
+  "validade_dias": 30
+}
