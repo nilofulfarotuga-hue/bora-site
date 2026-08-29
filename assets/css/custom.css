@@ -254,8 +254,10 @@ body {
   border-radius: 9999px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
-.cine-btn-primary { background: #16a34a; color: #fff; }
-.cine-btn-primary:hover { background: #15803d; transform: translateY(-2px); }
+/* Branco sobre #16a34a da 3.3:1 e o minimo e 4.5. O #15803d da 5.02:1.
+   O verde da marca continua nos acentos e nos icones. (2026-08-29) */
+.cine-btn-primary { background: #15803d; color: #fff; }
+.cine-btn-primary:hover { background: #166534; transform: translateY(-2px); }
 .cine-btn-ghost { border: 2px solid rgba(255, 255, 255, 0.6); color: #fff; }
 .cine-btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
 
@@ -457,19 +459,33 @@ body {
   border-radius: 14px; padding: 10px 8px; min-height: 52px;
   font-weight: 800; font-size: .95rem; text-align: center; line-height: 1.15;
 }
-.portas-fixas a small { font-weight: 500; font-size: .7rem; opacity: .95; }
+/* .7rem dava 11.2px. Abaixo de 13px nao se le no telemovel — o fiscal
+   visual mediu-o. .82rem da 13.1px e continua a caber nas duas linhas. */
+.portas-fixas a small { font-weight: 500; font-size: .82rem; opacity: .95; line-height: 1.25; }
 .portas-fixas .p-app { background: #15803d; color: #fff; }   /* 5.02:1 com branco */
 .portas-fixas .p-web { background: #f97316; color: #431407; } /* 5.58:1, laranja da marca */
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .portas-fixas { display: flex; }
   body { padding-bottom: 78px; }   /* não tapar o rodapé */
 }
 /* A barra das duas portas esta la desde o primeiro segundo. Ja tinha um
    atraso ate a pessoa descer meio ecra, mas isso deixava o heroi do
    telemovel sem as duas portas — que sao a accao principal do site. */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   /* "Pedir pelo site" aparecia duas vezes no mesmo ecra: no cabecalho e
-     na barra. Fica so na barra, onde tem o mesmo peso que a outra porta. */
+     na barra. Fica so na barra, onde tem o mesmo peso que a outra porta.
+     Ate aos 1023px as duas portas vivem so na barra: no cabecalho, a
+     essa largura, a segunda saia 302px para fora do ecra. */
   .topo-porta-web { display: none !important; }
 }
+
+/* -------------------------------------------------------------------------
+   Alvos de toque da montra, medidos pelo fiscal visual a 2026-08-29:
+   os links da gaveta tinham 240x28 e o link do logotipo 65x36. Abaixo de
+   44x44 o dedo falha. (site-premio)
+   ------------------------------------------------------------------------- */
+#mobile-drawer nav a {
+  display: flex; align-items: center; min-height: 44px;
+}
+header a[href="index.html"] { min-height: 44px; display: flex; align-items: center; }

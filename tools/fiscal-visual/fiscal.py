@@ -201,9 +201,13 @@ MEDIR_JS = r"""
   const fundoDe = el => {
     let p = el;
     while (p && p !== document.documentElement) {
-      const s = getComputedStyle(p).backgroundColor;
-      const c = rgb(s);
-      const alfa = (s.match(/[\d.]+\)$/) || ['1'])[0];
+      const cs = getComputedStyle(p);
+      // Um gradiente ou uma imagem de fundo NAO e backgroundColor. Subir por
+      // cima dele levava a comparar o texto com uma seccao muito mais atras e
+      // a inventar razoes como 1:1. Aqui desiste-se e diz-se que nao se sabe.
+      if (cs.backgroundImage && cs.backgroundImage !== 'none') return null;
+      const c = rgb(cs.backgroundColor);
+      const alfa = (cs.backgroundColor.match(/[\d.]+\)$/) || ['1'])[0];
       if (c && parseFloat(alfa) > 0.7) return c;
       p = p.parentElement;
     }
@@ -220,6 +224,7 @@ MEDIR_JS = r"""
     const s = getComputedStyle(el);
     const f = rgb(s.color); if (!f) continue;
     const b = fundoDe(el);
+    if (!b) continue;   // fundo em gradiente: nao se mede, nao se inventa
     const chave = f.join(',') + '|' + b.join(',');
     if (vistos.has(chave)) continue; vistos.add(chave);
     const L1 = lum(f), L2 = lum(b);
