@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Componentes prémio — caixa de ferramentas Bora</title>
+<!--
+  Galeria interna dos 13 componentes. NÃO é publicada: esta pasta não está na
+  lista branca do deploy-cloudflare.sh. Abre-se com duplo clique no ficheiro.
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:12px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{padding:9vh 20px 5vh;text-align:center}
+  h1{font-size:clamp(1.9rem,5vw,3rem);font-weight:900;letter-spacing:-.04em}
+  header p{color:var(--texto-2);margin-top:14px;max-width:56ch;margin-inline:auto}
+  .marca{display:inline-flex;gap:8px;align-items:center;font-size:.76rem;font-weight:800;
+         letter-spacing:.18em;text-transform:uppercase;color:var(--verde);margin-bottom:16px}
+  .grelha{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));padding-bottom:10vh}
+  .c{display:block;text-decoration:none;color:inherit;background:var(--tinta-2);
+     border:1px solid var(--linha);border-radius:16px;padding:22px;
+     transition:border-color .2s ease,transform .2s ease}
+  .c:hover{border-color:var(--verde);transform:translateY(-3px)}
+  .n{font-size:.74rem;font-weight:800;letter-spacing:.16em;color:var(--laranja)}
+  .c h2{font-size:1.05rem;font-weight:700;margin:8px 0 6px;letter-spacing:-.01em}
+  .c p{color:var(--texto-2);font-size:.9rem}
+  .aviso{background:rgba(249,115,22,.10);border:1px solid rgba(249,115,22,.32);
+         border-radius:14px;padding:18px 20px;margin:0 0 28px;font-size:.93rem;color:#f4d9c2}
+  @media (prefers-reduced-motion: reduce){ .c:hover{transform:none} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="marca">Caixa de ferramentas</div>
+  <h1>Componentes prémio</h1>
+  <p>Treze peças isoladas, sem frameworks. Cada uma com o comentário no topo a dizer para que serve e quando não usar.</p>
+</header>
+
+<div class="wrap">
+  <p class="aviso"><b>Regra dos treze:</b> movimento reduzido respeitado, foco de teclado visível, e nenhuma animação esconde informação — o estado por omissão é visível e é o JavaScript que esconde. Mobile primeiro, testado a 360px.</p>
+
+  <div class="grelha">
+    <a class="c" href="01-cena-em-scroll.html"><div class="n">01</div><h2>Cena em scroll</h2><p>A secção fixa-se e o elemento monta-se por camadas. Elemento assinatura — um por site.</p></a>
+    <a class="c" href="02-revelacao-ao-scroll.html"><div class="n">02</div><h2>Revelação ao scroll</h2><p>Opacidade e deslocamento com atraso escalonado entre irmãos.</p></a>
+    <a class="c" href="03-cabecalho-que-muda.html"><div class="n">03</div><h2>Cabeçalho que muda</h2><p>Transparente em cima, sólido e mais fino ao descer.</p></a>
+    <a class="c" href="04-carrossel-infinito.html"><div class="n">04</div><h2>Carrossel infinito</h2><p>Fita sem fim que pára no hover e no foco. CSS puro.</p></a>
+    <a class="c" href="05-card-troca-imagem.html"><div class="n">05</div><h2>Troca de imagem</h2><p>Duas fotos do mesmo produto, com aproximação. Ao toque no telemóvel.</p></a>
+    <a class="c" href="06-contador-no-ecra.html"><div class="n">06</div><h2>Contador no ecrã</h2><p>Números que sobem ao aparecer. Só números verdadeiros.</p></a>
+    <a class="c" href="07-galeria-lightbox.html"><div class="n">07</div><h2>Galeria com lightbox</h2><p>Abre em grande, setas do teclado, devolve o foco. Usa dialog nativo.</p></a>
+    <a class="c" href="08-antes-depois.html"><div class="n">08</div><h2>Antes e depois</h2><p>Puxador arrastável. Clínicas, oficinas — e site velho vs site novo.</p></a>
+    <a class="c" href="09-formulario-whatsapp.html"><div class="n">09</div><h2>Formulário WhatsApp</h2><p>Abre a conversa já escrita. A peça que dá orçamentos.</p></a>
+    <a class="c" href="10-cta-duplo-fixo.html"><div class="n">10</div><h2>CTA duplo fixo</h2><p>Duas acções no fundo, do mesmo tamanho. Nenhuma secundária.</p></a>
+    <a class="c" href="11-heroi-video.html"><div class="n">11</div><h2>Herói com vídeo</h2><p>Vídeo real, poster real, queda para imagem fixa em ligação lenta.</p></a>
+    <a class="c" href="12-parallax-camadas.html"><div class="n">12</div><h2>Parallax de camadas</h2><p>Três velocidades. translate3d, nunca background-attachment.</p></a>
+    <a class="c" href="13-previsualizacao-protegida.html"><div class="n">13</div><h2>Pré-visualização protegida</h2><p>Marca de água em canvas e o caminho de servidor que protege. Base do Nível 4.</p></a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parallax de camadas — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  12 — PARALLAX DE CAMADAS
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Fundo, meio e frente a andar a velocidades diferentes ao descer. Dá
+  profundidade sem custar conteúdo nenhum.
+
+  A REGRA TÉCNICA QUE NÃO SE NEGOCEIA
+  Feito com transform: translate3d, NUNCA com background-attachment: fixed.
+  O background-attachment: fixed parte no telemóvel — no iOS Safari nem sequer
+  é suportado a sério, e no Android obriga o browser a repintar a página
+  inteira a cada pixel de scroll. É a causa clássica de um site "que treme".
+
+  COMO FUNCIONA
+  Cada camada declara data-vel (velocidade). 0 = colada ao scroll normal.
+  0.35 = anda a 35% da velocidade da página, portanto parece mais longe.
+  Negativo = anda mais depressa, portanto parece mais perto.
+  Uma única leitura de getBoundingClientRect por camada, por frame, dentro de
+  requestAnimationFrame — nunca dentro do evento de scroll.
+
+  DESEMPENHO
+  will-change:transform só enquanto a secção está no ecrã (posto e tirado pelo
+  IntersectionObserver). Deixá-lo sempre ligado obriga o browser a manter uma
+  camada de composição por elemento e come memória — num PC de 4 GB nota-se.
+
+  ACESSIBILIDADE
+  Nenhuma camada leva informação: o texto está no fluxo normal e não se mexe.
+  reduced-motion desliga tudo e as camadas ficam nas posições de origem.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+  .espaco{height:70vh;display:grid;place-items:center;color:var(--texto-2)}
+
+  .cena{
+    position:relative;min-height:120vh;overflow:hidden;isolation:isolate;
+    display:grid;place-items:center;
+    background:linear-gradient(180deg,#071410,#0B0F0D 60%);
+  }
+  .camada{position:absolute;left:0;right:0;pointer-events:none;will-change:auto}
+
+  /* fundo: serra distante */
+  .c-fundo{bottom:0;height:62%;z-index:-3;
+    background:linear-gradient(180deg,transparent,#0f2a1e 40%);
+    clip-path:polygon(0 62%,14% 40%,28% 55%,44% 28%,60% 48%,76% 34%,90% 52%,100% 42%,100% 100%,0 100%)}
+  /* meio: cidade */
+  .c-meio{bottom:0;height:44%;z-index:-2;
+    background:linear-gradient(180deg,transparent,#16382a 45%);
+    clip-path:polygon(0 70%,8% 52%,8% 70%,20% 44%,32% 66%,46% 38%,58% 62%,70% 46%,84% 64%,94% 50%,100% 68%,100% 100%,0 100%)}
+  /* frente: granito */
+  .c-frente{bottom:-6%;height:26%;z-index:-1;
+    background:linear-gradient(180deg,#1c4a35,#0B0F0D);
+    clip-path:polygon(0 44%,18% 22%,36% 40%,54% 16%,72% 38%,88% 20%,100% 36%,100% 100%,0 100%)}
+
+  .texto{position:relative;z-index:2;text-align:center;padding:0 22px;max-width:22ch}
+  .texto h2{font-size:clamp(1.9rem,6vw,3.4rem);font-weight:900;letter-spacing:-.04em;line-height:1.05}
+  .texto p{color:var(--texto-2);margin-top:16px;max-width:34ch;margin-inline:auto}
+
+  /* pontos de luz, a camada mais rápida */
+  .c-luzes{top:0;height:100%;z-index:-1}
+  .luz{position:absolute;width:6px;height:6px;border-radius:999px;background:var(--laranja);
+       box-shadow:0 0 18px 4px rgba(249,115,22,.55)}
+
+  @media (prefers-reduced-motion: reduce){
+    .camada{transform:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="espaco"><p>Desce.</p></div>
+
+<section class="cena" id="cena" aria-label="A Guarda vista de longe">
+  <div class="camada c-fundo"  data-vel="0.34"></div>
+  <div class="camada c-meio"   data-vel="0.18"></div>
+  <div class="camada c-luzes"  data-vel="-0.10">
+    <i class="luz" style="left:18%;top:52%"></i>
+    <i class="luz" style="left:41%;top:61%"></i>
+    <i class="luz" style="left:63%;top:56%"></i>
+    <i class="luz" style="left:82%;top:64%"></i>
+  </div>
+  <div class="camada c-frente" data-vel="-0.16"></div>
+
+  <div class="texto">
+    <h2>A cidade mais alta de Portugal.</h2>
+    <p>O texto não se mexe. Só as camadas.</p>
+  </div>
+</section>
+
+<div class="espaco"><p>Fim.</p></div>
+
+<script>
+(function(){
+  var cena = document.getElementById('cena');
+  if(!cena) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var camadas = Array.prototype.slice.call(cena.querySelectorAll('[data-vel]'))
+    .map(function(el){ return {el:el, vel:parseFloat(el.dataset.vel) || 0}; });
+
+  var pedido = null, activo = false;
+
+  function desenhar(){
+    pedido = null;
+    // UMA leitura de geometria por frame, e é da secção — não de cada camada.
+    var r = cena.getBoundingClientRect();
+    // centro da secção relativo ao centro do ecrã: 0 quando está a meio
+    var desvio = (r.top + r.height/2) - window.innerHeight/2;
+    camadas.forEach(function(c){
+      c.el.style.transform = 'translate3d(0,' + (desvio * c.vel).toFixed(2) + 'px,0)';
+    });
+  }
+  function pedir(){ if(pedido === null) pedido = requestAnimationFrame(desenhar); }
+
+  // will-change só enquanto a cena está no ecrã — senão come memória à toa
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting && !activo){
+        camadas.forEach(function(c){ c.el.style.willChange = 'transform'; });
+        window.addEventListener('scroll', pedir, {passive:true});
+        window.addEventListener('resize', pedir);
+        activo = true; pedir();
+      } else if(!e.isIntersecting && activo){
+        window.removeEventListener('scroll', pedir);
+        window.removeEventListener('resize', pedir);
+        camadas.forEach(function(c){ c.el.style.willChange = 'auto'; });
+        activo = false;
+      }
+    });
+  }, {rootMargin:'150px'}).observe(cena);
+})();
+</script>
+</body>
+</html>

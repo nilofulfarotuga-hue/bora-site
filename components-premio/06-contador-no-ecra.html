@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contador que anima ao entrar no ecrã — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  06 — CONTADOR QUE ANIMA SÓ QUANDO ENTRA NO ECRÃ
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Números que sobem de zero até ao valor real quando a secção aparece.
+  Dá peso a factos que numa linha de texto passavam despercebidos.
+
+  A REGRA QUE NÃO SE QUEBRA
+  Só se anima NÚMERO VERDADEIRO. Nunca inventar métricas para o contador ter
+  o que contar. Um número falso no site de um cliente é um estrago que não se
+  desfaz — e o Danilo já disse: nada de números inventados no portfólio.
+
+  COMO FUNCIONA
+  O valor final está escrito no HTML (data-ate e também como texto). O script
+  só o vai buscar e conta até lá com requestAnimationFrame e uma curva
+  easeOutExpo, para travar no fim em vez de bater.
+  IntersectionObserver com unobserve — conta uma vez, nunca repete.
+
+  ACESSIBILIDADE
+  O número final ESTÁ no HTML de origem. Se o JavaScript falhar, lê-se o valor
+  certo — nunca um zero. Durante a contagem o elemento leva aria-hidden e há
+  um <span class="sr"> com o valor final para o leitor de ecrã, senão ele lê
+  cinquenta números diferentes.
+  reduced-motion: escreve o valor final directamente, sem contar.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+  .espaco{height:75vh;display:grid;place-items:center;color:var(--texto-2)}
+  .numeros{
+    max-width:1040px;margin:0 auto;padding:8vh 20px 14vh;
+    display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    text-align:center;
+  }
+  .caixa{background:var(--tinta-2);border:1px solid var(--linha);border-radius:18px;padding:34px 18px}
+  .valor{
+    font-size:clamp(2.2rem,6vw,3.4rem);font-weight:900;letter-spacing:-.04em;
+    color:var(--verde);font-variant-numeric:tabular-nums;line-height:1;
+  }
+  .valor .uni{color:var(--laranja);font-size:.5em;margin-left:.12em;vertical-align:.35em}
+  .rot{color:var(--texto-2);font-size:.92rem;margin-top:12px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<div class="espaco"><p>Desce até os números aparecerem.</p></div>
+
+<section class="numeros" aria-label="O Bora em números">
+  <!--
+    O valor final está no texto E em data-ate. Sem JS lê-se o valor certo.
+    data-decimais e data-sufixo para casos como "4,8" e "%".
+  -->
+  <div class="caixa">
+    <div class="valor" data-contar data-ate="11">11</div>
+    <span class="sr">11 categorias</span>
+    <div class="rot">categorias na app</div>
+  </div>
+  <div class="caixa">
+    <div class="valor" data-contar data-ate="6">6</div>
+    <span class="sr">6 mercados</span>
+    <div class="rot">mercados da cidade</div>
+  </div>
+  <div class="caixa">
+    <div class="valor" data-contar data-ate="4.8" data-decimais="1">4,8</div>
+    <span class="sr">4,8 em 5</span>
+    <div class="rot">média de avaliação</div>
+  </div>
+  <div class="caixa">
+    <div class="valor" data-contar data-ate="100" data-sufixo="%">100<span class="uni">%</span></div>
+    <span class="sr">100 por cento da Guarda</span>
+    <div class="rot">feito na Guarda</div>
+  </div>
+</section>
+
+<div class="espaco"><p>Fim.</p></div>
+
+<script>
+(function(){
+  var alvos = document.querySelectorAll('[data-contar]');
+  if(!alvos.length) return;
+
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(parado || !('IntersectionObserver' in window)) return;  // fica o valor do HTML
+
+  function formatar(n, casas, sufixo){
+    var t = casas ? n.toFixed(casas).replace('.', ',') : String(Math.round(n));
+    return sufixo ? t + '<span class="uni">' + sufixo + '</span>' : t;
+  }
+
+  function contar(el){
+    var ate    = parseFloat(el.dataset.ate);
+    var casas  = parseInt(el.dataset.decimais, 10) || 0;
+    var sufixo = el.dataset.sufixo || '';
+    var dur    = parseInt(el.dataset.duracao, 10) || 1400;
+    if(isNaN(ate)) return;
+
+    el.setAttribute('aria-hidden','true');   // o leitor de ecrã usa o .sr
+    var inicio = null;
+    function passo(agora){
+      if(inicio === null) inicio = agora;
+      var t = Math.min((agora - inicio) / dur, 1);
+      var e = 1 - Math.pow(2, -10 * t);      // easeOutExpo: trava no fim
+      el.innerHTML = formatar(ate * e, casas, sufixo);
+      if(t < 1) requestAnimationFrame(passo);
+      else      el.innerHTML = formatar(ate, casas, sufixo);   // acerta exacto
+    }
+    requestAnimationFrame(passo);
+  }
+
+  var obs = new IntersectionObserver(function(ents,o){
+    ents.forEach(function(e){
+      if(e.isIntersecting){ contar(e.target); o.unobserve(e.target); }
+    });
+  }, {threshold:0.4});
+  alvos.forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>

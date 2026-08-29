@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galeria com lightbox navegável por teclado — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  07 — GALERIA COM LIGHTBOX NAVEGÁVEL POR TECLADO
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Grelha de fotografias que abrem em grande. Serve alojamento, clínica,
+  barbearia, imobiliária, clube — qualquer nicho onde a foto É o argumento.
+
+  PORQUE É QUE ISTO NÃO É UM PACOTE DE TERCEIROS
+  Um lightbox de biblioteca traz 40 KB de JavaScript e um tema que não é o do
+  site. Isto são 60 linhas e usa <dialog>, que o browser já sabe fazer:
+  fundo modal, fecho por Escape e devolução do foco ao sítio de onde se veio.
+
+  TECLADO (obrigatório, e é onde quase todos falham)
+    Enter/Espaço na miniatura → abre
+    ← →                        → foto anterior / seguinte
+    Escape                     → fecha e devolve o foco à miniatura de origem
+  No telemóvel: arrastar para o lado muda de foto.
+
+  ACESSIBILIDADE
+  As miniaturas são <button> a sério — não <div> com onclick. O <dialog> trata
+  do foco preso e do fundo inerte sozinho. O contador "3 de 8" é aria-live
+  para quem não vê saber onde está.
+  reduced-motion: sem transição de entrada.
+
+  DESEMPENHO
+  Miniaturas com width/height e loading="lazy". A imagem grande só é pedida ao
+  abrir. Num site a sério a grande é WebP e a miniatura é uma versão pequena
+  de verdade, não a grande encolhida por CSS.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:12px}
+  .topo{text-align:center;padding:9vh 20px 5vh}
+  .topo h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;letter-spacing:-.03em}
+  .topo p{color:var(--texto-2);margin-top:12px}
+
+  .galeria{max-width:1040px;margin:0 auto;padding:0 20px 12vh;
+           display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .mini{
+    padding:0;border:1px solid var(--linha);background:var(--tinta-2);
+    border-radius:14px;overflow:hidden;cursor:zoom-in;
+    aspect-ratio:1/1;transition:transform .22s ease,border-color .22s ease;
+  }
+  .mini:hover,.mini:focus-visible{transform:translateY(-3px);border-color:var(--verde)}
+  .mini img{width:100%;height:100%;object-fit:cover}
+
+  /* ---------- lightbox ---------- */
+  dialog.caixa{
+    border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;
+    width:100%;height:100%;color:var(--texto);
+  }
+  dialog.caixa::backdrop{background:rgba(4,7,6,.94)}
+  .palco{
+    position:fixed;inset:0;display:grid;
+    grid-template-rows:auto 1fr auto;gap:10px;padding:14px;
+  }
+  .barra-topo{display:flex;align-items:center;gap:12px}
+  .conta{font-size:.86rem;color:var(--texto-2);font-variant-numeric:tabular-nums}
+  .fechar{margin-left:auto}
+  .btn{
+    background:rgba(255,255,255,.08);border:1px solid var(--linha);color:var(--texto);
+    border-radius:999px;padding:9px 16px;font:inherit;font-size:.9rem;font-weight:700;
+    cursor:pointer;transition:background .18s ease,border-color .18s ease;
+  }
+  .btn:hover{background:rgba(255,255,255,.16);border-color:var(--verde)}
+  .moldura{position:relative;display:grid;place-items:center;min-height:0}
+  .moldura img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px}
+  .legenda{text-align:center;color:var(--texto-2);font-size:.92rem;min-height:1.5em}
+  .setas{position:absolute;inset:0;display:flex;align-items:center;
+         justify-content:space-between;padding:0 6px;pointer-events:none}
+  .setas .btn{pointer-events:auto;width:46px;height:46px;padding:0;font-size:1.2rem}
+
+  @media (prefers-reduced-motion: no-preference){
+    dialog.caixa[open] .moldura img{animation:entrar .24s ease both}
+    @keyframes entrar{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Galeria com lightbox</h1>
+  <p>Abre uma foto e usa as setas do teclado. Escape fecha e o foco volta ao sítio.</p>
+</div>
+
+<!-- Num site a sério: <img src="foto-1-mini.webp" data-grande="foto-1.webp"> -->
+<div class="galeria" id="galeria">
+  <button class="mini" type="button" data-grande="" data-legenda="Sala principal ao fim da tarde">
+    <img loading="lazy" width="600" height="600" alt="Sala principal ao fim da tarde"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%23163a2a'/%3E%3Ccircle cx='300' cy='250' r='120' fill='%2316A34A'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23d7f5e4' text-anchor='middle'%3E1%3C/text%3E%3C/svg%3E"></button>
+  <button class="mini" type="button" data-grande="" data-legenda="Cadeira de barbeiro, detalhe">
+    <img loading="lazy" width="600" height="600" alt="Cadeira de barbeiro, detalhe"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%233a2b16'/%3E%3Crect x='150' y='120' width='300' height='260' rx='24' fill='%23F97316'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23ffe3cc' text-anchor='middle'%3E2%3C/text%3E%3C/svg%3E"></button>
+  <button class="mini" type="button" data-grande="" data-legenda="Entrada vista da rua">
+    <img loading="lazy" width="600" height="600" alt="Entrada vista da rua"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%2316303a'/%3E%3Cpolygon points='300,110 470,380 130,380' fill='%232f8fb0'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23cfeaf5' text-anchor='middle'%3E3%3C/text%3E%3C/svg%3E"></button>
+  <button class="mini" type="button" data-grande="" data-legenda="Equipa, foto de grupo">
+    <img loading="lazy" width="600" height="600" alt="Equipa, foto de grupo"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%23301a3a'/%3E%3Ccircle cx='210' cy='250' r='80' fill='%238e4fb0'/%3E%3Ccircle cx='390' cy='250' r='80' fill='%23b06fd0'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23eeddf7' text-anchor='middle'%3E4%3C/text%3E%3C/svg%3E"></button>
+  <button class="mini" type="button" data-grande="" data-legenda="Balcão e montra">
+    <img loading="lazy" width="600" height="600" alt="Balcão e montra"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%233a1620'/%3E%3Crect x='120' y='200' width='360' height='170' rx='16' fill='%23c2405e'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23fbd6de' text-anchor='middle'%3E5%3C/text%3E%3C/svg%3E"></button>
+  <button class="mini" type="button" data-grande="" data-legenda="Pormenor do produto">
+    <img loading="lazy" width="600" height="600" alt="Pormenor do produto"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%231d3a16'/%3E%3Cellipse cx='300' cy='260' rx='170' ry='110' fill='%236aa842'/%3E%3Ctext x='300' y='470' font-family='sans-serif' font-size='40' fill='%23e2f5d3' text-anchor='middle'%3E6%3C/text%3E%3C/svg%3E"></button>
+</div>
+
+<dialog class="caixa" id="caixa" aria-label="Fotografia em tamanho grande">
+  <div class="palco">
+    <div class="barra-topo">
+      <span class="conta" id="conta" aria-live="polite"></span>
+      <button class="btn fechar" type="button" id="btFechar">Fechar ✕</button>
+    </div>
+    <div class="moldura">
+      <img id="grande" alt="">
+      <div class="setas">
+        <button class="btn" type="button" id="btAnt" aria-label="Fotografia anterior">‹</button>
+        <button class="btn" type="button" id="btSeg" aria-label="Fotografia seguinte">›</button>
+      </div>
+    </div>
+    <p class="legenda" id="legenda"></p>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var caixa   = document.getElementById('caixa');
+  var grande  = document.getElementById('grande');
+  var legenda = document.getElementById('legenda');
+  var conta   = document.getElementById('conta');
+  var minis   = Array.prototype.slice.call(document.querySelectorAll('.mini'));
+  if(!caixa || !minis.length || typeof caixa.showModal !== 'function') return;
+
+  var actual = 0, origem = null;
+
+  function mostrar(i){
+    actual = (i + minis.length) % minis.length;      // dá a volta nas pontas
+    var b   = minis[actual];
+    var img = b.querySelector('img');
+    // data-grande vazio na demo → usa a própria miniatura
+    grande.src = b.dataset.grande || img.currentSrc || img.src;
+    grande.alt = img.alt || '';
+    legenda.textContent = b.dataset.legenda || '';
+    conta.textContent = (actual+1) + ' de ' + minis.length;
+  }
+
+  minis.forEach(function(b,i){
+    b.addEventListener('click', function(){
+      origem = b;                                    // para devolver o foco
+      mostrar(i);
+      caixa.showModal();
+    });
+  });
+
+  document.getElementById('btAnt').addEventListener('click', function(){ mostrar(actual-1); });
+  document.getElementById('btSeg').addEventListener('click', function(){ mostrar(actual+1); });
+  document.getElementById('btFechar').addEventListener('click', function(){ caixa.close(); });
+
+  caixa.addEventListener('keydown', function(ev){
+    if(ev.key === 'ArrowLeft'){  ev.preventDefault(); mostrar(actual-1); }
+    if(ev.key === 'ArrowRight'){ ev.preventDefault(); mostrar(actual+1); }
+    // Escape é tratado pelo próprio <dialog>
+  });
+
+  // clicar no fundo fecha (mas não clicar na imagem)
+  caixa.addEventListener('click', function(ev){ if(ev.target === caixa) caixa.close(); });
+
+  // devolver o foco a quem abriu — é a parte que quase toda a gente esquece
+  caixa.addEventListener('close', function(){ if(origem) origem.focus(); });
+
+  // arrastar para o lado no telemóvel
+  var x0 = null;
+  caixa.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  caixa.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx) > 45) mostrar(actual + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

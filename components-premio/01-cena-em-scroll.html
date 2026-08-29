@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cena em scroll — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  01 — CENA EM SCROLL
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  A secção fixa-se no ecrã e um elemento vai-se montando por camadas conforme
+  a pessoa desce. É o efeito do hamburguer a montar-se e do café a ser servido.
+  É um ELEMENTO ASSINATURA: usa-se UMA vez por site, nunca duas.
+
+  QUANDO USAR
+  Quando existe um processo com ordem natural (montar, servir, construir,
+  pedir → preparar → entregar). Se a ordem não importa, isto não serve.
+
+  QUANDO NÃO USAR
+  Público mais velho, ou informação que a pessoa PRECISA de ler. Regra do
+  público: efeito que confunde o cliente do cliente é defeito.
+
+  COMO FUNCIONA
+  Duas implementações, a melhor primeiro:
+    1. animation-timeline: scroll() — nativo, corre fora da thread principal.
+    2. IntersectionObserver + requestAnimationFrame — para quem não suporta.
+  O JS só liga o método 2 se @supports disser que o 1 não existe.
+
+  ACESSIBILIDADE
+  Estado por omissão = TUDO VISÍVEL. A classe .js-cena é que passa a esconder.
+  Se o JavaScript falhar, a pessoa vê as camadas todas empilhadas e legíveis.
+  prefers-reduced-motion: reduce desliga o efeito por inteiro.
+  ===========================================================================
+-->
+<style>
+  :root{
+    --tinta:#0B0F0D; --tinta-2:#121815; --texto:#F4F7F5; --texto-2:#A9B5AE;
+    --verde:#16A34A; --laranja:#F97316; --linha:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:4px}
+  .intro,.fim{max-width:640px;margin:0 auto;padding:18vh 20px;text-align:center}
+  .intro h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.03em}
+  .intro p{color:var(--texto-2);margin-top:14px}
+
+  /* ---------- a cena ---------- */
+  .cena{position:relative}
+  /* A altura do invólucro é o que dá "tempo" à cena. 100vh por camada + 1. */
+  .cena-alt{height:500vh}
+  .cena-fixa{
+    position:sticky;top:0;height:100vh;
+    display:grid;place-items:center;overflow:hidden;
+    background:radial-gradient(900px 480px at 50% 20%,rgba(22,163,74,.18),transparent 62%);
+  }
+  .palco{position:relative;width:min(88vw,420px);aspect-ratio:1/1}
+
+  /* Estado POR OMISSÃO: tudo visível e empilhado. Sem JS, lê-se na mesma. */
+  .camada{
+    position:absolute;inset:0;display:grid;place-items:center;
+    font-size:clamp(3rem,14vw,7rem);
+  }
+  .rotulo{
+    position:absolute;left:50%;bottom:-2.2em;transform:translateX(-50%);
+    font-size:.95rem;font-weight:700;letter-spacing:.02em;color:var(--texto-2);
+    white-space:nowrap;
+  }
+  .passo-num{
+    position:absolute;top:-1.6em;left:50%;transform:translateX(-50%);
+    font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--verde);
+  }
+
+  /* ---------- só quando o JS confirma que pode animar ---------- */
+  .js-cena .camada{opacity:0;transform:translateY(26px) scale(.96)}
+  .js-cena .camada.dentro{opacity:1;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
+
+  /* ---------- método 1: nativo (o melhor) ---------- */
+  @supports (animation-timeline: scroll()){
+    .js-cena.nativo .camada{
+      opacity:0;transform:translateY(26px) scale(.96);
+      animation:montar linear both;
+      animation-timeline:scroll(root block);
+    }
+    .js-cena.nativo .camada:nth-child(1){animation-range:5% 20%}
+    .js-cena.nativo .camada:nth-child(2){animation-range:20% 35%}
+    .js-cena.nativo .camada:nth-child(3){animation-range:35% 50%}
+    .js-cena.nativo .camada:nth-child(4){animation-range:50% 65%}
+    .js-cena.nativo .camada:nth-child(5){animation-range:65% 80%}
+  }
+  @keyframes montar{
+    from{opacity:0;transform:translateY(26px) scale(.96)}
+    to  {opacity:1;transform:none}
+  }
+
+  /* ---------- barra de progresso da cena ---------- */
+  .barra{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--linha)}
+  .barra i{display:block;height:100%;width:0;background:var(--laranja);transition:width .1s linear}
+
+  /* ---------- quem pediu menos movimento vê tudo, parado ---------- */
+  @media (prefers-reduced-motion: reduce){
+    .cena-alt{height:auto}
+    .cena-fixa{position:static;height:auto;padding:48px 20px}
+    .js-cena .camada,.js-cena.nativo .camada{
+      opacity:1!important;transform:none!important;animation:none!important;
+      position:static;margin:32px auto;
+    }
+    .palco{aspect-ratio:auto}
+    .rotulo,.passo-num{position:static;transform:none;display:block;text-align:center}
+    .barra{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Cena em scroll</h1>
+  <p>Desce. A secção fixa-se e o pedido monta-se camada a camada.</p>
+</div>
+
+<section class="cena" aria-label="Como o pedido acontece">
+  <div class="cena-alt">
+    <div class="cena-fixa">
+      <div class="palco" id="palco">
+        <div class="camada"><span class="passo-num">Passo 1</span>📱<span class="rotulo">Escolhes na app</span></div>
+        <div class="camada"><span class="passo-num">Passo 2</span>👨‍🍳<span class="rotulo">A loja prepara</span></div>
+        <div class="camada"><span class="passo-num">Passo 3</span>🛵<span class="rotulo">O estafeta recolhe</span></div>
+        <div class="camada"><span class="passo-num">Passo 4</span>🗺️<span class="rotulo">Segues no mapa</span></div>
+        <div class="camada"><span class="passo-num">Passo 5</span>🚪<span class="rotulo">Chega à tua porta</span></div>
+      </div>
+      <div class="barra" aria-hidden="true"><i id="progresso"></i></div>
+    </div>
+  </div>
+</section>
+
+<div class="fim"><p>Fim da cena. O conteúdo normal continua daqui para baixo.</p></div>
+
+<script>
+(function(){
+  var cena = document.querySelector('.cena');
+  var palco = document.getElementById('palco');
+  var progresso = document.getElementById('progresso');
+  if(!cena || !palco) return;
+
+  // Quem pediu menos movimento não recebe nada disto.
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(parado.matches) return;
+
+  // Só agora é que se passa a esconder. Sem JS o conteúdo ficou visível.
+  document.body.classList.add('js-cena');
+
+  var camadas = Array.prototype.slice.call(palco.children);
+
+  // ---- método 1: o browser trata de tudo ----
+  var temNativo = CSS && CSS.supports && CSS.supports('animation-timeline','scroll()');
+  if(temNativo){
+    document.body.classList.add('nativo');
+  }
+
+  // ---- método 2 (queda) + barra de progresso, sempre ----
+  var pedido = null;
+  function desenhar(){
+    pedido = null;
+    var r = cena.getBoundingClientRect();
+    var total = r.height - window.innerHeight;
+    if(total <= 0) return;
+    var andado = Math.min(Math.max(-r.top / total, 0), 1);
+    if(progresso) progresso.style.width = (andado*100).toFixed(1) + '%';
+
+    if(temNativo) return; // as camadas já são do browser
+
+    var fatia = 1 / camadas.length;
+    camadas.forEach(function(c,i){
+      // cada camada entra quando o scroll passa a sua fatia
+      c.classList.toggle('dentro', andado >= fatia*i*0.92);
+    });
+  }
+  function pedir(){ if(pedido === null) pedido = requestAnimationFrame(desenhar); }
+
+  // IntersectionObserver: só ouvimos o scroll enquanto a cena está no ecrã.
+  var ligado = false;
+  var obs = new IntersectionObserver(function(ents){
+    ents.forEach(function(e){
+      if(e.isIntersecting && !ligado){
+        window.addEventListener('scroll', pedir, {passive:true});
+        window.addEventListener('resize', pedir);
+        ligado = true; pedir();
+      } else if(!e.isIntersecting && ligado){
+        window.removeEventListener('scroll', pedir);
+        window.removeEventListener('resize', pedir);
+        ligado = false;
+      }
+    });
+  }, {rootMargin:'200px'});
+  obs.observe(cena);
+
+  // Se a pessoa mudar a preferência a meio, devolve-se tudo ao estado visível.
+  parado.addEventListener('change', function(ev){
+    if(ev.matches){
+      document.body.classList.remove('js-cena','nativo');
+      if(ligado){ window.removeEventListener('scroll', pedir); ligado = false; }
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrossel infinito que pára no hover — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  04 — CARROSSEL INFINITO QUE PÁRA NO HOVER
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Fita que anda sozinha, sem fim, e pára quando o rato entra. Serve para
+  logótipos de parceiros, avaliações curtas, fotografias de trabalhos.
+
+  PORQUE É QUE PÁRA NO HOVER
+  Se não parar, a pessoa não consegue ler nem clicar no que lhe interessou.
+  Um carrossel que foge do cursor lê-se como defeito.
+
+  COMO FUNCIONA
+  A lista é duplicada com aria-hidden na cópia (o leitor de ecrã lê uma vez
+  só) e a fita anda -50% em animação linear infinita. Como a segunda metade é
+  igual à primeira, o salto no fim do ciclo é invisível.
+  Isto é CSS puro — não há JavaScript nenhum a correr no scroll.
+
+  ACESSIBILIDADE
+  Pára no hover E no foco de teclado (:focus-within), senão quem navega por
+  Tab perde de vista o item onde está.
+  reduced-motion: a animação desliga e a fita passa a scroll horizontal
+  manual — o conteúdo continua todo alcançável.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:10px}
+  .topo{text-align:center;padding:10vh 20px 6vh}
+  .topo h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;letter-spacing:-.03em}
+  .topo p{color:var(--texto-2);margin-top:12px}
+
+  /* ---------- a fita ---------- */
+  .fita{
+    position:relative;overflow:hidden;padding:26px 0;
+    /* as pontas desvanecem — é o que faz parecer infinito e não cortado */
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  }
+  .fita-in{display:flex;width:max-content;gap:18px;animation:andar 28s linear infinite}
+  .fita:hover .fita-in,
+  .fita:focus-within .fita-in{animation-play-state:paused}
+  @keyframes andar{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  .item{
+    flex:0 0 auto;width:220px;padding:20px 22px;border-radius:16px;
+    background:var(--tinta-2);border:1px solid var(--linha);
+    text-decoration:none;color:inherit;
+    transition:border-color .22s ease,transform .22s ease;
+  }
+  .item:hover,.item:focus-visible{border-color:var(--verde);transform:translateY(-3px)}
+  .item b{display:block;font-size:1rem;margin-bottom:6px}
+  .item span{color:var(--texto-2);font-size:.88rem}
+
+  /* segunda direcção, para uma segunda fita por baixo */
+  .fita.contrario .fita-in{animation-direction:reverse;animation-duration:34s}
+
+  @media (prefers-reduced-motion: reduce){
+    .fita{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .fita-in{animation:none;width:auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Carrossel infinito</h1>
+  <p>Passa o rato por cima (ou navega por Tab) — a fita pára.</p>
+</div>
+
+<!--
+  A lista real vai UMA vez. A cópia leva aria-hidden="true" para o leitor
+  de ecrã não ler os mesmos parceiros duas vezes.
+-->
+<div class="fita" aria-label="Parceiros do Bora">
+  <div class="fita-in">
+    <a class="item" href="#"><b>Sabores de Casa</b><span>Açaí e brasileiro</span></a>
+    <a class="item" href="#"><b>Ouro e Prata</b><span>Barbearia</span></a>
+    <a class="item" href="#"><b>Mr Kebab</b><span>Restaurante</span></a>
+    <a class="item" href="#"><b>Goola</b><span>Açaí</span></a>
+    <a class="item" href="#"><b>BeUnique</b><span>Beleza e academia</span></a>
+    <a class="item" href="#"><b>Sabores do Brasil</b><span>Festas e encomendas</span></a>
+    <!-- cópia: mesma ordem, escondida da leitura -->
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>Sabores de Casa</b><span>Açaí e brasileiro</span></a>
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>Ouro e Prata</b><span>Barbearia</span></a>
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>Mr Kebab</b><span>Restaurante</span></a>
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>Goola</b><span>Açaí</span></a>
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>BeUnique</b><span>Beleza e academia</span></a>
+    <a class="item" href="#" aria-hidden="true" tabindex="-1"><b>Sabores do Brasil</b><span>Festas e encomendas</span></a>
+  </div>
+</div>
+
+<div class="fita contrario" aria-hidden="true">
+  <div class="fita-in">
+    <span class="item"><b>Entregas</b><span>em minutos</span></span>
+    <span class="item"><b>Viagens</b><span>preço fechado</span></span>
+    <span class="item"><b>Limpeza</b><span>em casa</span></span>
+    <span class="item"><b>Beleza</b><span>marcação</span></span>
+    <span class="item"><b>Festas</b><span>com data</span></span>
+    <span class="item"><b>Favores</b><span>alguém vai por ti</span></span>
+    <span class="item"><b>Entregas</b><span>em minutos</span></span>
+    <span class="item"><b>Viagens</b><span>preço fechado</span></span>
+    <span class="item"><b>Limpeza</b><span>em casa</span></span>
+    <span class="item"><b>Beleza</b><span>marcação</span></span>
+    <span class="item"><b>Festas</b><span>com data</span></span>
+    <span class="item"><b>Favores</b><span>alguém vai por ti</span></span>
+  </div>
+</div>
+
+<p style="text-align:center;color:var(--texto-2);padding:8vh 20px;font-size:.9rem">
+  Sem JavaScript. A fita é CSS puro — não custa nada ao scroll.
+</p>
+</body>
+</html>

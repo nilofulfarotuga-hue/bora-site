@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTA duplo fixo no rodapé em mobile — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  10 — CTA DUPLO FIXO NO RODAPÉ, EM MOBILE
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Duas acções sempre à mão no telemóvel, coladas ao fundo. Nunca uma só, e
+  nunca uma maior que a outra.
+
+  PORQUE DUAS, E DO MESMO TAMANHO
+  Cicatriz de 28/08 no Bora: havia um botão grande para a Play Store com a
+  versão web em letra miudinha por baixo. Metade das pessoas não tem Android
+  — essa metade lia o site e não tinha por onde pedir.
+  Regra da casa (PADRAO_BORA 1.11): dois botões do mesmo tamanho, nenhum
+  secundário, e uma linha curta por baixo a dizer para quem é cada um.
+
+  ONDE APARECE
+  Só abaixo de 768px. No computador o cabeçalho já tem as acções e uma barra
+  colada ao fundo só rouba espaço.
+
+  DETALHES QUE JÁ CUSTARAM CARO
+  - padding-bottom com env(safe-area-inset-bottom): no iPhone a barra ficava
+    por baixo da risca do sistema e o segundo botão não se carregava.
+  - O <body> leva padding-bottom igual à altura da barra, senão a barra tapa
+    o rodapé do site e ninguém vê os termos nem a privacidade.
+  - A barra só aparece depois de a pessoa descer um ecrã: no herói ela ainda
+    está a perceber o que é aquilo, e uma barra a saltar logo lê-se como anúncio.
+
+  ACESSIBILIDADE
+  São <a> a sério, com texto legível e uma linha de contexto por baixo.
+  Estado por omissão = VISÍVEL (não se esconde informação); o script só lhe
+  acrescenta a entrada suave.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.12);
+        --barra-alt:82px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:12px}
+  .heroi{min-height:92vh;display:grid;place-items:center;text-align:center;padding:0 20px;
+         background:radial-gradient(900px 520px at 50% 25%,rgba(22,163,74,.22),transparent 62%)}
+  .heroi h1{font-size:clamp(1.9rem,6vw,3rem);font-weight:900;letter-spacing:-.04em}
+  .heroi p{color:var(--texto-2);margin-top:14px}
+  .corpo{max-width:700px;margin:0 auto;padding:0 20px 8vh}
+  .corpo p{color:var(--texto-2);margin:20px 0}
+  .rodape{background:var(--tinta-2);border-top:1px solid var(--linha);
+          padding:40px 20px;text-align:center;color:var(--texto-2);font-size:.9rem}
+
+  /* ---------- a barra ---------- */
+  .cta2{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+    gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));
+    background:rgba(11,15,13,.96);backdrop-filter:blur(14px);
+    border-top:1px solid var(--linha);
+  }
+  .cta2 a{
+    flex:1 1 0;                       /* MESMO peso. Nenhum é secundário. */
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:2px;text-decoration:none;border-radius:14px;padding:11px 8px;
+    font-weight:800;font-size:.98rem;text-align:center;line-height:1.15;
+  }
+  .cta2 a small{font-weight:500;font-size:.72rem;opacity:.9;letter-spacing:.01em}
+  .cta2 .app{background:var(--verde);color:#fff}
+  .cta2 .web{background:var(--laranja);color:#fff}
+
+  @media (max-width:767px){
+    .cta2{display:flex}
+    body{padding-bottom:var(--barra-alt)}   /* não tapar o rodapé */
+  }
+
+  /* entrada suave — só depois de o script decidir que se mostra */
+  @media (prefers-reduced-motion: no-preference){
+    .cta2{transform:translateY(0);transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+    body.cta-espera .cta2{transform:translateY(110%)}
+  }
+</style>
+</head>
+<body>
+
+<div class="heroi">
+  <div>
+    <h1>Desce um ecrã</h1>
+    <p>A barra de duas acções entra por baixo. Estreita a janela para menos de 768px.</p>
+  </div>
+</div>
+
+<div class="corpo">
+  <p>Os dois botões têm exactamente o mesmo peso visual. Um é para quem tem Android; o outro para quem tem iPhone ou está no computador.</p>
+  <p>Cada um leva uma linha curta a dizer para quem é. Sem essa linha, a pessoa escolhe ao acaso e metade escolhe mal.</p>
+  <p style="height:120vh"></p>
+</div>
+
+<footer class="rodape">Este rodapé tem de continuar a ver-se. Por isso o body leva padding em baixo.</footer>
+
+<nav class="cta2" aria-label="Pedir pelo Bora">
+  <a class="app" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" rel="noopener">
+    Descarregar a app<small>Android · recebe os avisos</small>
+  </a>
+  <a class="web" href="https://app.boraguarda.com" rel="noopener">
+    Pedir pelo site<small>iPhone e computador · sem instalar</small>
+  </a>
+</nav>
+
+<script>
+(function(){
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(parado) return;                       // fica visível desde o início
+
+  document.body.classList.add('cta-espera');   // esconde só agora
+  var pedido = null;
+  function ver(){
+    pedido = null;
+    document.body.classList.toggle('cta-espera', window.scrollY < window.innerHeight * 0.55);
+  }
+  function pedir(){ if(pedido === null) pedido = requestAnimationFrame(ver); }
+  ver();
+  window.addEventListener('scroll', pedir, {passive:true});
+  window.addEventListener('resize', pedir);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pré-visualização protegida — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  13 — PRÉ-VISUALIZAÇÃO PROTEGIDA (base do NÍVEL 4)
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Mostrar a fotografia com marca de água por cima, e só entregar o ficheiro
+  limpo depois de o pagamento estar confirmado. É a base do Nível 4 para
+  fotógrafos, escolas, estúdios e clubes — e é o que separa um site de
+  algumas centenas de euros de um de vários milhares.
+
+  ⚠️ A VERDADE SOBRE O QUE ISTO PROTEGE, E O QUE NÃO PROTEGE
+  A marca de água do lado do browser é DISSUASÃO, não é segurança.
+  Quem sabe abrir as ferramentas do browser tira-a. Sempre.
+
+  A protecção a sério é UMA, e é do lado do servidor:
+    o ficheiro em alta resolução NUNCA tem URL público.
+    Fica num balde privado. Depois de o pagamento estar confirmado — pelo
+    webhook do fornecedor, no servidor, nunca por uma variável do JavaScript —
+    uma função de servidor emite um link assinado que expira em minutos.
+
+  Por isso o que se serve ao visitante NÃO é a foto grande com um carimbo por
+  cima. É uma versão PEQUENA (1000px de largura chegam), gerada no servidor,
+  já com a marca gravada nos píxeis. Mesmo que a alguém apeteça guardar a
+  imagem, o que leva não presta para imprimir.
+
+  Este ficheiro mostra as duas metades:
+    A) a marca de água em canvas (a que se vê, e é a dissuasão)
+    B) a chamada ao servidor e o que ele tem de devolver (a que protege)
+
+  PORQUÊ CANVAS E NÃO SÓ CSS
+  Uma camada CSS por cima tira-se com um clique nas ferramentas do browser e
+  a imagem por baixo fica limpa. No canvas, a marca fica DENTRO dos píxeis do
+  que é mostrado — o original nunca chega ao browser. Continua a não ser
+  segurança, mas já não é um clique.
+
+  ACESSIBILIDADE
+  O <canvas> leva role="img" e aria-label com a descrição da fotografia.
+  Estado por omissão: se o canvas falhar, mostra-se a imagem pequena com a
+  camada CSS — o visitante vê sempre alguma coisa.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--tinta-3:#171F1B;--texto:#F4F7F5;
+        --texto-2:#A9B5AE;--verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.12)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  img,canvas{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:10px}
+  .topo{text-align:center;padding:8vh 20px 4vh}
+  .topo h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;letter-spacing:-.03em}
+  .topo p{color:var(--texto-2);margin-top:12px;max-width:56ch;margin-inline:auto}
+
+  .grelha{max-width:1040px;margin:0 auto;padding:0 20px 6vh;
+          display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .item{background:var(--tinta-2);border:1px solid var(--linha);border-radius:18px;overflow:hidden}
+  .moldura{position:relative;aspect-ratio:3/2;background:#0f1512}
+  .moldura canvas,.moldura img{width:100%;height:100%;object-fit:cover}
+  /* queda: se o canvas não pintar, a camada CSS entra */
+  .moldura.sem-canvas::after{
+    content:"PRÉ-VISUALIZAÇÃO";position:absolute;inset:0;
+    display:grid;place-items:center;color:rgba(255,255,255,.5);
+    font-weight:900;letter-spacing:.3em;font-size:.9rem;
+    background:repeating-linear-gradient(-30deg,rgba(0,0,0,.28) 0 2px,transparent 2px 26px);
+  }
+  .info{padding:16px 18px 20px}
+  .info h3{font-size:1rem;font-weight:700}
+  .info p{color:var(--texto-2);font-size:.88rem;margin-top:4px}
+  .linha-preco{display:flex;align-items:center;gap:12px;margin-top:14px}
+  .preco{font-weight:900;color:var(--laranja);font-size:1.15rem}
+  .comprar{
+    margin-left:auto;background:var(--verde);color:#fff;border:0;border-radius:999px;
+    padding:11px 20px;font:inherit;font-weight:800;font-size:.92rem;cursor:pointer;
+  }
+  .comprar:hover{background:#1bbd58}
+  .comprar[disabled]{opacity:.55;cursor:progress}
+
+  .nota{max-width:820px;margin:0 auto;padding:0 20px 12vh;color:var(--texto-2);font-size:.94rem}
+  .nota h2{color:var(--texto);font-size:1.15rem;margin:26px 0 10px}
+  .nota code{background:var(--tinta-3);border:1px solid var(--linha);border-radius:6px;
+             padding:2px 6px;font-size:.86em;color:#cfe9db}
+  pre{background:var(--tinta-3);border:1px solid var(--linha);border-radius:12px;
+      padding:16px;overflow-x:auto;font-size:.84rem;line-height:1.55;color:#cfe9db;margin:12px 0}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Pré-visualização protegida</h1>
+  <p>A marca de água é dissuasão. O que protege a sério é o ficheiro limpo nunca ter endereço público — e só sair depois de o servidor confirmar o pagamento.</p>
+</div>
+
+<div class="grelha" id="grelha">
+  <!--
+    data-src   = a versão PEQUENA (o servidor já a gerou pequena; nunca a original)
+    data-id    = identificador do ficheiro, para a função de servidor saber qual é
+    data-alt   = descrição, para quem não vê
+  -->
+  <div class="item">
+    <div class="moldura"
+         data-proteger
+         data-id="foto-101"
+         data-alt="Equipa em campo, festejo após o golo"
+         data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%23123a24'/%3E%3Ccircle cx='450' cy='250' r='150' fill='%2316A34A'/%3E%3Crect y='430' width='900' height='170' fill='%230e2c1c'/%3E%3C/svg%3E"></div>
+    <div class="info">
+      <h3>Festejo, 12 de Agosto</h3><p>Alta resolução · 4000 × 2667</p>
+      <div class="linha-preco"><span class="preco">4,00 €</span>
+        <button class="comprar" type="button" data-comprar="foto-101">Comprar</button></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="moldura"
+         data-proteger
+         data-id="foto-102"
+         data-alt="Bancada cheia ao entardecer"
+         data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%233a2b16'/%3E%3Crect x='60' y='180' width='780' height='260' rx='20' fill='%23F97316'/%3E%3C/svg%3E"></div>
+    <div class="info">
+      <h3>Bancada, fim de tarde</h3><p>Alta resolução · 4000 × 2667</p>
+      <div class="linha-preco"><span class="preco">4,00 €</span>
+        <button class="comprar" type="button" data-comprar="foto-102">Comprar</button></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="moldura"
+         data-proteger
+         data-id="foto-103"
+         data-alt="Retrato do capitão com o troféu"
+         data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%23301a3a'/%3E%3Cellipse cx='450' cy='300' rx='220' ry='180' fill='%238e4fb0'/%3E%3C/svg%3E"></div>
+    <div class="info">
+      <h3>O capitão e o troféu</h3><p>Alta resolução · 3000 × 2000</p>
+      <div class="linha-preco"><span class="preco">6,00 €</span>
+        <button class="comprar" type="button" data-comprar="foto-103">Comprar</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="nota">
+  <h2>A metade que protege — do lado do servidor</h2>
+  <p>O botão <code>Comprar</code> nunca fala com a Stripe directamente. Chama uma função
+  de servidor, que é a única que tem a chave secreta. O site só conhece a chave
+  publicável (<code>pk_…</code>), que é pública por desenho.</p>
+
+<pre>// 1. o site pede a sessão de pagamento (não sabe preços nem chaves)
+const r = await fetch('/api/comprar-foto', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ fotoId: 'foto-101' })
+});
+const { url } = await r.json();
+window.location.href = url;          // vai para o pagamento
+
+// 2. no SERVIDOR (Edge Function): o preço vem da base, nunca do browser
+//    o webhook do fornecedor é que marca a compra como paga
+//    — nunca uma variável do JavaScript, nunca o "voltou da página de sucesso"
+
+// 3. só depois, para descarregar:
+//    a função confirma na base que aquela compra está PAGA,
+//    e só então emite um link assinado ao balde PRIVADO, válido 5 minutos.
+const { data } = await supabase.storage
+  .from('fotos-originais')            // balde PRIVADO, sem URL público
+  .createSignedUrl(caminho, 300);     // 5 minutos e morre</pre>
+
+  <h2>As três regras que não se quebram</h2>
+  <p><b>Uma.</b> O ficheiro em alta resolução nunca tem endereço público. Se tiver, todo o
+  resto é teatro.</p>
+  <p><b>Duas.</b> Quem decide que a compra está paga é o webhook do fornecedor, no servidor.
+  O regresso da pessoa à página de sucesso não prova pagamento nenhum — ela pode escrever
+  esse endereço à mão.</p>
+  <p><b>Três.</b> A chave secreta vive só na função de servidor. O HTML é público: qualquer
+  visitante lê o código-fonte da página.</p>
+</div>
+
+<script>
+(function(){
+  var MARCA = 'PRÉ-VISUALIZAÇÃO';
+
+  function pintar(cx){
+    var src = cx.dataset.src, alt = cx.dataset.alt || '';
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+
+    img.onload = function(){
+      // canvas do tamanho do que se mostra — nunca do original
+      var L = Math.min(img.naturalWidth, 1000);
+      var A = Math.round(L * img.naturalHeight / img.naturalWidth);
+      var c = document.createElement('canvas');
+      c.width = L; c.height = A;
+      c.setAttribute('role','img');
+      c.setAttribute('aria-label', alt);
+
+      var g = c.getContext('2d');
+      if(!g){ cair(cx, src, alt); return; }
+      g.drawImage(img, 0, 0, L, A);
+
+      // marca em diagonal, repetida — dentro dos píxeis do que é mostrado
+      g.save();
+      g.globalAlpha = 0.20;
+      g.fillStyle = '#ffffff';
+      g.font = '700 ' + Math.round(L/22) + 'px Inter, sans-serif';
+      g.textAlign = 'center';
+      g.textBaseline = 'middle';
+      g.translate(L/2, A/2);
+      g.rotate(-Math.PI/7);
+      var passoY = Math.round(A/4), passoX = Math.round(L/1.5);
+      for(var y = -A; y < A; y += passoY){
+        for(var x = -L; x < L*1.4; x += passoX){ g.fillText(MARCA, x, y); }
+      }
+      g.restore();
+
+      // risca fina no rodapé, a repetir a origem
+      g.globalAlpha = 0.55;
+      g.fillStyle = 'rgba(0,0,0,.45)';
+      g.fillRect(0, A - Math.round(A*0.09), L, Math.round(A*0.09));
+      g.globalAlpha = 0.9;
+      g.fillStyle = '#fff';
+      g.font = '600 ' + Math.round(L/44) + 'px Inter, sans-serif';
+      g.textAlign = 'left';
+      g.fillText('© a versão limpa entrega-se depois do pagamento',
+                 Math.round(L*0.03), A - Math.round(A*0.045));
+
+      cx.appendChild(c);
+    };
+
+    img.onerror = function(){ cair(cx, src, alt); };
+    img.src = src;
+  }
+
+  // queda: sem canvas, mostra a pequena com a camada CSS por cima
+  function cair(cx, src, alt){
+    cx.classList.add('sem-canvas');
+    var i = new Image(); i.src = src; i.alt = alt; cx.appendChild(i);
+  }
+
+  document.querySelectorAll('[data-proteger]').forEach(pintar);
+
+  // o botão: aqui só demonstra o caminho, não chama servidor nenhum
+  document.querySelectorAll('[data-comprar]').forEach(function(b){
+    b.addEventListener('click', function(){
+      b.disabled = true; b.textContent = 'A abrir…';
+      setTimeout(function(){
+        b.disabled = false; b.textContent = 'Comprar';
+        alert('Demonstração.\n\nNum site a sério, este botão chama a função de servidor,'
+            + ' que é a única que tem a chave secreta. O ficheiro limpo só sai por link'
+            + ' assinado, depois de o webhook confirmar o pagamento.');
+      }, 500);
+    });
+  });
+})();
+</script>
+</body>
+</html>

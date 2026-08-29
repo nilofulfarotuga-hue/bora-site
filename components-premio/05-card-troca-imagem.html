@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card com troca de imagem no hover — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  05 — CARD COM TROCA DE IMAGEM NO HOVER E APROXIMAÇÃO SUAVE
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Duas fotografias do mesmo produto: a de montra e a segunda (outro ângulo, o
+  prato empratado, o corte feito). O hover troca e aproxima ligeiramente.
+  É o gesto que a loja online consagrou e que quase nenhum site local tem.
+
+  QUANDO USAR
+  Catálogos, cardápios, galerias de trabalhos, plantel de um clube.
+
+  O DETALHE QUE FAZ A DIFERENÇA
+  A segunda imagem tem loading="lazy" e SÓ é descarregada quando faz falta —
+  mas o hover não pode esperar pelo download, senão pisca. Por isso o cartão
+  pré-carrega a segunda imagem no primeiro pointerenter (uma vez por cartão).
+
+  NO TELEMÓVEL
+  Não há hover. Por isso os cartões marcados data-tocar trocam a imagem ao
+  toque, com um pequeno indicador. Sem isto, metade dos visitantes nunca vê
+  a segunda foto.
+
+  ACESSIBILIDADE
+  A troca acontece também em :focus-within — quem navega por Tab vê o mesmo.
+  A segunda imagem é decorativa (alt=""), a primeira é que descreve.
+  reduced-motion: a troca mantém-se (é informação), a aproximação desaparece.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:16px}
+  .topo{text-align:center;padding:10vh 20px 6vh}
+  .topo h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;letter-spacing:-.03em}
+  .topo p{color:var(--texto-2);margin-top:12px}
+  .grelha{max-width:1040px;margin:0 auto;padding:0 20px 14vh;
+          display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+  /* ---------- o cartão ---------- */
+  .cartao{
+    display:block;text-decoration:none;color:inherit;
+    background:var(--tinta-2);border:1px solid var(--linha);
+    border-radius:18px;overflow:hidden;
+    transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
+  }
+  .cartao:hover,.cartao:focus-within{
+    border-color:var(--verde);transform:translateY(-4px);
+    box-shadow:0 18px 40px -20px rgba(0,0,0,.8);
+  }
+  .moldura{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0f1512}
+  .moldura img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:opacity .38s ease,transform .55s cubic-bezier(.2,.7,.3,1);
+  }
+  .foto-2{opacity:0}
+  .cartao:hover  .foto-1,.cartao:focus-within .foto-1{opacity:0;transform:scale(1.06)}
+  .cartao:hover  .foto-2,.cartao:focus-within .foto-2{opacity:1;transform:scale(1.06)}
+  /* estado ligado pelo toque no telemóvel */
+  .cartao.trocado .foto-1{opacity:0;transform:scale(1.04)}
+  .cartao.trocado .foto-2{opacity:1;transform:scale(1.04)}
+
+  .selo{
+    position:absolute;left:12px;top:12px;z-index:2;
+    background:rgba(11,15,13,.82);backdrop-filter:blur(6px);
+    border:1px solid var(--linha);border-radius:999px;
+    padding:6px 12px;font-size:.74rem;font-weight:800;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--verde);
+  }
+  .dica-toque{
+    position:absolute;right:12px;bottom:12px;z-index:2;display:none;
+    background:rgba(11,15,13,.82);border:1px solid var(--linha);border-radius:999px;
+    padding:5px 11px;font-size:.72rem;color:var(--texto-2);
+  }
+  .info{padding:16px 18px 20px}
+  .info h3{font-size:1.02rem;font-weight:700;margin-bottom:4px}
+  .info p{color:var(--texto-2);font-size:.9rem}
+  .preco{margin-top:10px;font-weight:800;color:var(--laranja)}
+
+  /* sem hover (telemóvel) → mostra a dica de toque */
+  @media (hover:none){ .dica-toque{display:block} }
+
+  @media (prefers-reduced-motion: reduce){
+    .moldura img{transition:opacity .2s ease}
+    .cartao:hover .foto-1,.cartao:hover .foto-2,
+    .cartao:focus-within .foto-1,.cartao:focus-within .foto-2,
+    .cartao.trocado .foto-1,.cartao.trocado .foto-2{transform:none}
+    .cartao:hover,.cartao:focus-within{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Troca de imagem no hover</h1>
+  <p>Passa o rato. No telemóvel, toca uma vez para trocar e outra para abrir.</p>
+</div>
+
+<div class="grelha">
+  <!--
+    NUM SITE A SÉRIO estas src são WebP reais do cliente, com width e height
+    declarados e loading="lazy" na segunda. Aqui são SVG embutidos só para a
+    demo correr sem rede.
+  -->
+  <a class="cartao" href="#" data-tocar>
+    <div class="moldura">
+      <span class="selo">Novo</span>
+      <img class="foto-1" width="800" height="600" alt="Açaí 500ml em copo, vista de frente"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b2a6e'/%3E%3Cstop offset='1' stop-color='%23241033'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23a)'/%3E%3Ccircle cx='400' cy='300' r='140' fill='%237e3f96'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23e9d5f5' text-anchor='middle'%3Efoto 1 — montra%3C/text%3E%3C/svg%3E">
+      <img class="foto-2" loading="lazy" width="800" height="600" alt=""
+        data-src2="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23123a24'/%3E%3Ccircle cx='400' cy='290' r='160' fill='%2316A34A'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23d7f5e4' text-anchor='middle'%3Efoto 2 — por dentro%3C/text%3E%3C/svg%3E">
+      <span class="dica-toque">toca para ver</span>
+    </div>
+    <div class="info"><h3>Açaí 500 ml</h3><p>Com granola e banana</p><div class="preco">6,50 €</div></div>
+  </a>
+
+  <a class="cartao" href="#" data-tocar>
+    <div class="moldura">
+      <img class="foto-1" width="800" height="600" alt="Corte de cabelo clássico, antes"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%231d232b'/%3E%3Crect x='250' y='140' width='300' height='320' rx='150' fill='%233a4551'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23aebbc9' text-anchor='middle'%3Eantes%3C/text%3E%3C/svg%3E">
+      <img class="foto-2" loading="lazy" width="800" height="600" alt=""
+        data-src2="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%232b2118'/%3E%3Crect x='250' y='150' width='300' height='300' rx='150' fill='%23c9964a'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23f0dcbb' text-anchor='middle'%3Edepois%3C/text%3E%3C/svg%3E">
+      <span class="dica-toque">toca para ver</span>
+    </div>
+    <div class="info"><h3>Corte clássico</h3><p>30 minutos</p><div class="preco">12,00 €</div></div>
+  </a>
+
+  <a class="cartao" href="#" data-tocar>
+    <div class="moldura">
+      <img class="foto-1" width="800" height="600" alt="Kebab embalado, vista de fora"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23402a12'/%3E%3Cellipse cx='400' cy='300' rx='200' ry='120' fill='%23a5702c'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23f3ddb9' text-anchor='middle'%3Efechado%3C/text%3E%3C/svg%3E">
+      <img class="foto-2" loading="lazy" width="800" height="600" alt=""
+        data-src2="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23511b16'/%3E%3Cellipse cx='400' cy='300' rx='210' ry='130' fill='%23d1452f'/%3E%3Ctext x='400' y='520' font-family='sans-serif' font-size='30' fill='%23ffd9d0' text-anchor='middle'%3Eaberto%3C/text%3E%3C/svg%3E">
+      <span class="dica-toque">toca para ver</span>
+    </div>
+    <div class="info"><h3>Kebab de vitela</h3><p>Pão fresco, molho à escolha</p><div class="preco">7,90 €</div></div>
+  </a>
+</div>
+
+<script>
+(function(){
+  // A segunda imagem só entra no DOM quando faz falta — mas antes do hover
+  // precisar dela, senão pisca na primeira passagem.
+  function carregar(cartao){
+    var f2 = cartao.querySelector('.foto-2');
+    if(f2 && !f2.src && f2.dataset.src2){ f2.src = f2.dataset.src2; }
+  }
+  document.querySelectorAll('.cartao').forEach(function(c){
+    c.addEventListener('pointerenter', function(){ carregar(c); }, {once:true});
+    c.addEventListener('focusin',      function(){ carregar(c); }, {once:true});
+  });
+
+  // Telemóvel: primeiro toque troca, segundo toque abre o link.
+  var semHover = window.matchMedia('(hover:none)').matches;
+  if(semHover){
+    document.querySelectorAll('.cartao[data-tocar]').forEach(function(c){
+      c.addEventListener('click', function(ev){
+        if(!c.classList.contains('trocado')){
+          ev.preventDefault();
+          carregar(c);
+          document.querySelectorAll('.cartao.trocado').forEach(function(o){
+            if(o!==c) o.classList.remove('trocado');
+          });
+          c.classList.add('trocado');
+        }
+      });
+    });
+  }
+
+  // Rede de segurança: se por alguma razão o pointerenter não disparar,
+  // carrega as segundas imagens que já estão perto do ecrã.
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(ents,o){
+      ents.forEach(function(e){ if(e.isIntersecting){ carregar(e.target); o.unobserve(e.target); } });
+    }, {rootMargin:'300px'});
+    document.querySelectorAll('.cartao').forEach(function(c){ obs.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>

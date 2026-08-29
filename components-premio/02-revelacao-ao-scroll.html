@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revelação ao scroll — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  02 — REVELAÇÃO AO SCROLL
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  Opacidade e deslocamento suave quando o elemento entra no ecrã, com atraso
+  escalonado entre elementos irmãos. É o efeito mais barato que separa um site
+  profissional de um amador — e o mais fácil de exagerar.
+
+  QUANDO USAR
+  Praticamente todos os sites de Nível 2 e 3. Cartões, secções, imagens.
+
+  QUANDO NÃO USAR
+  Em conteúdo crítico acima da dobra (o herói aparece já visível, sempre) e em
+  sites de Nível 1 para público mais velho.
+
+  COMO SE USA NOUTRO SITE
+  1. Copia o bloco <style> e o <script>.
+  2. Põe data-revelar em qualquer elemento.
+  3. Para escalonar irmãos, põe data-revelar-grupo no PAI. Os filhos directos
+     recebem atraso de 80ms cada, com tecto de 6 (480ms) para a última fila
+     não ficar à espera.
+
+  ACESSIBILIDADE
+  Estado por omissão = VISÍVEL. A classe .js-revelar (posta pelo script) é que
+  esconde. Se o JS falhar, lê-se tudo. reduced-motion desliga por inteiro.
+  Cada elemento só é observado uma vez (unobserve depois de entrar) — não há
+  custo de scroll depois de revelado.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--tinta-2:#121815;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.10)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .topo{padding:14vh 20px 8vh;text-align:center}
+  .topo h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.03em}
+  .topo p{color:var(--texto-2);margin-top:12px}
+  section{padding:12vh 0;border-top:1px solid var(--linha)}
+  h2{font-size:clamp(1.3rem,3vw,2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:26px}
+  .grelha{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .cartao{background:var(--tinta-2);border:1px solid var(--linha);border-radius:16px;padding:24px}
+  .cartao h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+  .cartao p{color:var(--texto-2);font-size:.95rem}
+
+  /* ---------- o efeito: só existe depois de o JS o ligar ---------- */
+  .js-revelar [data-revelar]{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .62s cubic-bezier(.2,.7,.3,1),
+               transform .62s cubic-bezier(.2,.7,.3,1);
+    transition-delay:var(--atraso,0ms);
+    will-change:opacity,transform;
+  }
+  .js-revelar [data-revelar].revelado{opacity:1;transform:none;will-change:auto}
+
+  @media (prefers-reduced-motion: reduce){
+    .js-revelar [data-revelar]{opacity:1!important;transform:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Revelação ao scroll</h1>
+  <p>Desce devagar. Repara no atraso entre os cartões irmãos.</p>
+</div>
+
+<section class="wrap">
+  <h2 data-revelar>Um elemento sozinho</h2>
+  <p data-revelar style="color:var(--texto-2);max-width:56ch">
+    Entra com 22 pixéis de deslocamento e seis décimos de segundo. Chega.
+  </p>
+</section>
+
+<section class="wrap">
+  <h2 data-revelar>Irmãos escalonados</h2>
+  <div class="grelha" data-revelar-grupo>
+    <div class="cartao" data-revelar><h3>Primeiro</h3><p>Sem atraso.</p></div>
+    <div class="cartao" data-revelar><h3>Segundo</h3><p>80 milissegundos depois.</p></div>
+    <div class="cartao" data-revelar><h3>Terceiro</h3><p>160 milissegundos.</p></div>
+    <div class="cartao" data-revelar><h3>Quarto</h3><p>240 milissegundos.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:20vh">
+  <h2 data-revelar>Fim</h2>
+  <p data-revelar style="color:var(--texto-2)">Se desligares o JavaScript, isto continua tudo visível.</p>
+</section>
+
+<script>
+(function(){
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(parado.matches) return;               // não se esconde nada
+  if(!('IntersectionObserver' in window)) return;
+
+  document.body.classList.add('js-revelar'); // só agora passa a esconder
+
+  // atraso escalonado entre irmãos, com tecto para a última fila não esperar
+  document.querySelectorAll('[data-revelar-grupo]').forEach(function(pai){
+    var passo = parseInt(pai.getAttribute('data-revelar-passo'), 10) || 80;
+    Array.prototype.slice.call(pai.children).forEach(function(f,i){
+      if(f.hasAttribute('data-revelar')){
+        f.style.setProperty('--atraso', (Math.min(i,6)*passo) + 'ms');
+      }
+    });
+  });
+
+  var obs = new IntersectionObserver(function(ents,o){
+    ents.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('revelado');
+        o.unobserve(e.target);            // uma vez e nunca mais
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+
+  document.querySelectorAll('[data-revelar]').forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>

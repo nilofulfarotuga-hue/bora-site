@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herói com vídeo real em fundo — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  11 — HERÓI COM VÍDEO REAL EM FUNDO
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  É o primeiro segundo que faz a pessoa achar que o site é caro. Vídeo curto
+  em loop, sem som, com escurecimento por cima para o texto se ler.
+
+  A REGRA DO VÍDEO (PADRAO_BORA 1.11 e regra 8.3 da skill site-premio)
+  - NUNCA em base64. Fica em assets/ com caminho relativo.
+  - Poster de IMAGEM REAL, que aparece enquanto o vídeo carrega. Sem poster,
+    o primeiro segundo é um rectângulo preto — o oposto do efeito que se quer.
+  - Tem de passar a lista branca do deploy-cloudflare.sh. Se não estiver na
+    lista, não é publicado e ninguém dá por isso.
+  - Vídeo do próprio cliente, ou montado a partir das fotografias reais dele.
+    Nada gerado por inteligência artificial, nada de banco de imagens.
+
+  QUEDA PARA IMAGEM FIXA — três casos, todos tratados
+  1. prefers-reduced-motion: reduce → o vídeo nunca é carregado.
+  2. Ligação lenta (navigator.connection: 2g/3g, ou saveData ligado) → idem.
+  3. O vídeo falha, demora, ou o browser recusa o autoplay → fica o poster.
+  Nos três casos o herói continua bonito, porque o poster é uma foto a sério.
+
+  PORQUE É QUE O <video> NÃO ESTÁ NO HTML DE ORIGEM
+  Está como <template>. Se estivesse no HTML, o browser começava a descarregar
+  megabytes ANTES de sabermos se a pessoa quer movimento ou se tem rede boa.
+  Assim, quem não pode ver vídeo não paga um único byte por ele.
+
+  ACESSIBILIDADE
+  O vídeo é decorativo: aria-hidden, sem som, sem controlos, e não leva
+  informação nenhuma que não esteja no texto. Botão para parar o movimento,
+  sempre visível — quem tem sensibilidade a movimento precisa dele mesmo sem
+  a preferência do sistema ligada.
+  ===========================================================================
+-->
+<style>
+  :root{--tinta:#0B0F0D;--texto:#F4F7F5;--texto-2:#A9B5AE;
+        --verde:#16A34A;--laranja:#F97316;--linha:rgba(255,255,255,.14)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--tinta);color:var(--texto);
+       font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  img,video{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:10px}
+
+  .heroi{position:relative;min-height:100svh;display:grid;overflow:hidden;isolation:isolate}
+  /* o poster é o fundo real — existe sempre, com ou sem vídeo */
+  .fundo{
+    position:absolute;inset:0;z-index:-2;
+    background-size:cover;background-position:center;background-color:#0d1a13;
+  }
+  .heroi video{
+    position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;
+    opacity:0;transition:opacity .8s ease;
+  }
+  .heroi video.pronto{opacity:1}
+  /* escurecimento: sem isto o texto branco desaparece no primeiro fotograma claro */
+  .veu{
+    position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(4,8,6,.62) 0%,rgba(4,8,6,.38) 45%,rgba(4,8,6,.86) 100%);
+  }
+
+  .conteudo{
+    position:relative;align-self:end;max-width:1040px;width:100%;
+    margin:0 auto;padding:0 22px calc(64px + env(safe-area-inset-bottom,0px));
+  }
+  .chapeu{font-size:.76rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+          color:var(--verde);margin-bottom:14px}
+  h1{font-size:clamp(2.1rem,7vw,4.2rem);font-weight:900;letter-spacing:-.045em;line-height:1.02;
+     max-width:16ch;text-wrap:balance}
+  .lead{color:#dfe7e2;margin-top:16px;max-width:46ch;font-size:clamp(1rem,2vw,1.18rem)}
+
+  .portas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .porta{
+    flex:1 1 220px;display:flex;flex-direction:column;gap:2px;
+    padding:14px 22px;border-radius:999px;text-decoration:none;
+    font-weight:800;font-size:1rem;text-align:center;
+  }
+  .porta small{font-weight:500;font-size:.76rem;opacity:.92}
+  .porta.a{background:var(--verde);color:#fff}
+  .porta.b{background:var(--laranja);color:#fff}
+
+  .parar{
+    position:absolute;right:16px;top:16px;z-index:3;
+    background:rgba(11,15,13,.72);color:var(--texto);border:1px solid var(--linha);
+    border-radius:999px;padding:8px 15px;font:inherit;font-size:.82rem;font-weight:700;
+    cursor:pointer;backdrop-filter:blur(8px);
+  }
+  .parar:hover{border-color:var(--verde)}
+
+  .depois{max-width:700px;margin:0 auto;padding:10vh 20px}
+  .depois p{color:var(--texto-2);margin:18px 0}
+</style>
+</head>
+<body>
+
+<section class="heroi" id="heroi">
+  <!--
+    O POSTER é o fundo, sempre. É uma imagem real (aqui, o poster do vídeo de
+    apresentação do Bora que já vive em assets/video/).
+  -->
+  <div class="fundo" id="fundo"
+       style="background-image:url('../assets/video/bora-apresentacao-poster.jpg')"></div>
+  <div class="veu"></div>
+
+  <button class="parar" type="button" id="btParar" hidden>Parar o vídeo</button>
+
+  <div class="conteudo">
+    <div class="chapeu">Guarda, Portugal</div>
+    <h1>A cidade inteira cabe num pedido.</h1>
+    <p class="lead">Comida, mercado, farmácia, viagens, limpeza e marcações. Uma app só, feita aqui.</p>
+    <div class="portas">
+      <a class="porta a" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" rel="noopener">
+        Descarregar a app<small>Android · recebe os avisos</small></a>
+      <a class="porta b" href="https://app.boraguarda.com" rel="noopener">
+        Pedir pelo site<small>iPhone e computador · sem instalar</small></a>
+    </div>
+  </div>
+</section>
+
+<!--
+  O vídeo vive AQUI DENTRO até se saber se pode ser carregado.
+  Enquanto está num <template>, o browser não descarrega um único byte.
+-->
+<template id="tpl-video">
+  <video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"
+         poster="../assets/video/bora-apresentacao-poster.jpg">
+    <source src="../assets/video/bora-apresentacao.mp4" type="video/mp4">
+  </video>
+</template>
+
+<div class="depois">
+  <p>Abaixo do herói o site continua normal. O vídeo não leva informação nenhuma que não esteja escrita — é decoração, e é assim que tem de ser.</p>
+  <p>Se desligares o JavaScript, ou se a tua ligação for lenta, ou se tiveres menos movimento ligado no sistema, fica o poster. E o poster é uma fotografia a sério.</p>
+</div>
+
+<script>
+(function(){
+  var heroi = document.getElementById('heroi');
+  var tpl   = document.getElementById('tpl-video');
+  var bt    = document.getElementById('btParar');
+  if(!heroi || !tpl) return;
+
+  // ---- 1. quem pediu menos movimento não recebe vídeo ----
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(parado.matches) return;
+
+  // ---- 2. ligação fraca ou poupança de dados: também não ----
+  var c = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if(c && (c.saveData === true || /^(slow-)?2g$/.test(c.effectiveType || '') || c.effectiveType === '3g')) return;
+
+  // ---- 3. só carrega quando o herói está mesmo no ecrã ----
+  function ligar(){
+    var v = tpl.content.firstElementChild.cloneNode(true);
+    heroi.insertBefore(v, heroi.firstChild);
+    v.preload = 'auto';
+    v.load();
+
+    // só se mostra depois de haver imagem — nunca um rectângulo preto
+    v.addEventListener('canplay', function(){
+      var p = v.play();
+      if(p && p.catch) p.catch(function(){ v.remove(); });   // autoplay recusado → fica o poster
+      v.classList.add('pronto');
+      bt.hidden = false;
+    }, {once:true});
+
+    v.addEventListener('error', function(){ v.remove(); });  // falhou → fica o poster
+
+    // rede de segurança: 6 segundos sem conseguir tocar, desiste
+    setTimeout(function(){ if(!v.classList.contains('pronto')) v.remove(); }, 6000);
+
+    bt.addEventListener('click', function(){
+      if(v.paused){ v.play(); bt.textContent = 'Parar o vídeo'; }
+      else        { v.pause(); bt.textContent = 'Retomar o vídeo'; }
+    });
+
+    // poupa bateria quando o herói sai do ecrã
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting) { if(bt.textContent.indexOf('Parar')===0) v.play(); } else v.pause(); });
+    }, {threshold:0.05}).observe(heroi);
+  }
+
+  if('IntersectionObserver' in window){
+    var o = new IntersectionObserver(function(es,ob){
+      es.forEach(function(e){ if(e.isIntersecting){ ligar(); ob.disconnect(); } });
+    }, {rootMargin:'100px'});
+    o.observe(heroi);
+  } else { ligar(); }
+})();
+</script>
+</body>
+</html>
