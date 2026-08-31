@@ -1,0 +1,106 @@
+{
+  "url": "https://www.jleague.jp/",
+  "quando": "2026-08-31 13:43",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "【公式】Ｊリーグ公式サイト（J.LEAGUE）",
+    "descricao": "Ｊリーグ公式サイト：Ｊリーグ試合速報、ニュースリリース、日程結果、順位など、ＪリーグとＪクラブの情報をご覧いただけます。",
+    "ogImage": "https://www.jleague.jp/ogp/ogimage.png",
+    "body": {
+      "fontFamily": "jLeagueSansFont, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Helvetica Neue\", Helvetica, Arial",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(15, 18, 20)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "jLeagueSansFont, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Helvetica Neue\", Helvetica, Arial",
+      "fontSize": "32px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "jLeagueSansFont, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Helvetica Neue\", Helvetica, Arial",
+      "fontSize": "24px",
+      "fontWeight": "900",
+      "letterSpacing": "normal",
+      "lineHeight": "33.6px",
+      "color": "rgb(245, 245, 245)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "jLeagueSansFont, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", sans-serif, \"Helvetica Neue\", Helvetica, Arial",
+      "fontSize": "0px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "0px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(77, 144, 254)",
+      "borderRadius": "2px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "jLeagueSansFont",
+      "arial"
+    ],
+    "alturaTotal": 7282
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#111616",
+      "fatia": 31.7,
+      "px": 4958
+    },
+    {
+      "hex": "#2B2929",
+      "fatia": 29.5,
+      "px": 4608
+    },
+    {
+      "hex": "#554942",
+      "fatia": 22.9,
+      "px": 3571
+    },
+    {
+      "hex": "#E2E2DF",
+      "fatia": 18.8,
+      "px": 2941
+    },
+    {
+      "hex": "#81786F",
+      "fatia": 18.8,
+      "px": 2939
+    },
+    {
+      "hex": "#222324",
+      "fatia": 15.8,
+      "px": 2464
+    },
+    {
+      "hex": "#323936",
+      "fatia": 15.0,
+      "px": 2350
+    },
+    {
+      "hex": "#0C0D0D",
+      "fatia": 7.5,
+      "px": 1169
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "url": "https://www.mancity.com/",
+  "quando": "2026-08-31 13:45",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Um momento…",
+    "descricao": null,
+    "ogImage": null,
+    "body": {
+      "fontFamily": "Kippax, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 24, 56)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "KippaxCondensed, sans-serif",
+      "fontSize": "100px",
+      "fontWeight": "800",
+      "letterSpacing": "normal",
+      "lineHeight": "92px",
+      "color": "rgb(0, 24, 56)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": {
+      "fontFamily": "Kippax, sans-serif",
+      "fontSize": "24px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 24, 56)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": null,
+    "fontes": [
+      "KippaxCondensed",
+      "Kippax"
+    ],
+    "alturaTotal": 856
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#EEF2F6",
+      "fatia": 59.7,
+      "px": 9322
+    },
+    {
+      "hex": "#9DC9EA",
+      "fatia": 33.8,
+      "px": 5274
+    },
+    {
+      "hex": "#79ABD3",
+      "fatia": 25.1,
+      "px": 3917
+    },
+    {
+      "hex": "#B0D2ED",
+      "fatia": 21.9,
+      "px": 3422
+    },
+    {
+      "hex": "#FAFBFC",
+      "fatia": 9.2,
+      "px": 1431
+    },
+    {
+      "hex": "#D2E4F2",
+      "fatia": 4.6,
+      "px": 715
+    },
+    {
+      "hex": "#F0F2F5",
+      "fatia": 3.7,
+      "px": 582
+    },
+    {
+      "hex": "#E8F2FA",
+      "fatia": 2.2,
+      "px": 337
+    }
+  ]
+}

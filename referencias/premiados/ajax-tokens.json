@@ -1,0 +1,108 @@
+{
+  "url": "https://www.ajax.nl/",
+  "quando": "2026-08-31 13:46",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Officiële website AFC Ajax Amsterdam - Ajax.nl",
+    "descricao": "Officiële website van AFC Ajax. Bekijk het laatste nieuws over Ajax! ✓ Video's ✓ Tickets bestellen ✓ Wedstrijden en meer!",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18.4px",
+      "color": "rgb(24, 19, 20)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "lexia-advertising, sans-serif",
+      "fontSize": "52px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "47.84px",
+      "color": "rgb(24, 19, 20)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "SuisseIntl, sans-serif",
+      "fontSize": "36px",
+      "fontWeight": "800",
+      "letterSpacing": "normal",
+      "lineHeight": "33.84px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18.4px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(24, 19, 20, 0.6)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "SuisseIntl",
+      "Times New Roman",
+      "lexia-advertising",
+      ""
+    ],
+    "alturaTotal": 3991
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 33.3,
+      "px": 5206
+    },
+    {
+      "hex": "#211916",
+      "fatia": 24.7,
+      "px": 3854
+    },
+    {
+      "hex": "#B50329",
+      "fatia": 21.1,
+      "px": 3290
+    },
+    {
+      "hex": "#A07A64",
+      "fatia": 20.9,
+      "px": 3272
+    },
+    {
+      "hex": "#0B0A08",
+      "fatia": 17.4,
+      "px": 2718
+    },
+    {
+      "hex": "#7A4638",
+      "fatia": 16.6,
+      "px": 2587
+    },
+    {
+      "hex": "#CDBBAE",
+      "fatia": 15.4,
+      "px": 2411
+    },
+    {
+      "hex": "#F4F4F3",
+      "fatia": 10.6,
+      "px": 1662
+    }
+  ]
+}

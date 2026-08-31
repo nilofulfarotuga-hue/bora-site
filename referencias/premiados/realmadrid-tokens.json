@@ -1,0 +1,97 @@
+{
+  "url": "https://www.realmadrid.com/pt-PT",
+  "quando": "2026-08-31 13:46",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Real Madrid CF | Site Oficial",
+    "descricao": "Bem-vindo ao site oficial do Real Madrid CF. Descubra as últimas notícias, jogos, jogadores, bilhetes, loja oficial e muito mais do clube mais laureado do mundo.",
+    "ogImage": "https://publish.realmadrid.com/content/dam/common/statics/public-content/internet/web/rm-spa-web/images/meta/og-image.png",
+    "body": {
+      "fontFamily": "RMNeue, arial, helvetica",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(20, 20, 43)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": {
+      "fontFamily": "RMNeue, arial, helvetica",
+      "fontSize": "40px",
+      "fontWeight": "700",
+      "letterSpacing": "-1px",
+      "lineHeight": "44px",
+      "color": "rgb(15, 33, 69)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "RMNeue, arial, helvetica",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "lineHeight": "21px",
+      "color": "rgb(15, 33, 69)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "7.994px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "RMNeue",
+      "rm-icons-24",
+      "rm-icons-40",
+      "rm-icons-16"
+    ],
+    "alturaTotal": 9351
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 44.3,
+      "px": 6918
+    },
+    {
+      "hex": "#F2F3F3",
+      "fatia": 29.9,
+      "px": 4665
+    },
+    {
+      "hex": "#9E9FA1",
+      "fatia": 21.8,
+      "px": 3408
+    },
+    {
+      "hex": "#886162",
+      "fatia": 20.0,
+      "px": 3118
+    },
+    {
+      "hex": "#39343D",
+      "fatia": 18.1,
+      "px": 2824
+    },
+    {
+      "hex": "#CDC5BF",
+      "fatia": 18.0,
+      "px": 2820
+    },
+    {
+      "hex": "#FCFFFF",
+      "fatia": 4.8,
+      "px": 747
+    },
+    {
+      "hex": "#F6F5FF",
+      "fatia": 3.2,
+      "px": 500
+    }
+  ]
+}

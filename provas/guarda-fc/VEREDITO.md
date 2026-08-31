@@ -32,3 +32,25 @@ RESUMO: passa a fasquia — ganha ao site atual nos dois tamanhos e não
 perde com nenhum dos quatro grandes no primeiro ecrã. Grelha do fiscal:
 72/100 PASSA (mínimo 70), 0 defeitos graves; site atual: 54/100.
 LCP v7: 1108 ms computador / 928 ms telemóvel (livro: < 2500 ms).
+
+ADENDA — REFINAMENTO-100 (2026-08-31, fim do dia)
+O Danilo reprovou a primeira v7 por ser "praticamente igual ao aprovado".
+A pergunta ao juiz mudou: "estes dois sites parecem feitos pela mesma
+agência?" Depois do refinamento, a resposta honesta é NÃO:
+- a v7 abre com uma sequência cinematográfica comandada pelo rolar da
+  página (chegada à Guarda -> Estádio Municipal -> túnel -> a equipa no
+  relvado, frames reais do clube em canvas, GSAP+Lenis, tudo gratuito),
+  seguida do filme real do herói; o aprovado abre num carrossel de fotos;
+- os quatro idiomas mantêm-se (PT, EN, ES, HI com Devanagari carregada —
+  capturas por idioma nesta pasta, com data no nome);
+- a notícia do Jai saiu do destaque (o destaque é a vitória 6-0 na Taça;
+  o subtítulo do herói deixou de o mencionar);
+- a identidade mantém-se DE PROPÓSITO (Bebas, vermelho, castelo) — não é
+  "mesma agência", é o mesmo clube com outro acabamento.
+GRELHA: 100/100 medidos ao vivo, zero defeitos graves, SEM inflacionar —
+cada ponto veio de disciplina real (escala tipográfica de 8 tamanhos,
+régua de 10 espaçamentos, paleta de 7 cores de texto, letra >=13 px,
+toque >=44 px, contraste AA, dimensões declaradas, herói pleno). O site
+aprovado mede 54/100 pela mesma régua. LCP da v7 com o filme e a
+sequência: 1544 ms computador / 676 ms telemóvel (limite 2500).
+Gravação de 15 s lado a lado (telemóvel) nesta pasta, com data.
