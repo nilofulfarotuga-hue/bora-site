@@ -1,0 +1,83 @@
+{
+  "url": "https://obys.agency/",
+  "quando": "2026-08-31 09:58",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Obys Agency",
+    "descricao": "Concept-driven design studio based in the EU. Crafting award-winning brand and web experiences shaped by storytelling and strong visual systems.",
+    "ogImage": "https://cms.obys.agency/uploads/large_Thumbnail_Obys_5419986743.webp",
+    "body": {
+      "fontFamily": "Obys, serif",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.11px",
+      "lineHeight": "13.2px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": null,
+    "botao": {
+      "fontFamily": "Obys, serif",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "13.2px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Obys"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#000000",
+      "fatia": 154.9,
+      "px": 24198
+    },
+    {
+      "hex": "#161616",
+      "fatia": 1.0,
+      "px": 150
+    },
+    {
+      "hex": "#292929",
+      "fatia": 1.0,
+      "px": 149
+    },
+    {
+      "hex": "#848484",
+      "fatia": 0.8,
+      "px": 118
+    },
+    {
+      "hex": "#ABABAB",
+      "fatia": 0.6,
+      "px": 100
+    },
+    {
+      "hex": "#DEDEDE",
+      "fatia": 0.6,
+      "px": 99
+    },
+    {
+      "hex": "#3D3D3D",
+      "fatia": 0.6,
+      "px": 98
+    },
+    {
+      "hex": "#5F5F5F",
+      "fatia": 0.6,
+      "px": 88
+    }
+  ]
+}

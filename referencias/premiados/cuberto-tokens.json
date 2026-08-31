@@ -1,0 +1,105 @@
+{
+  "url": "https://cuberto.com/",
+  "quando": "2026-08-31 10:32",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Cuberto | Digital Design & Development Agency",
+    "descricao": "Cuberto is a UI/UX design agency based in USA. We specialise in UI/UX design, branding, web, and mobile development.",
+    "ogImage": "/cover.png",
+    "body": {
+      "fontFamily": "\"Suisse Intl\", sans-serif",
+      "fontSize": "12.6px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "14.49px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Suisse Intl\", sans-serif",
+      "fontSize": "81px",
+      "fontWeight": "500",
+      "letterSpacing": "-0.81px",
+      "lineHeight": "81px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Suisse Intl\", sans-serif",
+      "fontSize": "14.4px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "15.84px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": {
+      "fontFamily": "\"Suisse Intl\", sans-serif",
+      "fontSize": "18px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "lineHeight": "18px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(0, 0, 0)",
+      "borderRadius": "99999px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Suisse Intl"
+    ],
+    "alturaTotal": 13596
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 92.0,
+      "px": 14368
+    },
+    {
+      "hex": "#E1DBD5",
+      "fatia": 16.0,
+      "px": 2494
+    },
+    {
+      "hex": "#E2DDD8",
+      "fatia": 13.4,
+      "px": 2092
+    },
+    {
+      "hex": "#DBD2C2",
+      "fatia": 11.4,
+      "px": 1774
+    },
+    {
+      "hex": "#DDD7CD",
+      "fatia": 10.2,
+      "px": 1593
+    },
+    {
+      "hex": "#9C8C73",
+      "fatia": 10.0,
+      "px": 1560
+    },
+    {
+      "hex": "#F0EDE9",
+      "fatia": 6.5,
+      "px": 1008
+    },
+    {
+      "hex": "#E4DCC4",
+      "fatia": 0.7,
+      "px": 111
+    }
+  ]
+}

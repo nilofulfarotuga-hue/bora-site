@@ -1,0 +1,83 @@
+{
+  "url": "https://niika.com.au/",
+  "quando": "2026-08-31 10:47",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "403 Forbidden",
+    "descricao": null,
+    "ogImage": null,
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "32px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": null,
+    "botao": null,
+    "fontes": [
+      "Times New Roman"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 156.6,
+      "px": 24471
+    },
+    {
+      "hex": "#F1F1F1",
+      "fatia": 1.5,
+      "px": 228
+    },
+    {
+      "hex": "#FBFBFB",
+      "fatia": 1.3,
+      "px": 197
+    },
+    {
+      "hex": "#B0B0B0",
+      "fatia": 0.5,
+      "px": 79
+    },
+    {
+      "hex": "#FDFDFD",
+      "fatia": 0.1,
+      "px": 11
+    },
+    {
+      "hex": "#FFFFFE",
+      "fatia": 0.1,
+      "px": 8
+    },
+    {
+      "hex": "#F4F5F6",
+      "fatia": 0.0,
+      "px": 4
+    },
+    {
+      "hex": "#FBFBFA",
+      "fatia": 0.0,
+      "px": 2
+    }
+  ]
+}

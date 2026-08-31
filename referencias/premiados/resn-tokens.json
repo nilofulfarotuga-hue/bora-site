@@ -1,0 +1,96 @@
+{
+  "url": "https://resn.co.nz/",
+  "quando": "2026-08-31 09:59",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Resn - Creative Digital Agency | Ideation, Design, and Development",
+    "descricao": "Resn is a creative studio bringing brand, content and digital experiences to life through stories shaped with global brands and emerging innovators.",
+    "ogImage": "http://resn.co.nz/resn-share.jpg?bar=2",
+    "body": {
+      "fontFamily": "sans-serif",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Fort-Extralight, Arial, sans-serif",
+      "fontSize": "43.2px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "43.2px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": null,
+    "botao": {
+      "fontFamily": "Fort-Medium, Arial, sans-serif",
+      "fontSize": "9.9px",
+      "fontWeight": "400",
+      "letterSpacing": "0.99px",
+      "lineHeight": "19.8px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Fort-Book",
+      "Fort-Medium",
+      "Fort-Extralight"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#0F0E0F",
+      "fatia": 135.3,
+      "px": 21140
+    },
+    {
+      "hex": "#0E0D0E",
+      "fatia": 20.2,
+      "px": 3161
+    },
+    {
+      "hex": "#171718",
+      "fatia": 1.6,
+      "px": 256
+    },
+    {
+      "hex": "#0F0E10",
+      "fatia": 1.6,
+      "px": 248
+    },
+    {
+      "hex": "#0E0E0E",
+      "fatia": 0.6,
+      "px": 101
+    },
+    {
+      "hex": "#100E0F",
+      "fatia": 0.4,
+      "px": 66
+    },
+    {
+      "hex": "#0D0C0D",
+      "fatia": 0.1,
+      "px": 17
+    },
+    {
+      "hex": "#0F0E0E",
+      "fatia": 0.1,
+      "px": 11
+    }
+  ]
+}

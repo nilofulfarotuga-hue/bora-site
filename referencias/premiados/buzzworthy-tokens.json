@@ -1,0 +1,96 @@
+{
+  "url": "https://buzzworthystudio.com/",
+  "quando": "2026-08-31 10:02",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Buzzworthy Studio - Creative websites that convert",
+    "descricao": "Buzzworthy is an enthusiastic, dedicated team of talented individuals with diverse backgrounds and deep expertise in design, development and marketing",
+    "ogImage": "https://buzzworthystudio.com/img/social.jpg",
+    "body": {
+      "fontFamily": "\"Suisse Intl\", \"Open Sans\", Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(238, 238, 242)",
+      "background": "rgb(238, 238, 242)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"TT Tunnels Bold\", Impact, sans-serif",
+      "fontSize": "219.888px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "241.877px",
+      "color": "rgb(238, 238, 242)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": {
+      "fontFamily": "\"TT Lakes Neue\", Impact, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18px",
+      "color": "rgb(238, 238, 242)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": null,
+    "fontes": [
+      "Suisse Intl",
+      "TT Tunnels Bold",
+      "TT Lakes Neue"
+    ],
+    "alturaTotal": 15740
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#1D2145",
+      "fatia": 61.9,
+      "px": 9675
+    },
+    {
+      "hex": "#28274F",
+      "fatia": 45.2,
+      "px": 7056
+    },
+    {
+      "hex": "#807995",
+      "fatia": 23.9,
+      "px": 3736
+    },
+    {
+      "hex": "#171B3B",
+      "fatia": 10.6,
+      "px": 1659
+    },
+    {
+      "hex": "#1D2147",
+      "fatia": 10.1,
+      "px": 1583
+    },
+    {
+      "hex": "#1A2146",
+      "fatia": 3.9,
+      "px": 613
+    },
+    {
+      "hex": "#202145",
+      "fatia": 2.7,
+      "px": 419
+    },
+    {
+      "hex": "#1E213D",
+      "fatia": 1.7,
+      "px": 259
+    }
+  ]
+}

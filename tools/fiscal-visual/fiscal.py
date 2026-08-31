@@ -70,7 +70,28 @@ MEDIR_JS = r"""
     transbordo: [], alvos: [], letraPequena: [], semDimensao: [],
     esticadas: [], semAlt: [], contraste: [], espacos: {}, paleta: {},
     tipos: {}, h1: 0, titulo: '', metas: {}, ancoras: 0, ancorasVazias: 0,
+    videoBarra: [], videoMalConfigurado: [],
   };
+
+  // ---- 0b. vídeo como barra (regra de 2026-08-31: o vídeo no telemóvel
+  //      apareceu como linha fina e só tocava o som — reprova-se) ----
+  for (const v of document.querySelectorAll('video')) {
+    const r = v.getBoundingClientRect();
+    const s = getComputedStyle(v);
+    if (s.display === 'none' || s.visibility === 'hidden') continue;
+    if (r.width > 200 && r.height > 0 && r.height < 120) {
+      out.videoBarra.push({ el: nome(v), l: Math.round(r.width), a: Math.round(r.height) });
+    }
+    const semPoster = !v.getAttribute('poster');
+    const comControlos = v.hasAttribute('controls');
+    const semMudo = !v.hasAttribute('muted') && !v.muted;
+    const semInline = !v.hasAttribute('playsinline');
+    if ((r.width > 300) && (semPoster || comControlos || semMudo || semInline)) {
+      out.videoMalConfigurado.push({ el: nome(v),
+        faltas: [semPoster ? 'poster' : '', comControlos ? 'controls-nativos' : '',
+                 semMudo ? 'muted' : '', semInline ? 'playsinline' : ''].filter(Boolean).join('+') });
+    }
+  }
 
   out.h1 = document.querySelectorAll('h1').length;
   out.titulo = (document.title || '').trim();
@@ -280,6 +301,30 @@ MEDIR_JS = r"""
     if (!h || h === '#') out.ancorasVazias++;
   }
 
+  // ---- 10. o herói (livro de regras 2026-08-31): o primeiro ecrã tem
+  //      imagem/vídeo a sério, título com peso e uma ação visível? ----
+  let cobertura = 0;
+  for (const el of document.querySelectorAll('img,video,picture')) {
+    const s = getComputedStyle(el);
+    if (s.display === 'none' || s.visibility === 'hidden') continue;
+    const r = el.getBoundingClientRect();
+    const iw = Math.max(0, Math.min(r.right, vw) - Math.max(r.left, 0));
+    const ih = Math.max(0, Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0));
+    cobertura = Math.max(cobertura, (iw * ih) / (vw * window.innerHeight));
+  }
+  const h1el = document.querySelector('h1');
+  let temCta = false;
+  for (const b of document.querySelectorAll('a,button')) {
+    if (!visivel(b)) continue;
+    const r = b.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.width > 80 && r.height > 34) { temCta = true; break; }
+  }
+  out.heroi = {
+    cobertura: +cobertura.toFixed(2),
+    h1px: h1el ? Math.round(parseFloat(getComputedStyle(h1el).fontSize)) : 0,
+    cta: temCta,
+  };
+
   return out;
 }
 """
@@ -346,6 +391,48 @@ try {
 
 
 # ---------------------------------------------------------------------------
+def pontuar(medidas, n_graves):
+    """A grelha 0-100 do LIVRO-DE-REGRAS (2026-08-31). Só medidas, zero opinião.
+
+    30 primeiro ecrã · 30 técnica · 25 identidade · 15 telemóvel.
+    GRAVE encosta a nota a um máximo de 49. Mínimo para publicar: 70.
+    O teste dos 3 segundos (contra o site do cliente) é eliminatório à parte.
+    """
+    m1440 = next((m for m in medidas if m["largura"] >= 1200), medidas[0])
+    m390 = next((m for m in medidas if m["largura"] <= 480), medidas[-1])
+    p = {}
+    h = m1440.get("heroi") or {}
+    cob = h.get("cobertura", 0)
+    p["heroi_imagem"] = 12 if cob >= 0.6 else (6 if cob >= 0.3 else 0)
+    p["heroi_titulo"] = 8 if h.get("h1px", 0) >= 40 else (4 if h.get("h1px", 0) >= 28 else 0)
+    p["heroi_cta"] = 5 if h.get("cta") else 0
+    metas = m1440.get("metas") or {}
+    p["partilha"] = 5 if (metas.get("descricao") and metas.get("ogImagem")) else 0
+
+    p["zero_graves"] = 12 if n_graves == 0 else 0
+    p["video_movel"] = 8 if not m390.get("videoBarra") else 0
+    p["contraste"] = 5 if len(m390.get("contraste") or []) <= 2 else 0
+    p["dimensoes"] = 5 if not m390.get("semDimensao") else 0
+
+    tipos = m1440.get("tipos") or {}
+    p["escala_tipos"] = 8 if len(tipos) <= 8 else (4 if len(tipos) <= 12 else 0)
+    esp = m1440.get("espacos") or {}
+    p["regua_espacos"] = 7 if len(esp) <= 10 else (3 if len(esp) <= 14 else 0)
+    pal = m1440.get("paleta") or {}
+    p["paleta"] = 6 if len(pal) <= 8 else (3 if len(pal) <= 12 else 0)
+    p["fundacoes"] = 4 if (metas.get("canonico") and metas.get("icone")) else 0
+
+    alvos = m390.get("alvos") or []
+    p["toque"] = 8 if not alvos else (4 if len(alvos) <= 2 else 0)
+    letra = m390.get("letraPequena") or []
+    p["letra"] = 7 if not letra else (3 if len(letra) <= 2 else 0)
+
+    nota = sum(p.values())
+    if n_graves > 0:
+        nota = min(nota, 49)
+    return min(nota, 100), p
+
+
 def defeitos(m, rotulo):
     """Traduz medidas em defeitos concretos. Cada um leva a medida."""
     d = []
@@ -364,6 +451,14 @@ def defeitos(m, rotulo):
             d.append(("MEDIO", f"[{rotulo} {L}px] {t['el']} passa {t['excesso']}px para fora "
                                f"do ecrã (mede {t['largura']}px). A página não rola, mas o "
                                f"conteúdo está cortado — confirma se é sangria de propósito."))
+    for v in m.get("videoBarra", [])[:4]:
+        d.append(("GRAVE", f"[{rotulo} {L}px] Vídeo aparece como BARRA: {v['el']} mede "
+                           f"{v['l']}×{v['a']}px. Regra 2026-08-31: vídeo de herói/fundo tem de "
+                           f"ter altura definida e poster real — reprovado."))
+    for v in m.get("videoMalConfigurado", [])[:4]:
+        d.append(("MEDIO", f"[{rotulo} {L}px] Vídeo mal configurado ({v['el']}): falta "
+                           f"{v['faltas']}. Regra: muted+autoplay+loop+playsinline+poster, "
+                           f"sem controlos nativos, botão de som visível."))
     for a in m["alvos"][:5]:
         d.append(("MEDIO", f"[{rotulo} {L}px] Alvo de toque pequeno: {a['el']} "
                            f"tem {a['l']}×{a['a']}px, o mínimo é 44×44."))
@@ -503,6 +598,14 @@ def main():
             ctx = nav.new_context(viewport={"width": larg, "height": alt},
                                   device_scale_factor=1,
                                   is_mobile=(larg < 768), has_touch=(larg < 768))
+            # FISCAL_COOKIE=nome=valor injeta o biscoito do portão (maquetes fechadas
+            # a palavra-passe, ex. gfc_gate). Sem a variável, nada muda.
+            biscoito = os.environ.get("FISCAL_COOKIE", "")
+            if biscoito and "=" in biscoito:
+                bn, bv = biscoito.split("=", 1)
+                from urllib.parse import urlparse as _up
+                ctx.add_cookies([{"name": bn, "value": bv,
+                                  "domain": _up(alvo).hostname, "path": "/"}])
             ctx.add_init_script(ESPIA_JS)
             pag = ctx.new_page()
             print(f"  {rot} {larg}px …", flush=True)
@@ -533,9 +636,15 @@ def main():
     medios = sum(1 for n, _ in todos_defeitos if n == "MEDIO")
     leves = len(todos_defeitos) - graves - medios
 
+    nota, partes = pontuar(todos, graves)
+    veredicto_nota = "PASSA (>=70)" if nota >= 70 else "NAO PUBLICA (<70)"
+
     linhas = [f"# Fiscal visual — {nome}", "",
               f"Alvo: {alvo}", "",
-              f"{graves} graves, {medios} médios, {leves} leves.", ""]
+              f"{graves} graves, {medios} médios, {leves} leves.", "",
+              f"NOTA DA GRELHA (LIVRO-DE-REGRAS 2026-08-31): {nota}/100 — {veredicto_nota}",
+              f"  parcelas: {partes}",
+              "  (o teste dos 3 segundos contra o site do cliente é eliminatório à parte)", ""]
     if not todos_defeitos:
         linhas.append("Nenhum defeito de geometria encontrado nas três larguras.")
     for nivel in ("GRAVE", "MEDIO", "LEVE"):

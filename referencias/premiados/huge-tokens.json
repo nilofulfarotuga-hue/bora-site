@@ -1,0 +1,105 @@
+{
+  "url": "https://www.hugeinc.com/",
+  "quando": "2026-08-31 10:50",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Huge.",
+    "descricao": "We’re Huge, a human-first, AI-native design and technology company built for moments when technology and culture are changing faster than businesses.",
+    "ogImage": "https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg",
+    "body": {
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "19.104px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "30.5664px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "284.8px",
+      "fontWeight": "600",
+      "letterSpacing": "-19.936px",
+      "lineHeight": "250.624px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "145.648px",
+      "fontWeight": "600",
+      "letterSpacing": "-7.2824px",
+      "lineHeight": "131.083px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "letterSpacing": "-0.48px",
+      "lineHeight": "16px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "999px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "matter"
+    ],
+    "alturaTotal": 21706
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#010101",
+      "fatia": 66.9,
+      "px": 10446
+    },
+    {
+      "hex": "#BB85A0",
+      "fatia": 31.8,
+      "px": 4968
+    },
+    {
+      "hex": "#060003",
+      "fatia": 19.3,
+      "px": 3010
+    },
+    {
+      "hex": "#560D37",
+      "fatia": 19.1,
+      "px": 2978
+    },
+    {
+      "hex": "#000000",
+      "fatia": 17.7,
+      "px": 2766
+    },
+    {
+      "hex": "#010201",
+      "fatia": 3.1,
+      "px": 483
+    },
+    {
+      "hex": "#2C0219",
+      "fatia": 1.9,
+      "px": 299
+    },
+    {
+      "hex": "#000201",
+      "fatia": 0.3,
+      "px": 50
+    }
+  ]
+}

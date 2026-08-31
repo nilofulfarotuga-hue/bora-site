@@ -1,0 +1,74 @@
+{
+  "url": "http://www.cyclemon.com/",
+  "quando": "2026-08-31 10:39",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Cyclemon / Experiment",
+    "descricao": "Cyclemon / Experiment",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": null,
+    "botao": null,
+    "fontes": [
+      "Times New Roman",
+      "Lucida Sans Unicode",
+      "Lucida Grande"
+    ],
+    "alturaTotal": 21240
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FEC56D",
+      "fatia": 138.4,
+      "px": 21627
+    },
+    {
+      "hex": "#FEC56C",
+      "fatia": 8.1,
+      "px": 1269
+    },
+    {
+      "hex": "#F47268",
+      "fatia": 5.4,
+      "px": 838
+    },
+    {
+      "hex": "#F3B369",
+      "fatia": 3.9,
+      "px": 604
+    },
+    {
+      "hex": "#FBC56C",
+      "fatia": 2.0,
+      "px": 320
+    },
+    {
+      "hex": "#FECA76",
+      "fatia": 1.2,
+      "px": 186
+    },
+    {
+      "hex": "#FEC56E",
+      "fatia": 0.5,
+      "px": 80
+    },
+    {
+      "hex": "#FFC56D",
+      "fatia": 0.5,
+      "px": 76
+    }
+  ]
+}

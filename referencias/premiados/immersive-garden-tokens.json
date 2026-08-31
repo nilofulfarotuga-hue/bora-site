@@ -1,0 +1,96 @@
+{
+  "url": "https://immersive-g.com/",
+  "quando": "2026-08-31 10:01",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Immersive Garden",
+    "descricao": "Immersive Garden, Innovative digital experience studio.",
+    "ogImage": "https://immersive-g.com/images/share/immersive-garden.jpg",
+    "body": {
+      "fontFamily": "sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(3, 3, 3)",
+      "background": "rgb(232, 232, 232)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "PSTimes, serif",
+      "fontSize": "44px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "48.4px",
+      "color": "rgb(3, 3, 3)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": null,
+    "botao": {
+      "fontFamily": "PSTimes, serif",
+      "fontSize": "44px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "48.4px",
+      "color": "rgb(3, 3, 3)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "PSTimes",
+      "HelveticaNeueRegular",
+      "sans-serif"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#E8E8E8",
+      "fatia": 158.1,
+      "px": 24706
+    },
+    {
+      "hex": "#E9E9E9",
+      "fatia": 0.4,
+      "px": 69
+    },
+    {
+      "hex": "#E6E6E6",
+      "fatia": 0.4,
+      "px": 56
+    },
+    {
+      "hex": "#E2E2E2",
+      "fatia": 0.3,
+      "px": 49
+    },
+    {
+      "hex": "#DCDCDC",
+      "fatia": 0.3,
+      "px": 45
+    },
+    {
+      "hex": "#BDBDBD",
+      "fatia": 0.3,
+      "px": 40
+    },
+    {
+      "hex": "#E4E4E4",
+      "fatia": 0.1,
+      "px": 18
+    },
+    {
+      "hex": "#EAEAEA",
+      "fatia": 0.1,
+      "px": 17
+    }
+  ]
+}

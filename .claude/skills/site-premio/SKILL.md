@@ -338,11 +338,35 @@ palmarés. Um número errado no site de um cliente é um estrago que não se des
 **8.8 Fotos: ninguém cortado de fora, e sem duplicados por hash percetual.** Uma foto com
 meia cara fora do enquadramento lê-se como descuido.
 
+**8.10 Vídeo no telemóvel (2026-08-31 — apanhado pelo Danilo ao vivo).** Todo o
+vídeo de fundo/herói leva OBRIGATORIAMENTE `muted autoplay loop playsinline
+preload="metadata"` + `poster` de imagem real, largura 100% e ALTURA DEFINIDA
+(aspect-ratio ou altura explícita, com fallback `100vh` ANTES de `100svh` —
+os webviews do WhatsApp/Instagram não conhecem svh e o herói colapsa numa
+linha fina que só toca o som). Nada de controlos nativos a fazer de herói;
+o som liga-se num botão visível. O fiscal REPROVA (grave) qualquer captura
+a 390px onde um vídeo apareça como barra (<120px de altura).
+
+**8.11 UM link só por cliente (2026-08-31).** Ao cliente vai UMA morada — a
+raiz da maquete. As páginas interiores (fichas, serviços) abrem-se clicando
+de dentro do site, nunca por links soltos na mensagem. Um cliente com três
+links perde-se; com um, entra e explora.
+
 **8.9 Entregar sempre com** favicon, imagem de partilha, sitemap, robots, página 404 — e
 **QR** quando houver parede de loja. O QR usa correcção de erro **M** (nunca menos), com pelo
 menos 500 px de lado na arte A4, e prova-se por leitura do QR **isolado** em várias reduções.
 
 ---
+
+## 8c. O LIVRO DE REGRAS E A GRELHA (2026-08-31)
+
+O método ganhou um livro tirado de provas: `propostas/fase1/LIVRO-DE-REGRAS.md`
+(regras com contagem de fontes: sites premiados MEDIDOS + fichas de vídeo
+lidas pelo Ollama + cicatrizes) e `propostas/fase1/ANTI-PADROES.md` (o que
+denuncia barato ou IA). O fiscal dá a NOTA DA GRELHA 0-100 (função
+`pontuar` no fiscal.py): **mínimo 70 para publicar**, GRAVE encosta a 49,
+e o teste dos 3 segundos continua eliminatório à parte. Ler o livro antes
+do prompt longo; em conflito, o livro perde só para o veredito do Danilo.
 
 ## 9. COMO SE USA ISTO NUMA TAREFA
 

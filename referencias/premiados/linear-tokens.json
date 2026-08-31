@@ -1,0 +1,106 @@
+{
+  "url": "https://linear.app/",
+  "quando": "2026-08-31 10:15",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Linear – The system for product development",
+    "descricao": "Purpose-built for planning and building products with AI agents.",
+    "ogImage": "https://linear.app/static/og/homepage.jpg",
+    "body": {
+      "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(247, 248, 248)",
+      "background": "rgb(8, 9, 10)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "64px",
+      "fontWeight": "510",
+      "letterSpacing": "-1.408px",
+      "lineHeight": "64px",
+      "color": "rgb(247, 248, 248)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "48px",
+      "fontWeight": "510",
+      "letterSpacing": "-1.056px",
+      "lineHeight": "48px",
+      "color": "rgb(138, 143, 152)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "19.5px",
+      "color": "rgb(138, 143, 152)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "9999px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Inter Variable",
+      "Berkeley Mono"
+    ],
+    "alturaTotal": 9960
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#08090A",
+      "fatia": 69.1,
+      "px": 10791
+    },
+    {
+      "hex": "#131415",
+      "fatia": 53.6,
+      "px": 8369
+    },
+    {
+      "hex": "#373839",
+      "fatia": 12.8,
+      "px": 2007
+    },
+    {
+      "hex": "#09090A",
+      "fatia": 9.8,
+      "px": 1534
+    },
+    {
+      "hex": "#0E0F10",
+      "fatia": 7.7,
+      "px": 1208
+    },
+    {
+      "hex": "#080909",
+      "fatia": 3.9,
+      "px": 615
+    },
+    {
+      "hex": "#040506",
+      "fatia": 3.0,
+      "px": 475
+    },
+    {
+      "hex": "#07090A",
+      "fatia": 0.0,
+      "px": 1
+    }
+  ]
+}

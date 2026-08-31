@@ -1,0 +1,105 @@
+{
+  "url": "https://fantasy.co/",
+  "quando": "2026-08-31 10:48",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Fantasy | AI-Native Digital Product Design Agency",
+    "descricao": "Design & innovation partner to the world's most iconic brands, Fantasy launches enterprise-scale digital products, AI experiences & flagship consumer platforms.",
+    "ogImage": "https://www.datocms-assets.com/157026/1753982207-intelligent-experiences-fantasy.jpg",
+    "body": {
+      "fontFamily": "sans",
+      "fontSize": "16.6667px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.166667px",
+      "lineHeight": "23.3333px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "sans",
+      "fontSize": "66.6667px",
+      "fontWeight": "400",
+      "letterSpacing": "-2px",
+      "lineHeight": "66.6667px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "sans",
+      "fontSize": "41.6667px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.833333px",
+      "lineHeight": "45.8333px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "sans",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "letterSpacing": "-0.166667px",
+      "lineHeight": "24px",
+      "color": "rgb(208, 208, 208)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "2px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "sans"
+    ],
+    "alturaTotal": 14832
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#000000",
+      "fatia": 82.5,
+      "px": 12892
+    },
+    {
+      "hex": "#010101",
+      "fatia": 18.0,
+      "px": 2806
+    },
+    {
+      "hex": "#020202",
+      "fatia": 16.1,
+      "px": 2513
+    },
+    {
+      "hex": "#030303",
+      "fatia": 14.7,
+      "px": 2292
+    },
+    {
+      "hex": "#040404",
+      "fatia": 10.4,
+      "px": 1629
+    },
+    {
+      "hex": "#0E0E0E",
+      "fatia": 9.6,
+      "px": 1507
+    },
+    {
+      "hex": "#F4F4F4",
+      "fatia": 7.6,
+      "px": 1180
+    },
+    {
+      "hex": "#7B7B7B",
+      "fatia": 1.2,
+      "px": 181
+    }
+  ]
+}

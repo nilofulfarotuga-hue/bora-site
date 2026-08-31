@@ -1,0 +1,108 @@
+{
+  "url": "https://koto.studio/",
+  "quando": "2026-08-31 10:40",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Koto, an international creative agency building impactful brands",
+    "descricao": "​​Meet Koto — a creative studio that partners with brands to shape the future with optimism, collaboration, and craft. Come see what we’re building.\n",
+    "ogImage": "https://cdn.sanity.io/images/sbsn7wuy/production/5ca8fb4194fcd82fbe6b83b6d701f1f8cfc7f163-1200x630.png",
+    "body": {
+      "fontFamily": "gtKotoheim, \"gtKotoheim Fallback\", sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "gtKotoheimCondensed, \"gtKotoheimCondensed Fallback\", sans-serif",
+      "fontSize": "48px",
+      "fontWeight": "300",
+      "letterSpacing": "-0.48px",
+      "lineHeight": "48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "gtKotoheimMono, \"gtKotoheimMono Fallback\", sans-serif",
+      "fontSize": "9px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.18px",
+      "lineHeight": "9px",
+      "color": "rgb(152, 152, 152)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": {
+      "fontFamily": "sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "letterSpacing": "0.1px",
+      "lineHeight": "21px",
+      "color": "rgb(152, 152, 152)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "sans-serif",
+      "gtKotoheim",
+      "gtKotoheimMono",
+      "gtKotoheimCondensed"
+    ],
+    "alturaTotal": 6114
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#050B23",
+      "fatia": 24.2,
+      "px": 3784
+    },
+    {
+      "hex": "#B5EBFA",
+      "fatia": 22.2,
+      "px": 3469
+    },
+    {
+      "hex": "#2B0906",
+      "fatia": 21.5,
+      "px": 3366
+    },
+    {
+      "hex": "#5CA2CE",
+      "fatia": 21.5,
+      "px": 3358
+    },
+    {
+      "hex": "#F6F0D4",
+      "fatia": 20.9,
+      "px": 3271
+    },
+    {
+      "hex": "#894626",
+      "fatia": 18.4,
+      "px": 2875
+    },
+    {
+      "hex": "#D5AA85",
+      "fatia": 16.7,
+      "px": 2606
+    },
+    {
+      "hex": "#1B3D63",
+      "fatia": 14.5,
+      "px": 2271
+    }
+  ]
+}

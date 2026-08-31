@@ -1,0 +1,83 @@
+{
+  "url": "https://holographik.co/",
+  "quando": "2026-08-31 10:42",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Holographik® is a creative studio specialized in design and motion.",
+    "descricao": "A design and motion studio working with like-minded visionaries to make an impact on the industry through a clear and effective visual language.",
+    "ogImage": "https://cdn.prod.website-files.com/68668b52da99cf7082f62153/68ed85a40c43950e8c516155_holographik_studio_share.png",
+    "body": {
+      "fontFamily": "\"Helvetica Neue\", Arial, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "20px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Helvetica Neue\", Arial, sans-serif",
+      "fontSize": "26.4px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.528px",
+      "lineHeight": "26.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": null,
+    "botao": null,
+    "fontes": [
+      "Helvetica Neue"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#000000",
+      "fatia": 127.6,
+      "px": 19931
+    },
+    {
+      "hex": "#FFFFFF",
+      "fatia": 13.0,
+      "px": 2034
+    },
+    {
+      "hex": "#4F4F4F",
+      "fatia": 5.1,
+      "px": 798
+    },
+    {
+      "hex": "#181818",
+      "fatia": 4.9,
+      "px": 773
+    },
+    {
+      "hex": "#E0E0E0",
+      "fatia": 3.5,
+      "px": 540
+    },
+    {
+      "hex": "#8B8B8B",
+      "fatia": 3.4,
+      "px": 527
+    },
+    {
+      "hex": "#010001",
+      "fatia": 2.5,
+      "px": 396
+    },
+    {
+      "hex": "#000001",
+      "fatia": 0.0,
+      "px": 1
+    }
+  ]
+}

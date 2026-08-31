@@ -1,0 +1,96 @@
+{
+  "url": "https://outline.agency/",
+  "quando": "2026-08-31 10:42",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Integrated Digital Marketing | Outline Marketing Agency",
+    "descricao": "Discover Outline Marketing Agency in Gauteng, your hub for holistic digital marketing solutions, perfectly harmonised with your brand's mission. Amplify performance, establish audience connections, and drive business advancement. Delve into our spectrum of services: digital strategy, social media, sales funnels, web and graphic design, SEO, brand evolution, lead generation, email and content marketing, and consulting. With our tailor-made approach, ascend to new marketing heights.",
+    "ogImage": "https://outline.agency/wp-content/uploads/2025/04/Outline-Agency-Banner2.png",
+    "body": {
+      "fontFamily": "\"Open Sans\", sans-serif",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "27px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Helvetica, sans-serif",
+      "fontSize": "50.4px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "lineHeight": "79px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": null,
+    "botao": {
+      "fontFamily": "\"Open Sans\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(204, 51, 102)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "3px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Open Sans",
+      "Alata",
+      "Helvetica"
+    ],
+    "alturaTotal": 1805
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 35.2,
+      "px": 5506
+    },
+    {
+      "hex": "#EE0A0B",
+      "fatia": 23.8,
+      "px": 3715
+    },
+    {
+      "hex": "#020101",
+      "fatia": 23.3,
+      "px": 3634
+    },
+    {
+      "hex": "#121212",
+      "fatia": 18.8,
+      "px": 2945
+    },
+    {
+      "hex": "#856D6D",
+      "fatia": 18.1,
+      "px": 2821
+    },
+    {
+      "hex": "#BFBABA",
+      "fatia": 16.6,
+      "px": 2587
+    },
+    {
+      "hex": "#612C2D",
+      "fatia": 16.1,
+      "px": 2510
+    },
+    {
+      "hex": "#F5F3F3",
+      "fatia": 8.2,
+      "px": 1282
+    }
+  ]
+}

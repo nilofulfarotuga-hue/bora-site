@@ -1,0 +1,111 @@
+{
+  "url": "https://www.superlist.com/",
+  "quando": "2026-08-31 10:33",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Superlist — Task Management & To-Do List App for Work and Life",
+    "descricao": "From the creators of Wunderlist — the all-in-one task management app for to-do lists, notes, and projects. AI-powered productivity that replaces 5 apps. Free to start, works on Mac, Web, iOS & Android.",
+    "ogImage": "https://framerusercontent.com/assets/xlouachsGTVuJaHXsYmxxI66e2s.png",
+    "body": {
+      "fontFamily": "sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(24, 24, 36)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Haffer XH SemiBold\", \"Haffer XH SemiBold Placeholder\", sans-serif",
+      "fontSize": "64px",
+      "fontWeight": "600",
+      "letterSpacing": "-1.28px",
+      "lineHeight": "60.8px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Haffer XH SemiBold\", \"Haffer XH SemiBold Placeholder\", sans-serif",
+      "fontSize": "30px",
+      "fontWeight": "600",
+      "letterSpacing": "-0.6px",
+      "lineHeight": "36px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Haffer XH SemiBold Italic\", \"Haffer XH SemiBold Italic Placeholder\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "lineHeight": "16px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Inter",
+      "sans-serif",
+      "Haffer XH SemiBold",
+      "Jersey 10",
+      "CUSTOM;Blender Medium",
+      "Satoshi",
+      "Haffer XH SemiBold Italic"
+    ],
+    "alturaTotal": 8599
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#191927",
+      "fatia": 35.0,
+      "px": 5476
+    },
+    {
+      "hex": "#232235",
+      "fatia": 33.3,
+      "px": 5198
+    },
+    {
+      "hex": "#302440",
+      "fatia": 20.7,
+      "px": 3232
+    },
+    {
+      "hex": "#5995C2",
+      "fatia": 19.8,
+      "px": 3096
+    },
+    {
+      "hex": "#45324D",
+      "fatia": 18.8,
+      "px": 2943
+    },
+    {
+      "hex": "#1E1C2F",
+      "fatia": 18.7,
+      "px": 2927
+    },
+    {
+      "hex": "#271F36",
+      "fatia": 7.4,
+      "px": 1149
+    },
+    {
+      "hex": "#212238",
+      "fatia": 6.3,
+      "px": 979
+    }
+  ]
+}

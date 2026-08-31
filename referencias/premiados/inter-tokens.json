@@ -1,0 +1,106 @@
+{
+  "url": "https://www.inter.it/en",
+  "quando": "2026-08-31 10:19",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "FC Internazionale Milano - Inter Official Website | Inter.it",
+    "descricao": "News, video and updates from the official Inter website - Get the latest updates on the team, club, interviews and also info about matches and tickets. ",
+    "ogImage": "https://intermilan.bynder.com/transform/2f2f2281-ebbc-44e2-bc77-950293d4bd46/9MP_4682-3344260?quality=60&io=transform:fill,width:1136,height:640&format=webp",
+    "body": {
+      "fontFamily": "\"Graphik Web\", Arial, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(26, 32, 44)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Giorgio Sans\", sans-serif",
+      "fontSize": "140px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "119px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": {
+      "fontFamily": "\"Giorgio Sans\", sans-serif",
+      "fontSize": "80px",
+      "fontWeight": "700",
+      "letterSpacing": "-0.8px",
+      "lineHeight": "60px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Graphik Web\", sans-serif",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "30.6px",
+      "color": "rgb(26, 32, 44)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Graphik Web",
+      "Giorgio Sans"
+    ],
+    "alturaTotal": 7084
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 32.0,
+      "px": 4997
+    },
+    {
+      "hex": "#0C0B0D",
+      "fatia": 27.0,
+      "px": 4218
+    },
+    {
+      "hex": "#282423",
+      "fatia": 26.7,
+      "px": 4169
+    },
+    {
+      "hex": "#626366",
+      "fatia": 20.6,
+      "px": 3220
+    },
+    {
+      "hex": "#502C29",
+      "fatia": 16.4,
+      "px": 2563
+    },
+    {
+      "hex": "#A7B5BE",
+      "fatia": 14.7,
+      "px": 2290
+    },
+    {
+      "hex": "#D8EAF3",
+      "fatia": 12.2,
+      "px": 1911
+    },
+    {
+      "hex": "#0F1E43",
+      "fatia": 10.4,
+      "px": 1632
+    }
+  ]
+}

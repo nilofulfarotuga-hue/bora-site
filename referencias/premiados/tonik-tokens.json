@@ -1,0 +1,106 @@
+{
+  "url": "https://www.tonik.com/",
+  "quando": "2026-08-31 10:41",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Design studio for visionaries | tonik",
+    "descricao": "Founder-first, 0→1 studio that defines, designs, and builds products and other digital wizardry.",
+    "ogImage": "https://cdn.prod.website-files.com/66c4a4d95e549a87dd8ddee9/670eaa05755e2542656ca4aa_og_image.png",
+    "body": {
+      "fontFamily": "\"Neue Montreal\", Arial, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(239, 239, 239)",
+      "background": "rgb(33, 33, 33)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Neue Montreal\", Arial, sans-serif",
+      "fontSize": "96px",
+      "fontWeight": "400",
+      "letterSpacing": "-2.4px",
+      "lineHeight": "96px",
+      "color": "rgb(239, 239, 239)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Neue Montreal\", Arial, sans-serif",
+      "fontSize": "32px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "40px",
+      "color": "rgb(33, 33, 33)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"IBM Plex Mono\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(18, 18, 18)",
+      "borderRadius": "2px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "IBM Plex Mono",
+      "Neue Montreal"
+    ],
+    "alturaTotal": 12559
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#212121",
+      "fatia": 117.3,
+      "px": 18335
+    },
+    {
+      "hex": "#2D2D2D",
+      "fatia": 14.0,
+      "px": 2192
+    },
+    {
+      "hex": "#7A7A7B",
+      "fatia": 10.3,
+      "px": 1606
+    },
+    {
+      "hex": "#202120",
+      "fatia": 7.2,
+      "px": 1119
+    },
+    {
+      "hex": "#1D1D1D",
+      "fatia": 6.1,
+      "px": 947
+    },
+    {
+      "hex": "#222122",
+      "fatia": 5.0,
+      "px": 783
+    },
+    {
+      "hex": "#212122",
+      "fatia": 0.1,
+      "px": 16
+    },
+    {
+      "hex": "#212120",
+      "fatia": 0.0,
+      "px": 2
+    }
+  ]
+}

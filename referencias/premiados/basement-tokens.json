@@ -1,0 +1,107 @@
+{
+  "url": "https://basement.studio/",
+  "quando": "2026-08-31 10:47",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "basement.studio | We make cool shit that performs.",
+    "descricao": "basement.studio is a digital studio crafting brands, websites, 3D experiences, and products. We design and engineer cool shit that actually performs.",
+    "ogImage": "https://basement.studio/images/opengraph-image.gif",
+    "body": {
+      "fontFamily": "Geist, \"Geist Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Geist, \"Geist Fallback\"",
+      "fontSize": "87px",
+      "fontWeight": "600",
+      "letterSpacing": "-3.48px",
+      "lineHeight": "78px",
+      "color": "rgb(230, 230, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "Geist, \"Geist Fallback\"",
+      "fontSize": "24px",
+      "fontWeight": "600",
+      "letterSpacing": "-0.72px",
+      "lineHeight": "24px",
+      "color": "rgb(117, 117, 117)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Geist, \"Geist Fallback\"",
+      "fontSize": "13px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "lineHeight": "16px",
+      "color": "rgb(230, 230, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Geist",
+      "flauta",
+      "Geist Mono"
+    ],
+    "alturaTotal": 5417
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#201714",
+      "fatia": 25.5,
+      "px": 3980
+    },
+    {
+      "hex": "#070605",
+      "fatia": 23.7,
+      "px": 3709
+    },
+    {
+      "hex": "#0F0C0C",
+      "fatia": 23.3,
+      "px": 3645
+    },
+    {
+      "hex": "#180D09",
+      "fatia": 19.6,
+      "px": 3064
+    },
+    {
+      "hex": "#030202",
+      "fatia": 18.6,
+      "px": 2914
+    },
+    {
+      "hex": "#0E0805",
+      "fatia": 17.3,
+      "px": 2705
+    },
+    {
+      "hex": "#000000",
+      "fatia": 17.0,
+      "px": 2663
+    },
+    {
+      "hex": "#4D413C",
+      "fatia": 14.8,
+      "px": 2320
+    }
+  ]
+}

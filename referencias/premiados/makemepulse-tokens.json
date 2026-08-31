@@ -1,0 +1,106 @@
+{
+  "url": "https://www.makemepulse.com/",
+  "quando": "2026-08-31 10:43",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "makemepulse — Global Creative Studio",
+    "descricao": "Global creative studio crafting standout digital platforms and immersive experiences. We combine strategic design with technical excellence to deliver innovative solutions.",
+    "ogImage": "https://images.prismic.io/makemepulse/7820b0e5-9cc5-43e8-a093-7fcb89e2bf3d_makemepulse-background.png?auto=compress,format&rect=0,1,1601,838&w=1080&h=565",
+    "body": {
+      "fontFamily": "Biotif, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(15, 15, 15)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Beatrice Display\", sans-serif",
+      "fontSize": "105px",
+      "fontWeight": "300",
+      "letterSpacing": "normal",
+      "lineHeight": "128px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "lowercase"
+    },
+    "h2": {
+      "fontFamily": "Biotif, sans-serif",
+      "fontSize": "160px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "128px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Biotif, sans-serif",
+      "fontSize": "11px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "50px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Biotif",
+      "Beatrice Display"
+    ],
+    "alturaTotal": 8844
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#0F0F0F",
+      "fatia": 112.2,
+      "px": 17531
+    },
+    {
+      "hex": "#B4B19D",
+      "fatia": 12.9,
+      "px": 2016
+    },
+    {
+      "hex": "#99A4A1",
+      "fatia": 10.1,
+      "px": 1580
+    },
+    {
+      "hex": "#FFFFFF",
+      "fatia": 8.2,
+      "px": 1285
+    },
+    {
+      "hex": "#A3A89F",
+      "fatia": 6.2,
+      "px": 969
+    },
+    {
+      "hex": "#0A0A0A",
+      "fatia": 5.0,
+      "px": 785
+    },
+    {
+      "hex": "#585B5B",
+      "fatia": 4.1,
+      "px": 639
+    },
+    {
+      "hex": "#CCC7B8",
+      "fatia": 1.2,
+      "px": 195
+    }
+  ]
+}

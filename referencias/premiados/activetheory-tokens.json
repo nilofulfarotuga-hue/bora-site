@@ -1,0 +1,85 @@
+{
+  "url": "https://activetheory.net/",
+  "quando": "2026-08-31 09:57",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Active Theory · Creative Digital Experiences",
+    "descricao": "Founded in 2012. We blend story, art & technology as an in-house team of passionate makers. Our industry-leading web toolset consistently delivers award-winning work through quality & performance. ",
+    "ogImage": "https://storage.googleapis.com/activetheory-v6.appspot.com/media/social.jpg",
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": null,
+    "botao": {
+      "fontFamily": "Arial",
+      "fontSize": "13.3333px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(156, 165, 255, 0.333)",
+      "borderRadius": "500px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Times New Roman",
+      "nbarchitekt",
+      "Arial"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#0B1113",
+      "fatia": 36.4,
+      "px": 5692
+    },
+    {
+      "hex": "#0C1114",
+      "fatia": 29.7,
+      "px": 4636
+    },
+    {
+      "hex": "#0B1013",
+      "fatia": 28.9,
+      "px": 4516
+    },
+    {
+      "hex": "#0D1316",
+      "fatia": 26.2,
+      "px": 4091
+    },
+    {
+      "hex": "#11191C",
+      "fatia": 21.4,
+      "px": 3338
+    },
+    {
+      "hex": "#1F3136",
+      "fatia": 14.3,
+      "px": 2239
+    },
+    {
+      "hex": "#0B1112",
+      "fatia": 3.1,
+      "px": 484
+    },
+    {
+      "hex": "#0A1113",
+      "fatia": 0.0,
+      "px": 4
+    }
+  ]
+}

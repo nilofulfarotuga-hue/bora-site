@@ -1,0 +1,94 @@
+{
+  "url": "https://antinomy.studio/",
+  "quando": "2026-08-31 10:03",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Antinomy Studio",
+    "descricao": "Antinomy is an independent creative studio shaping contemporary brands.",
+    "ogImage": "https://www.antinomy.studio/images/og-image.png",
+    "body": {
+      "fontFamily": "ABCDiatype, \"ABCDiatype Fallback\"",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.28px",
+      "lineHeight": "16.8px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "ABCDiatype, \"ABCDiatype Fallback\"",
+      "fontSize": "24px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.48px",
+      "lineHeight": "25.2px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "ABCDiatype, \"ABCDiatype Fallback\"",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "-0.28px",
+      "lineHeight": "16.8px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": null,
+    "fontes": [
+      "ABCDiatype"
+    ],
+    "alturaTotal": 9838
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 53.7,
+      "px": 8391
+    },
+    {
+      "hex": "#1E1E1D",
+      "fatia": 23.4,
+      "px": 3656
+    },
+    {
+      "hex": "#615F56",
+      "fatia": 20.1,
+      "px": 3148
+    },
+    {
+      "hex": "#8B8464",
+      "fatia": 19.3,
+      "px": 3023
+    },
+    {
+      "hex": "#41413C",
+      "fatia": 18.8,
+      "px": 2941
+    },
+    {
+      "hex": "#2A2B28",
+      "fatia": 17.5,
+      "px": 2727
+    },
+    {
+      "hex": "#FEFF54",
+      "fatia": 4.9,
+      "px": 766
+    },
+    {
+      "hex": "#D9D78E",
+      "fatia": 2.2,
+      "px": 348
+    }
+  ]
+}

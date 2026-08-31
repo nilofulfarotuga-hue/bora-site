@@ -1,0 +1,94 @@
+{
+  "url": "https://garden-eight.com/",
+  "quando": "2026-08-31 10:35",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Garden Eight",
+    "descricao": "Garden Eight is a digital design studio based in Tokyo.",
+    "ogImage": "https://d1oo4riy5et4sg.cloudfront.net/v3-1/assets/img/ogp.png",
+    "body": {
+      "fontFamily": "lausanne, sans-serif",
+      "fontSize": "13.9968px",
+      "fontWeight": "300",
+      "letterSpacing": "normal",
+      "lineHeight": "19.8755px",
+      "color": "rgb(219, 214, 208)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "lausanne, sans-serif",
+      "fontSize": "14.9904px",
+      "fontWeight": "300",
+      "letterSpacing": "normal",
+      "lineHeight": "21.2864px",
+      "color": "rgb(30, 31, 31)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": null,
+    "botao": {
+      "fontFamily": "lausanne, sans-serif",
+      "fontSize": "11.9952px",
+      "fontWeight": "200",
+      "letterSpacing": "normal",
+      "lineHeight": "0px",
+      "color": "rgb(219, 214, 208)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "1440px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "lausanne"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#E1DCD5",
+      "fatia": 26.3,
+      "px": 4103
+    },
+    {
+      "hex": "#E9E2DA",
+      "fatia": 25.4,
+      "px": 3962
+    },
+    {
+      "hex": "#E3DED7",
+      "fatia": 22.6,
+      "px": 3531
+    },
+    {
+      "hex": "#F1E9DF",
+      "fatia": 20.8,
+      "px": 3248
+    },
+    {
+      "hex": "#DECFBF",
+      "fatia": 19.4,
+      "px": 3037
+    },
+    {
+      "hex": "#E4DCD2",
+      "fatia": 18.4,
+      "px": 2872
+    },
+    {
+      "hex": "#E6DFD7",
+      "fatia": 16.3,
+      "px": 2552
+    },
+    {
+      "hex": "#756E65",
+      "fatia": 10.8,
+      "px": 1695
+    }
+  ]
+}

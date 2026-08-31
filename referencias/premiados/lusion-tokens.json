@@ -1,0 +1,105 @@
+{
+  "url": "https://lusion.co/",
+  "quando": "2026-08-31 09:56",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Lusion - Award Winning 3D and Interactive Web Studio",
+    "descricao": "We design and produce 3D visual storytelling, immersive websites, and interactive digital experiences that help brands stand out online.",
+    "ogImage": "https://lusion.co/assets/meta/social_sharing.jpg",
+    "body": {
+      "fontFamily": "Aeonik",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18.4px",
+      "color": "rgb(240, 241, 250)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Aeonik",
+      "fontSize": "36px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "39.6px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "Aeonik",
+      "fontSize": "21.6px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "30.24px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Aeonik",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "letterSpacing": "normal",
+      "lineHeight": "16.1px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "100px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Aeonik"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#F0F1FA",
+      "fatia": 38.8,
+      "px": 6064
+    },
+    {
+      "hex": "#141619",
+      "fatia": 35.8,
+      "px": 5596
+    },
+    {
+      "hex": "#040853",
+      "fatia": 20.0,
+      "px": 3126
+    },
+    {
+      "hex": "#050508",
+      "fatia": 19.9,
+      "px": 3105
+    },
+    {
+      "hex": "#7B7D8B",
+      "fatia": 18.1,
+      "px": 2831
+    },
+    {
+      "hex": "#161B40",
+      "fatia": 14.1,
+      "px": 2200
+    },
+    {
+      "hex": "#EFF1F9",
+      "fatia": 7.3,
+      "px": 1137
+    },
+    {
+      "hex": "#F4F5FD",
+      "fatia": 6.0,
+      "px": 941
+    }
+  ]
+}

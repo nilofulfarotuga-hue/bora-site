@@ -1,0 +1,96 @@
+{
+  "url": "https://akaru.fr/",
+  "quando": "2026-08-31 10:36",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Agence web lyon : création de site internet et design graphique",
+    "descricao": "Akaru est une agence web basée à Lyon, spécialiste en création de site internet sur-mesure. Agence digitale, nous proposons des sites vitrines et e-commerce personnalisés. \n",
+    "ogImage": "https://cdn.sanity.io/images/zvxprgaj/production/3d4bf9ffaeb4b93c74b5e162f50d6e56f3c8f139-1200x630.png",
+    "body": {
+      "fontFamily": "\"Alliance Neue\", sans-serif",
+      "fontSize": "15.9999px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Alliance Neue\", sans-serif",
+      "fontSize": "31.9998px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Alliance Neue\", sans-serif",
+      "fontSize": "95.9994px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(14, 14, 14)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": null,
+    "fontes": [
+      "Alliance Neue",
+      "Alliance Platt",
+      "Alliance Text"
+    ],
+    "alturaTotal": 25053
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#F1EFEB",
+      "fatia": 44.0,
+      "px": 6873
+    },
+    {
+      "hex": "#BFCCD8",
+      "fatia": 37.7,
+      "px": 5884
+    },
+    {
+      "hex": "#9D929B",
+      "fatia": 37.2,
+      "px": 5819
+    },
+    {
+      "hex": "#21273A",
+      "fatia": 28.1,
+      "px": 4383
+    },
+    {
+      "hex": "#E0DDD9",
+      "fatia": 4.9,
+      "px": 767
+    },
+    {
+      "hex": "#F6F4F0",
+      "fatia": 4.2,
+      "px": 656
+    },
+    {
+      "hex": "#BECCD8",
+      "fatia": 2.2,
+      "px": 347
+    },
+    {
+      "hex": "#ECEFEB",
+      "fatia": 1.7,
+      "px": 271
+    }
+  ]
+}

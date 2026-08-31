@@ -1,0 +1,106 @@
+{
+  "url": "https://14islands.com/",
+  "quando": "2026-08-31 10:04",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "14islands | Creative design & technology agency",
+    "descricao": "We're a nimble team of designers and developers crafting premium products, brands, and experiences — with offices in Stockholm and Reykjavík.",
+    "ogImage": "https://cdn.sanity.io/images/f3tpxs09/production/fceb3fc54a25a6cc86fa77648390d1573e46499c-2400x1260.jpg",
+    "body": {
+      "fontFamily": "BentonSans, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(7, 7, 7)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "BentonSans, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(7, 7, 7)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "BentonSans, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "16.8px",
+      "color": "rgb(162, 162, 169)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": {
+      "fontFamily": "BentonSans, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(7, 7, 7)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "BentonSans",
+      "AftenScreen"
+    ],
+    "alturaTotal": 10304
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#F2F2F2",
+      "fatia": 123.9,
+      "px": 19354
+    },
+    {
+      "hex": "#171717",
+      "fatia": 8.8,
+      "px": 1373
+    },
+    {
+      "hex": "#1A1A1A",
+      "fatia": 5.5,
+      "px": 860
+    },
+    {
+      "hex": "#D0D0D1",
+      "fatia": 5.4,
+      "px": 846
+    },
+    {
+      "hex": "#FAFAFA",
+      "fatia": 4.8,
+      "px": 749
+    },
+    {
+      "hex": "#F4F4F4",
+      "fatia": 4.3,
+      "px": 667
+    },
+    {
+      "hex": "#525252",
+      "fatia": 3.8,
+      "px": 597
+    },
+    {
+      "hex": "#0D0D0D",
+      "fatia": 3.5,
+      "px": 554
+    }
+  ]
+}

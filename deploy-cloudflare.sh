@@ -43,6 +43,9 @@ done
 # Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
+# provas/ — capturas do trabalho para a Claude.ai ver (noindex na meta,
+# PERMITIDA no robots; regra do Bloco A3, 2026-08-31)
+[ -d provas ] && cp -r provas "$STAGE"/provas
 # assets/ vai INTEIRO: e onde vivem os videos (assets/video/*.mp4) e os
 # posters. Video nunca em base64, e nunca fora desta copia — se ficar
 # de fora nao e publicado e ninguem da por isso. (site-premio 2026-08-29)

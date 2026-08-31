@@ -1,0 +1,70 @@
+{
+  "url": "https://igloo.inc/",
+  "quando": "2026-08-31 10:33",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Igloo Inc.",
+    "descricao": "Our mission is to create the largest onchain community, driving the consumer crypto revolution.",
+    "ogImage": "https://www.igloo.inc/assets/images/social.jpg",
+    "body": {
+      "fontFamily": "\"Times New Roman\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(160, 165, 177)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": null,
+    "botao": null,
+    "fontes": [],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#9DA2AF",
+      "fatia": 98.6,
+      "px": 15411
+    },
+    {
+      "hex": "#9BA0AD",
+      "fatia": 18.4,
+      "px": 2878
+    },
+    {
+      "hex": "#9CA1AE",
+      "fatia": 18.4,
+      "px": 2878
+    },
+    {
+      "hex": "#9A9FAC",
+      "fatia": 12.4,
+      "px": 1941
+    },
+    {
+      "hex": "#989EAA",
+      "fatia": 8.8,
+      "px": 1368
+    },
+    {
+      "hex": "#9CA2AE",
+      "fatia": 2.1,
+      "px": 322
+    },
+    {
+      "hex": "#9DA2AE",
+      "fatia": 1.0,
+      "px": 159
+    },
+    {
+      "hex": "#9AA0AC",
+      "fatia": 0.3,
+      "px": 43
+    }
+  ]
+}

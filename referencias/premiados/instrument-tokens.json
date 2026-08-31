@@ -1,0 +1,95 @@
+{
+  "url": "https://www.instrument.com/",
+  "quando": "2026-08-31 10:49",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Instrument | A technology-led brand, product, & marketing agency | Instrument",
+    "descricao": "We are a design and technology company helping brands unlock their full potential.",
+    "ogImage": "https://a-us.storyblok.com/f/1004432/1200x630/e7ff102c87/000.png/m/1200x630/filters:format(png)/",
+    "body": {
+      "fontFamily": "Instrument-Sans, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "16px",
+      "color": "rgb(232, 232, 233)",
+      "background": "rgb(7, 7, 8)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": {
+      "fontFamily": "Instrument-Sans, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "1.32px",
+      "lineHeight": "16px",
+      "color": "rgb(232, 232, 233)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": {
+      "fontFamily": "Instrument-Sans, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "letterSpacing": "1.32px",
+      "lineHeight": "16px",
+      "color": "rgb(232, 232, 233)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Instrument-Sans",
+      "Instrument-Serif"
+    ],
+    "alturaTotal": 6710
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#080809",
+      "fatia": 26.7,
+      "px": 4179
+    },
+    {
+      "hex": "#EDEDEE",
+      "fatia": 26.6,
+      "px": 4163
+    },
+    {
+      "hex": "#0F0D0E",
+      "fatia": 26.4,
+      "px": 4125
+    },
+    {
+      "hex": "#212023",
+      "fatia": 23.6,
+      "px": 3687
+    },
+    {
+      "hex": "#121D1E",
+      "fatia": 18.0,
+      "px": 2817
+    },
+    {
+      "hex": "#000000",
+      "fatia": 16.8,
+      "px": 2621
+    },
+    {
+      "hex": "#040606",
+      "fatia": 13.7,
+      "px": 2139
+    },
+    {
+      "hex": "#7A7D7A",
+      "fatia": 8.1,
+      "px": 1269
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "url": "http://everylastdrop.co.uk/",
+  "quando": "2026-08-31 10:38",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Every Last Drop – An Interactive Website about Water Saving",
+    "descricao": "Every Last Drop is an interactive website which takes a detailed look at how much water we waste on a daily basis and how small changes can make a big difference.",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "Ubuntu",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "letterSpacing": "normal",
+      "lineHeight": "22.4px",
+      "color": "rgb(61, 61, 61)",
+      "background": "rgb(212, 158, 153)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": null,
+    "botao": null,
+    "fontes": [
+      "Ubuntu"
+    ],
+    "alturaTotal": 0
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#D49E99",
+      "fatia": 74.2,
+      "px": 11593
+    },
+    {
+      "hex": "#464747",
+      "fatia": 30.7,
+      "px": 4790
+    },
+    {
+      "hex": "#D5C9A0",
+      "fatia": 18.6,
+      "px": 2908
+    },
+    {
+      "hex": "#524336",
+      "fatia": 11.6,
+      "px": 1819
+    },
+    {
+      "hex": "#A89E8D",
+      "fatia": 9.0,
+      "px": 1404
+    },
+    {
+      "hex": "#605956",
+      "fatia": 8.4,
+      "px": 1312
+    },
+    {
+      "hex": "#D59E99",
+      "fatia": 5.5,
+      "px": 852
+    },
+    {
+      "hex": "#D49E9A",
+      "fatia": 2.1,
+      "px": 322
+    }
+  ]
+}

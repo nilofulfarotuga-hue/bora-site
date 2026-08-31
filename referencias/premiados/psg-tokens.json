@@ -1,0 +1,109 @@
+{
+  "url": "https://en.psg.fr/",
+  "quando": "2026-08-31 10:20",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "PSG.FR | Official site of Paris Saint-Germain",
+    "descricao": "Dive into the heart of Paris Saint-Germain: follow the latest news and live matches, discover exclusive content, and feel the excitement with PSG players.",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "virageNarrow, \"virageNarrow Fallback\", Helvetica, Arial, sans-serif",
+      "fontSize": "56px",
+      "fontWeight": "800",
+      "letterSpacing": "0.5px",
+      "lineHeight": "67.2px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "h2": {
+      "fontFamily": "virageNarrow, \"virageNarrow Fallback\", Helvetica, Arial, sans-serif",
+      "fontSize": "28px",
+      "fontWeight": "800",
+      "letterSpacing": "0.5px",
+      "lineHeight": "33.6px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": {
+      "fontFamily": "virageWide, \"virageWide Fallback\", Helvetica, Arial, sans-serif",
+      "fontSize": "7px",
+      "fontWeight": "400",
+      "letterSpacing": "1px",
+      "lineHeight": "7px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "virageWide",
+      "ui-sans-serif",
+      "virageNarrow",
+      "virageCondensed",
+      "virage"
+    ],
+    "alturaTotal": 6150
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#0E1B36",
+      "fatia": 41.8,
+      "px": 6532
+    },
+    {
+      "hex": "#5C5A6F",
+      "fatia": 21.4,
+      "px": 3348
+    },
+    {
+      "hex": "#232C44",
+      "fatia": 19.9,
+      "px": 3113
+    },
+    {
+      "hex": "#4F3040",
+      "fatia": 18.4,
+      "px": 2873
+    },
+    {
+      "hex": "#511427",
+      "fatia": 17.6,
+      "px": 2750
+    },
+    {
+      "hex": "#1D182B",
+      "fatia": 16.9,
+      "px": 2636
+    },
+    {
+      "hex": "#C9CCD4",
+      "fatia": 16.7,
+      "px": 2605
+    },
+    {
+      "hex": "#09142C",
+      "fatia": 7.3,
+      "px": 1143
+    }
+  ]
+}

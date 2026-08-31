@@ -1,0 +1,106 @@
+{
+  "url": "https://vercel.com/",
+  "quando": "2026-08-31 10:16",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Agentic Infrastructure - Vercel",
+    "descricao": "The autonomous stack for every app and agent.",
+    "ogImage": "https://lishhsx6kmthaacj.public.blob.vercel-storage.com/og-home-not-x.png",
+    "body": {
+      "fontFamily": "GeistSans, \"GeistSans Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(23, 23, 23)",
+      "background": "rgb(250, 250, 250)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "GeistSans, \"GeistSans Fallback\"",
+      "fontSize": "64px",
+      "fontWeight": "400",
+      "letterSpacing": "-3.84px",
+      "lineHeight": "64px",
+      "color": "rgb(23, 23, 23)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "GeistSans, \"GeistSans Fallback\"",
+      "fontSize": "56px",
+      "fontWeight": "450",
+      "letterSpacing": "-3.36px",
+      "lineHeight": "56px",
+      "color": "rgb(23, 23, 23)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "GeistSans, \"GeistSans Fallback\"",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "20px",
+      "color": "rgb(23, 23, 23)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "6px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "GeistSans",
+      "Geist Mono"
+    ],
+    "alturaTotal": 5958
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FAFAFA",
+      "fatia": 34.8,
+      "px": 5438
+    },
+    {
+      "hex": "#DFDFDF",
+      "fatia": 28.2,
+      "px": 4410
+    },
+    {
+      "hex": "#F6F6F6",
+      "fatia": 24.7,
+      "px": 3866
+    },
+    {
+      "hex": "#F0F0F0",
+      "fatia": 20.6,
+      "px": 3225
+    },
+    {
+      "hex": "#F9F9F9",
+      "fatia": 19.6,
+      "px": 3070
+    },
+    {
+      "hex": "#E9E9E9",
+      "fatia": 18.8,
+      "px": 2935
+    },
+    {
+      "hex": "#BBBBBB",
+      "fatia": 10.3,
+      "px": 1609
+    },
+    {
+      "hex": "#FDFDFD",
+      "fatia": 2.9,
+      "px": 447
+    }
+  ]
+}

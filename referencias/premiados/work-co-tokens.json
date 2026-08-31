@@ -1,0 +1,106 @@
+{
+  "url": "https://work.co/",
+  "quando": "2026-08-31 10:50",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Work & Co | Digital Product Agency",
+    "descricao": "Work & Co is a digital product agency. We drive tangible business impact through strategy, design, and development of new platforms and experiences.",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "adobe-garamond-pro, serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "18.4px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "HelveticaNowDisplay, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "fontSize": "56px",
+      "fontWeight": "500",
+      "letterSpacing": "-1.12px",
+      "lineHeight": "56px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "HelveticaNowDisplay, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "fontSize": "21px",
+      "fontWeight": "500",
+      "letterSpacing": "-0.21px",
+      "lineHeight": "28px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "HelveticaNowDisplay, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "fontSize": "18px",
+      "fontWeight": "500",
+      "letterSpacing": "-0.18px",
+      "lineHeight": "27px",
+      "color": "rgba(0, 0, 0, 0.3)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "50px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "HelveticaNowDisplay",
+      "adobe-garamond-pro"
+    ],
+    "alturaTotal": 3836
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 110.3,
+      "px": 17238
+    },
+    {
+      "hex": "#FD6A04",
+      "fatia": 18.9,
+      "px": 2948
+    },
+    {
+      "hex": "#282828",
+      "fatia": 14.1,
+      "px": 2198
+    },
+    {
+      "hex": "#CEBDB8",
+      "fatia": 8.2,
+      "px": 1284
+    },
+    {
+      "hex": "#FFFFFE",
+      "fatia": 4.1,
+      "px": 640
+    },
+    {
+      "hex": "#222324",
+      "fatia": 2.4,
+      "px": 368
+    },
+    {
+      "hex": "#BD4F1D",
+      "fatia": 1.7,
+      "px": 262
+    },
+    {
+      "hex": "#FEFFFF",
+      "fatia": 0.4,
+      "px": 62
+    }
+  ]
+}

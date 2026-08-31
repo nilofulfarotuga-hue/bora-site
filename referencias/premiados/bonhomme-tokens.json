@@ -1,0 +1,105 @@
+{
+  "url": "https://bonhomme.lol/",
+  "quando": "2026-08-31 10:37",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Bonhomme - Developer",
+    "descricao": "Maxime Bonhomme - Product-focused Developer",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "\"SF Pro\", Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "21px",
+      "color": "rgba(255, 255, 255, 0.64)",
+      "background": "rgb(0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"SF Pro\", Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "22px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "26.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"SF Pro\", Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "16.8px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"SF Pro\", Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "21px",
+      "color": "rgba(255, 255, 255, 0.64)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "SF Pro"
+    ],
+    "alturaTotal": 2681
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#000000",
+      "fatia": 144.0,
+      "px": 22502
+    },
+    {
+      "hex": "#171717",
+      "fatia": 4.2,
+      "px": 652
+    },
+    {
+      "hex": "#2E2D2D",
+      "fatia": 3.5,
+      "px": 547
+    },
+    {
+      "hex": "#424242",
+      "fatia": 3.1,
+      "px": 477
+    },
+    {
+      "hex": "#050505",
+      "fatia": 2.3,
+      "px": 359
+    },
+    {
+      "hex": "#80807F",
+      "fatia": 1.4,
+      "px": 220
+    },
+    {
+      "hex": "#010000",
+      "fatia": 1.4,
+      "px": 215
+    },
+    {
+      "hex": "#000001",
+      "fatia": 0.2,
+      "px": 28
+    }
+  ]
+}

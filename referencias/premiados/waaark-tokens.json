@@ -1,0 +1,95 @@
+{
+  "url": "https://waaark.com/",
+  "quando": "2026-08-31 10:44",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "wrk - French Creative Web Studio",
+    "descricao": "We create elegant and functional custom‑designed websites. Our fine studio of two know the value of hard work.",
+    "ogImage": null,
+    "body": {
+      "fontFamily": "sofia-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "letterSpacing": "normal",
+      "lineHeight": "22.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(168, 208, 230)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Playfair Display\", serif",
+      "fontSize": "32px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "44.8px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "sofia-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "letterSpacing": "3.2px",
+      "lineHeight": "16px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "botao": null,
+    "fontes": [
+      "Playfair Display",
+      "sofia-pro"
+    ],
+    "alturaTotal": 900
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#A8D0E6",
+      "fatia": 85.9,
+      "px": 13422
+    },
+    {
+      "hex": "#393862",
+      "fatia": 26.7,
+      "px": 4170
+    },
+    {
+      "hex": "#F76C6C",
+      "fatia": 23.0,
+      "px": 3590
+    },
+    {
+      "hex": "#C4DDEA",
+      "fatia": 8.9,
+      "px": 1385
+    },
+    {
+      "hex": "#ACD0E5",
+      "fatia": 7.4,
+      "px": 1149
+    },
+    {
+      "hex": "#D0A1A9",
+      "fatia": 5.8,
+      "px": 902
+    },
+    {
+      "hex": "#A7D1E7",
+      "fatia": 1.3,
+      "px": 203
+    },
+    {
+      "hex": "#A8D0E7",
+      "fatia": 1.1,
+      "px": 179
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "url": "https://dogstudio.co/",
+  "quando": "2026-08-31 10:00",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Dogstudio. Multidisciplinary Creative Studio.",
+    "descricao": "We are at the intersection of art, design and technology. Our goal is to deliver amazing experiences.",
+    "ogImage": "https://dogstudio.co/app/themes/portfolio-2018/static/assets/images/shared/share-facebook.jpg",
+    "body": {
+      "fontFamily": "Heebo, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "29.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(19, 20, 25)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Heebo, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "29.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "Heebo, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "29.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Arial",
+      "fontSize": "13.3333px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Heebo",
+      "Arial",
+      "GT Sectra Display",
+      "Gilroy"
+    ],
+    "alturaTotal": 3800
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#2C3A66",
+      "fatia": 38.9,
+      "px": 6074
+    },
+    {
+      "hex": "#1D2235",
+      "fatia": 24.5,
+      "px": 3834
+    },
+    {
+      "hex": "#161923",
+      "fatia": 21.3,
+      "px": 3332
+    },
+    {
+      "hex": "#171F30",
+      "fatia": 20.0,
+      "px": 3120
+    },
+    {
+      "hex": "#13151D",
+      "fatia": 18.2,
+      "px": 2849
+    },
+    {
+      "hex": "#1E2E56",
+      "fatia": 16.7,
+      "px": 2607
+    },
+    {
+      "hex": "#293056",
+      "fatia": 13.4,
+      "px": 2098
+    },
+    {
+      "hex": "#5A6984",
+      "fatia": 7.0,
+      "px": 1086
+    }
+  ]
+}

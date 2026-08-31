@@ -1,0 +1,106 @@
+{
+  "url": "https://locomotive.ca/",
+  "quando": "2026-08-31 09:58",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Locomotive | Montreal web agency",
+    "descricao": "Locomotive® offers a wide range of creative and strategic services for remarkable brands, companies and organizations. Over the 15 years, Locomotive® has become a go-to for meaningful, innovative, results-driven digital experiences, web design and branding. Freshness guaranteed.",
+    "ogImage": "https://locomotive.ca/uploads/metadata/Open_Graph_Loco_%281%29.png",
+    "body": {
+      "fontFamily": "HelveticaNowDisplay, -apple-system, BlinkMacSystemFont, \"avenir next\", avenir, \"segoe ui\", \"helvetica neue\", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "19.5px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "LocomotiveNew, -apple-system, BlinkMacSystemFont, \"avenir next\", avenir, \"segoe ui\", \"helvetica neue\", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+      "fontSize": "70px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "77px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "HelveticaNowDisplay, -apple-system, BlinkMacSystemFont, \"avenir next\", avenir, \"segoe ui\", \"helvetica neue\", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+      "fontSize": "26px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "31.2px",
+      "color": "rgb(0, 0, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "HelveticaNowDisplay, -apple-system, BlinkMacSystemFont, \"avenir next\", avenir, \"segoe ui\", \"helvetica neue\", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+      "fontSize": "26px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "31.2px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "HelveticaNowDisplay",
+      "LocomotiveNew"
+    ],
+    "alturaTotal": 6598
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#6CA9C8",
+      "fatia": 29.3,
+      "px": 4585
+    },
+    {
+      "hex": "#6AA8C7",
+      "fatia": 28.9,
+      "px": 4511
+    },
+    {
+      "hex": "#70ABCA",
+      "fatia": 26.6,
+      "px": 4154
+    },
+    {
+      "hex": "#86BADB",
+      "fatia": 26.5,
+      "px": 4146
+    },
+    {
+      "hex": "#3B525E",
+      "fatia": 20.4,
+      "px": 3184
+    },
+    {
+      "hex": "#192022",
+      "fatia": 12.7,
+      "px": 1991
+    },
+    {
+      "hex": "#659FBE",
+      "fatia": 8.0,
+      "px": 1244
+    },
+    {
+      "hex": "#70A1BD",
+      "fatia": 7.6,
+      "px": 1185
+    }
+  ]
+}

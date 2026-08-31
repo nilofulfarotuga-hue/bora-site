@@ -1,0 +1,95 @@
+{
+  "url": "https://www.juventus.com/en",
+  "quando": "2026-08-31 10:17",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Juventus Football Club - Official Website | Juventus.com",
+    "descricao": "The official Juventus website with the latest news, full information on teams, matches, the Allianz Stadium and the Club. Tickets purchase and more.",
+    "ogImage": "https://www.juventus.com/images/image/upload/f_auto/dev/assets/opengraph",
+    "body": {
+      "fontFamily": "JuventusFans, Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "19.6px",
+      "color": "rgb(21, 21, 21)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": null,
+    "h2": {
+      "fontFamily": "JuventusFans, Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "19.6px",
+      "color": "rgb(21, 21, 21)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "JuventusFans, Roboto, Helvetica, Arial, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "19.6px",
+      "color": "rgb(250, 250, 250)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "JuventusFans",
+      "Roboto"
+    ],
+    "alturaTotal": 9513
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#454B38",
+      "fatia": 27.3,
+      "px": 4258
+    },
+    {
+      "hex": "#2C3029",
+      "fatia": 25.5,
+      "px": 3987
+    },
+    {
+      "hex": "#1C1919",
+      "fatia": 24.1,
+      "px": 3767
+    },
+    {
+      "hex": "#040405",
+      "fatia": 21.8,
+      "px": 3409
+    },
+    {
+      "hex": "#0E1011",
+      "fatia": 16.8,
+      "px": 2629
+    },
+    {
+      "hex": "#433733",
+      "fatia": 16.1,
+      "px": 2514
+    },
+    {
+      "hex": "#71726F",
+      "fatia": 14.3,
+      "px": 2232
+    },
+    {
+      "hex": "#301C1A",
+      "fatia": 14.1,
+      "px": 2204
+    }
+  ]
+}
