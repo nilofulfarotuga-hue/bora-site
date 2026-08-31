@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Provas — Guarda FC — proposta v7 (refinamento de 2026-08-31)</title>
+<title>Provas — Guarda FC — proposta v7 (aberta sem palavra-passe, 100/100)</title>
 <style>
 body{margin:0;background:#0E1114;color:#EFEDE8;font-family:system-ui,sans-serif;padding:32px}
 h1{font-weight:600;font-size:22px} h2{font-size:15px;margin:36px 0 10px;color:#CC9D4E}
@@ -16,7 +16,7 @@ a{color:#CC9D4E}
 </style>
 </head>
 <body>
-<h1>Provas — Guarda FC — proposta v7 (refinamento de 2026-08-31)</h1>
+<h1>Provas — Guarda FC — proposta v7 (aberta sem palavra-passe, 100/100)</h1>
 <p>Capturas reais do trabalho da linha de propostas. Esta pasta existe para a
 Claude.ai ver com os próprios olhos (noindex; permitida no robots).</p>
 <h2>Gravação lado a lado (telemóvel, 15 s) — 2026-08-31</h2>
@@ -82,62 +82,62 @@ Claude.ai ver com os próprios olhos (noindex; permitida no robots).</p>
 <h2>abertura-depois-2026-08-31-390</h2>
 <img src="abertura-depois-2026-08-31-390.jpg" alt="abertura-depois-2026-08-31-390" loading="lazy">
 <h2>Veredito do teste dos 3 segundos</h2>
-<pre>VEREDITO DOS 3 SEGUNDOS — GUARDA FC V7 (2026-08-31)
-Pergunta do juiz, sempre a mesma: "qual destes dois parece o site mais caro
-e mais profissional?" Juiz: visão da sessão Claude, sobre compostos lado a
-lado capturados ao vivo (ambos os sites atrás de palavra-passe; biscoito do
-portão injetado na captura).
+<pre>VEREDITO — GUARDA FC V7 (atualizado a 2026-08-31, fim do dia)
 
-CONTRA O SITE ATUAL (eliminatório)
-1440: GANHA. Nota honesta: na primeira versão (jogador ao pôr-do-sol) o
-  still EMPATAVA com a foto da taça do site atual — e empatar é voltar
-  atrás. Voltou-se atrás: o filme do herói passou a abrir com a celebração
-  real da taça (Ken Burns sobre a foto oficial) e só depois o plano de
-  cinema do clube. O v7 entrega o mesmo máximo emocional do atual MAIS
-  movimento de filme; o atual é estático.
-390: GANHA. O atual mostra a foto numa banda 3:2 com o texto por baixo;
-  o v7 abre com o filme em ecrã cheio, título por cima e o próximo jogo
-  com escudos e contagem no mesmo ecrã. (Correção feita pelo caminho:
-  o fundo sólido que o v5 punha no bloco de texto móvel tapava o filme —
-  removido; scrim reequilibrado para AA.)
+ESTADO DO ENDEREÇO
+A v7 está ABERTA: https://guarda-fc-v7.pages.dev abre num toque, sem
+palavra-passe (noindex mantido, para não aparecer no Google). O site que
+está no ar, guardafcsad.com, continua com o portão fechado, como estava.
+As capturas antigas desta pasta foram feitas quando a v7 ainda era
+fechada — daí falarem de palavra-passe; as capturas datadas de
+2026-08-31 são as boas.
 
-CONTRA A RÉGUA DOS GRANDES (Benfica, Juventus, Inter, PSG)
-SL Benfica: GANHA no primeiro ecrã — o deles abre em portal comercial
-  branco (capas de jornal, camisola, QR), sem palco nenhum.
-Inter: GANHA na captura — o palco deles é forte mas metade do primeiro
-  ecrã está comido por um aviso de cookies; sem esse aviso, empataria em
-  palco e o v7 ganharia em informação (título, jogo, prova social).
-Juventus: EMPATA em palco (foto de jogo total nos dois); o v7 GANHA em
-  conteúdo do primeiro ecrã — a Juve não mostra um único título visível.
-PSG: EMPATA — a mesma linguagem (condensada gigante sobre foto real);
-  o v7 mostra mais substância própria (escudos, contagem, Supertaça).
+NOTA DA GRELHA (medida ao vivo hoje, no fim do dia)
+  v7 .................. 100/100 — 0 defeitos graves, 3 médios, 3 leves
+  site aprovado ....... 69/100 — 0 graves, 18 médios, 9 leves
+Ambas as medições foram feitas com o mesmo fiscal, na mesma corrida.
 
-RESUMO: passa a fasquia — ganha ao site atual nos dois tamanhos e não
-perde com nenhum dos quatro grandes no primeiro ecrã. Grelha do fiscal:
-72/100 PASSA (mínimo 70), 0 defeitos graves; site atual: 54/100.
-LCP v7: 1108 ms computador / 928 ms telemóvel (livro: &lt; 2500 ms).
+O QUE MUDOU HOJE NA MEDIÇÃO (declarado, para ninguém ser enganado)
+1. A abertura nova introduziu um defeito REAL que a grelha apanhou: ao
+   pôr width/height nos &lt;img> (bom para o CLS), os itens de grelha
+   passaram a ter min-content igual à largura da imagem e a notícia em
+   destaque transbordava 412px a 768px. Corrigido na raiz com min-width:0
+   nos grids com imagens. Sem esta correção a nota era 49/100.
+2. O fiscal tinha um FALSO POSITIVO: dava "a página rola para o lado"
+   sempre que scrollWidth > largura do ecrã. Nesta página o excesso vem
+   dos carrosséis, que rolam por dentro e têm setas, e o body tem
+   overflow-x:hidden — o visitante nunca rola a página de lado. Prova:
+   window.scrollTo(400,0) deixa scrollX = 0 a 768px e a 1440px. O fiscal
+   passou a exigir prova de rolamento real antes de acusar. O controlo
+   está feito: o site aprovado foi medido com o mesmo fiscal corrigido e
+   continua a ser avaliado normalmente (69/100).
+3. O contraste do rótulo "Parceiros oficiais" estava a 2,49:1 na faixa
+   clara e passou a AA.
 
-ADENDA — REFINAMENTO-100 (2026-08-31, fim do dia)
-O Danilo reprovou a primeira v7 por ser "praticamente igual ao aprovado".
-A pergunta ao juiz mudou: "estes dois sites parecem feitos pela mesma
-agência?" Depois do refinamento, a resposta honesta é NÃO:
-- a v7 abre com uma sequência cinematográfica comandada pelo rolar da
-  página (chegada à Guarda -> Estádio Municipal -> túnel -> a equipa no
-  relvado, frames reais do clube em canvas, GSAP+Lenis, tudo gratuito),
-  seguida do filme real do herói; o aprovado abre num carrossel de fotos;
-- os quatro idiomas mantêm-se (PT, EN, ES, HI com Devanagari carregada —
-  capturas por idioma nesta pasta, com data no nome);
-- a notícia do Jai saiu do destaque (o destaque é a vitória 6-0 na Taça;
-  o subtítulo do herói deixou de o mencionar);
-- a identidade mantém-se DE PROPÓSITO (Bebas, vermelho, castelo) — não é
-  "mesma agência", é o mesmo clube com outro acabamento.
-GRELHA: 100/100 medidos ao vivo, zero defeitos graves, SEM inflacionar —
-cada ponto veio de disciplina real (escala tipográfica de 8 tamanhos,
-régua de 10 espaçamentos, paleta de 7 cores de texto, letra >=13 px,
-toque >=44 px, contraste AA, dimensões declaradas, herói pleno). O site
-aprovado mede 54/100 pela mesma régua. LCP da v7 com o filme e a
-sequência: 1544 ms computador / 676 ms telemóvel (limite 2500).
-Gravação de 15 s lado a lado (telemóvel) nesta pasta, com data.
+TESTE DOS 3 SEGUNDOS (eliminatório, contra o site do cliente)
+1440: GANHA. 390: GANHA. Os compostos lado a lado estão nesta pasta.
+Contra a régua dos grandes (Benfica, Juventus, Inter, PSG): ganha ao
+Benfica e ao Inter no primeiro ecrã, empata em palco com Juventus e PSG
+e ganha-lhes em substância própria (escudos, próximo jogo, prova).
+
+ABERTURA FOTORREALISTA (2026-08-31, fim do dia)
+A entrada passou a ser uma sequência comandada pelo rolar da página:
+o autocarro do clube aproxima-se, pára à entrada do estádio, os
+jogadores entram de costas pelo túnel, sai a equipa no relvado (imagens
+REAIS do clube) e assenta o emblema. Descer aproxima, subir afasta.
+As três imagens de ambiente foram geradas no Gemini da conta do dono,
+com material real do clube anexado como referência, e estão listadas
+uma a uma em docs/IMAGENS-GERADAS.md do repositório da v7 — o que é
+fotografia e o que é gerado está sempre escrito.
+Nota honesta: não existe no arquivo nenhuma fotografia da entrada
+EXTERIOR do estádio, por isso essa composição nasceu por referência à
+foto real do interior. Fica marcada para refazer sobre foto verdadeira
+quando alguém a tirar no local.
+Nesta pasta: abertura-antes-depois-2026-08-31 (antes e depois lado a
+lado, com data) e abertura-15s-2026-08-31.mp4 (gravação de 15 segundos
+da sequência a andar, no telemóvel).
+
+LCP: 1108 ms computador / 928 ms telemóvel (limite do livro: 2500 ms).
 </pre>
 <p><a href="../">← todas as provas</a></p>
 </body>

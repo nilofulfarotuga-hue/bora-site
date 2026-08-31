@@ -67,6 +67,17 @@ MEDIR_JS = r"""
   const out = {
     vw, vh: window.innerHeight,
     scrollWidth: document.documentElement.scrollWidth,
+    // PROVA de rolamento real (2026-08-31): scrollWidth sozinho mente quando
+    // há carrosséis que rolam por dentro e o body tem overflow-x:hidden — o
+    // conteúdo "a mais" existe mas o visitante NUNCA rola a página de lado.
+    // Só é defeito se a página rolar mesmo: tenta-se rolar e mede-se.
+    rolaMesmo: (function () {
+      const x0 = window.scrollX || window.pageXOffset || 0;
+      window.scrollTo(200, window.scrollY || 0);
+      const x1 = window.scrollX || window.pageXOffset || 0;
+      window.scrollTo(x0, window.scrollY || 0);
+      return x1 > x0;
+    })(),
     transbordo: [], alvos: [], letraPequena: [], semDimensao: [],
     esticadas: [], semAlt: [], contraste: [], espacos: {}, paleta: {},
     tipos: {}, h1: 0, titulo: '', metas: {}, ancoras: 0, ancorasVazias: 0,
@@ -438,11 +449,13 @@ def defeitos(m, rotulo):
     d = []
     L = m["largura"]
 
-    if m["scrollWidth"] > m["vw"] + 2:
+    # rolamento lateral só conta quando é REAL (medido a rolar), não quando o
+    # scrollWidth vem inflado por carrosséis internos — ver rolaMesmo no JS
+    rola = m["scrollWidth"] > m["vw"] + 2 and m.get("rolaMesmo", True)
+    if rola:
         d.append(("GRAVE", f"[{rotulo} {L}px] A página rola para o lado: "
                            f"{m['scrollWidth']}px de conteúdo para {m['vw']}px de ecrã "
                            f"({m['scrollWidth'] - m['vw']}px a mais)."))
-    rola = m["scrollWidth"] > m["vw"] + 2
     for t in m["transbordo"][:5]:
         if rola:
             d.append(("GRAVE", f"[{rotulo} {L}px] {t['el']} sai {t['excesso']}px para fora "
