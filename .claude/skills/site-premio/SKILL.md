@@ -35,7 +35,14 @@ salta, por mais pressa que haja.
 
 ### Passo 1 — REFERÊNCIA primeiro
 
-Antes de escrever uma linha de HTML, ir buscar como é que os melhores fazem isto:
+**REGRA QUE MANDA (2026-08-31, veredito do Danilo): A REFERÊNCIA Nº 1 É SEMPRE
+O SITE ATUAL DO CLIENTE.** A maquete do Imoaugusto perdeu ao vivo contra o
+site real dele porque o fiscal só comparou com referências de luxo e nunca com
+o adversário verdadeiro. A maquete só está pronta quando GANHA do site atual
+do cliente à primeira vista — teste dos 3 segundos (ver §6b). Se o site dele
+for bom, a fasquia sobe; nunca se assume que é mau.
+
+Depois do site do cliente, ir buscar como é que os melhores fazem isto:
 
 - Pinterest: `layout site <nicho>` — é o mais rápido a mostrar composições inteiras
 - Awwwards, Dribbble, Land-book — para hierarquia, movimento e estado da arte
@@ -261,6 +268,28 @@ botão de acção fixo no telemóvel · rodapé completo.
 
 **Teste rápido antes de entregar:** tapa o logótipo. Se o site pudesse ser de qualquer outro
 negócio do mesmo ramo, não está pronto.
+
+### 6b. O TESTE DOS 3 SEGUNDOS (obrigatório desde 2026-08-31)
+
+Composto lado a lado — site atual do cliente à ESQUERDA, maquete à DIREITA,
+a 1440px e a 390px, a MESMA secção (herói contra herói) — gerado por
+`propostas/ferramentas/tres_segundos.py` e guardado em `prova/3segundos/`.
+O juiz de visão olha e responde a UMA pergunta:
+
+> **"Qual destes dois parece o site mais caro e mais profissional?"**
+
+Se a resposta não for a maquete, com justificação concreta (o que é que o
+outro tem que o nosso não tem), a maquete VOLTA PARA TRÁS. Sem exceções,
+sem "mas as referências…". O veredito escreve-se em
+`prova/3segundos/VEREDITO.md`: GANHA ou PERDEU, e porquê.
+
+### 6c. PROIBIÇÃO DO HERÓI VAZIO (desde 2026-08-31)
+
+**Herói sem imagem ou vídeo em ecrã cheio é proibido. Texto sobre fundo liso
+nunca mais abre uma maquete.** Foi assim que a página creme minimalista do
+Imoaugusto pareceu vazia ao lado da casa em ecrã cheio do site real dele.
+O primeiro ecrã abre SEMPRE com fotografia ou filme do próprio cliente a
+sangrar — a elegância tipográfica vem por cima, nunca em vez.
 
 ---
 
