@@ -1,0 +1,106 @@
+{
+  "url": "https://www.fineandcountry.pt/",
+  "quando": "2026-08-31 00:29",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Fine & Country | Real Estate Agents in Portugal",
+    "descricao": "At Fine & Country, we offer a refreshing approach to selling exclusive homes, combining individual flair and attention to detail with the expertise of local estate agents to create a strong international network, with powerful marketing capabilities.",
+    "ogImage": "https://devvlsnxxkrq9.cloudfront.net/prod/assets/_1200x630_crop_center-center_82_none/1800x600-website-banners-We-value-space-to-grow-13-PORT-Portuguese.jpg?mtime=1660751340",
+    "body": {
+      "fontFamily": "Montserrat, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(106, 114, 120)",
+      "background": "rgb(255, 255, 255)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Didot, serif",
+      "fontSize": "56px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "67.2px",
+      "color": "rgb(64, 69, 74)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "Montserrat, sans-serif",
+      "fontSize": "32px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "38.4px",
+      "color": "rgb(64, 69, 74)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Montserrat, sans-serif",
+      "fontSize": "12.5px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "12.5px",
+      "color": "rgb(106, 114, 120)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Montserrat",
+      "Didot"
+    ],
+    "alturaTotal": 5783
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 77.5,
+      "px": 12102
+    },
+    {
+      "hex": "#D7C7B1",
+      "fatia": 28.8,
+      "px": 4498
+    },
+    {
+      "hex": "#C9BAA5",
+      "fatia": 21.9,
+      "px": 3418
+    },
+    {
+      "hex": "#9E8C72",
+      "fatia": 13.5,
+      "px": 2108
+    },
+    {
+      "hex": "#FEFEFE",
+      "fatia": 12.0,
+      "px": 1882
+    },
+    {
+      "hex": "#E7E1D9",
+      "fatia": 6.3,
+      "px": 986
+    },
+    {
+      "hex": "#FFFEFF",
+      "fatia": 0.0,
+      "px": 4
+    },
+    {
+      "hex": "#FFFFFE",
+      "fatia": 0.0,
+      "px": 2
+    }
+  ]
+}

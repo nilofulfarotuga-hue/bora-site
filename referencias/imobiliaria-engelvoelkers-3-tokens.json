@@ -1,0 +1,106 @@
+{
+  "url": "https://www.engelvoelkers.com/pt-pt/",
+  "quando": "2026-08-31 00:32",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Agência imobiliária em Portugal | Engel & Völkers Portugal",
+    "descricao": "A Engel & Völkers é uma agência imobiliária líder mundial na compra, venda e aluguer de imóveis de luxo e de alto padrão em todo o país.",
+    "ogImage": "https://ucarecdn.com/53ee0de7-ebf5-48e0-9825-329e06a5978f/-/preview/1381x987/",
+    "body": {
+      "fontFamily": "\"Engel Voelkers Text VF App\", Arial, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "0.48px",
+      "lineHeight": "normal",
+      "color": "rgb(64, 64, 64)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Engel Voelkers Head VF App\", Georgia, \"Times New Roman\", Times, serif",
+      "fontSize": "40px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "48px",
+      "color": "rgb(64, 64, 64)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Engel Voelkers Head VF App\", Georgia, \"Times New Roman\", Times, serif",
+      "fontSize": "28px",
+      "fontWeight": "700",
+      "letterSpacing": "normal",
+      "lineHeight": "36px",
+      "color": "rgb(38, 38, 38)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Engel Voelkers Text VF App\", Arial, Helvetica, sans-serif",
+      "fontSize": "13.3333px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "normal",
+      "color": "rgb(13, 13, 13)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "4px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Engel Voelkers Text VF App",
+      "Engel Voelkers Head VF App"
+    ],
+    "alturaTotal": 11697
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#FFFFFF",
+      "fatia": 54.5,
+      "px": 8523
+    },
+    {
+      "hex": "#62645F",
+      "fatia": 24.1,
+      "px": 3765
+    },
+    {
+      "hex": "#B4B2AB",
+      "fatia": 19.8,
+      "px": 3087
+    },
+    {
+      "hex": "#808E92",
+      "fatia": 19.3,
+      "px": 3011
+    },
+    {
+      "hex": "#364245",
+      "fatia": 16.6,
+      "px": 2596
+    },
+    {
+      "hex": "#FCFAF8",
+      "fatia": 13.5,
+      "px": 2116
+    },
+    {
+      "hex": "#E0DEDA",
+      "fatia": 10.6,
+      "px": 1654
+    },
+    {
+      "hex": "#FFFFFB",
+      "fatia": 1.6,
+      "px": 248
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "url": "https://www.barrocal.pt/",
+  "quando": "2026-08-31 00:13",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Hotel & Monte Alentejano - São Lourenço do Barrocal",
+    "descricao": "Come and stay in the heart of the Alentejo in Portugal, check availability online of our Guest Rooms and Cottages in our Hotel & Monte Alentejano.",
+    "ogImage": "https://barrocal.pt/images/Full-Logo.svg",
+    "body": {
+      "fontFamily": "\"Chronicle Display A\", \"Chronicle Display B\"",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "letterSpacing": "0.533333px",
+      "lineHeight": "22.4px",
+      "color": "rgb(112, 112, 112)",
+      "background": "rgb(245, 244, 243)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Chronicle Display A\", \"Chronicle Display B\"",
+      "fontSize": "80px",
+      "fontWeight": "300",
+      "letterSpacing": "0.533333px",
+      "lineHeight": "80px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "\"Chronicle Display A\", \"Chronicle Display B\"",
+      "fontSize": "36px",
+      "fontWeight": "300",
+      "letterSpacing": "0.533333px",
+      "lineHeight": "44px",
+      "color": "rgb(175, 104, 36)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "\"Substance W05 Light\"",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "letterSpacing": "2px",
+      "lineHeight": "18px",
+      "color": "rgb(24, 41, 67)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "uppercase"
+    },
+    "fontes": [
+      "Chronicle Display A",
+      "Substance W05 Light",
+      "Arial"
+    ],
+    "alturaTotal": 4839
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#F4F4F3",
+      "fatia": 25.9,
+      "px": 4040
+    },
+    {
+      "hex": "#414553",
+      "fatia": 23.4,
+      "px": 3664
+    },
+    {
+      "hex": "#9A9EA5",
+      "fatia": 21.5,
+      "px": 3352
+    },
+    {
+      "hex": "#7E808A",
+      "fatia": 20.1,
+      "px": 3138
+    },
+    {
+      "hex": "#D9DAD6",
+      "fatia": 17.9,
+      "px": 2796
+    },
+    {
+      "hex": "#212123",
+      "fatia": 17.6,
+      "px": 2755
+    },
+    {
+      "hex": "#696973",
+      "fatia": 17.1,
+      "px": 2666
+    },
+    {
+      "hex": "#BEBFBD",
+      "fatia": 16.6,
+      "px": 2589
+    }
+  ]
+}

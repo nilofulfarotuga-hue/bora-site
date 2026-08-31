@@ -5,10 +5,10 @@ metadata:
   type: procedural
   zona: verde
   origem: missao site-premio-montra-bora, 2026-08-29
-  execucoes: 0
-  sucessos: 0
+  execucoes: 3
+  sucessos: 3
   falhas: 0
-  ultima_execucao: 2026-08-29
+  ultima_execucao: 2026-08-31
 ---
 
 # SITE PRÉMIO — o manual de construir sites que se vendem

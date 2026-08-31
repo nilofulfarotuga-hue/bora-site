@@ -1,0 +1,96 @@
+{
+  "url": "https://casadesaolourenco.pt/",
+  "quando": "2026-08-31 00:13",
+  "cookies_1440": "escondido",
+  "tokens": {
+    "titulo": "Casa de São Lourenço - Casa de São Lourenço | Website Oficial",
+    "descricao": "Casa de São Lourenço – hotel 5 estrelas sustentável na Serra da Estrela. Natureza, vistas panorâmicas, spa, restaurante de altitude e conforto único. Reserve já.",
+    "ogImage": "https://www.casadesaolourenco.pt/media/casa-de-sao-lourenco-bannercasadesaolourencoserradaestrela-2.webp",
+    "body": {
+      "fontFamily": "SF-Pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "0.8px",
+      "lineHeight": "24px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(28, 28, 28)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "\"Domaine Display\", sans-serif",
+      "fontSize": "72px",
+      "fontWeight": "400",
+      "letterSpacing": "0.8px",
+      "lineHeight": "86.4px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": null,
+    "botao": {
+      "fontFamily": "SF-Pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "lineHeight": "24px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "SF-Pro",
+      "Domaine Display",
+      "Arial"
+    ],
+    "alturaTotal": 7890
+  },
+  "cookies_390": "escondido",
+  "paleta_captura": [
+    {
+      "hex": "#182D39",
+      "fatia": 24.2,
+      "px": 3784
+    },
+    {
+      "hex": "#0C0D0A",
+      "fatia": 22.5,
+      "px": 3515
+    },
+    {
+      "hex": "#0E130F",
+      "fatia": 21.9,
+      "px": 3422
+    },
+    {
+      "hex": "#323C43",
+      "fatia": 21.5,
+      "px": 3355
+    },
+    {
+      "hex": "#273236",
+      "fatia": 20.2,
+      "px": 3153
+    },
+    {
+      "hex": "#CACECD",
+      "fatia": 18.7,
+      "px": 2929
+    },
+    {
+      "hex": "#070908",
+      "fatia": 17.8,
+      "px": 2784
+    },
+    {
+      "hex": "#191916",
+      "fatia": 13.2,
+      "px": 2058
+    }
+  ]
+}

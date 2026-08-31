@@ -1,0 +1,106 @@
+{
+  "url": "https://www.portadafrente.com/",
+  "quando": "2026-08-31 00:15",
+  "cookies_1440": "recusado",
+  "tokens": {
+    "titulo": "Porta da Frente Christie’s International Real Estate",
+    "descricao": "Imobiliária de luxo em Lisboa, Cascais, Oeiras e Comporta. Casas exclusivas para comprar ou investir com a Porta da Frente Christie’s International Real Estate.",
+    "ogImage": "https://eu-west-2.graphassets.com/cm1jogl5x00dj01w4hmsobeqh/cmcokcdyf37ev07lahykfai3c",
+    "body": {
+      "fontFamily": "Montserrat, \"Montserrat Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "0.5px",
+      "lineHeight": "24px",
+      "color": "rgb(17, 24, 28)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h1": {
+      "fontFamily": "Aleo, serif",
+      "fontSize": "57px",
+      "fontWeight": "300",
+      "letterSpacing": "0.5px",
+      "lineHeight": "64px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "h2": {
+      "fontFamily": "Aleo, serif",
+      "fontSize": "36px",
+      "fontWeight": "400",
+      "letterSpacing": "0.5px",
+      "lineHeight": "44px",
+      "color": "rgb(12, 17, 29)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "botao": {
+      "fontFamily": "Montserrat, \"Montserrat Fallback\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "0.5px",
+      "lineHeight": "24px",
+      "color": "rgb(17, 24, 28)",
+      "background": "rgba(0, 0, 0, 0)",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "textTransform": "none"
+    },
+    "fontes": [
+      "Montserrat",
+      "Aleo"
+    ],
+    "alturaTotal": 9088
+  },
+  "cookies_390": "recusado",
+  "paleta_captura": [
+    {
+      "hex": "#9C9C9E",
+      "fatia": 31.5,
+      "px": 4929
+    },
+    {
+      "hex": "#AAAAA9",
+      "fatia": 29.2,
+      "px": 4558
+    },
+    {
+      "hex": "#FFFFFF",
+      "fatia": 24.9,
+      "px": 3886
+    },
+    {
+      "hex": "#504F50",
+      "fatia": 20.4,
+      "px": 3189
+    },
+    {
+      "hex": "#362E2F",
+      "fatia": 20.2,
+      "px": 3159
+    },
+    {
+      "hex": "#191917",
+      "fatia": 19.7,
+      "px": 3084
+    },
+    {
+      "hex": "#858485",
+      "fatia": 9.1,
+      "px": 1425
+    },
+    {
+      "hex": "#E4E3E3",
+      "fatia": 4.9,
+      "px": 770
+    }
+  ]
+}
