@@ -120,6 +120,60 @@ def qr_em_cartao(url, lado, margem=None, raio=None, logo=None):
     return cartao
 
 
+# -------------------------------------------------------- colar numa peca
+
+# O logo, quando existe de cada lado. Na VPS das redes vive noutro sitio.
+LOGOS = [
+    "/opt/data/social/imagens/bora_logo.png",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                 "..", "flyer", "assets", "brand", "bora_logo.png"),
+]
+
+
+def _logo_disponivel():
+    for c in LOGOS:
+        if os.path.exists(c):
+            return c
+    return None
+
+
+def colar_qr(imagem, origem, fraccao=0.155, margem_frac=0.045, logo=True,
+             canto="cima-direita"):
+    """Cola o QR da `origem` na peca e devolve-a.
+
+    UMA funcao para todos os moldes -- feed, story, reel e carrossel -- para o
+    QR ficar sempre no mesmo sitio e do mesmo tamanho relativo. Se cada molde
+    colasse o seu, mais tarde ou mais cedo um deles ficava por colar e ninguem
+    dava por isso ate' a campanha ja' estar a correr.
+
+    `fraccao` -- o lado do QR em fraccao da largura da peca. 0.155 de 1080 da'
+    167 px, que se le' bem no telemovel a olhar para o ecra de outra pessoa e
+    nao come a peca. Nao baixar de 0.12.
+
+    `canto` -- "cima-direita" por defeito, e nao em baixo como e' habitual.
+    Motivo, medido e nao suposto (2026-09-05): em baixo o QR tapava o fim do
+    selo laranja -- "Codigo BEMVINDO no primeiro pedid[o]" ficava cortado. Em
+    todos os moldes da casa o bloco de texto vive em baixo e o logo em cima a'
+    esquerda, portanto o canto de cima a' direita e' o unico que esta' sempre
+    livre. Uma peca com o QR por cima da chamada e' pior do que uma peca sem QR.
+    """
+    im = imagem.convert("RGBA") if imagem.mode != "RGBA" else imagem.copy()
+    lado = max(96, int(im.width * fraccao))
+    cartao = qr_em_cartao(link_destino(origem), lado,
+                          logo=_logo_disponivel() if logo else None)
+    m = int(im.width * margem_frac)
+    if canto == "cima-direita":
+        pos = (im.width - cartao.width - m, m)
+    elif canto == "baixo-direita":
+        pos = (im.width - cartao.width - m, im.height - cartao.height - m)
+    elif canto == "cima-esquerda":
+        pos = (m, m)
+    else:
+        raise ValueError("canto desconhecido: %r" % canto)
+    im.alpha_composite(cartao, pos)
+    return im
+
+
 # ------------------------------------------------------------------- leitura
 
 def ler_qr(imagem):
