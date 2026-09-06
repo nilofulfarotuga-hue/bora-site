@@ -165,11 +165,17 @@
   // De onde veio esta pessoa. O QR e os anúncios trazem ?de=qr-story, ?de=pago...
   // Sem isto não se sabe que peça é que traz instalações, e uma campanha paga
   // às cegas é dinheiro deitado fora.
-  var PERMITIDAS = ['qr-feed','qr-story','qr-reel','qr-carrossel','qr-grupo',
-                    'qr-flyer','pago','bio'];
+  var PERMITIDAS = ['qr-feed','qr-story','qr-reel','qr-carrossel','qr-extra',
+                    'qr-grupo','qr-flyer','pago','bio','site'];
+  // A marcação por grupo vem como qr-grupo-<slug> — um slug por grupo do
+  // Facebook, para se saber QUE grupo trouxe gente. Não cabe numa lista fixa,
+  // por isso vai por forma. A 2026-09-06 faltavam aqui o qr-extra, o site e
+  // esta forma: tudo isso caía em 'directo' e a origem perdia-se em silêncio,
+  // porque o pedido lá em baixo tem o catch vazio e nunca se queixa.
+  var GRUPO = /^qr-grupo-[a-z0-9-]{2,39}$/;
   var p = new URLSearchParams(location.search);
   var de = p.get('de') || '';
-  if (PERMITIDAS.indexOf(de) === -1) { de = 'directo'; }
+  if (PERMITIDAS.indexOf(de) === -1 && !GRUPO.test(de)) { de = 'directo'; }
 
   var PLAY = 'https://play.google.com/store/apps/details?id=pt.boraapp.bora';
   var WEB  = 'https://app.boraguarda.com';
