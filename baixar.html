@@ -100,6 +100,10 @@
   footer a{color:var(--verde-escuro)}
 
   @media (min-width:640px){ .qr{display:block} }
+  .qr-duplo{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:10px}
+  .qr-duplo figure{margin:0}
+  .qr-duplo img{width:150px;height:150px;margin:0 auto 6px}
+  .qr-duplo figcaption{font-size:13px;color:var(--cinza)}
 </style>
 </head>
 <body>
@@ -125,13 +129,29 @@
     <span>Instalar no Android<small>Grátis · recebe os avisos do pedido</small></span>
   </a>
 
+  <!-- 2026-09-13: a app de iPhone foi aprovada pela Apple a 12/09 (id 6809954739).
+       O botão fica escondido até o JS ler o aparelho: no iPhone passa a primeiro. -->
+  <a id="btn-appstore" class="btn btn-web" hidden
+     href="https://apps.apple.com/pt/app/id6809954739">
+    <span>Instalar no iPhone<small>App Store · grátis · recebe os avisos do pedido</small></span>
+  </a>
+
   <a id="btn-web" class="btn btn-web" href="https://app.boraguarda.com">
     <span>Pedir pelo site<small>iPhone ou computador · sem instalar nada</small></span>
   </a>
 
   <div class="qr">
-    <img src="assets/img/qr-baixar.png" alt="Código QR para instalar o Bora no telemóvel" width="180" height="180">
-    <p>Aponta a câmara do telemóvel para instalar.</p>
+    <div class="qr-duplo">
+      <figure>
+        <img src="assets/img/qr-playstore.png" alt="Código QR da app Bora na Google Play" width="150" height="150">
+        <figcaption>Android · Google Play</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/qr-appstore.png" alt="Código QR da app Bora na App Store" width="150" height="150">
+        <figcaption>iPhone · App Store</figcaption>
+      </figure>
+    </div>
+    <p>Aponta a câmara do telemóvel para instalar. Código <b>BEMVINDO</b> no primeiro pedido.</p>
   </div>
 
   <div class="ou">como funciona</div>
@@ -190,32 +210,47 @@
   bPlay.href = PLAY + '&referrer=' + ref;
   bWeb.href  = WEB + '?de=' + encodeURIComponent(de);
 
-  // Em Android o botão de instalar vem primeiro; em iPhone/computador o de
-  // pedir pelo site, que é o único caminho que lá funciona hoje.
+  // Em Android o botão da Google Play vem primeiro; no iPhone vem o da App
+  // Store (aprovada a 2026-09-12); no computador aparecem as duas lojas e o
+  // site. O site continua sempre visível: é o caminho que funciona em todo o
+  // lado sem instalar nada.
+  var APPSTORE = 'https://apps.apple.com/pt/app/id6809954739';
+  var bApp = document.getElementById('btn-appstore');
+  bApp.href = APPSTORE;
   var ua = navigator.userAgent || '';
   var android = /Android/i.test(ua);
   var ios = /iPhone|iPad|iPod/i.test(ua);
   if (!android && ios) {
-    bWeb.parentNode.insertBefore(bWeb, bPlay);
-    bWeb.className = 'btn btn-play';
-    bPlay.className = 'btn btn-web';
-    bPlay.querySelector('small').textContent = 'A app de iPhone está a caminho';
+    bApp.hidden = false;
+    bApp.className = 'btn btn-play';
+    bApp.parentNode.insertBefore(bApp, bPlay);
+    bPlay.hidden = true;
+    bWeb.querySelector('small').textContent =
+      'Se a App Store disser que ainda não está disponível no teu país, pede por aqui';
+  } else if (!android) {
+    bApp.hidden = false;
   }
 
-  // Contagem de visitas por origem. Guarda-se A ORIGEM E O DIA, mais nada:
-  // sem IP, sem cookie, sem agente, sem nada que identifique a pessoa. É o
-  // suficiente para saber que peça é que traz gente, que é a única pergunta
-  // que a campanha paga precisa de responder.
-  // A chave é publicável por desenho (RLS deixa inserir, ninguém anónimo lê).
+  // Contagem de visitas por origem. Desde 2026-09-07 passa pela função
+  // /api/visita em vez de ir direto à base, por uma razão medida nesse dia: o
+  // contador antigo guardava só a origem e o dia, e por isso contava como
+  // visita tudo o que abrisse a página — incluindo o renderizador de
+  // pré-visualização das redes, que chega em rajadas de três e quatro no MESMO
+  // segundo a seguir a cada publicação. Sem o agente não há como separar gente
+  // de robô, e um número inflacionado leva a decidir mal.
+  //
+  // O agente e o referrer o navegador manda-os sozinho nos cabeçalhos; o IP só
+  // o servidor o vê, e a função trunca-o antes de o gravar (IPv4 perde o último
+  // octeto). Nunca se guarda cookie nem nada que identifique a pessoa.
   try {
-    fetch('https://ojykpzwqrtusfeakzrna.supabase.co/rest/v1/site_visits', {
+    fetch('/api/visita', {
       method: 'POST',
-      headers: {
-        'apikey': 'sb_publishable_ylfhSuS2D_JoKmtFY-x6-A_DlOgHhVP',
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ origem: de }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        de: de,
+        page: '/baixar',
+        plataforma: android ? 'android' : (ios ? 'ios' : 'outro')
+      }),
       keepalive: true
     }).catch(function () {});
   } catch (e) {}
