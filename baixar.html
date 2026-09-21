@@ -4,18 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Descarrega o Bora — código BEMVINDO com 5 € para o primeiro pedido</title>
-<meta name="description" content="Instala o Bora na Guarda e usa o código BEMVINDO no primeiro pedido: 1000 tokens, que valem 5 euros. Restaurantes, supermercados, farmácias, limpeza e favores.">
+<meta name="description" content="Instala o Bora na Guarda — na App Store e na Google Play — e usa o código BEMVINDO no primeiro pedido: 1000 tokens, que valem 5 euros. Restaurantes, supermercados, farmácias, limpeza e favores.">
 <link rel="canonical" href="https://boraguarda.com/baixar">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bora App">
 <meta property="og:title" content="Descarrega o Bora — 5 € no primeiro pedido">
-<meta property="og:description" content="Código BEMVINDO: 1000 tokens, que valem 5 euros no teu primeiro pedido na Guarda.">
+<meta property="og:description" content="Na App Store e na Google Play. Código BEMVINDO: 1000 tokens, que valem 5 euros no teu primeiro pedido na Guarda.">
 <meta property="og:image" content="https://boraguarda.com/assets/img/og-image.png">
 <meta property="og:url" content="https://boraguarda.com/baixar">
 <meta property="og:locale" content="pt_PT">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://boraguarda.com/assets/img/og-image.png">
+<!-- O Safari mostra a faixa "abrir na App Store" por cima da página no iPhone. -->
+<meta name="apple-itunes-app" content="app-id=6809954739">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
@@ -33,8 +35,20 @@
   é gente que desiste antes de instalar. O CSS vai inteiro aqui dentro.
 
   Os valores do BEMVINDO não foram escritos de cabeça — saíram da tabela
-  promo_codes a 2026-09-05: type=tokens_grant, value_cents=1000,
-  max_uses_per_user=1, is_active=true. Se a promoção mudar, muda aqui também.
+  promo_codes a 2026-09-05 (reconfirmados a 2026-09-21): type=tokens_grant,
+  value_cents=1000, max_uses_per_user=1, is_active=true. Se a promoção mudar,
+  muda aqui também.
+
+  2026-09-21 (missão link-unico-iphone): esta é a ÚNICA morada da propaganda —
+  QR dos flyers, autocolantes, cartazes, redes e robô. Cada aparelho vai para o
+  sítio certo: iPhone/iPad → App Store, Android → Google Play, computador → as
+  duas lojas lado a lado e um QR grande para apontar o telemóvel. "Pedir pelo
+  site" deixou de ser botão: é uma linha pequena por baixo, alternativa e nunca
+  o caminho principal (ordem do Danilo). Os dois botões das lojas nascem
+  VISÍVEIS no HTML — quem lê a página sem JavaScript (um robô, uma
+  pré-visualização) vê as duas lojas; o JavaScript só esconde a que não serve
+  ao aparelho. Antes o da App Store nascia escondido e uma leitura sem JS
+  concluía que o iPhone ia para o site.
 -->
 <style>
   *,*::before,*::after{box-sizing:border-box}
@@ -69,23 +83,41 @@
   .oferta p{margin:0;font-size:16px;color:var(--tinta)}
   .oferta .letra{display:block;margin-top:10px;font-size:14px;color:var(--cinza)}
 
+  /* as lojas: em telemóvel uma em cima da outra (o JS deixa só a certa);
+     em computador as duas lado a lado */
+  .lojas{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
   .btn{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    width:100%;min-height:58px;border-radius:999px;text-decoration:none;
-    font-weight:700;font-size:17px;padding:14px 20px;margin-bottom:12px;
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    width:100%;min-height:62px;border-radius:999px;text-decoration:none;
+    font-weight:700;font-size:17px;padding:14px 20px;
+    background:var(--verde);color:#fff;box-shadow:0 4px 16px rgba(22,163,74,.28);
     border:2px solid transparent;transition:transform .12s ease,box-shadow .12s ease;
   }
   .btn:active{transform:scale(.985)}
-  .btn-play{background:var(--verde);color:#fff;box-shadow:0 4px 16px rgba(22,163,74,.28)}
-  .btn-web{background:#fff;color:var(--verde-escuro);border-color:var(--verde)}
+  .btn svg{width:26px;height:26px;flex:none;fill:currentColor}
   .btn small{display:block;font-weight:500;font-size:13px;opacity:.85;margin-top:2px}
+  @media (min-width:640px){
+    .lojas{flex-direction:row}
+    .lojas .btn{flex:1}
+  }
+  html[data-aparelho="ios"] #btn-play{display:none}
+  html[data-aparelho="android"] #btn-appstore{display:none}
+
+  /* a alternativa: uma linha pequena, nunca um botão */
+  .site{text-align:center;font-size:14px;color:var(--cinza);margin:0 0 26px}
+  .site a{color:var(--verde-escuro);font-weight:600}
+
+  /* o QR único, para quem está no computador: aponta o telemóvel e a
+     página decide a loja. Escondido em telemóvel, onde não faz sentido. */
+  .qr{display:none;background:#fff;border:1px solid var(--linha);border-radius:18px;padding:22px 20px;text-align:center;margin-bottom:24px}
+  .qr img{width:220px;height:220px;display:block;margin:0 auto 12px}
+  .qr p{margin:0;font-size:15px;color:var(--cinza)}
+  .qr .morada{display:block;margin-top:6px;font-size:16px;font-weight:700;color:var(--tinta);letter-spacing:.01em}
+  @media (min-width:640px){ .qr{display:block} }
+  html[data-aparelho="ios"] .qr, html[data-aparelho="android"] .qr{display:none}
 
   .ou{display:flex;align-items:center;gap:12px;color:var(--cinza);font-size:14px;margin:20px 0 16px}
   .ou::before,.ou::after{content:"";flex:1;height:1px;background:var(--linha)}
-
-  .qr{display:none;background:#fff;border:1px solid var(--linha);border-radius:18px;padding:20px;text-align:center;margin-bottom:24px}
-  .qr img{width:180px;height:180px;display:block;margin:0 auto 10px}
-  .qr p{margin:0;font-size:14px;color:var(--cinza)}
 
   .passos{background:#fff;border:1px solid var(--linha);border-radius:18px;padding:20px 22px;margin-bottom:24px}
   .passos h2{font-size:16px;margin:0 0 14px;font-weight:700}
@@ -98,12 +130,6 @@
 
   footer{text-align:center;font-size:13px;color:var(--cinza);border-top:1px solid var(--linha);padding-top:20px}
   footer a{color:var(--verde-escuro)}
-
-  @media (min-width:640px){ .qr{display:block} }
-  .qr-duplo{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:10px}
-  .qr-duplo figure{margin:0}
-  .qr-duplo img{width:150px;height:150px;margin:0 auto 6px}
-  .qr-duplo figcaption{font-size:13px;color:var(--cinza)}
 </style>
 </head>
 <body>
@@ -115,7 +141,7 @@
   </header>
 
   <h1>A Guarda inteira,<br>à distância de um toque.</h1>
-  <p class="sub">Comida, supermercado, farmácia, limpeza e favores — entregues em casa.</p>
+  <p class="sub">Comida, supermercado, farmácia, limpeza e favores — entregues em casa. Na App Store e na Google Play.</p>
 
   <div class="oferta">
     <p class="etiqueta">Primeiro pedido</p>
@@ -124,34 +150,26 @@
     <span class="letra">Escreve o código no carrinho. Uma vez por pessoa.</span>
   </div>
 
-  <a id="btn-play" class="btn btn-play"
-     href="https://play.google.com/store/apps/details?id=pt.boraapp.bora">
-    <span>Instalar no Android<small>Grátis · recebe os avisos do pedido</small></span>
-  </a>
+  <div class="lojas">
+    <!-- App Store: aprovada a 2026-09-12, na loja portuguesa desde 2026-09-20 (id 6809954739). -->
+    <a id="btn-appstore" class="btn"
+       href="https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.7c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.02.73c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.44-3.7zM14.1 6c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+      <span>Instalar no iPhone<small>App Store · grátis · recebe os avisos do pedido</small></span>
+    </a>
+    <a id="btn-play" class="btn"
+       href="https://play.google.com/store/apps/details?id=pt.boraapp.bora">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.7 2.2l-.1.1z"/><path d="M16.1 15.6l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1z"/><path d="M16.2 15.5L13 12.3 3.6 21.7c.3.4.9.4 1.5.1l11.1-6.3"/><path d="M16.2 8.9L5.1 2.6c-.6-.4-1.2-.3-1.5.1L13 12.3l3.2-3.4z"/></svg>
+      <span>Instalar no Android<small>Google Play · grátis · recebe os avisos do pedido</small></span>
+    </a>
+  </div>
 
-  <!-- 2026-09-13: a app de iPhone foi aprovada pela Apple a 12/09 (id 6809954739).
-       O botão fica escondido até o JS ler o aparelho: no iPhone passa a primeiro. -->
-  <a id="btn-appstore" class="btn btn-web" hidden
-     href="https://apps.apple.com/pt/app/id6809954739">
-    <span>Instalar no iPhone<small>App Store · grátis · recebe os avisos do pedido</small></span>
-  </a>
-
-  <a id="btn-web" class="btn btn-web" href="https://app.boraguarda.com">
-    <span>Pedir pelo site<small>iPhone ou computador · sem instalar nada</small></span>
-  </a>
+  <p class="site">Sem instalar nada? <a id="btn-web" href="https://app.boraguarda.com">Pedir pelo site</a></p>
 
   <div class="qr">
-    <div class="qr-duplo">
-      <figure>
-        <img src="assets/img/qr-playstore.png" alt="Código QR da app Bora na Google Play" width="150" height="150">
-        <figcaption>Android · Google Play</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/img/qr-appstore.png" alt="Código QR da app Bora na App Store" width="150" height="150">
-        <figcaption>iPhone · App Store</figcaption>
-      </figure>
-    </div>
-    <p>Aponta a câmara do telemóvel para instalar. Código <b>BEMVINDO</b> no primeiro pedido.</p>
+    <img src="assets/img/qr-baixar.png" alt="Código QR: aponta o telemóvel e abre a loja certa" width="220" height="220">
+    <p>Aponta a câmara do telemóvel — abre a App Store ou a Google Play, conforme o aparelho.
+      <span class="morada">boraguarda.com/baixar</span></p>
   </div>
 
   <div class="ou">como funciona</div>
@@ -197,8 +215,9 @@
   var de = p.get('de') || '';
   if (PERMITIDAS.indexOf(de) === -1 && !GRUPO.test(de)) { de = 'directo'; }
 
-  var PLAY = 'https://play.google.com/store/apps/details?id=pt.boraapp.bora';
-  var WEB  = 'https://app.boraguarda.com';
+  var PLAY     = 'https://play.google.com/store/apps/details?id=pt.boraapp.bora';
+  var APPSTORE = 'https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739';
+  var WEB      = 'https://app.boraguarda.com';
 
   // O Install Referrer da Play Store: é assim que a origem sobrevive à
   // instalação e aparece na Play Console. Tem de ir codificado uma vez.
@@ -206,30 +225,23 @@
     'utm_source=' + de + '&utm_medium=bora-redes&utm_campaign=guarda-2026-09');
 
   var bPlay = document.getElementById('btn-play');
+  var bApp  = document.getElementById('btn-appstore');
   var bWeb  = document.getElementById('btn-web');
   bPlay.href = PLAY + '&referrer=' + ref;
+  // A App Store não tem referrer de instalação; a origem fica só na visita.
+  bApp.href  = APPSTORE;
   bWeb.href  = WEB + '?de=' + encodeURIComponent(de);
 
-  // Em Android o botão da Google Play vem primeiro; no iPhone vem o da App
-  // Store (aprovada a 2026-09-12); no computador aparecem as duas lojas e o
-  // site. O site continua sempre visível: é o caminho que funciona em todo o
-  // lado sem instalar nada.
-  var APPSTORE = 'https://apps.apple.com/pt/app/id6809954739';
-  var bApp = document.getElementById('btn-appstore');
-  bApp.href = APPSTORE;
+  // Que aparelho é este. O iPad novo diz "Macintosh" mas tem ecrã táctil — sem
+  // esta segunda condição ia ver os dois botões e o QR como se fosse um PC.
   var ua = navigator.userAgent || '';
   var android = /Android/i.test(ua);
-  var ios = /iPhone|iPad|iPod/i.test(ua);
-  if (!android && ios) {
-    bApp.hidden = false;
-    bApp.className = 'btn btn-play';
-    bApp.parentNode.insertBefore(bApp, bPlay);
-    bPlay.hidden = true;
-    bWeb.querySelector('small').textContent =
-      'Se a App Store disser que ainda não está disponível no teu país, pede por aqui';
-  } else if (!android) {
-    bApp.hidden = false;
-  }
+  var ios = !android && (/iPhone|iPad|iPod/i.test(ua) ||
+            (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1));
+  var aparelho = android ? 'android' : (ios ? 'ios' : 'pc');
+  // O CSS faz o resto: no iPhone esconde a Play, no Android esconde a App
+  // Store, e nos dois esconde o QR (não se aponta o telemóvel a si próprio).
+  document.documentElement.setAttribute('data-aparelho', aparelho);
 
   // Contagem de visitas por origem. Desde 2026-09-07 passa pela função
   // /api/visita em vez de ir direto à base, por uma razão medida nesse dia: o
