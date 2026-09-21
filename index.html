@@ -597,14 +597,22 @@
   <section id="download" class="bg-[#FFF7ED] border-y border-orange-100 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Descarrega o Bora agora</h2>
-      <p class="text-gray-600 mb-10">Aponta a câmara do telemóvel ao QR code ou toca no botão da Play Store.</p>
+      <p class="text-gray-600 mb-10">Aponta a câmara do telemóvel ao QR — abre a App Store ou a Google Play, conforme o aparelho — ou toca na tua loja.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
-        <img src="assets/img/qr-playstore.png" alt="QR code para descarregar o Bora App na Play Store" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md" width="512" height="512">
+        <!-- 2026-09-21: um QR só, o da página /baixar, que manda cada telemóvel para a loja certa.
+             Antes era o QR da Play Store e a frase "iOS brevemente" — a app está na App Store desde 20/09. -->
+        <a href="/baixar?de=site" aria-label="Página de descarga do Bora">
+          <img src="assets/img/qr-baixar.png" alt="QR code para descarregar o Bora App — abre a loja certa no teu telemóvel" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md" width="600" height="600">
+        </a>
         <div class="flex flex-col items-center gap-4">
+          <a href="https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739" class="inline-flex items-center gap-3 bg-black text-white rounded-lg h-16 px-5 border border-gray-700 hover:bg-gray-900 transition" aria-label="Descarregar na App Store">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current" aria-hidden="true"><path d="M16.37 12.7c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.02.73c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.44-3.7zM14.1 6c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+            <span class="text-left leading-tight"><span class="block text-[11px] uppercase tracking-wide opacity-80">Descarregar na</span><span class="block text-xl font-semibold">App Store</span></span>
+          </a>
           <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora">
             <img src="assets/img/google-play-badge.png" alt="Disponível no Google Play" loading="lazy" class="h-16 w-auto" width="646" height="250">
           </a>
-          <p class="text-sm text-gray-500">Disponível para Android. iOS brevemente.</p>
+          <p class="text-sm text-gray-500">Disponível para iPhone e Android. Código <b>BEMVINDO</b> no primeiro pedido.</p>
         </div>
       </div>
     </div>
