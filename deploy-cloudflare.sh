@@ -41,6 +41,10 @@ for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
 # Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
+# /verificar/<token> (motorista TVDE, 2026-09-23): a pagina e a regra que
+# manda qualquer token para ela.
+[ -d verificar ] && cp -r verificar "$STAGE"/verificar
+[ -f _redirects ] && cp _redirects "$STAGE"/_redirects
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
 # provas/ — capturas do trabalho para a Claude.ai ver (noindex na meta,
