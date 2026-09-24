@@ -44,6 +44,10 @@ done
 # /verificar/<token> (motorista TVDE, 2026-09-23): a pagina e a regra que
 # manda qualquer token para ela.
 [ -d verificar ] && cp -r verificar "$STAGE"/verificar
+# /avenca/<token>/ (amostras da avenca Presenca Digital, 2026-09-24): paginas privadas,
+# uma por negocio, com link unico e noindex na meta. Nao estao ligadas de lado nenhum do
+# site: so chega la quem tiver o link.
+[ -d avenca ] && cp -r avenca "$STAGE"/avenca
 [ -f _redirects ] && cp _redirects "$STAGE"/_redirects
 # _headers (Cache-Control das /provas, 2026-09-05): sem esta linha a copia
 # filtrada publicava o site SEM as regras de cache — o Danilo via a versao de
