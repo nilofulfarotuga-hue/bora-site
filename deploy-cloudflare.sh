@@ -45,6 +45,10 @@ done
 # manda qualquer token para ela.
 [ -d verificar ] && cp -r verificar "$STAGE"/verificar
 [ -f _redirects ] && cp _redirects "$STAGE"/_redirects
+# _headers (Cache-Control das /provas, 2026-09-05): sem esta linha a copia
+# filtrada publicava o site SEM as regras de cache — o Danilo via a versao de
+# ontem depois de um deploy novo. (fecho-manha-2026-09-24)
+[ -f _headers ] && cp _headers "$STAGE"/_headers
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
 # provas/ — capturas do trabalho para a Claude.ai ver (noindex na meta,
