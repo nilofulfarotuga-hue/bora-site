@@ -1,0 +1,2 @@
+# /verificar/<token> — pagina publica de verificacao do motorista TVDE (a pagina le o token do endereco).
+/verificar/*  /verificar/index.html  200

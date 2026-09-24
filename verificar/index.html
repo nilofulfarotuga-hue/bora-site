@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verificação de motorista TVDE — Bora</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#16A34A">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<!--
+  Página pública de verificação do ecrã "Mostrar à autoridade" da app do
+  motorista TVDE (Lei 45/2018 revista pela Lei 59/2026).
+  A autoridade lê o QR do telemóvel do motorista e confirma aqui, fora da app,
+  que os dados são os que a Bora tem. Só leitura: RPC verificar_ficha_publica
+  (anon), token de 24 h. Sem NIF, sem morada, sem apólice, sem passageiro.
+  Missão motorista-ficha-legal-2026-09-23.
+-->
+<style>
+  :root{--verde:#16A34A;--laranja:#F97316;--texto:#111827;--texto2:#4B5563;--linha:#E5E7EB}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Arial,sans-serif;background:#fff;color:var(--texto)}
+  header{background:var(--verde);color:#fff;padding:16px 20px;display:flex;gap:12px;align-items:center}
+  header img{width:36px;height:36px;border-radius:8px;background:#fff}
+  header h1{font-size:1.25rem;margin:0;font-weight:800}
+  main{max-width:640px;margin:0 auto;padding:16px 20px 40px}
+  .selo{border-radius:12px;padding:14px 16px;font-weight:700;margin:12px 0}
+  .ok{background:#ECFDF5;color:#065F46;border:1px solid #A7F3D0}
+  .mau{background:#FEF2F2;color:#991B1B;border:1px solid #FECACA}
+  h2{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--verde);margin:22px 0 6px}
+  .l{padding:6px 0;border-bottom:1px solid var(--linha)}
+  .l small{display:block;color:var(--texto2);font-size:.85rem}
+  .l b{font-size:1.1rem}
+  .mat{font-size:2.2rem;font-weight:800;letter-spacing:.12em}
+  .foto{display:flex;gap:14px;align-items:center}
+  .foto img{width:84px;height:84px;border-radius:50%;object-fit:cover;background:#F0FDF4}
+  .doc{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--linha)}
+  .valido{color:#15803D}.a_expirar{color:#B45309}.expirado{color:#B91C1C}.em_falta{color:#6B7280}
+  footer{color:var(--texto2);font-size:.8rem;margin-top:24px}
+</style>
+</head>
+<body>
+<header>
+  <img src="/assets/img/bora_logo.png" alt="Bora">
+  <h1>Verificação de motorista TVDE</h1>
+</header>
+<main id="m"><p>A verificar…</p></main>
+<noscript><main><p>Esta página precisa de JavaScript para confirmar os dados.</p></main></noscript>
+<script>
+(function () {
+  var URL_RPC = 'https://ojykpzwqrtusfeakzrna.supabase.co/rest/v1/rpc/verificar_ficha_publica';
+  // Chave PUBLICÁVEL (a mesma que vai dentro da app). Só abre o que a RLS/RPC deixa: esta RPC.
+  var CHAVE = 'sb_publishable_ylfhSuS2D_JoKmtFY-x6-A_DlOgHhVP';
+  var m = document.getElementById('m');
+
+  function token() {
+    var p = location.pathname.replace(/\/+$/, '').split('/');
+    var t = p[p.length - 1];
+    if (t && t !== 'verificar' && t !== 'index.html') return decodeURIComponent(t);
+    return new URLSearchParams(location.search).get('t') || '';
+  }
+  function esc(s) {
+    return String(s == null ? '—' : s).replace(/[&<>"']/g, function (c) {
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function dia(d) {
+    if (!d) return 'por preencher';
+    var x = String(d).split('-');
+    return x.length === 3 ? x[2] + '/' + x[1] + '/' + x[0] : d;
+  }
+  function hora(iso) {
+    if (!iso) return '—';
+    try {
+      return new Date(iso).toLocaleString('pt-PT', {timeZone: 'Europe/Lisbon', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    } catch (e) { return iso; }
+  }
+  function linha(r, v, cls) { return '<div class="l"><small>' + esc(r) + '</small><b class="' + (cls || '') + '">' + esc(v) + '</b></div>'; }
+  var ESTADO = {valido: 'Válido', a_expirar: 'A expirar', expirado: 'Expirado', em_falta: 'Por preencher'};
+  var ESTADO_VIAGEM = {motorista_atribuido: 'a caminho do passageiro', motorista_a_caminho: 'a caminho do passageiro', motorista_chegou: 'à espera do passageiro', em_andamento: 'com passageiro a bordo', finalizada: 'terminada'};
+
+  var t = token();
+  if (!t) { m.innerHTML = '<div class="selo mau">Falta o código de verificação no endereço.</div>'; return; }
+
+  fetch(URL_RPC, {
+    method: 'POST',
+    headers: {'apikey': CHAVE, 'Authorization': 'Bearer ' + CHAVE, 'Content-Type': 'application/json'},
+    body: JSON.stringify({p_token: t})
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || d.ok !== true) {
+      var motivo = d && d.motivo === 'token_expirado'
+        ? 'Este código expirou (' + esc(hora(d.expirou_em)) + '). Peça ao motorista para reabrir o ecrã na app.'
+        : 'Código de verificação inválido. Os dados mostrados no telemóvel NÃO foram confirmados pela Bora.';
+      m.innerHTML = '<div class="selo mau">' + motivo + '</div>';
+      return;
+    }
+    var mo = d.motorista || {}, v = d.veiculo || {}, o = d.operador, p = d.plataforma || {}, vg = d.viagem;
+    var h = '';
+    h += '<div class="selo ok">Dados confirmados pela Bora. Código gerado a ' + esc(hora(d.gerado_em)) + ', válido até ' + esc(hora(d.expira_em)) + '. Consultado a ' + esc(hora(d.consultado_em)) + '.</div>';
+    h += '<h2>Motorista</h2><div class="foto">' + (mo.foto ? '<img src="' + esc(mo.foto) + '" alt="Fotografia do motorista">' : '') + '<b style="font-size:1.4rem">' + esc(mo.nome) + '</b></div>';
+    h += linha('Certificado de motorista TVDE (IMT)', (mo.tvde_cert_numero || '—') + ' · válido até ' + dia(mo.tvde_cert_validade));
+    h += linha('Carta de condução', (mo.carta_numero || '—') + ' · válida até ' + dia(mo.carta_validade));
+    h += '<h2>Veículo</h2><div class="mat">' + esc(v.matricula) + '</div>';
+    h += linha('Marca / modelo · cor · ano', (v.marca_modelo || '—') + ' · ' + (v.cor || '—') + ' · ' + (v.ano || '—'));
+    h += linha('Dístico TVDE (IMT)', (v.distico_numero || '—') + ' · válido até ' + dia(v.distico_validade));
+    h += linha('Inspeção periódica', 'válida até ' + dia(v.inspecao_validade));
+    h += linha('Seguro', (v.seguro_seguradora || '—') + ' · válido até ' + dia(v.seguro_validade) + ' · cobre passageiros: ' + (v.seguro_cobre_passageiros === true ? 'sim' : v.seguro_cobre_passageiros === false ? 'não' : '—'));
+    h += '<h2>Operador e plataforma</h2>';
+    h += linha('Operador TVDE', o ? (o.nome + ' · licença IMT ' + (o.licenca || '—')) : 'Motorista por conta própria (sem frota)');
+    h += linha('Operador de plataforma', (p.nome || 'Bora') + ' · licença IMT ' + (p.licenca || 'em processo de registo'));
+    h += '<h2>' + (vg && vg.em_curso ? 'Viagem em curso' : 'Última viagem') + '</h2>';
+    h += vg ? linha('Estado · início', (ESTADO_VIAGEM[vg.estado] || vg.estado) + ' · ' + hora(vg.inicio)) : linha('Estado', 'Sem viagens registadas');
+    h += '<h2>Validade dos documentos</h2>';
+    (d.documentos || []).forEach(function (x) {
+      h += '<div class="doc"><span>' + esc(x.rotulo) + '</span><b class="' + esc(x.estado) + '">' + esc(ESTADO[x.estado] || x.estado) + (x.validade ? ' · ' + dia(x.validade) : '') + '</b></div>';
+    });
+    h += '<footer>Página de verificação da Bora, operador de plataforma TVDE. Por privacidade, não mostra NIF, morada, apólice nem dados do passageiro.</footer>';
+    m.innerHTML = h;
+  }).catch(function () {
+    m.innerHTML = '<div class="selo mau">Sem ligação à Bora para confirmar. Tente de novo dentro de momentos.</div>';
+  });
+})();
+</script>
+</body>
+</html>
