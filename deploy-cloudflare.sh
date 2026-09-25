@@ -48,11 +48,15 @@ done
 # uma por negocio, com link unico e noindex na meta. Nao estao ligadas de lado nenhum do
 # site: so chega la quem tiver o link.
 [ -d avenca ] && cp -r avenca "$STAGE"/avenca
-[ -f _redirects ] && cp _redirects "$STAGE"/_redirects
+# _redirects e _headers vao SEM fim de linha do Windows. O Cloudflare Pages le o
+# _redirects linha a linha: com CRLF o estado fica "200", a regra e descartada em
+# silencio, e /verificar/<token> respondia 404 enquanto /verificar/?t=<token> dava 200
+# (apanhado a 24/09/2026). Tirar o  aqui garante isto mesmo que o checkout seja Windows.
+[ -f _redirects ] && tr -d '' < _redirects > "$STAGE"/_redirects
 # _headers (Cache-Control das /provas, 2026-09-05): sem esta linha a copia
 # filtrada publicava o site SEM as regras de cache — o Danilo via a versao de
 # ontem depois de um deploy novo. (fecho-manha-2026-09-24)
-[ -f _headers ] && cp _headers "$STAGE"/_headers
+[ -f _headers ] && tr -d '' < _headers > "$STAGE"/_headers
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
 # provas/ — capturas do trabalho para a Claude.ai ver (noindex na meta,
