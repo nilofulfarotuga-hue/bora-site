@@ -37,7 +37,8 @@ mkdir -p "$STAGE"
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
          viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
          trabalhos.html orcamento.html 404.html \
-         baixar-pagina.html \n         manifest.json robots.txt sitemap.xml; do
+         baixar-pagina.html \
+         manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
 # Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
