@@ -37,13 +37,18 @@ mkdir -p "$STAGE"
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
          viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
          trabalhos.html orcamento.html 404.html \
-         manifest.json robots.txt sitemap.xml; do
+         baixar-pagina.html \n         manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
 # Uma pagina por parceiro (geradas por gerar_paginas.py) + o JSON de origem.
 # /verificar/<token> (motorista TVDE, 2026-09-23): a pagina e a regra que
 # manda qualquer token para ela.
 [ -d verificar ] && cp -r verificar "$STAGE"/verificar
+# functions/ (Cloudflare Pages Functions): /baixar conta a visita no servidor e manda
+# o iPhone para a App Store e o Android para a Google Play (30/09/2026). Sem esta
+# linha a funcao nao e publicada e a contagem morre em silencio (foi o que aconteceu
+# de 23/09 a 30/09: a copia filtrada deixou a pagina de fora).
+[ -d functions ] && cp -r functions "$STAGE"/functions
 # /avenca/<token>/ (amostras da avenca Presenca Digital, 2026-09-24): paginas privadas,
 # uma por negocio, com link unico e noindex na meta. Nao estao ligadas de lado nenhum do
 # site: so chega la quem tiver o link.
