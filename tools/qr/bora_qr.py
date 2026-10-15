@@ -46,6 +46,7 @@ ORIGENS = {
     "pago": "anuncio pago",
     "bio": "link da bio do Instagram / botao da pagina do Facebook",
     "site": "o QR da propria pagina /baixar, para quem esta no computador",
+    "qr-site": "o QR da pagina inicial do site (boraguarda.com, bloco 'Descarrega o Bora agora')",
 }
 
 

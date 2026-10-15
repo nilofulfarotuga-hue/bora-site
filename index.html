@@ -46,15 +46,34 @@
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
+<!-- Selos das lojas (bloco "Descarrega o Bora agora", 15/10/2026): no iPhone a App Store
+     vem primeiro e maior, no Android a Google Play; no computador e sem JS ficam iguais. -->
+<script>
+(function () {
+  try {
+    var u = navigator.userAgent || '', d = 'outro';
+    if (/android/i.test(u)) d = 'android';
+    else if (/iphone|ipad|ipod/i.test(u) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) d = 'ios';
+    document.documentElement.setAttribute('data-aparelho', d);
+  } catch (e) {}
+})();
+</script>
+<style>
+  .selo-loja img { height: 56px; width: auto; display: block; }
+  html[data-aparelho="ios"] .selo-ios, html[data-aparelho="android"] .selo-android { order: -1; }
+  html[data-aparelho="ios"] .selo-ios img, html[data-aparelho="android"] .selo-android img { height: 60px; }
+  html[data-aparelho="ios"] .selo-android img, html[data-aparelho="android"] .selo-ios img { height: 44px; }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   "name": "Bora App",
-  "operatingSystem": "ANDROID",
+  "operatingSystem": "ANDROID, IOS",
   "applicationCategory": "LifestyleApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-  "url": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+  "url": "https://www.boraguarda.com/baixar",
   "areaServed": {
     "@type": "City",
     "name": "Guarda, Portugal"
@@ -115,7 +134,7 @@
          class="topo-porta-web inline-flex items-center justify-center gap-1.5 bg-[#15803D] hover:bg-[#166534] text-white font-bold text-sm sm:text-base px-4 sm:px-5 min-h-[44px] rounded-full transition shadow-md shadow-green-900/25 whitespace-nowrap">
         <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
       </a>
-      <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener"
+      <a href="https://www.boraguarda.com/baixar?de=site-inicio" target="_blank" rel="noopener"
          class="hidden lg:inline-flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-[#431407] font-bold text-sm sm:text-base px-4 sm:px-5 min-h-[44px] rounded-full transition whitespace-nowrap">
         <i data-lucide="download" class="w-4 h-4"></i> Descarregar a app
       </a>
@@ -144,7 +163,7 @@
     <a href="https://app.boraguarda.com" class="text-gray-500">Entrar</a>
     <!-- As duas portas, do mesmo tamanho. Nenhuma e secundaria. -->
     <a href="https://app.boraguarda.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#15803D] text-white font-bold px-5 py-3 min-h-[52px] rounded-full mt-2">🛍️ Pedir pelo site</a>
-    <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#F97316] text-[#431407] font-bold px-5 py-3 min-h-[52px] rounded-full">📲 Descarregar a app</a>
+    <a href="https://www.boraguarda.com/baixar?de=site-inicio" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#F97316] text-[#431407] font-bold px-5 py-3 min-h-[52px] rounded-full">📲 Descarregar a app</a>
   </nav>
 </div>
 
@@ -234,7 +253,7 @@
           <span class="cine-kicker">07 · Bora</span>
           <h2 class="cine-title"><span class="cine-word accent">Bora.</span> <span class="cine-word">Uma</span> <span class="cine-word">app,</span> <span class="cine-word">a</span> <span class="cine-word">cidade</span> <span class="cine-word">inteira.</span></h2>
           <div class="cine-cta">
-            <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" class="cine-btn cine-btn-primary">
+            <a href="https://www.boraguarda.com/baixar?de=site-inicio" class="cine-btn cine-btn-primary">
               <i data-lucide="smartphone" class="w-5 h-5"></i> Descarregar grátis
             </a>
             <a href="index.html#download" class="cine-btn cine-btn-ghost">
@@ -542,7 +561,7 @@
             <i data-lucide="download" class="w-8 h-8 text-[#16A34A]"></i>
           </div>
           <h3 class="font-bold text-lg mb-2">1. Descarrega</h3>
-          <p class="text-gray-600 text-sm">Instala o Bora grátis na Play Store.</p>
+          <p class="text-gray-600 text-sm">Instala o Bora grátis na App Store ou no Google Play.</p>
         </div>
         <div class="text-center px-6">
           <div class="w-16 h-16 rounded-full bg-[#16A34A]/10 flex items-center justify-center mx-auto mb-5">
@@ -575,18 +594,18 @@
              esta no computador, e a web em letra miudinha mandava-as embora. -->
         <div class="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto text-left">
           <div class="flex flex-col gap-2">
-            <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener"
+            <a href="https://www.boraguarda.com/baixar?de=site-inicio" target="_blank" rel="noopener"
                class="inline-flex items-center justify-center gap-2 bg-white text-[#15803D] hover:bg-white/90 font-bold px-6 py-4 min-h-[52px] rounded-full transition">
               <i data-lucide="download" class="w-4 h-4"></i> Descarregar a app
             </a>
-            <span class="text-sm text-white/85 text-center">Android. Instala e recebe os avisos do pedido.</span>
+            <span class="text-sm text-white/85 text-center">iPhone e Android. Instala e recebe os avisos do pedido.</span>
           </div>
           <div class="flex flex-col gap-2">
             <a href="https://app.boraguarda.com" target="_blank" rel="noopener"
                class="inline-flex items-center justify-center gap-2 bg-white text-[#15803D] hover:bg-white/90 font-bold px-6 py-4 min-h-[52px] rounded-full transition">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
             </a>
-            <span class="text-sm text-white/85 text-center">Funciona no iPhone e no computador, sem instalar nada.</span>
+            <span class="text-sm text-white/85 text-center">No computador, sem instalar nada.</span>
           </div>
         </div>
       </div>
@@ -599,20 +618,25 @@
       <h2 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-4">Descarrega o Bora agora</h2>
       <p class="text-gray-600 mb-10">Aponta a câmara do telemóvel ao QR — abre a App Store ou a Google Play, conforme o aparelho — ou toca na tua loja.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
-        <!-- 2026-09-21: um QR só, o da página /baixar, que manda cada telemóvel para a loja certa.
-             Antes era o QR da Play Store e a frase "iOS brevemente" — a app está na App Store desde 20/09. -->
-        <a href="/baixar?de=site" aria-label="Página de descarga do Bora">
-          <img src="assets/img/qr-baixar.png" alt="QR code para descarregar o Bora App — abre a loja certa no teu telemóvel" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md" width="600" height="600">
+        <!-- 2026-10-15: um QR só, para /baixar?de=qr-site (bora-site/tools/qr/bora_qr.py),
+             que manda cada telemóvel para a loja certa. Antes era um QR só da loja Android e uma
+             frase a dizer que o iPhone vinha mais tarde — a app está na App Store desde 20/09. -->
+        <a href="https://www.boraguarda.com/baixar?de=site-inicio" aria-label="Página de descarga do Bora">
+          <img src="assets/img/qr-baixar-site.png" alt="QR code para descarregar o Bora App — abre a App Store no iPhone e a Google Play no Android" loading="lazy" class="w-40 h-40 bg-white p-3 rounded-2xl shadow-md" width="708" height="708">
         </a>
         <div class="flex flex-col items-center gap-4">
-          <a href="https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739" class="inline-flex items-center gap-3 bg-black text-white rounded-lg h-16 px-5 border border-gray-700 hover:bg-gray-900 transition" aria-label="Descarregar na App Store">
-            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current" aria-hidden="true"><path d="M16.37 12.7c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.02.73c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.44-3.7zM14.1 6c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
-            <span class="text-left leading-tight"><span class="block text-[11px] uppercase tracking-wide opacity-80">Descarregar na</span><span class="block text-xl font-semibold">App Store</span></span>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=pt.boraapp.bora">
-            <img src="assets/img/google-play-badge.png" alt="Disponível no Google Play" loading="lazy" class="h-16 w-auto" width="646" height="250">
-          </a>
-          <p class="text-sm text-gray-500">Disponível para iPhone e Android. Código <b>BEMVINDO</b> no primeiro pedido.</p>
+          <!-- Os dois selos oficiais, lado a lado. No telemóvel, o da loja do aparelho
+               vem primeiro e maior (data-aparelho, no <head>); no computador ficam iguais.
+               Sem JavaScript ficam os dois iguais e os dois funcionam. -->
+          <div class="lojas-selos flex flex-wrap items-center justify-center gap-3">
+            <a class="selo-loja selo-ios" href="https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739" aria-label="Descarregar na App Store">
+              <img src="assets/img/app-store-badge-pt.svg" alt="Descarregar na App Store" loading="lazy" width="168" height="56">
+            </a>
+            <a class="selo-loja selo-android" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" aria-label="Obter no Google Play">
+              <img src="assets/img/google-play-badge-pt.png" alt="Obter no Google Play" loading="lazy" width="188" height="56">
+            </a>
+          </div>
+          <p class="text-sm text-gray-500">Disponível para iPhone e Android.</p>
         </div>
       </div>
     </div>
@@ -696,11 +720,11 @@
      Cicatriz de 28/08: um botao grande da Play Store com a web em letra
      miudinha por baixo mandava embora metade das pessoas, que anda de iPhone. -->
 <nav class="portas-fixas" aria-label="Pedir pelo Bora">
-  <a class="p-app" href="https://play.google.com/store/apps/details?id=pt.boraapp.bora" target="_blank" rel="noopener">
-    Descarregar a app<small>Android · recebe os avisos</small>
+  <a class="p-app" href="https://www.boraguarda.com/baixar?de=site-inicio" target="_blank" rel="noopener">
+    Descarregar a app<small>iPhone e Android</small>
   </a>
   <a class="p-web" href="https://app.boraguarda.com" target="_blank" rel="noopener">
-    Pedir pelo site<small>iPhone e computador · sem instalar</small>
+    Pedir pelo site<small>no computador · sem instalar</small>
   </a>
 </nav>
 
