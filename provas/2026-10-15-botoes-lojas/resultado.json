@@ -1,0 +1,628 @@
+{
+ "base": "https://boraguarda.com",
+ "aparelhos": {
+  "iphone15": {
+   "plataforma": "ios",
+   "paginas": {
+    "inicio": {
+     "url": "https://boraguarda.com/",
+     "cliques": [
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar grátis",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-inicio-clique1.jpg",
+       "aba_final": "https://boraguarda.com/"
+      },
+      {
+       "i": 3,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-inicio-clique2.jpg",
+       "aba_final": ""
+      },
+      {
+       "i": 4,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Página de descarga do Bora",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-inicio-clique3.jpg",
+       "aba_final": "https://boraguarda.com/"
+      },
+      {
+       "i": 5,
+       "href": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "texto": "Descarregar na App Store",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-inicio-clique4.jpg",
+       "aba_final": "https://boraguarda.com/"
+      },
+      {
+       "i": 6,
+       "href": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+       "texto": "Obter no Google Play",
+       "esperado": "play",
+       "nota": "selo da outra loja — não testado"
+      },
+      {
+       "i": 7,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app iPhone e Android",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-inicio-clique6.jpg",
+       "aba_final": ""
+      }
+     ],
+     "data_aparelho": "ios",
+     "selos": [
+      {
+       "selo": "selo-ios",
+       "x": 27,
+       "y": 518,
+       "altura": 60,
+       "largura": 179
+      },
+      {
+       "selo": "selo-android",
+       "x": 218,
+       "y": 526,
+       "altura": 44,
+       "largura": 148
+      }
+     ],
+     "qr_src": "assets/img/qr-baixar-site.png",
+     "texto_brevemente": 0
+    },
+    "entregas": {
+     "url": "https://boraguarda.com/entregas",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-entregas-clique1.jpg",
+       "aba_final": "https://boraguarda.com/entregas"
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar o Bora",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-entregas-clique2.jpg",
+       "aba_final": "https://boraguarda.com/entregas"
+      }
+     ]
+    },
+    "viagens": {
+     "url": "https://boraguarda.com/viagens",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-viagens-clique1.jpg",
+       "aba_final": "https://boraguarda.com/viagens"
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar a app",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-viagens-clique2.jpg",
+       "aba_final": "https://boraguarda.com/viagens"
+      },
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar o Bora",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739"
+       ],
+       "captura": "iphone15-viagens-clique3.jpg",
+       "aba_final": "https://boraguarda.com/viagens"
+      }
+     ]
+    }
+   }
+  },
+  "pixel7": {
+   "plataforma": "android",
+   "paginas": {
+    "inicio": {
+     "url": "https://boraguarda.com/",
+     "cliques": [
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar grátis",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-inicio-clique1.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 3,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-inicio-clique2.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 4,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Página de descarga do Bora",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-inicio-clique3.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 5,
+       "href": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "texto": "Descarregar na App Store",
+       "esperado": "appstore",
+       "nota": "selo da outra loja — não testado"
+      },
+      {
+       "i": 6,
+       "href": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+       "texto": "Obter no Google Play",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+       "cadeia": [
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-inicio-clique5.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
+      },
+      {
+       "i": 7,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app iPhone e Android",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-inicio-clique6.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      }
+     ],
+     "data_aparelho": "android",
+     "selos": [
+      {
+       "selo": "selo-ios",
+       "x": 247,
+       "y": 598,
+       "altura": 44,
+       "largura": 132
+      },
+      {
+       "selo": "selo-android",
+       "x": 33,
+       "y": 590,
+       "altura": 60,
+       "largura": 202
+      }
+     ],
+     "qr_src": "assets/img/qr-baixar-site.png",
+     "texto_brevemente": 0
+    },
+    "entregas": {
+     "url": "https://boraguarda.com/entregas",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-entregas-clique1.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar o Bora",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-entregas-clique2.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      }
+     ]
+    },
+    "viagens": {
+     "url": "https://boraguarda.com/viagens",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-viagens-clique1.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar a app",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-viagens-clique2.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      },
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar o Bora",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens",
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09",
+        "intent://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&pcampaignid=web_auto_redirect&web_logged_in=0&redirect_entry_point=dp"
+       ],
+       "captura": "pixel7-viagens-clique3.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora&referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09"
+      }
+     ]
+    }
+   }
+  },
+  "computador": {
+   "plataforma": "outro",
+   "paginas": {
+    "inicio": {
+     "url": "https://boraguarda.com/",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio"
+       ],
+       "captura": "computador-inicio-clique1.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar grátis",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio"
+       ],
+       "captura": "computador-inicio-clique2.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 3,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Descarregar a app",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio"
+       ],
+       "captura": "computador-inicio-clique3.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 4,
+       "href": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "texto": "Página de descarga do Bora",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-inicio"
+       ],
+       "captura": "computador-inicio-clique4.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-inicio",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 5,
+       "href": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "texto": "Descarregar na App Store",
+       "esperado": "appstore",
+       "obtido": "appstore",
+       "ok": true,
+       "destino": "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+       "cadeia": [
+        "https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739",
+        "https://apps.apple.com/pt/app/bora-entregas-e-servi%C3%A7os/id6809954739"
+       ],
+       "captura": "computador-inicio-clique5.jpg",
+       "aba_final": "https://apps.apple.com/pt/app/bora-entregas-e-servi%C3%A7os/id6809954739"
+      },
+      {
+       "i": 6,
+       "href": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+       "texto": "Obter no Google Play",
+       "esperado": "play",
+       "obtido": "play",
+       "ok": true,
+       "destino": "https://play.google.com/store/apps/details?id=pt.boraapp.bora",
+       "cadeia": [
+        "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
+       ],
+       "captura": "computador-inicio-clique6.jpg",
+       "aba_final": "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
+      }
+     ],
+     "data_aparelho": "outro",
+     "selos": [
+      {
+       "selo": "selo-ios",
+       "x": 599,
+       "y": 462,
+       "altura": 56,
+       "largura": 168
+      },
+      {
+       "selo": "selo-android",
+       "x": 779,
+       "y": 462,
+       "altura": 56,
+       "largura": 188
+      }
+     ],
+     "qr_src": "assets/img/qr-baixar-site.png",
+     "texto_brevemente": 0
+    },
+    "entregas": {
+     "url": "https://boraguarda.com/entregas",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas"
+       ],
+       "captura": "computador-entregas-clique1.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "texto": "Instalar o Bora",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-entregas"
+       ],
+       "captura": "computador-entregas-clique2.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-entregas",
+       "appstore_visivel": true,
+       "play_visivel": true
+      }
+     ]
+    },
+    "viagens": {
+     "url": "https://boraguarda.com/viagens",
+     "cliques": [
+      {
+       "i": 0,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens"
+       ],
+       "captura": "computador-viagens-clique1.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 1,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar a app",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens"
+       ],
+       "captura": "computador-viagens-clique2.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "appstore_visivel": true,
+       "play_visivel": true
+      },
+      {
+       "i": 2,
+       "href": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "texto": "Instalar o Bora",
+       "esperado": "pagina-baixar",
+       "obtido": "pagina-baixar",
+       "ok": true,
+       "destino": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "cadeia": [
+        "https://www.boraguarda.com/baixar?de=site-viagens"
+       ],
+       "captura": "computador-viagens-clique3.jpg",
+       "aba_final": "https://www.boraguarda.com/baixar?de=site-viagens",
+       "appstore_visivel": true,
+       "play_visivel": true
+      }
+     ]
+    }
+   }
+  }
+ },
+ "falhas": 0
+}
