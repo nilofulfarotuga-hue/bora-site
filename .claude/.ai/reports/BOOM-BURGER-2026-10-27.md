@@ -2,6 +2,21 @@
 
 Missão `boom-burger-2026-10-27` · fluxo `e2e_log` com o mesmo nome · Claude Code no PC.
 
+## Atualização da noite (adendos 2 a 6)
+
+Fiz isto: os preços do dono estão nos 56 produtos (Clássico 10,90 € na loja dá 12,72 € na app) e o site mostra os
+mesmos. A demonstração de 28/10 às 11:00 está pronta e provada com seis pedidos de ensaio, pela máquina e pela app
+na web, todos fechados sem custo e sem nada em dinheiro, faturas, fechos ou tokens. A janela (10:30–12:00) desliga-se
+sozinha. O telemóvel 1 usa a página /demo/ deste site (noindex). As sete bebidas sem foto têm agora a foto oficial do
+fabricante (origem em `origem/ORIGEM.md`). Os consertos da app (catálogo a dobrar, pausa do dia, feriados, dados
+fiscais e termos do parceiro) estão no ramo `consertos-boom-2026-10-27` do bora_app, por publicar.
+
+Falta isto: as fotos das quatro sobremesas novas (pedir ao dono), o preço do King Elvis, os dados fiscais do dono
+e a aprovação dele para tirar o "Em breve". O sinal das reservas por loja mexe em pagamento: está só preparado.
+
+O relatório completo, em português simples, está no livro: página `relatorio-boom-burger-2026-10-27`.
+O que se segue abaixo é o relatório da manhã, mantido como estava.
+
 ## Fiz isto
 
 A loja da Boom! Burger já existe na app, como parceira e com a faixa "Em breve". Tem o logótipo, a capa

@@ -80,3 +80,21 @@ ATENÇÃO: o horário lá ("Domingos jantares e Segunda-feira dia todo" encerrad
 
 - Facebook: https://www.facebook.com/people/Boom-Burger-Hamburgueria-Artesanal/61571813637975/ (VisitGuarda e Google).
 - Instagram: não encontrado em fonte nenhuma (VisitGuarda tem o ícone mas sem endereço). Não se inventa.
+
+## Fabricantes (adendo 3, F6 — 27/10/2026 ~19:40)
+
+Bebidas sem foto do dono: foto OFICIAL do fabricante, descarregada do site dele, sem alterar o produto
+(os PNG são transparentes: na app leva fundo branco, como as outras bebidas). Sem pessoas.
+
+| Ficheiro | Tamanho | Fonte oficial | Produto |
+|---|---|---|---|
+| fabricante/cervejaletra-letra-a.png | 800×1020 | https://cervejaletra.pt/product/letra-a/ | Cerveja Letra A (Blonde Ale) |
+| fabricante/cervejaletra-letra-b.png | 800×1020 | https://cervejaletra.pt/product/letra-b/ | Cerveja Letra B (Bohemian Pilsner) |
+| fabricante/cervejaletra-letra-c.png | 800×1020 | https://cervejaletra.pt/product/letra-c/ | Cerveja Letra C (Oatmeal Stout) |
+| fabricante/cervejaletra-letra-d.png | 800×1020 | https://cervejaletra.pt/product/letra-d/ | Cerveja Letra D (Red Ale) |
+| fabricante/cervejaletra-letra-e.png | 800×1020 | https://cervejaletra.pt/product/letra-e/ | Cerveja Letra E (Belgian Dark Strong Ale) |
+| fabricante/cervejaletra-letra-f.png | 800×1020 | https://cervejaletra.pt/product/letra-f/ | Cerveja Letra F (American IPA) |
+| fabricante/superbockgroup-pedras-salgadas-25cl.png | 1080×1920 | https://superbockgroup.com/produtos/pedras-salgadas/ | Água das Pedras (Pedras Salgadas 25 cl, vidro) |
+
+Sobremesas (4): não há foto no WhatsApp do dono, nem na Glovo; a página pública de Facebook da Boom sem sessão só
+mostra 8 miniaturas (hambúrgueres e um aviso de férias). Ficam para pedir ao dono na visita de 28/10.
