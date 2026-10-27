@@ -3,7 +3,7 @@
 > Escrito a 2026-08-29 na missão `site-premio-montra-bora`.
 > Peça irmã da skill `site-premio` (o manual) e do `tools/fiscal-visual/` (o crítico).
 
-Treze componentes isolados. Cada um num ficheiro, cada um com demo própria, cada um com um
+Catorze componentes isolados. Cada um num ficheiro, cada um com demo própria, cada um com um
 comentário no topo a dizer **para que serve, quando não usar, e que erro real o originou**.
 
 **Sem frameworks.** HTML, CSS e JavaScript puro. Um componente que obrigue a instalar
@@ -14,7 +14,7 @@ ferramenta interna, como o `tools/`.
 
 ---
 
-## Os treze
+## Os catorze
 
 | # | Ficheiro | O que faz |
 |---|---|---|
@@ -31,12 +31,13 @@ ferramenta interna, como o `tools/`.
 | 11 | `11-heroi-video.html` | Vídeo real em fundo, sem som, com poster real e queda para imagem fixa. |
 | 12 | `12-parallax-camadas.html` | Fundo, meio e frente a velocidades diferentes. `translate3d`, nunca `background-attachment`. |
 | 13 | `13-previsualizacao-protegida.html` | Marca de água em canvas + o caminho de servidor que protege a sério. **Base do Nível 4.** |
+| 14 | `14-camadas-reais.html` | A foto REAL do produto recortada e partida nas camadas verdadeiras (pão pelo contorno, recheio inteiro) junta-se ao descer. Ferramenta: `tools/camadas/fatiar.py`. **Elemento assinatura** (Boom! Burger, 27/10/2026). |
 
 Ver todos de uma vez: abre `index.html` desta pasta.
 
 ---
 
-## As regras que valem para os treze
+## As regras que valem para os catorze
 
 ### 1. `prefers-reduced-motion: reduce` respeitado
 Quem tem essa preferência ligada **vê tudo, sem movimento**. Não vê menos conteúdo — vê o

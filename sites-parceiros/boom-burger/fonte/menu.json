@@ -1,0 +1,483 @@
+{
+ "gerado_em": "2026-10-27 09:27",
+ "com_precos": false,
+ "categorias": [
+  {
+   "id": "hamburgueres",
+   "nome": "Hambúrgueres",
+   "produtos": [
+    {
+     "id": "boom-bombastico",
+     "nome": "Boom! Bombástico",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, agrião, tomate, queijo edam, bacon e ovo. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": true,
+     "alcool": false,
+     "foto": "boom-bombastico"
+    },
+    {
+     "id": "boom-brie-fan",
+     "nome": "Boom! Brie Fan",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate seco, queijo brie, cebola caramelizada, nozes e molho mostarda e mel. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": true,
+     "alcool": false,
+     "foto": "boom-brie-fan"
+    },
+    {
+     "id": "boom-duplo-smash",
+     "nome": "Boom! Duplo Smash",
+     "desc": "Pão brioche, dupla carne smash de novilho, bacon, cebola roxa, picles de pepino e molho queijo cheddar. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": true,
+     "alcool": false,
+     "foto": "boom-duplo-smash"
+    },
+    {
+     "id": "boom-terra-e-mar-hamburguer-mes-outubro",
+     "nome": "Boom! Terra e Mar",
+     "desc": "Hambúrguer do mês (outubro). Pão brioche de cebola, maionese caseira de alho e ervas, alface iceberg em juliana, cebola roxa em juliana, carne novilho 160gr, queijo flamengo cremoso, camarão salteado ao alho, cebolinho picado",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-terra-e-mar-hamburguer-mes-outubro"
+    },
+    {
+     "id": "boom-kamikaze",
+     "nome": "Boom! Kamikaze",
+     "desc": "Pão brioche, 2x 160gr carne novilho, alface, tomate, picles de pepino, 2x queijo cheddar, 4x bacon, aros de cebola e ovo estrelado. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-kamikaze"
+    },
+    {
+     "id": "boom-the-king-elvis",
+     "nome": "Boom! The King Elvis",
+     "desc": "Diz a lenda que Elvis Presley cruzou os EUA no seu jato privado, a meio da noite, só para comer a sua sanduíche favorita. Não precisas de um avião para provar essa lenda: nós recriámo-la num hambúrguer épico que vai desafiar o teu paladar! Pão brioche de batata doce, alface iceberg, carne smash de novilho, manteiga de amendoim, bacon grelhado, chutney de Mirtilo, molho cheddar e cebola crocante. Acompanha batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-the-king-elvis"
+    },
+    {
+     "id": "boom-portobello",
+     "nome": "Boom! Portobello",
+     "desc": "Pão de feijão preto, agrião, 160 g de carne de novilho, queijo provolone fumado, bacon, cogumelo portobello salteado, cebola grelhada e molho de trufa negra. Inclui batata frita artesanal e maionese da casa",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-portobello"
+    },
+    {
+     "id": "boom-burguesinha",
+     "nome": "Boom! Burguesinha",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, queijo edam, fiambre, linguiça, salsicha, ovo estrelado e molho francesinha. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-burguesinha"
+    },
+    {
+     "id": "boom-cheddar-lovers",
+     "nome": "Boom! Cheddar Lovers",
+     "desc": "Pão brioche, 160gr carne novilho, tomate, bacon, molho cheddar e cebola frita. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-cheddar-lovers"
+    },
+    {
+     "id": "boom-serra-da-estrela",
+     "nome": "Boom! Serra da Estrela",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate grelhado, cebola roxa grelhada, queijo da serra e chutney de abóbora. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-serra-da-estrela"
+    },
+    {
+     "id": "boom-chicken-breast",
+     "nome": "Boom! Chicken Breast",
+     "desc": "Pão de sementes caseiro, 120gr peito de frango grelhado, alface, tomate, queijo edam e aros de cebola. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-chicken-breast"
+    },
+    {
+     "id": "boom-camone",
+     "nome": "Boom! Camone",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, tomate, picles de pepino, bacon, queijo cheddar, aros de cebola e molho BBQ. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-camone"
+    },
+    {
+     "id": "boom-crispy-chicken",
+     "nome": "Boom! Crispy Chicken",
+     "desc": "Pão brioche, peito de frango panado crocante, queijo edam, alface iceberg, cebola roxa, tomate, molho mostarda e mel. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-crispy-chicken"
+    },
+    {
+     "id": "boom-veggie-beyond",
+     "nome": "Boom! Veggie Beyond",
+     "desc": "Carne proteína de ervilha beyond, alface, tomate, queijo edam e cogumelos salteados. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-veggie-beyond"
+    },
+    {
+     "id": "boom-classico",
+     "nome": "Boom! Clássico",
+     "desc": "Pão de sementes caseiro, 160gr carne novilho, alface, tomate e queijo edam. Inclui batata frita artesanal e maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-classico"
+    }
+   ]
+  },
+  {
+   "id": "entradas",
+   "nome": "Entradas",
+   "produtos": [
+    {
+     "id": "boom-asas-de-frango-com-molho-bbq",
+     "nome": "Asas de frango com molho BBQ",
+     "desc": "8 unidades",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-asas-de-frango-com-molho-bbq"
+    },
+    {
+     "id": "boom-batata-gulosa",
+     "nome": "Batata gulosa",
+     "desc": "Batata com molho cheddar, bacon e cebola frita",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-batata-gulosa"
+    },
+    {
+     "id": "boom-bites-crocantes-peito-de-frango",
+     "nome": "Bites crocantes peito de frango",
+     "desc": "Pedaços crocantes panados de peito de frango, acompanhados com maionese de malagueta e maionese da casa",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-bites-crocantes-peito-de-frango"
+    },
+    {
+     "id": "boom-tequenhos-palitos-de-queijo",
+     "nome": "Tequeños — palitos de queijo",
+     "desc": "Palitos de queijo com massa mãe",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-tequenhos-palitos-de-queijo"
+    },
+    {
+     "id": "boom-cogumelos-frescos-salteados",
+     "nome": "Cogumelos Frescos salteados",
+     "desc": "Cogumelos frescos salteados em flor de sal",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-cogumelos-frescos-salteados"
+    },
+    {
+     "id": "boom-pimentos-padron-frescos",
+     "nome": "Pimentos Pádron frescos",
+     "desc": "Salteados em brandy e especiarias",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-pimentos-padron-frescos"
+    },
+    {
+     "id": "boom-bolinhas-alheira-de-mirandela",
+     "nome": "Bolinhas alheira de Mirandela",
+     "desc": "4 unidades",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-bolinhas-alheira-de-mirandela"
+    },
+    {
+     "id": "boom-bolo-do-caco-com-manteiga-de-alho",
+     "nome": "Bolo do caco com manteiga de alho",
+     "desc": "Bolo do caco com manteiga de alho caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-bolo-do-caco-com-manteiga-de-alho"
+    }
+   ]
+  },
+  {
+   "id": "traquinas",
+   "nome": "Menu Traquinas",
+   "produtos": [
+    {
+     "id": "boom-nuggets-de-frango",
+     "nome": "Nuggets de frango",
+     "desc": "Nuggets de frango acompanhados com batata frita artesanal",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-nuggets-de-frango"
+    }
+   ]
+  },
+  {
+   "id": "sobremesas",
+   "nome": "Sobremesas",
+   "produtos": [
+    {
+     "id": "boom-crumble-maca-c-caramelo-caseiro",
+     "nome": "Crumble de maçã com caramelo caseiro",
+     "desc": "Tarte crumble maçã com caramelo caseiro",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-crumble-maca-c-caramelo-caseiro"
+    },
+    {
+     "id": "boom-cheesecake-frutos-vermelhos",
+     "nome": "Cheesecake Frutos Vermelhos",
+     "desc": "Cheescake caseiro de frutos vermelhos",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-cheesecake-frutos-vermelhos"
+    }
+   ]
+  },
+  {
+   "id": "bebidas",
+   "nome": "Bebidas e cervejas",
+   "produtos": [
+    {
+     "id": "boom-franziskaner",
+     "nome": "Franziskaner",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-franziskaner"
+    },
+    {
+     "id": "boom-desperados",
+     "nome": "Desperados",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-desperados"
+    },
+    {
+     "id": "boom-bandida-pomar-maca-sidra",
+     "nome": "Bandida Pomar Maçã Sidra",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-bandida-pomar-maca-sidra"
+    },
+    {
+     "id": "boom-bandida-pomar-frutos-vermelhos-sidra",
+     "nome": "Bandida Pomar Frutos Vermelhos Sidra",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-bandida-pomar-frutos-vermelhos-sidra"
+    },
+    {
+     "id": "boom-heineken-zero-alcool",
+     "nome": "Heineken Zero Álcool",
+     "desc": "Heineken zero",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-heineken-zero-alcool"
+    },
+    {
+     "id": "boom-super-bock-stout",
+     "nome": "Super Bock Stout",
+     "desc": "Stout super",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-super-bock-stout"
+    },
+    {
+     "id": "boom-coca-cola",
+     "nome": "Coca-Cola",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-coca-cola"
+    },
+    {
+     "id": "boom-coca-cola-zero",
+     "nome": "Coca-Cola Zero",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-coca-cola-zero"
+    },
+    {
+     "id": "boom-sprite",
+     "nome": "Sprite",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-sprite"
+    },
+    {
+     "id": "boom-fanta-laranja",
+     "nome": "Fanta Laranja",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-fanta-laranja"
+    },
+    {
+     "id": "boom-ice-tea-limao",
+     "nome": "Ice Tea Limão",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-ice-tea-limao"
+    },
+    {
+     "id": "boom-ice-tea-pessego",
+     "nome": "Ice Tea Pêssego",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-ice-tea-pessego"
+    },
+    {
+     "id": "boom-ice-tea-manga",
+     "nome": "Ice Tea Manga",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-ice-tea-manga"
+    },
+    {
+     "id": "boom-compal-laranja",
+     "nome": "Compal Laranja",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-compal-laranja"
+    },
+    {
+     "id": "boom-compal-maca",
+     "nome": "Compal Maçã",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-compal-maca"
+    },
+    {
+     "id": "boom-super-bock-0-33",
+     "nome": "Super Bock 0,33 L",
+     "desc": "Cerveja",
+     "preco": null,
+     "popular": false,
+     "alcool": true,
+     "foto": "boom-super-bock-0-33"
+    },
+    {
+     "id": "boom-fanta-guarana",
+     "nome": "Fanta Guarana",
+     "desc": "Refrigerante Fanta guarana",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-fanta-guarana"
+    },
+    {
+     "id": "boom-agua-alardo-0-33",
+     "nome": "Água Alardo 0,33 L",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-agua-alardo-0-33"
+    }
+   ]
+  },
+  {
+   "id": "acompanhamentos",
+   "nome": "Acompanhamentos e molhos",
+   "produtos": [
+    {
+     "id": "boom-dose-batata-doce",
+     "nome": "Dose de batata doce",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-dose-batata-doce"
+    },
+    {
+     "id": "boom-molho-cheddar",
+     "nome": "Molho cheddar (300 g)",
+     "desc": "300gr",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-molho-cheddar"
+    },
+    {
+     "id": "boom-dose-batata-artesanal",
+     "nome": "Dose de batata frita artesanal",
+     "desc": "",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-dose-batata-artesanal"
+    },
+    {
+     "id": "boom-maionese-caseira-extra",
+     "nome": "Maionese caseira",
+     "desc": "Maionese caseira",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-maionese-caseira-extra"
+    },
+    {
+     "id": "boom-maionese-caseira-malagueta-picante",
+     "nome": "Maionese de malagueta picante",
+     "desc": "Maionese malagueta seca picante",
+     "preco": null,
+     "popular": false,
+     "alcool": false,
+     "foto": "boom-maionese-caseira-malagueta-picante"
+    }
+   ]
+  }
+ ]
+}

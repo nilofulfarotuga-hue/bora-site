@@ -1,0 +1,998 @@
+{
+ "heroi": {
+  "larguras": [
+   800,
+   1200,
+   1600
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 07:36 (wa-11, Boom! Duplo Smash)"
+ },
+ "fecho-portobello": {
+  "larguras": [
+   600,
+   900
+  ],
+  "w": 1054,
+  "h": 728,
+  "origem": "WhatsApp do dono 27/10 07:36 (wa-20, Boom! Portobello)"
+ },
+ "casa": {
+  "larguras": [
+   800,
+   1200
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 07:36 (wa-13, Boom! Serra da Estrela)"
+ },
+ "visita": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 07:32 (wa-05, Bolo do caco com manteiga de alho)"
+ },
+ "galeria-1": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 2048,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10 (wa-03.jpg)",
+  "alt": "Asas de frango com molho BBQ"
+ },
+ "galeria-2": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 (wa-04.jpg)",
+  "alt": "Batata gulosa"
+ },
+ "galeria-3": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 (wa-17.jpg)",
+  "alt": "Boom! Kamikaze"
+ },
+ "galeria-4": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10 (wa-02.jpg)",
+  "alt": "Cogumelos frescos salteados"
+ },
+ "galeria-5": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10 (wa-09.jpg)",
+  "alt": "Boom! Cheddar Lovers"
+ },
+ "galeria-6": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10 (wa-06.jpg)",
+  "alt": "Pimentos Padrón"
+ },
+ "galeria-7": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 1383,
+  "h": 1600,
+  "origem": "WhatsApp do dono 27/10 (wa-22.jpg)",
+  "alt": "Tequeños — palitos de queijo"
+ },
+ "galeria-8": {
+  "larguras": [
+   600,
+   1000
+  ],
+  "w": 2048,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10 (wa-08.jpg)",
+  "alt": "Boom! Burguesinha"
+ },
+ "p-boom-bombastico": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-18.jpg)"
+ },
+ "c-boom-bombastico": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-18.jpg)"
+ },
+ "p-boom-brie-fan": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-15.jpg)"
+ },
+ "c-boom-brie-fan": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-15.jpg)"
+ },
+ "p-boom-duplo-smash": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-11.jpg)"
+ },
+ "c-boom-duplo-smash": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-11.jpg)"
+ },
+ "p-boom-terra-e-mar-hamburguer-mes-outubro": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1086,
+  "h": 1086,
+  "origem": "Glovo do dono, loja 539100 (42372484543.jpg)"
+ },
+ "c-boom-terra-e-mar-hamburguer-mes-outubro": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1086,
+  "h": 1086,
+  "origem": "Glovo do dono, loja 539100 (42372484543.jpg)"
+ },
+ "p-boom-kamikaze": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-17.jpg)"
+ },
+ "c-boom-kamikaze": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-17.jpg)"
+ },
+ "p-boom-the-king-elvis": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 2690,
+  "h": 2690,
+  "origem": "Glovo do dono, loja 539100 (42259630693.jpg)"
+ },
+ "c-boom-the-king-elvis": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2690,
+  "h": 2690,
+  "origem": "Glovo do dono, loja 539100 (42259630693.jpg)"
+ },
+ "p-boom-portobello": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1500,
+  "h": 1500,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-20.jpg)"
+ },
+ "c-boom-portobello": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1500,
+  "h": 2000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-20.jpg)"
+ },
+ "p-boom-burguesinha": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-08.jpg)"
+ },
+ "c-boom-burguesinha": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2048,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-08.jpg)"
+ },
+ "p-boom-cheddar-lovers": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-09.jpg)"
+ },
+ "c-boom-cheddar-lovers": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-09.jpg)"
+ },
+ "p-boom-serra-da-estrela": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-13.jpg)"
+ },
+ "c-boom-serra-da-estrela": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-13.jpg)"
+ },
+ "p-boom-chicken-breast": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-10.jpg)"
+ },
+ "c-boom-chicken-breast": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-10.jpg)"
+ },
+ "p-boom-camone": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-07.jpg)"
+ },
+ "c-boom-camone": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-07.jpg)"
+ },
+ "p-boom-crispy-chicken": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-14.jpg)"
+ },
+ "c-boom-crispy-chicken": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-14.jpg)"
+ },
+ "p-boom-veggie-beyond": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-12.jpg)"
+ },
+ "c-boom-veggie-beyond": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-12.jpg)"
+ },
+ "p-boom-classico": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-16.jpg)"
+ },
+ "c-boom-classico": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-16.jpg)"
+ },
+ "p-boom-asas-de-frango-com-molho-bbq": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-03.jpg)"
+ },
+ "c-boom-asas-de-frango-com-molho-bbq": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2048,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-03.jpg)"
+ },
+ "p-boom-batata-gulosa": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-04.jpg)"
+ },
+ "c-boom-batata-gulosa": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-04.jpg)"
+ },
+ "p-boom-bites-crocantes-peito-de-frango": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 2255,
+  "h": 2255,
+  "origem": "Glovo do dono, loja 539100 (42186156644.jpg)"
+ },
+ "c-boom-bites-crocantes-peito-de-frango": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 3000,
+  "h": 2255,
+  "origem": "Glovo do dono, loja 539100 (42186156644.jpg)"
+ },
+ "p-boom-tequenhos-palitos-de-queijo": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1383,
+  "h": 1383,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-22.jpg)"
+ },
+ "c-boom-tequenhos-palitos-de-queijo": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1383,
+  "h": 1600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-22.jpg)"
+ },
+ "p-boom-cogumelos-frescos-salteados": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-02.jpg)"
+ },
+ "c-boom-cogumelos-frescos-salteados": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-02.jpg)"
+ },
+ "p-boom-pimentos-padron-frescos": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1066,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-06.jpg)"
+ },
+ "c-boom-pimentos-padron-frescos": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1600,
+  "h": 1066,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-06.jpg)"
+ },
+ "p-boom-bolinhas-alheira-de-mirandela": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-01.jpg)"
+ },
+ "c-boom-bolinhas-alheira-de-mirandela": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2048,
+  "h": 1365,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-01.jpg)"
+ },
+ "p-boom-bolo-do-caco-com-manteiga-de-alho": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1120,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-05.jpg)"
+ },
+ "c-boom-bolo-do-caco-com-manteiga-de-alho": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1680,
+  "h": 1120,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-05.jpg)"
+ },
+ "p-boom-nuggets-de-frango": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1200,
+  "h": 1200,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-21.jpg)"
+ },
+ "c-boom-nuggets-de-frango": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1200,
+  "h": 1600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-21.jpg)"
+ },
+ "p-boom-crumble-maca-c-caramelo-caseiro": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 712,
+  "h": 712,
+  "origem": "Glovo do dono, loja 539100 (41974160177.jpg)"
+ },
+ "c-boom-crumble-maca-c-caramelo-caseiro": {
+  "larguras": [
+   480
+  ],
+  "w": 712,
+  "h": 712,
+  "origem": "Glovo do dono, loja 539100 (41974160177.jpg)"
+ },
+ "p-boom-cheesecake-frutos-vermelhos": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 3000,
+  "h": 3000,
+  "origem": "Glovo do dono, loja 539100 (41806982855.jpg)"
+ },
+ "c-boom-cheesecake-frutos-vermelhos": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 3000,
+  "h": 3000,
+  "origem": "Glovo do dono, loja 539100 (41806982855.jpg)"
+ },
+ "p-boom-franziskaner": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
+ },
+ "c-boom-franziskaner": {
+  "larguras": [
+   480
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
+ },
+ "p-boom-desperados": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1000,
+  "h": 1000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
+ },
+ "c-boom-desperados": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1000,
+  "h": 1000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
+ },
+ "p-boom-bandida-pomar-maca-sidra": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
+ },
+ "c-boom-bandida-pomar-maca-sidra": {
+  "larguras": [
+   480
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
+ },
+ "p-boom-bandida-pomar-frutos-vermelhos-sidra": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1079,
+  "h": 1079,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
+ },
+ "c-boom-bandida-pomar-frutos-vermelhos-sidra": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 1080,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
+ },
+ "p-boom-heineken-zero-alcool": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1080,
+  "h": 1080,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-30.jpg)"
+ },
+ "c-boom-heineken-zero-alcool": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1080,
+  "h": 1080,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-30.jpg)"
+ },
+ "p-boom-super-bock-stout": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1024,
+  "h": 1024,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-28.jpg)"
+ },
+ "c-boom-super-bock-stout": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1080,
+  "h": 1024,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-28.jpg)"
+ },
+ "p-boom-coca-cola": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 2048,
+  "h": 2048,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-39.jpg)"
+ },
+ "c-boom-coca-cola": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2048,
+  "h": 2048,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-39.jpg)"
+ },
+ "p-boom-coca-cola-zero": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1079,
+  "h": 1079,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-33.jpg)"
+ },
+ "c-boom-coca-cola-zero": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 1080,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-33.jpg)"
+ },
+ "p-boom-sprite": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 997,
+  "h": 997,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-35.jpg)"
+ },
+ "c-boom-sprite": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 997,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-35.jpg)"
+ },
+ "p-boom-fanta-laranja": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 806,
+  "h": 806,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-34.jpg)"
+ },
+ "c-boom-fanta-laranja": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 806,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-34.jpg)"
+ },
+ "p-boom-ice-tea-limao": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 786,
+  "h": 786,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-38.jpg)"
+ },
+ "c-boom-ice-tea-limao": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 786,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-38.jpg)"
+ },
+ "p-boom-ice-tea-pessego": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 798,
+  "h": 798,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-37.jpg)"
+ },
+ "c-boom-ice-tea-pessego": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 798,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-37.jpg)"
+ },
+ "p-boom-ice-tea-manga": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 788,
+  "h": 788,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-36.jpg)"
+ },
+ "c-boom-ice-tea-manga": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 788,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-36.jpg)"
+ },
+ "p-boom-compal-laranja": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1003,
+  "h": 1002,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-32.jpg)"
+ },
+ "c-boom-compal-laranja": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1080,
+  "h": 1002,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-32.jpg)"
+ },
+ "p-boom-compal-maca": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1015,
+  "h": 1015,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-31.jpg)"
+ },
+ "c-boom-compal-maca": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 1015,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-31.jpg)"
+ },
+ "p-boom-super-bock-0-33": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1067,
+  "h": 1067,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
+ },
+ "c-boom-super-bock-0-33": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1080,
+  "h": 1067,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
+ },
+ "p-boom-fanta-guarana": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 786,
+  "h": 786,
+  "origem": "Glovo do dono, loja 539100 (42359757846.jpg)"
+ },
+ "c-boom-fanta-guarana": {
+  "larguras": [
+   480,
+   786
+  ],
+  "w": 786,
+  "h": 786,
+  "origem": "Glovo do dono, loja 539100 (42359757846.jpg)"
+ },
+ "p-boom-agua-alardo-0-33": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 2000,
+  "h": 2000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-23.jpg)"
+ },
+ "c-boom-agua-alardo-0-33": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2000,
+  "h": 2000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-23.jpg)"
+ },
+ "p-boom-dose-batata-doce": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "Glovo do dono, loja 539100 (41752909638.jpg)"
+ },
+ "c-boom-dose-batata-doce": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "Glovo do dono, loja 539100 (41752909638.jpg)"
+ },
+ "p-boom-molho-cheddar": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 3000,
+  "h": 3000,
+  "origem": "Glovo do dono, loja 539100 (41752909643.jpg)"
+ },
+ "c-boom-molho-cheddar": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 3000,
+  "h": 3000,
+  "origem": "Glovo do dono, loja 539100 (41752909643.jpg)"
+ },
+ "p-boom-dose-batata-artesanal": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "Glovo do dono, loja 539100 (41752909639.jpg)"
+ },
+ "c-boom-dose-batata-artesanal": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1365,
+  "h": 1365,
+  "origem": "Glovo do dono, loja 539100 (41752909639.jpg)"
+ },
+ "p-boom-maionese-caseira-extra": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 2382,
+  "h": 2382,
+  "origem": "Glovo do dono, loja 539100 (41752909640.jpg)"
+ },
+ "c-boom-maionese-caseira-extra": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2382,
+  "h": 2382,
+  "origem": "Glovo do dono, loja 539100 (41752909640.jpg)"
+ },
+ "p-boom-maionese-caseira-malagueta-picante": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1660,
+  "h": 1660,
+  "origem": "Glovo do dono, loja 539100 (42186172442.jpg)"
+ },
+ "c-boom-maionese-caseira-malagueta-picante": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 2208,
+  "h": 1660,
+  "origem": "Glovo do dono, loja 539100 (42186172442.jpg)"
+ }
+}

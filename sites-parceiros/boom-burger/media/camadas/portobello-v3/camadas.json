@@ -1,0 +1,30 @@
+{
+ "fonte": "recorte-u2net.png",
+ "largura_px": 900,
+ "altura_px": 622,
+ "proporcao": 1.4478,
+ "camadas": [
+  {
+   "n": 1,
+   "nome": "pao-cima",
+   "ficheiro": "camada-1-pao-cima.webp",
+   "top_pct": 0.0,
+   "altura_pct": 41.758
+  },
+  {
+   "n": 2,
+   "nome": "recheio",
+   "ficheiro": "camada-2-recheio.webp",
+   "top_pct": 23.077,
+   "altura_pct": 69.093
+  },
+  {
+   "n": 3,
+   "nome": "pao-baixo",
+   "ficheiro": "camada-3-pao-baixo.webp",
+   "top_pct": 74.863,
+   "altura_pct": 25.137
+  }
+ ],
+ "solida": "solida.webp"
+}
