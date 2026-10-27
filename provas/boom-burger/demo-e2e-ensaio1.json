@@ -1,0 +1,81 @@
+{
+ "pedido": "dbc61271-8e8d-46d2-87b6-ea20a9aba153",
+ "passos": [
+  {
+   "hora": "17:07:54",
+   "passo": "sessoes das 3 contas abertas (link de acesso, sem palavra-passe)"
+  },
+  {
+   "hora": "17:07:55",
+   "passo": "estafeta: pode ficar online?",
+   "st": 200,
+   "r": "{'ok': True}"
+  },
+  {
+   "hora": "17:07:55",
+   "passo": "estafeta demo online na Guarda (botao Online + batimento + GPS)",
+   "st": 204
+  },
+  {
+   "hora": "17:07:55",
+   "passo": "retoma o pedido",
+   "pedido": "dbc61271-8e8d-46d2-87b6-ea20a9aba153",
+   "estado": "callingDriver"
+  },
+  {
+   "hora": "17:07:56",
+   "passo": "dispatch-engine (como a app ao ficar online)",
+   "st": 200,
+   "r": "{'ok': True}"
+  },
+  {
+   "hora": "17:07:56",
+   "passo": "despacho chamou e ofereceu",
+   "segundos": 0,
+   "estado": "callingDriver",
+   "oferta": "24a57f25-910e-4a63-8949-3ac737e765cf",
+   "atribuido": null
+  },
+  {
+   "hora": "17:07:56",
+   "passo": "a oferta e do estafeta demo?",
+   "sim": true,
+   "oferta": "24a57f25-910e-4a63-8949-3ac737e765cf",
+   "ja_tentados": [
+    "f3c7d541-6bff-41a8-b322-0fff5fbadaa4"
+   ]
+  },
+  {
+   "hora": "17:07:56",
+   "passo": "estafeta demo aceitou",
+   "st": 200,
+   "r": "{'ok': True, 'status': 'driverAccepted', 'order_id': 'dbc61271-8e8d-46d2-87b6-ea20a9aba153'}"
+  },
+  {
+   "hora": "17:08:59",
+   "passo": "pedido levantado e a caminho",
+   "segundos": 62,
+   "estado": "onTheWay",
+   "oferta": null,
+   "atribuido": "24a57f25-910e-4a63-8949-3ac737e765cf"
+  },
+  {
+   "hora": "17:08:59",
+   "passo": "estafeta demo entregou com o PIN",
+   "st": 200,
+   "r": "{'ok': True}"
+  },
+  {
+   "hora": "17:09:02",
+   "passo": "estado final",
+   "estado": "cancelled",
+   "motivo": "Demonstracao concluida: entrega simulada, sem custo",
+   "taxa": 0.0,
+   "pagamento": "pending"
+  },
+  {
+   "hora": "17:09:02",
+   "passo": "estafeta demo voltou a offline"
+  }
+ ]
+}

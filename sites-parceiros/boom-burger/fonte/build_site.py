@@ -132,12 +132,12 @@ for pid in FAV:
 # ---------- menu completo ----------
 NOTAS = {
     'traquinas': 'Para os mais novos.',
-    'bebidas': 'Cervejas e sidras só para maiores de 18.',
+    'cervejas': 'Só para maiores de 18.',
 }
 abas, cats = [], []
 for c in menu['categorias']:
     abas.append(f'<a href="#{c["id"]}">{e(c["nome"].replace("Menu ", ""))}</a>')
-    compacta = c['id'] == 'bebidas'
+    compacta = c['id'] in ('bebidas', 'cervejas')
     itens = []
     for p in c['produtos']:
         img = (f'<img src="assets/img/p-{p["id"]}-160.webp" srcset="assets/img/p-{p["id"]}-160.webp 160w, assets/img/p-{p["id"]}-320.webp 320w" '
@@ -429,6 +429,12 @@ img{{width:180px;margin:0 auto}}a{{display:inline-flex;align-items:center;min-he
 <a class="a" href="{PEDIR}">Pedir pelo Bora</a><a class="b" href="/">Voltar ao início</a></main></body></html>
 '''
 open(os.path.join(DIST, '404.html'), 'w', encoding='utf-8').write(NAO_EXISTE)
+# /demo/ — pagina do "telemovel 1" da demonstracao de 28/10 (so a conta Cliente Demonstracao pede, so na janela)
+os.makedirs(os.path.join(DIST, 'demo'), exist_ok=True)
+DEMO = open(os.path.join(AQUI, 'demo.html'), encoding='utf-8').read().replace(
+    '<!--CONFIG_PUBLICA-->', f'<script>window.BOOM_SB={json.dumps(SB)};</script>')
+assert 'window.BOOM_SB=' in DEMO and 'Danilo' not in DEMO
+open(os.path.join(DIST, 'demo', 'index.html'), 'w', encoding='utf-8').write(DEMO)
 open(os.path.join(DIST, 'robots.txt'), 'w', encoding='utf-8').write(
     f'# noindex ate o dono aprovar (meta robots em cada pagina)\nUser-agent: *\nAllow: /\nSitemap: {URL}/sitemap.xml\n')
 open(os.path.join(DIST, 'sitemap.xml'), 'w', encoding='utf-8').write(

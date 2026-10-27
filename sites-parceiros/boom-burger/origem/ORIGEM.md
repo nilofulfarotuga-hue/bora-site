@@ -51,6 +51,7 @@ plataformas … daqui a 15 dias iremos ter uma nova sessão fotográfica".
 | whatsapp/wa-39.jpg | 2048×2048 | 27/10/2026 07:41 | lata de Coca-Cola, sem legenda | Coca cola |
 | whatsapp/wa-40.jpg | 1549×2048 | 27/10/2026 07:42 | imagem do logótipo ("Este ficheiro penso que não tem cor de fundo") | logótipo |
 
+| whatsapp/wa-41-king-elvis.jpg | 1500×2000 | 27/10/2026 15:35 | "The King Elvis / Preço envio depois" (descarregada 15:41, adendo 4) | Boom! The King Elvis (pendente de preço) |
 | whatsapp/boom-burger-whatsapp.zip | 5 918 033 B | — | o zip tal como caiu nas Transferências | — |
 | logo/boom-burger-logo-vetor.pdf | 99 505 B | 27/10/2026 07:42 | documento "BOOM BURGER - LOGO VETOR.pdf" | logótipo vetorial |
 

@@ -1,0 +1,211 @@
+{
+ "pedido": "f9cb900d-3175-475a-9edc-b07104959066",
+ "passos": [
+  {
+   "hora": "17:17:52",
+   "passo": "painel do parceiro aberto",
+   "escolheu": true,
+   "url": "https://app.boraguarda.com/",
+   "textos": [
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Trocar de perfil",
+    "ONLINE",
+    "Mudar modo",
+    "A minha conta",
+    "Recebe os pedidos novos",
+    "Agora não",
+    "As notificações estão bloqueadas neste navegador. Ativa-as nas definições do site e volta a abrir a Bora.",
+    "Muito trabalho? Pausa a loja uns minutos.",
+    "Pausar",
+    "Ganhos hoje €0.00 0 pedidos entregues",
+    "Ganhos semana €0.00 0 pedidos entregues",
+    "Ganhos totais €0.00 0 pedidos entregues",
+    "Ver detalhe de ganhos",
+    "Receber pagamentos",
+    "Extrato",
+    "Horários de funcionamento",
+    "Resumo do catálogo 112 Total 112 Disponíveis 0 Indisponíveis",
+    "Aceitar reservas de mesa\nDesligado — reservas ocultas aos clientes. (BR §14.10)",
+    "Tempo de preparação padrão\nEm minutos (3-60). Aparece pré-seleccionado ao aceitar.",
+    "Aceitar pedidos para levantamento (Takeaway)\nO botão \"Ir buscar\" aparece aos clientes.",
+    "Permitir levantamento no carro (Curbside)\nApenas levantamento ao balcão."
+   ]
+  },
+  {
+   "hora": "17:17:53",
+   "passo": "retoma o pedido",
+   "pedido": "f9cb900d-3175-475a-9edc-b07104959066",
+   "estado": "callingDriver"
+  },
+  {
+   "hora": "17:17:59",
+   "passo": "painel mostra o pedido novo?",
+   "visto": true,
+   "textos": [
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Trocar de perfil",
+    "ONLINE",
+    "Mudar modo",
+    "A minha conta",
+    "Recebe os pedidos novos",
+    "Agora não",
+    "As notificações estão bloqueadas neste navegador. Ativa-as nas definições do site e volta a abrir a Bora.",
+    "Muito trabalho? Pausa a loja uns minutos.",
+    "Pausar",
+    "Ganhos hoje €0.00 0 pedidos entregues",
+    "Ganhos semana €0.00 0 pedidos entregues",
+    "Ganhos totais €0.00 0 pedidos entregues",
+    "Ver detalhe de ganhos",
+    "Receber pagamentos",
+    "Extrato",
+    "Horários de funcionamento",
+    "Resumo do catálogo 112 Total 112 Disponíveis 0 Indisponíveis",
+    "Aceitar reservas de mesa\nDesligado — reservas ocultas aos clientes. (BR §14.10)",
+    "Tempo de preparação padrão\nEm minutos (3-60). Aparece pré-seleccionado ao aceitar.",
+    "Aceitar pedidos para levantamento (Takeaway)\nO botão \"Ir buscar\" aparece aos clientes.",
+    "Permitir levantamento no carro (Curbside)\nApenas levantamento ao balcão.",
+    "min",
+    "Ver Histórico (2)",
+    "Acrescentar produto",
+    "Marcar em falta",
+    "À procura de estafeta...",
+    "Ações rápidas",
+    "Gerir produtos Atualiza o catálogo, marca produtos esgotados e mantém os itens organizados.",
+    "Chamar estafeta Cliente pediu ao balcão ou por telefone? Chama um estafeta para lhe levar a encomenda.",
+    "Idioma: português. Toca para mudar para inglês. PT EN",
+    "Privacidade e Cookies",
+    "Aceitar tudo",
+    "Rejeitar",
+    "Gerir preferências",
+    "Suporte Bora"
+   ]
+  },
+  {
+   "hora": "17:17:59",
+   "passo": "parceiro carrega em Aceitar",
+   "botao": "Aceitar reservas de mesa\nDesligado — reservas ocultas aos clientes. (BR §14.10)"
+  },
+  {
+   "hora": "17:18:07",
+   "passo": "estado depois do Aceitar no painel",
+   "estado": "callingDriver",
+   "segundo_botao": null,
+   "textos": [
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Boom! Burger Hambúrgueres\nTrocar de perfil\nONLINE\nMudar modo\nA minha conta",
+    "Trocar de perfil",
+    "ONLINE",
+    "Mudar modo",
+    "A minha conta",
+    "Recebe os pedidos novos",
+    "Agora não",
+    "As notificações estão bloqueadas neste navegador. Ativa-as nas definições do site e volta a abrir a Bora.",
+    "Muito trabalho? Pausa a loja uns minutos.",
+    "Pausar",
+    "Ganhos hoje €0.00 0 pedidos entregues",
+    "Ganhos semana €0.00 0 pedidos entregues",
+    "Ganhos totais €0.00 0 pedidos entregues",
+    "Ver detalhe de ganhos",
+    "Receber pagamentos",
+    "Extrato",
+    "Horários de funcionamento",
+    "Resumo do catálogo 112 Total 112 Disponíveis 0 Indisponíveis",
+    "Aceitar reservas de mesa\nO botão \"Reservar mesa\" aparece aos clientes.",
+    "Tempo de preparação padrão\nEm minutos (3-60). Aparece pré-seleccionado ao aceitar.",
+    "Aceitar pedidos para levantamento (Takeaway)\nO botão \"Ir buscar\" aparece aos clientes.",
+    "Permitir levantamento no carro (Curbside)\nApenas levantamento ao balcão.",
+    "min",
+    "Reservas Pro",
+    "Ver Histórico (2)",
+    "Acrescentar produto",
+    "Marcar em falta"
+   ]
+  },
+  {
+   "hora": "17:18:29",
+   "passo": "app do estafeta aberta",
+   "escolheu": false,
+   "url": "https://app.boraguarda.com/",
+   "textos": [
+    "Enable accessibility",
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar"
+   ]
+  },
+  {
+   "hora": "17:18:29",
+   "passo": "estafeta carrega em Online",
+   "botao": null
+  },
+  {
+   "hora": "17:18:35",
+   "passo": "estafeta carrega em Online",
+   "botao": null
+  },
+  {
+   "hora": "17:18:41",
+   "passo": "estafeta carrega em Online",
+   "botao": null
+  },
+  {
+   "hora": "17:18:49",
+   "passo": "estafeta online no servidor?",
+   "drivers": [
+    {
+     "is_online": false
+    }
+   ],
+   "textos": [
+    "Enable accessibility",
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar"
+   ]
+  },
+  {
+   "hora": "17:20:26",
+   "passo": "oferta ao estafeta demo",
+   "oferta": false,
+   "tentados": [
+    "f3c7d541-6bff-41a8-b322-0fff5fbadaa4"
+   ],
+   "textos": [
+    "Enable accessibility",
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar"
+   ]
+  },
+  {
+   "hora": "17:20:31",
+   "passo": "estafeta carrega em Aceitar",
+   "botao": null,
+   "estado": "pickedUp",
+   "atribuido": "24a57f25-910e-4a63-8949-3ac737e765cf"
+  },
+  {
+   "hora": "17:21:10",
+   "passo": "entregue com o PIN",
+   "st": 200,
+   "r": "{'ok': True}",
+   "estado": "cancelled",
+   "motivo": "Demonstracao concluida: entrega simulada, sem custo",
+   "taxa": 0.0,
+   "textos": [
+    "Enable accessibility",
+    "Adicionar o Bora ao ecrã principal",
+    "Fechar"
+   ]
+  },
+  {
+   "hora": "17:21:10",
+   "passo": "estafeta demo offline"
+  }
+ ]
+}

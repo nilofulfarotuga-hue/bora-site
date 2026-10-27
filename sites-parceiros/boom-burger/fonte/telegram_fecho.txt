@@ -1,0 +1,7 @@
+Boom! Burger: a loja já está na app, com a faixa "Em breve" e ligada à conta de parceiro cuja palavra-passe te mandei de manhã.
+
+O site está no ar em https://boomburger.boraguarda.com e fica escondido do Google até o dono aprovar. Abre com a foto dele e com o logótipo a montar-se como um hambúrguer. Ao descer, o hambúrguer de pão preto monta-se camada a camada com a foto real dele. Três juízes independentes compararam o site com a página da Glovo deles e os três disseram que o site ganha, no computador e no telemóvel. No telemóvel tem 90 de velocidade e 100 de acessibilidade.
+
+Falta o seguinte. Os preços do dono ainda não chegaram; quando chegarem, meto o menu na app em minutos e o site mostra os mesmos preços. Depois ele vê e aprova, e só então se tira o "Em breve" e se deixa o Google ver o site. Os juízes deram 71 em 100 ao aspeto, e para chegar aos 90 faltam as fotos novas que ele faz daqui a 15 dias.
+
+As provas estão todas aqui: https://provas.boom-burger-778.pages.dev

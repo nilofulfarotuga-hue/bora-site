@@ -42,7 +42,7 @@ for p in prep['produtos']:
         'foto': p['id'] if p.get('foto_storage') else None,
     })
 IDS = {'Hambúrgueres': 'hamburgueres', 'Entradas': 'entradas', 'Menu Traquinas': 'traquinas',
-       'Sobremesas': 'sobremesas', 'Bebidas e cervejas': 'bebidas', 'Acompanhamentos e molhos': 'acompanhamentos'}
+       'Sobremesas': 'sobremesas', 'Bebidas': 'bebidas', 'Cervejas e sidras': 'cervejas', 'Acompanhamentos e molhos': 'acompanhamentos'}
 menu = {
     'gerado_em': datetime.datetime.now().strftime('%Y-%m-%d %H:%M'),
     'com_precos': any(x['preco'] is not None for c in cats.values() for x in c),

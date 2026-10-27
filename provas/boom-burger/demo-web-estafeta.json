@@ -1,0 +1,59 @@
+{
+ "modo": "estafeta",
+ "passos": [
+  {
+   "hora": "17:43:27",
+   "passo": "estafeta: papel",
+   "escolheu": "Sou Estafeta",
+   "cookies": "Rejeitar"
+  },
+  {
+   "hora": "17:43:27",
+   "passo": "estafeta em onTheWay: carrega",
+   "botao": "Concluir entrega",
+   "botoes": [
+    "Mudar modo",
+    "Ganhos",
+    "Ver mapa",
+    "Navegar para cliente",
+    "Concluir entrega",
+    "Ligar cliente",
+    "Chat · Cliente",
+    "Chat · Restaurante",
+    "Suporte Bora"
+   ]
+  },
+  {
+   "hora": "17:43:33",
+   "passo": "estafeta em onTheWay: carrega",
+   "botao": "Vi o documento, tem 18 ou mais",
+   "botoes": [
+    "Vi o documento, tem 18 ou mais",
+    "Não mostrou documento / é menor"
+   ]
+  },
+  {
+   "hora": "17:43:41",
+   "passo": "estafeta escreve o PIN do cliente e confirma",
+   "botao": "Confirmar",
+   "botoes": [
+    "Cancelar",
+    "Confirmar"
+   ]
+  },
+  {
+   "hora": "17:43:50",
+   "passo": "fim no ecra do estafeta",
+   "estado": "cancelled",
+   "motivo": "Demonstracao concluida: entrega simulada, sem custo",
+   "taxa": 0.0,
+   "botoes": [
+    "Perfil",
+    "Ganhos",
+    "Trabalhar noutra coisa",
+    "Ganhos de hoje €0,00",
+    "Mudar modo"
+   ]
+  }
+ ]
+}

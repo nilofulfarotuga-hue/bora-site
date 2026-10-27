@@ -170,24 +170,6 @@
   "h": 1120,
   "origem": "WhatsApp do dono 27/10/2026 (wa-11.jpg)"
  },
- "p-boom-terra-e-mar-hamburguer-mes-outubro": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1086,
-  "h": 1086,
-  "origem": "Glovo do dono, loja 539100 (42372484543.jpg)"
- },
- "c-boom-terra-e-mar-hamburguer-mes-outubro": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1086,
-  "h": 1086,
-  "origem": "Glovo do dono, loja 539100 (42372484543.jpg)"
- },
  "p-boom-kamikaze": {
   "larguras": [
    160,
@@ -205,24 +187,6 @@
   "w": 1680,
   "h": 1120,
   "origem": "WhatsApp do dono 27/10/2026 (wa-17.jpg)"
- },
- "p-boom-the-king-elvis": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 2690,
-  "h": 2690,
-  "origem": "Glovo do dono, loja 539100 (42259630693.jpg)"
- },
- "c-boom-the-king-elvis": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 2690,
-  "h": 2690,
-  "origem": "Glovo do dono, loja 539100 (42259630693.jpg)"
  },
  "p-boom-portobello": {
   "larguras": [
@@ -583,112 +547,6 @@
   "h": 3000,
   "origem": "Glovo do dono, loja 539100 (41806982855.jpg)"
  },
- "p-boom-franziskaner": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 600,
-  "h": 600,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
- },
- "c-boom-franziskaner": {
-  "larguras": [
-   480
-  ],
-  "w": 600,
-  "h": 600,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
- },
- "p-boom-desperados": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1000,
-  "h": 1000,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
- },
- "c-boom-desperados": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1000,
-  "h": 1000,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
- },
- "p-boom-bandida-pomar-maca-sidra": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 600,
-  "h": 600,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
- },
- "c-boom-bandida-pomar-maca-sidra": {
-  "larguras": [
-   480
-  ],
-  "w": 600,
-  "h": 600,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
- },
- "p-boom-bandida-pomar-frutos-vermelhos-sidra": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1079,
-  "h": 1079,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
- },
- "c-boom-bandida-pomar-frutos-vermelhos-sidra": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1079,
-  "h": 1080,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
- },
- "p-boom-heineken-zero-alcool": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1080,
-  "h": 1080,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-30.jpg)"
- },
- "c-boom-heineken-zero-alcool": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1080,
-  "h": 1080,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-30.jpg)"
- },
- "p-boom-super-bock-stout": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1024,
-  "h": 1024,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-28.jpg)"
- },
- "c-boom-super-bock-stout": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1080,
-  "h": 1024,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-28.jpg)"
- },
  "p-boom-coca-cola": {
   "larguras": [
    160,
@@ -851,24 +709,6 @@
   "h": 1015,
   "origem": "WhatsApp do dono 27/10/2026 (wa-31.jpg)"
  },
- "p-boom-super-bock-0-33": {
-  "larguras": [
-   160,
-   320
-  ],
-  "w": 1067,
-  "h": 1067,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
- },
- "c-boom-super-bock-0-33": {
-  "larguras": [
-   480,
-   800
-  ],
-  "w": 1080,
-  "h": 1067,
-  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
- },
  "p-boom-fanta-guarana": {
   "larguras": [
    160,
@@ -904,6 +744,94 @@
   "w": 2000,
   "h": 2000,
   "origem": "WhatsApp do dono 27/10/2026 (wa-23.jpg)"
+ },
+ "p-boom-franziskaner": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
+ },
+ "c-boom-franziskaner": {
+  "larguras": [
+   480
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
+ },
+ "p-boom-desperados": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1000,
+  "h": 1000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
+ },
+ "c-boom-desperados": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1000,
+  "h": 1000,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
+ },
+ "p-boom-bandida-pomar-maca-sidra": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
+ },
+ "c-boom-bandida-pomar-maca-sidra": {
+  "larguras": [
+   480
+  ],
+  "w": 600,
+  "h": 600,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
+ },
+ "p-boom-bandida-pomar-frutos-vermelhos-sidra": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1079,
+  "h": 1079,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
+ },
+ "c-boom-bandida-pomar-frutos-vermelhos-sidra": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1079,
+  "h": 1080,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
+ },
+ "p-boom-super-bock-0-33": {
+  "larguras": [
+   160,
+   320
+  ],
+  "w": 1067,
+  "h": 1067,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
+ },
+ "c-boom-super-bock-0-33": {
+  "larguras": [
+   480,
+   800
+  ],
+  "w": 1080,
+  "h": 1067,
+  "origem": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
  },
  "p-boom-dose-batata-doce": {
   "larguras": [
