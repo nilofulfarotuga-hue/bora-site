@@ -1,0 +1,20 @@
+Boom! Burger — ponto da noite.
+
+A demonstração de amanhã às 11:00 está pronta. Testei seis vezes do princípio ao fim: o pedido chega à loja, só o estafeta de demonstração é chamado, e no fim fecha sem custo nenhum. Funciona das 10:30 às 12:00 e depois desliga-se sozinha. As contas já estão na mensagem que te mandei antes.
+
+Consertei hoje, e está guardado à espera de publicar:
+- o painel da loja mostrava 112 produtos em vez de 56 (e o menu podia aparecer repetido);
+- a pausa do almoço: a loja já fica fechada das 14:30 às 19:00 e diz a que horas abre;
+- os feriados passam a contar na app;
+- o ecrã dos dados fiscais da loja e os termos do parceiro, no painel da loja e no painel admin;
+- fotos oficiais das 6 cervejas Letra e da Água das Pedras.
+
+A demonstração funciona sem publicar. Publicar só quando disseres que é urgente.
+
+O sinal das reservas por loja mexe em pagamento: está preparado, mas só aplico quando autorizares.
+
+Para pedir ao Emanuel amanhã:
+1. Fotos das 4 sobremesas novas: bolo de chocolate com pistáchio, brownie com nozes, cheesecake de caramelo salgado e palitos de Nutella.
+2. O preço do King Elvis.
+3. Os dados para abrir a loja: NIF, IBAN, data de nascimento (se for em nome individual) e o "aceito" dos termos.
+4. A aprovação dele para tirar o "Em breve".
