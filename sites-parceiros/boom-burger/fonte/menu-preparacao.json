@@ -1,0 +1,2651 @@
+{
+ "restaurant_id": "boom-burger-guarda",
+ "fonte": "Glovo Guarda, loja 539100 (catalogo publico lido a 2026-10-27); textos e fotos do proprio dono",
+ "regra_preco": "preco_loja = o que o dono quer RECEBER (products.partner_shelf_price). products.price = round(preco_loja / (1 - partner_visible_commission_pct) * (1 + partner_hidden_markup_pct), 2) -> hoje 0,10 e 0,05 (x1,1667). price_add das opcoes com a mesma formula.",
+ "estado": "PRECOS DO DONO RECEBIDOS (WhatsApp 27/10 14:47, adendo 2)",
+ "produtos": [
+  {
+   "id": "boom-bombastico",
+   "name": "Boom! Bombástico",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, agrião, tomate, queijo edam, bacon e ovo. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 1,
+   "is_popular": true,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 12.9,
+   "preco_glovo_ref": 14.6,
+   "glovo_id": 41752909644,
+   "foto_origem": "glovo/fotos/41752909644.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-bombastico-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-bombastico-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-bombastico-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-bombastico-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-bombastico-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-bombastico-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-bombastico-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-bombastico-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-bombastico-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-bombastico-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-bombastico-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-bombastico-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-bombastico-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-bombastico-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-bombastico-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bombastico.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-18.jpg)"
+  },
+  {
+   "id": "boom-brie-fan",
+   "name": "Boom! Brie Fan",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate seco, queijo brie, cebola caramelizada, nozes e molho mostarda e mel. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 2,
+   "is_popular": true,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 13.5,
+   "preco_glovo_ref": 15.3,
+   "glovo_id": 41752909744,
+   "foto_origem": "glovo/fotos/41752909744.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-brie-fan-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-brie-fan-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-brie-fan-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-brie-fan-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-brie-fan-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-brie-fan-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-brie-fan-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-brie-fan-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-brie-fan-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-brie-fan-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-brie-fan-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-brie-fan-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-brie-fan-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-brie-fan-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-brie-fan-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-brie-fan.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-15.jpg)"
+  },
+  {
+   "id": "boom-duplo-smash",
+   "name": "Boom! Duplo Smash",
+   "description": "Pão brioche, dupla carne smash de novilho, bacon, cebola roxa, picles de pepino e molho queijo cheddar. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 3,
+   "is_popular": true,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 15.9,
+   "preco_glovo_ref": 17.3,
+   "glovo_id": 41752909746,
+   "foto_origem": "glovo/fotos/41752909746.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-duplo-smash-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-duplo-smash-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-duplo-smash-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-duplo-smash-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-duplo-smash-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-duplo-smash-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-duplo-smash-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-duplo-smash-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-duplo-smash-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-duplo-smash-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-duplo-smash-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-duplo-smash-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-duplo-smash-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-duplo-smash-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-duplo-smash.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-11.jpg)"
+  },
+  {
+   "id": "boom-kamikaze",
+   "name": "Boom! Kamikaze",
+   "description": "Pão brioche, 2x 160gr carne novilho, alface, tomate, picles de pepino, 2x queijo cheddar, 4x bacon, aros de cebola e ovo estrelado. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 4,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 17.9,
+   "preco_glovo_ref": 19.2,
+   "glovo_id": 41752909749,
+   "foto_origem": "glovo/fotos/41752909749.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-kamikaze-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-kamikaze-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-kamikaze-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-kamikaze-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-kamikaze-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-kamikaze-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-kamikaze-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-kamikaze-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-kamikaze-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-kamikaze-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-kamikaze-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-kamikaze-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-kamikaze-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-kamikaze-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-kamikaze.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-17.jpg)"
+  },
+  {
+   "id": "boom-portobello",
+   "name": "Boom! Portobello",
+   "description": "Pão de feijão preto, agrião, 160 g de carne de novilho, queijo provolone fumado, bacon, cogumelo portobello salteado, cebola grelhada e molho de trufa negra. Inclui batata frita artesanal e maionese da casa",
+   "category": "Hambúrgueres",
+   "sort_order": 5,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 15.2,
+   "preco_glovo_ref": 18.7,
+   "glovo_id": 42186188244,
+   "foto_origem": "glovo/fotos/42186188244.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-portobello-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-portobello-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-portobello-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-portobello-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-portobello-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-portobello-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-portobello-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-portobello-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-portobello-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-portobello-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-portobello-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-portobello-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-portobello-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-portobello-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-portobello-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-portobello.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-20.jpg)"
+  },
+  {
+   "id": "boom-burguesinha",
+   "name": "Boom! Burguesinha",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, queijo edam, fiambre, linguiça, salsicha, ovo estrelado e molho francesinha. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 6,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 15.0,
+   "preco_glovo_ref": 16.8,
+   "glovo_id": 41752909853,
+   "foto_origem": "glovo/fotos/41752909853.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-burguesinha-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-burguesinha-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-burguesinha-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-burguesinha-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-burguesinha-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-burguesinha-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-burguesinha-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-burguesinha-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-burguesinha-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-burguesinha-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-burguesinha-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-burguesinha-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-burguesinha-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-burguesinha-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-burguesinha-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-burguesinha.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-08.jpg)"
+  },
+  {
+   "id": "boom-cheddar-lovers",
+   "name": "Boom! Cheddar Lovers",
+   "description": "Pão brioche, 160gr carne novilho, tomate, bacon, molho cheddar e cebola frita. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 7,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 14.1,
+   "preco_glovo_ref": 15.8,
+   "glovo_id": 41752909748,
+   "foto_origem": "glovo/fotos/41752909748.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-cheddar-lovers-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-cheddar-lovers-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-cheddar-lovers-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-cheddar-lovers-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-cheddar-lovers-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-cheddar-lovers-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-cheddar-lovers-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-cheddar-lovers-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-cheddar-lovers-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-cheddar-lovers-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-cheddar-lovers-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-cheddar-lovers-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-cheddar-lovers-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-cheddar-lovers-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-cheddar-lovers.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-09.jpg)"
+  },
+  {
+   "id": "boom-serra-da-estrela",
+   "name": "Boom! Serra da Estrela",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate grelhado, cebola roxa grelhada, queijo da serra e chutney de abóbora. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 8,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 13.0,
+   "preco_glovo_ref": 15.2,
+   "glovo_id": 41752909750,
+   "foto_origem": "glovo/fotos/41752909750.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-serra-da-estrela-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-serra-da-estrela-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-serra-da-estrela-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-serra-da-estrela-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-serra-da-estrela-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-serra-da-estrela-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-serra-da-estrela-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-serra-da-estrela-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-serra-da-estrela-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-serra-da-estrela-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-serra-da-estrela-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-serra-da-estrela-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-serra-da-estrela-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-serra-da-estrela-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-serra-da-estrela-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-serra-da-estrela.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-13.jpg)"
+  },
+  {
+   "id": "boom-chicken-breast",
+   "name": "Boom! Chicken Breast",
+   "description": "Pão de sementes caseiro, 120gr peito de frango grelhado, alface, tomate, queijo edam e aros de cebola. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 9,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 12.5,
+   "preco_glovo_ref": 14.5,
+   "glovo_id": 41752909745,
+   "foto_origem": "glovo/fotos/41752909745.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-chicken-breast-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-chicken-breast-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-chicken-breast-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-chicken-breast-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-chicken-breast-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-chicken-breast-trocar-a-carne-carne-de-novilho-160-g",
+       "name": "Carne de novilho (160 g)",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-chicken-breast-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-chicken-breast-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-chicken-breast-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-chicken-breast-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-chicken-breast-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-chicken-breast-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-chicken-breast-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-chicken-breast-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-chicken-breast-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-chicken-breast.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-10.jpg)"
+  },
+  {
+   "id": "boom-camone",
+   "name": "Boom! Camone",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, tomate, picles de pepino, bacon, queijo cheddar, aros de cebola e molho BBQ. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 10,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 12.8,
+   "preco_glovo_ref": 14.5,
+   "glovo_id": 41752909855,
+   "foto_origem": "glovo/fotos/41752909855.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-camone-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-camone-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-camone-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-camone-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-camone-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-camone-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-camone-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-camone-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-camone-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-camone-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-camone-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-camone-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-camone-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-camone-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-camone-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-camone.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-07.jpg)"
+  },
+  {
+   "id": "boom-crispy-chicken",
+   "name": "Boom! Crispy Chicken",
+   "description": "Pão brioche, peito de frango panado crocante, queijo edam, alface iceberg, cebola roxa, tomate, molho mostarda e mel. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 11,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 14.0,
+   "preco_glovo_ref": 14.4,
+   "glovo_id": 41752909751,
+   "foto_origem": "glovo/fotos/41752909751.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-crispy-chicken-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-crispy-chicken-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-crispy-chicken-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-crispy-chicken-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-crispy-chicken-trocar-a-carne-carne-de-novilho-160-g",
+       "name": "Carne de novilho (160 g)",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-crispy-chicken-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-crispy-chicken-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-crispy-chicken-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-crispy-chicken-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-crispy-chicken-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-crispy-chicken-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-crispy-chicken-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-crispy-chicken-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-crispy-chicken-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-crispy-chicken.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-14.jpg)"
+  },
+  {
+   "id": "boom-veggie-beyond",
+   "name": "Boom! Veggie Beyond",
+   "description": "Carne proteína de ervilha beyond, alface, tomate, queijo edam e cogumelos salteados. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 12,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 13.5,
+   "preco_glovo_ref": 14.3,
+   "glovo_id": 41752909747,
+   "foto_origem": "glovo/fotos/41752909747.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-veggie-beyond-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-veggie-beyond-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-veggie-beyond-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-veggie-beyond-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-veggie-beyond-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-veggie-beyond-trocar-a-carne-carne-de-novilho-160-g",
+       "name": "Carne de novilho (160 g)",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-veggie-beyond-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-veggie-beyond-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-veggie-beyond-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-veggie-beyond-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-veggie-beyond-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-veggie-beyond-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-veggie-beyond-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-veggie-beyond-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-veggie-beyond-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-veggie-beyond.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-12.jpg)"
+  },
+  {
+   "id": "boom-classico",
+   "name": "Boom! Clássico",
+   "description": "Pão de sementes caseiro, 160gr carne novilho, alface, tomate e queijo edam. Inclui batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 13,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 10.9,
+   "preco_glovo_ref": 12.7,
+   "glovo_id": 41752909856,
+   "foto_origem": "glovo/fotos/41752909856.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-classico-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-classico-trocar-o-pao-pao-brioche",
+       "name": "Pão brioche",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-classico-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-classico-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 3
+      }
+     ]
+    },
+    {
+     "id": "boom-classico-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-classico-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-classico-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-classico-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-classico-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-classico-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-classico-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-classico-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      },
+      {
+       "id": "boom-classico-extras-mais-peito-de-frango-grelhado",
+       "name": "Mais peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": null,
+       "sort_order": 5
+      }
+     ]
+    },
+    {
+     "id": "boom-classico-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-classico-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-classico.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-16.jpg)"
+  },
+  {
+   "id": "boom-asas-de-frango-com-molho-bbq",
+   "name": "Asas de frango com molho BBQ",
+   "description": "8 unidades",
+   "category": "Entradas",
+   "sort_order": 14,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 8.6,
+   "preco_glovo_ref": 10.6,
+   "glovo_id": 41752909636,
+   "foto_origem": "glovo/fotos/41752909636.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-asas-de-frango-com-molho-bbq.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-03.jpg)"
+  },
+  {
+   "id": "boom-batata-gulosa",
+   "name": "Batata gulosa",
+   "description": "Batata com molho cheddar, bacon e cebola frita",
+   "category": "Entradas",
+   "sort_order": 15,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.5,
+   "preco_glovo_ref": 7.9,
+   "glovo_id": 41752909630,
+   "foto_origem": "glovo/fotos/41752909630.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-batata-gulosa.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-04.jpg)"
+  },
+  {
+   "id": "boom-bites-crocantes-peito-de-frango",
+   "name": "Bites crocantes de peito de frango",
+   "description": "Pedaços crocantes panados de peito de frango, acompanhados com maionese de malagueta e maionese da casa",
+   "category": "Entradas",
+   "sort_order": 16,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.0,
+   "preco_glovo_ref": 7.8,
+   "glovo_id": 42186156644,
+   "foto_origem": "glovo/fotos/42186156644.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bites-crocantes-peito-de-frango.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (42186156644.jpg)"
+  },
+  {
+   "id": "boom-tequenhos-palitos-de-queijo",
+   "name": "Palitos de queijo",
+   "description": "Palitos de queijo (tequeños) com massa mãe.",
+   "category": "Entradas",
+   "sort_order": 17,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 5.3,
+   "preco_glovo_ref": 6.9,
+   "glovo_id": 41752909632,
+   "foto_origem": "glovo/fotos/41752909632.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-tequenhos-palitos-de-queijo.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-22.jpg)"
+  },
+  {
+   "id": "boom-cogumelos-frescos-salteados",
+   "name": "Cogumelos frescos salteados",
+   "description": "Cogumelos frescos salteados em flor de sal",
+   "category": "Entradas",
+   "sort_order": 18,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 5.5,
+   "preco_glovo_ref": 6.9,
+   "glovo_id": 41752909637,
+   "foto_origem": "glovo/fotos/41752909637.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-cogumelos-frescos-salteados.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-02.jpg)"
+  },
+  {
+   "id": "boom-pimentos-padron-frescos",
+   "name": "Pimentos Padrón salteados",
+   "description": "Pimentos Padrón salteados em brandy e especiarias.",
+   "category": "Entradas",
+   "sort_order": 19,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 5.3,
+   "preco_glovo_ref": 6.6,
+   "glovo_id": 41752909635,
+   "foto_origem": "glovo/fotos/41752909635.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-pimentos-padron-frescos.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-06.jpg)"
+  },
+  {
+   "id": "boom-bolinhas-alheira-de-mirandela",
+   "name": "Bolinhas de alheira de Mirandela",
+   "description": "4 unidades",
+   "category": "Entradas",
+   "sort_order": 20,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 4.4,
+   "preco_glovo_ref": 5.5,
+   "glovo_id": 41752909489,
+   "foto_origem": "glovo/fotos/41752909489.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bolinhas-alheira-de-mirandela.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-01.jpg)"
+  },
+  {
+   "id": "boom-bolo-do-caco-com-manteiga-de-alho",
+   "name": "Bolo do caco com manteiga de alho",
+   "description": "Bolo do caco com manteiga de alho caseira",
+   "category": "Entradas",
+   "sort_order": 21,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 3.8,
+   "preco_glovo_ref": 4.1,
+   "glovo_id": 41752909627,
+   "foto_origem": "glovo/fotos/41752909627.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bolo-do-caco-com-manteiga-de-alho.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-05.jpg)"
+  },
+  {
+   "id": "boom-nuggets-de-frango",
+   "name": "Nuggets de frango",
+   "description": "Nuggets de frango acompanhados com batata frita artesanal",
+   "category": "Menu Traquinas",
+   "sort_order": 22,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 10.0,
+   "preco_glovo_ref": 9.8,
+   "glovo_id": 41752909752,
+   "foto_origem": "glovo/fotos/41752909752.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-nuggets-de-frango.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-21.jpg)"
+  },
+  {
+   "id": "boom-crumble-maca-c-caramelo-caseiro",
+   "name": "Tarte crumble de maçã e gelado",
+   "description": "Tarte crumble de maçã, servida com gelado.",
+   "category": "Sobremesas",
+   "sort_order": 23,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.6,
+   "preco_glovo_ref": 7.5,
+   "glovo_id": 41974160177,
+   "foto_origem": "glovo/fotos/41974160177.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-crumble-maca-c-caramelo-caseiro.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41974160177.jpg)"
+  },
+  {
+   "id": "boom-cheesecake-frutos-vermelhos",
+   "name": "Cheesecake de frutos vermelhos",
+   "description": "Cheesecake caseiro de frutos vermelhos.",
+   "category": "Sobremesas",
+   "sort_order": 24,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.1,
+   "preco_glovo_ref": 6,
+   "glovo_id": 41806982855,
+   "foto_origem": "glovo/fotos/41806982855.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-cheesecake-frutos-vermelhos.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41806982855.jpg)"
+  },
+  {
+   "id": "boom-bolo-chocolate-pistacho-gelado",
+   "name": "Bolo de chocolate com creme de pistáchio e gelado",
+   "description": "",
+   "category": "Sobremesas",
+   "sort_order": 25,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.6,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-brownie-chocolate-nozes-gelado",
+   "name": "Brownie de chocolate com nozes e gelado",
+   "description": "",
+   "category": "Sobremesas",
+   "sort_order": 26,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.6,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cheesecake-caramelo-salgado",
+   "name": "Cheesecake de caramelo salgado",
+   "description": "",
+   "category": "Sobremesas",
+   "sort_order": 27,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.1,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-palitos-de-nutella",
+   "name": "Palitos de Nutella",
+   "description": "",
+   "category": "Sobremesas",
+   "sort_order": 28,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 6.6,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-coca-cola",
+   "name": "Coca-Cola",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 33,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772487857,
+   "foto_origem": "glovo/fotos/41772487857.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-coca-cola.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-39.jpg)"
+  },
+  {
+   "id": "boom-coca-cola-zero",
+   "name": "Coca-Cola Zero",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 34,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772504005,
+   "foto_origem": "glovo/fotos/41772504005.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-coca-cola-zero.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-33.jpg)"
+  },
+  {
+   "id": "boom-sprite",
+   "name": "Sprite",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 35,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772504553,
+   "foto_origem": "glovo/fotos/41772504553.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-sprite.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-35.jpg)"
+  },
+  {
+   "id": "boom-fanta-laranja",
+   "name": "Fanta Laranja",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 36,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772505248,
+   "foto_origem": "glovo/fotos/41772505248.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-fanta-laranja.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-34.jpg)"
+  },
+  {
+   "id": "boom-ice-tea-limao",
+   "name": "Ice Tea Limão",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 37,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772506213,
+   "foto_origem": "glovo/fotos/41772506213.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-ice-tea-limao.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-38.jpg)"
+  },
+  {
+   "id": "boom-ice-tea-pessego",
+   "name": "Ice Tea Pêssego",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 38,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772506756,
+   "foto_origem": "glovo/fotos/41772506756.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-ice-tea-pessego.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-37.jpg)"
+  },
+  {
+   "id": "boom-ice-tea-manga",
+   "name": "Ice Tea Manga",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 39,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772508242,
+   "foto_origem": "glovo/fotos/41772508242.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-ice-tea-manga.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-36.jpg)"
+  },
+  {
+   "id": "boom-compal-laranja",
+   "name": "Compal Laranja",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 40,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772508522,
+   "foto_origem": "glovo/fotos/41772508522.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-compal-laranja.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-32.jpg)"
+  },
+  {
+   "id": "boom-compal-maca",
+   "name": "Compal Maçã",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 41,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772508924,
+   "foto_origem": "glovo/fotos/41772508924.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-compal-maca.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-31.jpg)"
+  },
+  {
+   "id": "boom-fanta-guarana",
+   "name": "Fanta Guaraná",
+   "description": "Refrigerante Fanta guarana",
+   "category": "Bebidas",
+   "sort_order": 43,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.3,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 42359757846,
+   "foto_origem": "glovo/fotos/42359757846.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-fanta-guarana.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (42359757846.jpg)"
+  },
+  {
+   "id": "boom-agua-alardo-0-33",
+   "name": "Água 0,33 L",
+   "description": "Água Alardo 0,33 L.",
+   "category": "Bebidas",
+   "sort_order": 44,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 1.4,
+   "preco_glovo_ref": 1.5,
+   "glovo_id": 41772486459,
+   "foto_origem": "glovo/fotos/41772486459.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-agua-alardo-0-33.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-23.jpg)"
+  },
+  {
+   "id": "boom-agua-das-pedras",
+   "name": "Água das Pedras",
+   "description": "",
+   "category": "Bebidas",
+   "sort_order": 45,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 1.7,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-franziskaner",
+   "name": "Franziskaner",
+   "description": "",
+   "category": "Cervejas e sidras",
+   "sort_order": 29,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 4.4,
+   "preco_glovo_ref": 5,
+   "glovo_id": 41772522058,
+   "foto_origem": "glovo/fotos/41772522058.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-franziskaner.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-27.jpg)"
+  },
+  {
+   "id": "boom-desperados",
+   "name": "Desperados",
+   "description": "",
+   "category": "Cervejas e sidras",
+   "sort_order": 30,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.85,
+   "preco_glovo_ref": 4,
+   "glovo_id": 41772518316,
+   "foto_origem": "glovo/fotos/41772518316.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-desperados.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-26.jpg)"
+  },
+  {
+   "id": "boom-bandida-pomar-maca-sidra",
+   "name": "Bandida Pomar Maçã Sidra",
+   "description": "",
+   "category": "Cervejas e sidras",
+   "sort_order": 31,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 2.9,
+   "preco_glovo_ref": 3.1,
+   "glovo_id": 41772527539,
+   "foto_origem": "glovo/fotos/41772527539.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bandida-pomar-maca-sidra.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-25.jpg)"
+  },
+  {
+   "id": "boom-bandida-pomar-frutos-vermelhos-sidra",
+   "name": "Bandida Pomar Frutos Vermelhos Sidra",
+   "description": "",
+   "category": "Cervejas e sidras",
+   "sort_order": 32,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 2.9,
+   "preco_glovo_ref": 3.1,
+   "glovo_id": 41772527566,
+   "foto_origem": "glovo/fotos/41772527566.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-bandida-pomar-frutos-vermelhos-sidra.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-24.jpg)"
+  },
+  {
+   "id": "boom-super-bock-0-33",
+   "name": "Super Bock 0,33 L",
+   "description": "Cerveja",
+   "category": "Cervejas e sidras",
+   "sort_order": 42,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 2.1,
+   "preco_glovo_ref": 2.4,
+   "glovo_id": 41772511367,
+   "foto_origem": "glovo/fotos/41772511367.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-super-bock-0-33.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 (wa-29.jpg)"
+  },
+  {
+   "id": "boom-cerveja-letra-a",
+   "name": "Cerveja Letra A",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 46,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.65,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cerveja-letra-b",
+   "name": "Cerveja Letra B",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 47,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.85,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cerveja-letra-c",
+   "name": "Cerveja Letra C",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 48,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.95,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cerveja-letra-d",
+   "name": "Cerveja Letra D",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 49,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.95,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cerveja-letra-e",
+   "name": "Cerveja Letra E",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 50,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.95,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-cerveja-letra-f",
+   "name": "Cerveja Letra F",
+   "description": "Cerveja artesanal Letra.",
+   "category": "Cervejas e sidras",
+   "sort_order": 51,
+   "is_popular": false,
+   "age_restricted": true,
+   "allergens": null,
+   "preco_loja": 3.95,
+   "preco_glovo_ref": null,
+   "glovo_id": null,
+   "foto_origem": null,
+   "foto_nota": "sem foto: não há nas 40 imagens do dono",
+   "option_groups": []
+  },
+  {
+   "id": "boom-dose-batata-doce",
+   "name": "Dose de batata doce",
+   "description": "",
+   "category": "Acompanhamentos e molhos",
+   "sort_order": 52,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 3.85,
+   "preco_glovo_ref": 3.8,
+   "glovo_id": 41752909638,
+   "foto_origem": "glovo/fotos/41752909638.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-dose-batata-doce.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41752909638.jpg)"
+  },
+  {
+   "id": "boom-molho-cheddar",
+   "name": "Molho cheddar (300 g)",
+   "description": "300gr",
+   "category": "Acompanhamentos e molhos",
+   "sort_order": 53,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 3.2,
+   "preco_glovo_ref": 3.3,
+   "glovo_id": 41752909643,
+   "foto_origem": "glovo/fotos/41752909643.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-molho-cheddar.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41752909643.jpg)"
+  },
+  {
+   "id": "boom-dose-batata-artesanal",
+   "name": "Dose de batata frita artesanal",
+   "description": "",
+   "category": "Acompanhamentos e molhos",
+   "sort_order": 54,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 2.75,
+   "preco_glovo_ref": 2.5,
+   "glovo_id": 41752909639,
+   "foto_origem": "glovo/fotos/41752909639.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-dose-batata-artesanal.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41752909639.jpg)"
+  },
+  {
+   "id": "boom-maionese-caseira-extra",
+   "name": "Maionese caseira",
+   "description": "Maionese caseira",
+   "category": "Acompanhamentos e molhos",
+   "sort_order": 55,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 1.1,
+   "preco_glovo_ref": 1.4,
+   "glovo_id": 41752909640,
+   "foto_origem": "glovo/fotos/41752909640.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-maionese-caseira-extra.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (41752909640.jpg)"
+  },
+  {
+   "id": "boom-maionese-caseira-malagueta-picante",
+   "name": "Maionese de malagueta picante",
+   "description": "Maionese malagueta seca picante",
+   "category": "Acompanhamentos e molhos",
+   "sort_order": 56,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": 1.4,
+   "preco_glovo_ref": 1.4,
+   "glovo_id": 42186172442,
+   "foto_origem": "glovo/fotos/42186172442.jpg",
+   "foto_nota": null,
+   "option_groups": [],
+   "foto_storage": "boom-burger-guarda/produtos/boom-maionese-caseira-malagueta-picante.webp",
+   "foto_origem_final": "Glovo do dono, loja 539100 (42186172442.jpg)"
+  }
+ ],
+ "excluidos": [
+  {
+   "nome": "Embalagem de Utilização Única",
+   "motivo": "taxa de embalagem da Glovo; no Bora o saco do restaurante ja e cobrado a parte (0,30 EUR fixo)"
+  },
+  {
+   "nome": "Saco",
+   "motivo": "idem: saco e regra do Bora, nao produto"
+  },
+  {
+   "nome": "Ingrediente extra",
+   "motivo": "vira opcao; parece foto de banco de imagens (legumes sobre tabua branca) - nao usar"
+  },
+  {
+   "nome": "Boom! Terra e Mar",
+   "motivo": "hambúrguer do mês de outubro (especial); o dono não deu preço (15:32)"
+  },
+  {
+   "nome": "Heineken Zero Álcool",
+   "motivo": "não veio na lista do dono"
+  },
+  {
+   "nome": "Super Bock Stout",
+   "motivo": "não veio na lista do dono"
+  }
+ ],
+ "pendentes": [
+  {
+   "id": "boom-the-king-elvis",
+   "name": "Boom! The King Elvis",
+   "description": "Diz a lenda que Elvis Presley cruzou os EUA no seu jato privado, a meio da noite, só para comer a sua sanduíche favorita. Não precisas de um avião para provar essa lenda: nós recriámo-la num hambúrguer épico que vai desafiar o teu paladar! Pão brioche de batata doce, alface iceberg, carne smash de novilho, manteiga de amendoim, bacon grelhado, chutney de Mirtilo, molho cheddar e cebola crocante. Acompanha batata frita artesanal e maionese caseira",
+   "category": "Hambúrgueres",
+   "sort_order": 6,
+   "is_popular": false,
+   "age_restricted": false,
+   "allergens": null,
+   "preco_loja": null,
+   "preco_glovo_ref": 18.8,
+   "glovo_id": 42259630693,
+   "foto_origem": "whatsapp/wa-41-king-elvis.jpg",
+   "foto_nota": null,
+   "option_groups": [
+    {
+     "id": "boom-the-king-elvis-trocar-o-pao",
+     "name": "Trocar o pão",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 1,
+     "items": [
+      {
+       "id": "boom-the-king-elvis-trocar-o-pao-pao-sem-gluten",
+       "name": "Pão sem glúten",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.4,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-the-king-elvis-trocar-o-pao-bolo-do-caco",
+       "name": "Bolo do caco",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.1,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-the-king-elvis-trocar-a-carne",
+     "name": "Trocar a carne",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 2,
+     "items": [
+      {
+       "id": "boom-the-king-elvis-trocar-a-carne-peito-de-frango-grelhado",
+       "name": "Peito de frango grelhado",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.6,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-the-king-elvis-trocar-a-carne-veggie-beyond-proteina-de-ervilha",
+       "name": "Veggie Beyond (proteína de ervilha)",
+       "preco_loja": null,
+       "preco_glovo_ref": 3.25,
+       "sort_order": 2
+      }
+     ]
+    },
+    {
+     "id": "boom-the-king-elvis-extras",
+     "name": "Extras",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 4,
+     "sort_order": 3,
+     "items": [
+      {
+       "id": "boom-the-king-elvis-extras-mais-160-g-de-carne-de-novilho",
+       "name": "Mais 160 g de carne de novilho",
+       "preco_loja": null,
+       "preco_glovo_ref": 5.2,
+       "sort_order": 1
+      },
+      {
+       "id": "boom-the-king-elvis-extras-ingrediente-extra",
+       "name": "Ingrediente extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.7,
+       "sort_order": 2
+      },
+      {
+       "id": "boom-the-king-elvis-extras-maionese-caseira-extra",
+       "name": "Maionese caseira extra",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 3
+      },
+      {
+       "id": "boom-the-king-elvis-extras-maionese-de-malagueta-picante",
+       "name": "Maionese de malagueta picante",
+       "preco_loja": null,
+       "preco_glovo_ref": 1.4,
+       "sort_order": 4
+      }
+     ]
+    },
+    {
+     "id": "boom-the-king-elvis-batata",
+     "name": "Batata",
+     "is_required": false,
+     "min_choices": 0,
+     "max_choices": 1,
+     "sort_order": 4,
+     "items": [
+      {
+       "id": "boom-the-king-elvis-batata-trocar-a-batata-por-batata-doce",
+       "name": "Trocar a batata por batata doce",
+       "preco_loja": null,
+       "preco_glovo_ref": 2.2,
+       "sort_order": 1
+      }
+     ]
+    }
+   ],
+   "foto_storage": "boom-burger-guarda/produtos/boom-the-king-elvis-foto-dono.webp",
+   "foto_origem_final": "WhatsApp do dono 27/10/2026 15:35 (wa-41-king-elvis.jpg)",
+   "nota": "Foto recebida 15:35 (adendo 4); falta o preço da loja. Entra com as opções dos outros hambúrgueres."
+  }
+ ]
+}

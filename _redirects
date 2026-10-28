@@ -1,2 +1,5 @@
-# /verificar/<token> — pagina publica de verificacao do motorista TVDE (a pagina le o token do endereco).
-/verificar/*  /verificar/index.html  200
+# /verificar/<token> — pagina publica de verificacao do motorista TVDE.
+# O alvo e a pasta, NAO o index.html: o Cloudflare Pages redireciona 308 qualquer
+# URL acabado em .html para a versao limpa, e uma reescrita que aponta para .html
+# morre nesse redireccionamento (apanhado a 24/09/2026 — dava 404).
+/verificar/*  /verificar/  200

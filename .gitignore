@@ -10,3 +10,17 @@ tools/fiscal-visual/saida/
 # propostas geradas: levam dados de clientes, nao entram em git
 tools/proposta/saida/
 __pycache__/
+
+# boom-burger (2026-10-27): o repo e PUBLICO
+# - zip e manifest do WhatsApp levam o numero pessoal do lojista
+sites-parceiros/boom-burger/origem/whatsapp/*.zip
+sites-parceiros/boom-burger/origem/whatsapp/manifest.json
+# - ficha do Google leva nomes de quem escreveu avaliacoes
+sites-parceiros/boom-burger/origem/google/
+# - recortes de ensaio (regeneraveis com rembg)
+sites-parceiros/boom-burger/media/camadas/recorte-isnet-general-use.png
+# - capturas brutas (100+ MB) e capturas de sites de terceiros; a selecao vai em provas/boom-burger/selecao/
+provas/boom-burger/*.png
+provas/boom-burger/_video_tmp/
+provas/boom-burger/3segundos/*.png
+referencias/boom-burger/*.png

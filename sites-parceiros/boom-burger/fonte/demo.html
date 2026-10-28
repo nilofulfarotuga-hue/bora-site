@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demonstração — Boom! Burger</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/assets/logo/favicon.ico">
+<!-- Pagina da DEMONSTRACAO de 28/10/2026 (missao boom-burger-2026-10-27). So a conta "Cliente Demonstracao"
+     consegue pedir, so dentro da janela definida em platform_settings.modo_demo_loja; o pedido e de teste,
+     em dinheiro, e segue o fluxo real: painel da Boom! Burger -> estafeta de demonstracao.
+     A configuracao publica (URL e chave publica) entra no build, como no index.html (window.BOOM_SB). -->
+<!--CONFIG_PUBLICA-->
+<style>
+  :root{--noite:#121110;--carvao:#1C1B1A;--linha:#3A3836;--ouro:#DBB545;--creme:#F6F0E2;--creme2:#BFB6A6}
+  *{box-sizing:border-box}body{margin:0;background:var(--noite);color:var(--creme);font:17px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;padding:16px 16px 120px}
+  .caixa{max-width:560px;margin:0 auto}h1{font:400 2.4rem/1 Impact,"Bebas Neue","Arial Narrow",sans-serif;text-transform:uppercase;margin:16px 0 4px}
+  .faixa{display:inline-block;background:var(--ouro);color:var(--noite);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:8px}
+  p{color:var(--creme2)}label{display:block;font-weight:700;margin:12px 0 6px}
+  input{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--linha);background:var(--carvao);color:var(--creme);font-size:17px}
+  button{min-height:52px;padding:0 22px;border:0;border-radius:999px;background:var(--ouro);color:var(--noite);font-family:inherit;font-weight:800;font-size:17px;line-height:1;cursor:pointer;width:100%;margin-top:16px}
+  button[disabled]{opacity:.5}.sec{border-top:1px solid var(--linha);margin-top:24px;padding-top:16px}
+  .item{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--linha)}
+  .item img{width:56px;height:56px;border-radius:10px;object-fit:cover;background:#2B2A29}.item b{display:block}.item span{color:var(--creme2);font-size:15px}
+  .qtd{display:flex;align-items:center;gap:8px}.qtd button{width:44px;min-height:44px;margin:0;padding:0;font-size:22px}
+  .total{display:flex;justify-content:space-between;font-weight:800;margin-top:16px}
+  .estado{background:var(--carvao);border:1px solid var(--linha);border-radius:16px;padding:16px;margin-top:16px}
+  .passo{padding:6px 0;color:var(--creme2)}.passo.feito{color:var(--creme)}.passo.feito::before{content:"✓ ";color:var(--ouro)}
+  .erro{color:#FCA5A5;font-weight:700}
+</style>
+</head>
+<body>
+<main class="caixa">
+  <span class="faixa">Demonstração</span>
+  <h1>Pedir na Boom! Burger</h1>
+  <p>Esta página é só para a demonstração. O pedido vai a sério para o painel da loja e para o estafeta de demonstração, mas é de teste: ninguém paga e nada entra nas contas.</p>
+
+  <section id="entrar">
+    <label for="email">Conta de demonstração</label>
+    <input id="email" type="email" autocomplete="username" value="demo.cliente.boomburger@bora.app">
+    <label for="senha">Palavra-passe</label>
+    <input id="senha" type="password" autocomplete="current-password">
+    <button id="bEntrar">Entrar</button>
+    <p id="eEntrar" class="erro" role="alert"></p>
+  </section>
+
+  <section id="menu" class="sec" hidden>
+    <p>Escolhe o pedido (os preços são os da app Bora):</p>
+    <div id="lista"></div>
+    <div class="total"><span>Produtos</span><span id="total">0,00 €</span></div>
+    <p>Pagamento: <b>dinheiro, à entrega</b>. A entrega vai para a Praça Luís de Camões.</p>
+    <button id="bPedir">Fazer o pedido</button>
+    <p id="ePedir" class="erro" role="alert"></p>
+  </section>
+
+  <section id="seguir" class="sec" hidden>
+    <div class="estado" aria-live="polite">
+      <b id="numero"></b>
+      <p>Código de entrega para dar ao estafeta: <b id="pin" style="font-size:28px;letter-spacing:.15em;color:var(--ouro)"></b></p>
+      <div class="passo" data-s="created">Pedido recebido pela Boom! Burger</div>
+      <div class="passo" data-s="preparing">A loja aceitou e está a preparar</div>
+      <div class="passo" data-s="callingDriver">A chamar o estafeta</div>
+      <div class="passo" data-s="driverAccepted">O estafeta aceitou</div>
+      <div class="passo" data-s="pickedUp">Levantado na loja</div>
+      <div class="passo" data-s="onTheWay">A caminho</div>
+      <div class="passo" data-s="fim">Entregue (demonstração concluída, sem custo)</div>
+    </div>
+    <p>Também dá para seguir na app Bora, entrada Cliente, com esta mesma conta.</p>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  var cfg = window.BOOM_SB;
+  var sb = window.supabase.createClient(cfg.url, cfg.chave);
+  var ESCOLHA = ['boom-classico', 'boom-duplo-smash', 'boom-kamikaze', 'boom-batata-gulosa', 'boom-coca-cola', 'boom-super-bock-0-33'];
+  var qtd = {'boom-classico': 1, 'boom-coca-cola': 1};
+  var prods = [];
+  var eur = new Intl.NumberFormat('pt-PT', {style: 'currency', currency: 'EUR'});
+  var $ = function (id) { return document.getElementById(id); };
+  var ORDEM = ['created', 'preparing', 'callingDriver', 'driverAccepted', 'pickedUp', 'onTheWay', 'fim'];
+
+  function desenha() {
+    var t = 0;
+    $('lista').innerHTML = prods.map(function (p) {
+      var q = qtd[p.id] || 0; t += q * p.price;
+      return '<div class="item"><img alt="" src="' + (p.photo_url || '') + '"><div><b>' + p.name + '</b><span>' + eur.format(p.price) +
+        '</span></div><div class="qtd"><button aria-label="Menos ' + p.name + '" data-m="' + p.id + '">−</button><span>' + q +
+        '</span><button aria-label="Mais ' + p.name + '" data-p="' + p.id + '">+</button></div></div>';
+    }).join('');
+    $('total').textContent = eur.format(t);
+    $('bPedir').disabled = t <= 0;
+  }
+  $('lista').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var id = b.getAttribute('data-p') || b.getAttribute('data-m');
+    qtd[id] = Math.max(0, Math.min(10, (qtd[id] || 0) + (b.hasAttribute('data-p') ? 1 : -1)));
+    desenha();
+  });
+
+  async function menu() {
+    var q = await sb.from('products').select('id,name,price,photo_url').in('id', ESCOLHA);
+    prods = (q.data || []).sort(function (a, b) { return ESCOLHA.indexOf(a.id) - ESCOLHA.indexOf(b.id); });
+    $('entrar').hidden = true; $('menu').hidden = false; desenha();
+  }
+  $('bEntrar').addEventListener('click', async function () {
+    $('eEntrar').textContent = '';
+    var r = await sb.auth.signInWithPassword({email: $('email').value.trim(), password: $('senha').value});
+    if (r.error) { $('eEntrar').textContent = 'Não entrou: ' + r.error.message; return; }
+    menu();
+  });
+  // ja entrou antes neste telemovel: vai direto ao menu
+  sb.auth.getSession().then(function (r) { if (r.data && r.data.session) menu(); });
+
+  $('bPedir').addEventListener('click', async function () {
+    $('ePedir').textContent = ''; $('bPedir').disabled = true;
+    var itens = Object.keys(qtd).filter(function (k) { return qtd[k] > 0; }).map(function (k) { return {product_id: k, quantidade: qtd[k]}; });
+    var r = await sb.rpc('demo_boom_criar_pedido', {p_itens: itens, p_notas: 'Pedido de DEMONSTRAÇÃO'});
+    if (r.error) {
+      $('ePedir').textContent = /fora_da_janela/.test(r.error.message) ? 'A demonstração ainda não está aberta (ou já acabou).' : ('Não deu: ' + r.error.message);
+      $('bPedir').disabled = false; return;
+    }
+    var oid = r.data.order_id || r.data.id;
+    var resumo = itens.map(function (i) { var p = prods.find(function (x) { return x.id === i.product_id; }); return i.quantidade + 'x ' + (p ? p.name : i.product_id); }).join(', ');
+    sb.functions.invoke('notify-partner', {body: {orderId: oid, restaurantId: 'boom-burger-guarda', items: resumo, total: r.data.total || 0}}).catch(function () {});
+    $('menu').hidden = true; $('seguir').hidden = false; $('numero').textContent = 'Pedido #' + String(oid).slice(0, 8);
+    // o mesmo PIN que a app mostra ao cliente (4 primeiros hex do id, % 9000 + 1000)
+    $('pin').textContent = String(parseInt(String(oid).replace(/-/g, '').slice(0, 4), 16) % 9000 + 1000);
+    segue(oid);
+  });
+
+  function marca(s) {
+    var k = ORDEM.indexOf(s);
+    document.querySelectorAll('.passo').forEach(function (el) { el.classList.toggle('feito', ORDEM.indexOf(el.getAttribute('data-s')) <= k); });
+  }
+  async function segue(oid) {
+    var q = await sb.from('orders').select('status,cancel_reason').eq('id', oid).maybeSingle();
+    if (q.data) {
+      var s = q.data.status;
+      if (s === 'cancelled' && /Demonstra/.test(q.data.cancel_reason || '')) s = 'fim';
+      marca(s);
+      if (s === 'fim' || s === 'cancelled') return;
+    }
+    setTimeout(function () { segue(oid); }, 4000);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+ "pedido": "bb322980-9636-4a82-be6b-b23523d4bb39",
+ "passos": [
+  {
+   "hora": "17:11:12",
+   "passo": "sessoes das 3 contas abertas (link de acesso, sem palavra-passe)"
+  },
+  {
+   "hora": "17:11:12",
+   "passo": "estafeta: pode ficar online?",
+   "st": 200,
+   "r": "{'ok': True}"
+  },
+  {
+   "hora": "17:11:13",
+   "passo": "estafeta demo online na Guarda (botao Online + batimento + GPS)",
+   "st": 204
+  },
+  {
+   "hora": "17:11:13",
+   "passo": "cliente demo fez o pedido",
+   "pedido": "bb322980-9636-4a82-be6b-b23523d4bb39",
+   "estado": "created",
+   "teste": true
+  },
+  {
+   "hora": "17:11:14",
+   "passo": "aviso ao parceiro (notify-partner, como a app)",
+   "st": 200,
+   "r": "{'ok': False, 'reason': 'no_fcm_token'}"
+  },
+  {
+   "hora": "17:11:14",
+   "passo": "parceiro aceitou com 5 min",
+   "st": 200,
+   "r": "{'ok': True, 'status': 'preparing', 'prep_time_minutes': 5}"
+  },
+  {
+   "hora": "17:11:45",
+   "passo": "despacho chamou e ofereceu",
+   "segundos": 31,
+   "estado": "callingDriver",
+   "oferta": "24a57f25-910e-4a63-8949-3ac737e765cf",
+   "atribuido": null
+  },
+  {
+   "hora": "17:11:45",
+   "passo": "a oferta e do estafeta demo?",
+   "sim": true,
+   "oferta": "24a57f25-910e-4a63-8949-3ac737e765cf",
+   "ja_tentados": [
+    "f3c7d541-6bff-41a8-b322-0fff5fbadaa4"
+   ]
+  },
+  {
+   "hora": "17:11:45",
+   "passo": "estafeta demo aceitou",
+   "st": 200,
+   "r": "{'ok': True, 'status': 'driverAccepted', 'order_id': 'bb322980-9636-4a82-be6b-b23523d4bb39'}"
+  },
+  {
+   "hora": "17:13:09",
+   "passo": "pedido levantado e a caminho",
+   "segundos": 83,
+   "estado": "onTheWay",
+   "oferta": null,
+   "atribuido": "24a57f25-910e-4a63-8949-3ac737e765cf"
+  },
+  {
+   "hora": "17:13:09",
+   "passo": "estafeta demo entregou com o PIN",
+   "st": 200,
+   "r": "{'ok': True}"
+  },
+  {
+   "hora": "17:13:12",
+   "passo": "estado final",
+   "estado": "cancelled",
+   "motivo": "Demonstracao concluida: entrega simulada, sem custo",
+   "taxa": 0.0,
+   "pagamento": "pending"
+  },
+  {
+   "hora": "17:13:12",
+   "passo": "estafeta demo voltou a offline"
+  }
+ ]
+}

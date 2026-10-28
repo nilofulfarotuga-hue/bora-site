@@ -37,6 +37,7 @@ mkdir -p "$STAGE"
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
          viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
          trabalhos.html orcamento.html 404.html \
+         baixar-pagina.html secretario.html \
          manifest.json robots.txt sitemap.xml; do
   [ -f "$f" ] && cp "$f" "$STAGE"/
 done
@@ -44,7 +45,24 @@ done
 # /verificar/<token> (motorista TVDE, 2026-09-23): a pagina e a regra que
 # manda qualquer token para ela.
 [ -d verificar ] && cp -r verificar "$STAGE"/verificar
-[ -f _redirects ] && cp _redirects "$STAGE"/_redirects
+# functions/ (Cloudflare Pages Functions): /baixar conta a visita no servidor e manda
+# o iPhone para a App Store e o Android para a Google Play (30/09/2026). Sem esta
+# linha a funcao nao e publicada e a contagem morre em silencio (foi o que aconteceu
+# de 23/09 a 30/09: a copia filtrada deixou a pagina de fora).
+[ -d functions ] && cp -r functions "$STAGE"/functions
+# /avenca/<token>/ (amostras da avenca Presenca Digital, 2026-09-24): paginas privadas,
+# uma por negocio, com link unico e noindex na meta. Nao estao ligadas de lado nenhum do
+# site: so chega la quem tiver o link.
+[ -d avenca ] && cp -r avenca "$STAGE"/avenca
+# _redirects e _headers vao SEM fim de linha do Windows. O Cloudflare Pages le o
+# _redirects linha a linha: com CRLF o estado fica "200", a regra e descartada em
+# silencio, e /verificar/<token> respondia 404 enquanto /verificar/?t=<token> dava 200
+# (apanhado a 24/09/2026). Tirar o  aqui garante isto mesmo que o checkout seja Windows.
+[ -f _redirects ] && tr -d '' < _redirects > "$STAGE"/_redirects
+# _headers (Cache-Control das /provas, 2026-09-05): sem esta linha a copia
+# filtrada publicava o site SEM as regras de cache — o Danilo via a versao de
+# ontem depois de um deploy novo. (fecho-manha-2026-09-24)
+[ -f _headers ] && tr -d '' < _headers > "$STAGE"/_headers
 [ -d loja ]  && cp -r loja  "$STAGE"/loja
 [ -d dados ] && cp -r dados "$STAGE"/dados
 # provas/ — capturas do trabalho para a Claude.ai ver (noindex na meta,

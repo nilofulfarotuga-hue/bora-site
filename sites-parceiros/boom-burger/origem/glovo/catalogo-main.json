@@ -1,0 +1,5385 @@
+{
+ "type": "LIST_VIEW_LAYOUT",
+ "data": {
+  "styles": {
+   "contentMode": "AUTO"
+  },
+  "body": [
+   {
+    "type": "LIST",
+    "data": {
+     "title": "Mais vendidos",
+     "slug": "mais-vendidos-ts",
+     "action": {
+      "type": "NAVIGATION",
+      "data": {
+       "path": "/v4/stores/539100/addresses/873866/content/main?nodeType=DEEP_LINK&link=mais-vendidos-ts"
+      },
+      "trigger": "onInteraction"
+     },
+     "icon": {
+      "lightImageId": "dh:customer-assets-glovo/StoreWall/Top.png",
+      "darkImageId": "dh:customer-assets-glovo/StoreWall/Top.png"
+     },
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909644,
+        "externalId": "bbb349ac-2fd9-4693-971e-fa2bc30ad91d",
+        "storeProductId": "39e352f0-e425-451d-affe-ab9b00d0b257",
+        "urn": "",
+        "name": "Boom! Bombástico",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, agrião, tomate, queijo edam, bacon e ovo. Inclui batata frita artesanal e maionese caseira ",
+        "price": 14.6,
+        "priceInfo": {
+         "amount": 14.6,
+         "currencyCode": "EUR",
+         "displayText": "14,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/422cf790b07ce777375bb1c6499371469d25151cbb2b244a0fcf4733c50079af",
+        "imageId": "dh:menus-glovo/products/422cf790b07ce777375bb1c6499371469d25151cbb2b244a0fcf4733c50079af",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200855500075662.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "productTileFooter": {
+         "footerIcon": {
+          "lightImageId": "dh:customer-assets-glovo/social/order.svg",
+          "darkImageId": "dh:customer-assets-glovo/social/order.svg"
+         },
+         "footerText": "<b>50+</b> já pediram",
+         "metadata": {
+          "socialSignalType": "order",
+          "productId": 41752909644,
+          "userIds": []
+         }
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909644",
+             "productIndex": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "collectionType": "TopSellers",
+             "isSponsored": "false",
+             "productExternalId": "bbb349ac-2fd9-4693-971e-fa2bc30ad91d",
+             "productSaleType": "PiecePiece",
+             "socialSignal": "74",
+             "storeProductId": "39e352f0-e425-451d-affe-ab9b00d0b257",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909744,
+        "externalId": "b9e9dbf9-4ddb-4241-b545-37db6e3e4855",
+        "storeProductId": "2d42d66a-e667-4c7f-860d-9e4f76b74d15",
+        "urn": "",
+        "name": "Boom! Brie Fan",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate seco, queijo brie, cebola caramelizada, nozes e molho mostarda e mel. Inclui batata frita artesanal e maionese caseira ",
+        "price": 15.3,
+        "priceInfo": {
+         "amount": 15.3,
+         "currencyCode": "EUR",
+         "displayText": "15,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/39b4f669db8c56cdb78e1860a3a870b1830a8e5a57b7310c938d3d77a17b4a32",
+        "imageId": "dh:menus-glovo/products/39b4f669db8c56cdb78e1860a3a870b1830a8e5a57b7310c938d3d77a17b4a32",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200100192137679.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909744",
+             "productIndex": "1",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "collectionType": "TopSellers",
+             "isSponsored": "false",
+             "productExternalId": "b9e9dbf9-4ddb-4241-b545-37db6e3e4855",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "2d42d66a-e667-4c7f-860d-9e4f76b74d15",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909746,
+        "externalId": "d21a7816-f6e8-4d42-8288-67cdc62bb933",
+        "storeProductId": "c4e84749-4dcc-4ea8-a8e7-ed9ad751513a",
+        "urn": "",
+        "name": "Boom! Duplo Smash",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche, dupla carne smash de novilho, bacon, cebola roxa, picles de pepino e molho queijo cheddar. Inclui batata frita artesanal e maionese caseira ",
+        "price": 17.3,
+        "priceInfo": {
+         "amount": 17.3,
+         "currencyCode": "EUR",
+         "displayText": "17,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/13fa6a79343533592971e8cf0669fdf22feab0c4cc744e3976ecc2ead94d38fa",
+        "imageId": "dh:menus-glovo/products/13fa6a79343533592971e8cf0669fdf22feab0c4cc744e3976ecc2ead94d38fa",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200708628868522.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909746",
+             "productIndex": "2",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "collectionType": "TopSellers",
+             "isSponsored": "false",
+             "productExternalId": "d21a7816-f6e8-4d42-8288-67cdc62bb933",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "c4e84749-4dcc-4ea8-a8e7-ed9ad751513a",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "storeAddressId": 873866,
+      "componentEvent": "COLLECTION",
+      "collectionType": "TOP_SELLERS",
+      "collectionOrigin": "ContentExpansionButton",
+      "numberOfPictures": 5,
+      "collectionName": "Mais vendidos",
+      "widgetAppLocation": "StoreView"
+     }
+    }
+   },
+   {
+    "id": "entradas-s.6229130192",
+    "type": "LIST",
+    "data": {
+     "title": "Entradas",
+     "slug": "entradas-s.6229130192",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909636,
+        "externalId": "7f16a073-b319-44b1-8b15-3bbe4a07da6c",
+        "storeProductId": "78628bed-1122-4fb3-985d-ee4362f8ad0b",
+        "urn": "",
+        "name": "Asas de frango com molho BBQ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "8 unidades",
+        "price": 10.6,
+        "priceInfo": {
+         "amount": 10.6,
+         "currencyCode": "EUR",
+         "displayText": "10,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/1b1076e0aa58182ba5ab4f829d8852480f0c26a849e8d57b752a8b939cd111bb",
+        "imageId": "dh:menus-glovo/products/1b1076e0aa58182ba5ab4f829d8852480f0c26a849e8d57b752a8b939cd111bb",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198185119114767.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909636",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "7f16a073-b319-44b1-8b15-3bbe4a07da6c",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "78628bed-1122-4fb3-985d-ee4362f8ad0b",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909630,
+        "externalId": "d75c5656-25ce-4c6f-97aa-3ea029cb2e69",
+        "storeProductId": "fe11262f-1ee8-4045-a943-369def533149",
+        "urn": "",
+        "name": "Batata gulosa",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Batata com molho cheddar, bacon e cebola frita ",
+        "price": 7.9,
+        "priceInfo": {
+         "amount": 7.9,
+         "currencyCode": "EUR",
+         "displayText": "7,90 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198242506430158.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909630",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d75c5656-25ce-4c6f-97aa-3ea029cb2e69",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "fe11262f-1ee8-4045-a943-369def533149",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42186156644,
+        "externalId": "1f24346e-8187-47b9-9147-23e49869e15f",
+        "storeProductId": "bffcf2fb-56e3-4b9c-b24f-1caf50fde8fb",
+        "urn": "",
+        "name": "Bites crocantes peito de frango",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pedaços crocantes panados de peito de frango, acompanhados com maionese de malagueta e maionese da casa",
+        "price": 7.8,
+        "priceInfo": {
+         "amount": 7.8,
+         "currencyCode": "EUR",
+         "displayText": "7,80 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/a7f0d799-b6d5-4001-8a2f-f9afe21ef9de.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/a7f0d799-b6d5-4001-8a2f-f9afe21ef9de.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42186156644",
+             "productIndex": "2",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "1f24346e-8187-47b9-9147-23e49869e15f",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "bffcf2fb-56e3-4b9c-b24f-1caf50fde8fb",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909632,
+        "externalId": "58364c60-9ab6-4b58-a2f7-812aa766fd27",
+        "storeProductId": "4024a178-68eb-4b45-b408-4331f1afd0d1",
+        "urn": "",
+        "name": "Tequenhos Palitos de queijo",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Palitos de queijo com massa mãe",
+        "price": 6.9,
+        "priceInfo": {
+         "amount": 6.9,
+         "currencyCode": "EUR",
+         "displayText": "6,90 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/caca9294d4dc22c701e3f565e69b1c02fb6dab183b0e9cf7433f587a2c2c67b5",
+        "imageId": "dh:menus-glovo/products/caca9294d4dc22c701e3f565e69b1c02fb6dab183b0e9cf7433f587a2c2c67b5",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202549957858375.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909632",
+             "productIndex": "3",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "58364c60-9ab6-4b58-a2f7-812aa766fd27",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4024a178-68eb-4b45-b408-4331f1afd0d1",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909637,
+        "externalId": "8b83297e-c00f-4980-b730-7343e3a14fdf",
+        "storeProductId": "4c63bcd5-d2ec-4178-acc0-226a577c4a86",
+        "urn": "",
+        "name": "Cogumelos Frescos salteados",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Cogumelos frescos salteados em flor de sal",
+        "price": 6.9,
+        "priceInfo": {
+         "amount": 6.9,
+         "currencyCode": "EUR",
+         "displayText": "6,90 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/0be31c89363a7979bad2ef7456b0bc79c144a9f755a5ac500cd48561202b6585",
+        "imageId": "dh:menus-glovo/products/0be31c89363a7979bad2ef7456b0bc79c144a9f755a5ac500cd48561202b6585",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198330154763279.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909637",
+             "productIndex": "4",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8b83297e-c00f-4980-b730-7343e3a14fdf",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4c63bcd5-d2ec-4178-acc0-226a577c4a86",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909635,
+        "externalId": "a0e1f9d3-4b4d-456d-ae8a-74fbc87712da",
+        "storeProductId": "e0d9618e-db8e-4dd6-a7d5-ee17d655cd57",
+        "urn": "",
+        "name": "Pimentos Pádron frescos ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Salteados em brandy e especiarias ",
+        "price": 6.6,
+        "priceInfo": {
+         "amount": 6.6,
+         "currencyCode": "EUR",
+         "displayText": "6,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/b64144cfe340be72f09bd292c32720297a9fb45a213cee9e9e495d279692c020",
+        "imageId": "dh:menus-glovo/products/b64144cfe340be72f09bd292c32720297a9fb45a213cee9e9e495d279692c020",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198445165537422.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909635",
+             "productIndex": "5",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "a0e1f9d3-4b4d-456d-ae8a-74fbc87712da",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "e0d9618e-db8e-4dd6-a7d5-ee17d655cd57",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909489,
+        "externalId": "8b84d659-aa92-4a60-9173-d7643ff2b361",
+        "storeProductId": "384b8701-a46d-447c-9f11-3e622b4d5551",
+        "urn": "",
+        "name": "Bolinhas alheira de Mirandela ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "4 unidades",
+        "price": 5.5,
+        "priceInfo": {
+         "amount": 5.5,
+         "currencyCode": "EUR",
+         "displayText": "5,50 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/a81e598195502ca5b64e21a9933634472f67c0cbf822769a8df812f83cfd01eb",
+        "imageId": "dh:menus-glovo/products/a81e598195502ca5b64e21a9933634472f67c0cbf822769a8df812f83cfd01eb",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198050284268716.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909489",
+             "productIndex": "6",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8b84d659-aa92-4a60-9173-d7643ff2b361",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "384b8701-a46d-447c-9f11-3e622b4d5551",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909627,
+        "externalId": "9cd8d1aa-3455-4cbb-83aa-a6eefbe4306e",
+        "storeProductId": "e71ba1e5-c5c8-4495-a5bf-d8fa1eed40ad",
+        "urn": "",
+        "name": "Bolo do caco com manteiga de alho",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Bolo do caco com manteiga de alho caseira",
+        "price": 4.1,
+        "priceInfo": {
+         "amount": 4.1,
+         "currencyCode": "EUR",
+         "displayText": "4,10 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/0907daee17b71d7bb6811347892de5324a966279c38fd4089699a42692c71708",
+        "imageId": "dh:menus-glovo/products/0907daee17b71d7bb6811347892de5324a966279c38fd4089699a42692c71708",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758198414809499279.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Entradas",
+         "subCategoryId": "6229130192",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909627",
+             "productIndex": "7",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130192",
+             "swimlaneTitle": "Entradas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130192",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "9cd8d1aa-3455-4cbb-83aa-a6eefbe4306e",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "e71ba1e5-c5c8-4495-a5bf-d8fa1eed40ad",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6229130192
+     }
+    }
+   },
+   {
+    "id": "hamburgueres-artesanais-s.6229130163",
+    "type": "LIST",
+    "data": {
+     "title": "Hambúrgueres Artesanais ",
+     "slug": "hamburgueres-artesanais-s.6229130163",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42372484543,
+        "externalId": "aa31371c-4d29-47e9-ba36-c7461c3091d3",
+        "storeProductId": "f47ce3bb-fe87-42ab-98c9-fa0de7d21feb",
+        "urn": "",
+        "name": "Boom! Terra e Mar, Hamburguer mês Outubro",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche de cebola, maionese caseira de alho e ervas, alface iceberg em juliana, cebola roxa em juliana, carne novilho 160gr, queijo flamengo cremoso, camarão salteado ao alho, cebolinho picado",
+        "price": 19.4,
+        "priceInfo": {
+         "amount": 19.4,
+         "currencyCode": "EUR",
+         "displayText": "19,40 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/0ae9f1b4-90be-4063-a14f-11dca8c810ba.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/0ae9f1b4-90be-4063-a14f-11dca8c810ba.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42372484543",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "aa31371c-4d29-47e9-ba36-c7461c3091d3",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "f47ce3bb-fe87-42ab-98c9-fa0de7d21feb",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909749,
+        "externalId": "2a91b2d9-1a49-4fb2-965c-58af05b53094",
+        "storeProductId": "4dd80031-1375-4716-b872-43407a367998",
+        "urn": "",
+        "name": "Boom! Kamikaze",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche, 2x 160gr carne novilho, alface, tomate, picles de pepino, 2x queijo cheddar, 4x bacon, aros de cebola e ovo estrelado. Inclui batata frita artesanal e maionese caseira ",
+        "price": 19.2,
+        "priceInfo": {
+         "amount": 19.2,
+         "currencyCode": "EUR",
+         "displayText": "19,20 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/81d9a26a46471af7393aa1c5ec3bf2bbe11a928d14511e9e7d9eed5bbbb61e5f",
+        "imageId": "dh:menus-glovo/products/81d9a26a46471af7393aa1c5ec3bf2bbe11a928d14511e9e7d9eed5bbbb61e5f",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200838794777512.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909749",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "2a91b2d9-1a49-4fb2-965c-58af05b53094",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4dd80031-1375-4716-b872-43407a367998",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42259630693,
+        "externalId": "a34e84fe-1e47-4ca5-afe9-6d7e5aafe164",
+        "storeProductId": "15f4e290-ea37-4fd8-9c91-e6ff8a2b5313",
+        "urn": "",
+        "name": "Boom! The King Elvis",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Diz a lenda que Elvis Presley cruzou os EUA no seu jato privado, a meio da noite, só para comer a sua sanduíche favorita. Não precisas de um avião para provar essa lenda: nós recriámo-la num hambúrguer épico que vai desafiar o teu paladar!\n\nPão brioche de batata doce, alface iceberg, carne smash de novilho, manteiga de amendoim, bacon grelhado, chutney de Mirtilo, molho cheddar e cebola crocante. Acompanha batata frita artesanal e maionese caseira",
+        "price": 18.8,
+        "priceInfo": {
+         "amount": 18.8,
+         "currencyCode": "EUR",
+         "displayText": "18,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/b7ced7c9-1494-494c-9c18-fd9d380382e6.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/b7ced7c9-1494-494c-9c18-fd9d380382e6.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42259630693",
+             "productIndex": "2",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "a34e84fe-1e47-4ca5-afe9-6d7e5aafe164",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "15f4e290-ea37-4fd8-9c91-e6ff8a2b5313",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42186188244,
+        "externalId": "6a0e73bc-1d70-46e6-b847-918f5d5fbc78",
+        "storeProductId": "4b51e8bb-6f65-43a6-9700-00886cc5db90",
+        "urn": "",
+        "name": "Boom! Portobello",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de feijão preto, agrião, 160 g de carne de novilho, queijo provolone fumado, bacon, cogumelo portobello salteado, cebola grelhada e molho de trufa negra. Inclui batata frita artesanal e maionese da casa",
+        "price": 18.7,
+        "priceInfo": {
+         "amount": 18.7,
+         "currencyCode": "EUR",
+         "displayText": "18,70 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/85b45251-8461-48bf-8962-657806eab9cb.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/85b45251-8461-48bf-8962-657806eab9cb.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42186188244",
+             "productIndex": "3",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "6a0e73bc-1d70-46e6-b847-918f5d5fbc78",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4b51e8bb-6f65-43a6-9700-00886cc5db90",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909746,
+        "externalId": "d21a7816-f6e8-4d42-8288-67cdc62bb933",
+        "storeProductId": "c4e84749-4dcc-4ea8-a8e7-ed9ad751513a",
+        "urn": "",
+        "name": "Boom! Duplo Smash",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche, dupla carne smash de novilho, bacon, cebola roxa, picles de pepino e molho queijo cheddar. Inclui batata frita artesanal e maionese caseira ",
+        "price": 17.3,
+        "priceInfo": {
+         "amount": 17.3,
+         "currencyCode": "EUR",
+         "displayText": "17,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/13fa6a79343533592971e8cf0669fdf22feab0c4cc744e3976ecc2ead94d38fa",
+        "imageId": "dh:menus-glovo/products/13fa6a79343533592971e8cf0669fdf22feab0c4cc744e3976ecc2ead94d38fa",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200708628868522.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909746",
+             "productIndex": "4",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d21a7816-f6e8-4d42-8288-67cdc62bb933",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "c4e84749-4dcc-4ea8-a8e7-ed9ad751513a",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909853,
+        "externalId": "816b92a9-c89c-4261-b129-461f95f38b2c",
+        "storeProductId": "3cfab4e0-6fc7-4c26-a211-529b742d8825",
+        "urn": "",
+        "name": "Boom! Burguesinha",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, queijo edam, fiambre, linguiça, salsicha, ovo estrelado e molho francesinha. Inclui batata frita artesanal e maionese caseira",
+        "price": 16.8,
+        "priceInfo": {
+         "amount": 16.8,
+         "currencyCode": "EUR",
+         "displayText": "16,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/58d860d0b42e9eae2a12404f5cef1d013fcdad95052cb4b39a01d8870c607292",
+        "imageId": "dh:menus-glovo/products/58d860d0b42e9eae2a12404f5cef1d013fcdad95052cb4b39a01d8870c607292",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200490422662087.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909853",
+             "productIndex": "5",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "816b92a9-c89c-4261-b129-461f95f38b2c",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "3cfab4e0-6fc7-4c26-a211-529b742d8825",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909748,
+        "externalId": "6d252dfa-dd13-4fd1-a2f2-92940d950735",
+        "storeProductId": "618cbbdb-ebf5-4af7-8219-6a932639c080",
+        "urn": "",
+        "name": "Boom! Cheddar Lovers",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche, 160gr carne novilho, tomate, bacon, molho cheddar e cebola frita. Inclui batata frita artesanal e maionese caseira ",
+        "price": 15.8,
+        "priceInfo": {
+         "amount": 15.8,
+         "currencyCode": "EUR",
+         "displayText": "15,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/0b55437c1f5f60644d71448c6a21f9d77378e21e6e6f8682d3ed3291c23d8ee2",
+        "imageId": "dh:menus-glovo/products/0b55437c1f5f60644d71448c6a21f9d77378e21e6e6f8682d3ed3291c23d8ee2",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758199997926997107.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "productTileFooter": {
+         "footerIcon": {
+          "lightImageId": "dh:customer-assets-glovo/social/order.svg",
+          "darkImageId": "dh:customer-assets-glovo/social/order.svg"
+         },
+         "footerText": "<b>50+</b> já pediram",
+         "metadata": {
+          "socialSignalType": "order",
+          "productId": 41752909748,
+          "userIds": []
+         }
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909748",
+             "productIndex": "6",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "6d252dfa-dd13-4fd1-a2f2-92940d950735",
+             "productSaleType": "PiecePiece",
+             "socialSignal": "68",
+             "storeProductId": "618cbbdb-ebf5-4af7-8219-6a932639c080",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909744,
+        "externalId": "b9e9dbf9-4ddb-4241-b545-37db6e3e4855",
+        "storeProductId": "2d42d66a-e667-4c7f-860d-9e4f76b74d15",
+        "urn": "",
+        "name": "Boom! Brie Fan",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate seco, queijo brie, cebola caramelizada, nozes e molho mostarda e mel. Inclui batata frita artesanal e maionese caseira ",
+        "price": 15.3,
+        "priceInfo": {
+         "amount": 15.3,
+         "currencyCode": "EUR",
+         "displayText": "15,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/39b4f669db8c56cdb78e1860a3a870b1830a8e5a57b7310c938d3d77a17b4a32",
+        "imageId": "dh:menus-glovo/products/39b4f669db8c56cdb78e1860a3a870b1830a8e5a57b7310c938d3d77a17b4a32",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200100192137679.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909744",
+             "productIndex": "7",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "b9e9dbf9-4ddb-4241-b545-37db6e3e4855",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "2d42d66a-e667-4c7f-860d-9e4f76b74d15",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909750,
+        "externalId": "ec8a0cc8-901a-4213-9e65-a4d9d28229fe",
+        "storeProductId": "0f46a744-1d7f-4e22-92c5-a98bcfd91daa",
+        "urn": "",
+        "name": "Boom! Serra da Estrela",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, rúcula, tomate grelhado, cebola roxa grelhada, queijo da serra e chutney de abóbora. Inclui batata frita artesanal e maionese caseira ",
+        "price": 15.2,
+        "priceInfo": {
+         "amount": 15.2,
+         "currencyCode": "EUR",
+         "displayText": "15,20 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/41752909750/dcb4cc3d-57c6-4a75-8400-c29ea5fb0fb8.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/41752909750/dcb4cc3d-57c6-4a75-8400-c29ea5fb0fb8.jpg",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/ccd9aabf576c3d627b96986255548b4b161987f3a1cc68871ddcd82922cd938c",
+          "imageServiceId": "dh:menus-glovo/products/ccd9aabf576c3d627b96986255548b4b161987f3a1cc68871ddcd82922cd938c"
+         },
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200595444864130.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909750",
+             "productIndex": "8",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "ec8a0cc8-901a-4213-9e65-a4d9d28229fe",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "0f46a744-1d7f-4e22-92c5-a98bcfd91daa",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909644,
+        "externalId": "bbb349ac-2fd9-4693-971e-fa2bc30ad91d",
+        "storeProductId": "39e352f0-e425-451d-affe-ab9b00d0b257",
+        "urn": "",
+        "name": "Boom! Bombástico",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, agrião, tomate, queijo edam, bacon e ovo. Inclui batata frita artesanal e maionese caseira ",
+        "price": 14.6,
+        "priceInfo": {
+         "amount": 14.6,
+         "currencyCode": "EUR",
+         "displayText": "14,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/422cf790b07ce777375bb1c6499371469d25151cbb2b244a0fcf4733c50079af",
+        "imageId": "dh:menus-glovo/products/422cf790b07ce777375bb1c6499371469d25151cbb2b244a0fcf4733c50079af",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200855500075662.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "productTileFooter": {
+         "footerIcon": {
+          "lightImageId": "dh:customer-assets-glovo/social/order.svg",
+          "darkImageId": "dh:customer-assets-glovo/social/order.svg"
+         },
+         "footerText": "<b>50+</b> já pediram",
+         "metadata": {
+          "socialSignalType": "order",
+          "productId": 41752909644,
+          "userIds": []
+         }
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909644",
+             "productIndex": "9",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "bbb349ac-2fd9-4693-971e-fa2bc30ad91d",
+             "productSaleType": "PiecePiece",
+             "socialSignal": "74",
+             "storeProductId": "39e352f0-e425-451d-affe-ab9b00d0b257",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909745,
+        "externalId": "13c82a1a-87cd-49ee-889c-dfbe48af4c03",
+        "storeProductId": "4b1c8ffb-8430-4147-abc3-c4c88ccdb288",
+        "urn": "",
+        "name": "Boom! Chicken Breast",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 120gr peito de frango grelhado, alface, tomate, queijo edam e aros de cebola. Inclui batata frita artesanal e maionese caseira ",
+        "price": 14.5,
+        "priceInfo": {
+         "amount": 14.5,
+         "currencyCode": "EUR",
+         "displayText": "14,50 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/cd739b7c8cf814c07e0c0e591b8739c38289e655cd33c40fe4edf2e51b639530",
+        "imageId": "dh:menus-glovo/products/cd739b7c8cf814c07e0c0e591b8739c38289e655cd33c40fe4edf2e51b639530",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200250128709149.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909745",
+             "productIndex": "10",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "13c82a1a-87cd-49ee-889c-dfbe48af4c03",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4b1c8ffb-8430-4147-abc3-c4c88ccdb288",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909855,
+        "externalId": "03a7c7c6-c1e8-4366-81a3-89c68b7ab594",
+        "storeProductId": "372720e6-1961-440d-bdae-fd21d94b7466",
+        "urn": "",
+        "name": "Boom! Camone",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, tomate, picles de pepino, bacon, queijo cheddar, aros de cebola e molho BBQ. Inclui batata frita artesanal e maionese caseira ",
+        "price": 14.5,
+        "priceInfo": {
+         "amount": 14.5,
+         "currencyCode": "EUR",
+         "displayText": "14,50 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/5caa9e597226ffe30116f1eaa599f9aeec228361396a9eba6657cb94a9cf2e2e",
+        "imageId": "dh:menus-glovo/products/5caa9e597226ffe30116f1eaa599f9aeec228361396a9eba6657cb94a9cf2e2e",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200191907223848.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909855",
+             "productIndex": "11",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "03a7c7c6-c1e8-4366-81a3-89c68b7ab594",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "372720e6-1961-440d-bdae-fd21d94b7466",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909751,
+        "externalId": "09e7f232-8918-42a3-a198-655b3d7557b2",
+        "storeProductId": "f330bb0a-ae04-4e93-989c-cf2737b2565a",
+        "urn": "",
+        "name": "Boom! Crispy Chicken",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão brioche, peito de frango panado crocante, queijo edam, alface iceberg, cebola roxa, tomate, molho mostarda e mel. Inclui batata frita artesanal e maionese caseira",
+        "price": 14.4,
+        "priceInfo": {
+         "amount": 14.4,
+         "currencyCode": "EUR",
+         "displayText": "14,40 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/41752909751/e97dd7d4-ec6d-4592-a62f-36fa88224042.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/41752909751/e97dd7d4-ec6d-4592-a62f-36fa88224042.jpg",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/7610d18881accbdbcd470676936ff37ed2c8908b1661388f59974959a24b5037",
+          "imageServiceId": "dh:menus-glovo/products/7610d18881accbdbcd470676936ff37ed2c8908b1661388f59974959a24b5037"
+         },
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200385706761369.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909751",
+             "productIndex": "12",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "09e7f232-8918-42a3-a198-655b3d7557b2",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "f330bb0a-ae04-4e93-989c-cf2737b2565a",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909747,
+        "externalId": "a5b8c9a8-1467-448c-af0e-36bc0218452b",
+        "storeProductId": "c585d7f5-7d2e-445f-a076-9ffd6e9985fb",
+        "urn": "",
+        "name": "Boom! Veggie Beyond",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Carne proteína de ervilha beyond, alface, tomate, queijo edam e cogumelos salteados. Inclui batata frita artesanal e maionese caseira ",
+        "price": 14.3,
+        "priceInfo": {
+         "amount": 14.3,
+         "currencyCode": "EUR",
+         "displayText": "14,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/3c158afb3686c09163ca46fc8919ed30926a3ab365a462611b60c85ea39cb78f",
+        "imageId": "dh:menus-glovo/products/3c158afb3686c09163ca46fc8919ed30926a3ab365a462611b60c85ea39cb78f",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758200874669345227.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909747",
+             "productIndex": "13",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "a5b8c9a8-1467-448c-af0e-36bc0218452b",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "c585d7f5-7d2e-445f-a076-9ffd6e9985fb",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909856,
+        "externalId": "33c5506d-9351-49c0-88b1-d067130588cb",
+        "storeProductId": "386d3c9b-db13-4f63-b30a-097acaadc04d",
+        "urn": "",
+        "name": "Boom! Clássico",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Pão de sementes caseiro, 160gr carne novilho, alface, tomate e queijo edam. Inclui batata frita artesanal e maionese caseira ",
+        "price": 12.7,
+        "priceInfo": {
+         "amount": 12.7,
+         "currencyCode": "EUR",
+         "displayText": "12,70 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/41752909856/452b8cb4-dd7c-4a6a-b8c2-cf7530dc3b17.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/41752909856/452b8cb4-dd7c-4a6a-b8c2-cf7530dc3b17.jpg",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/f5f44edfd6f12089e89d1ce32302ddec74bb696a17daa04f39d6e61ae0ce8c74",
+          "imageServiceId": "dh:menus-glovo/products/f5f44edfd6f12089e89d1ce32302ddec74bb696a17daa04f39d6e61ae0ce8c74"
+         },
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758199171059246672.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Hambúrgueres Artesanais ",
+         "subCategoryId": "6229130163",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909856",
+             "productIndex": "14",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130163",
+             "swimlaneTitle": "Hambúrgueres Artesanais ",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130163",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "33c5506d-9351-49c0-88b1-d067130588cb",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "386d3c9b-db13-4f63-b30a-097acaadc04d",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6229130163
+     }
+    }
+   },
+   {
+    "id": "sobremesas-s.6234884302",
+    "type": "LIST",
+    "data": {
+     "title": "Sobremesas",
+     "slug": "sobremesas-s.6234884302",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41974160177,
+        "externalId": "ab79fc28-6a97-40af-b52b-6a5763b864e7",
+        "storeProductId": "e3fd3ea2-61f7-4b97-b9a3-d1bc1ebe9f81",
+        "urn": "",
+        "name": "Crumble Maçã c/ Caramelo caseiro ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Tarte crumble maçã com caramelo caseiro ",
+        "price": 7.5,
+        "priceInfo": {
+         "amount": 7.5,
+         "currencyCode": "EUR",
+         "displayText": "7,50 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/PRODUCT/43cdfb75-d68a-4bc6-ab92-d22f24807529.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/PRODUCT/43cdfb75-d68a-4bc6-ab92-d22f24807529.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Sobremesas",
+         "subCategoryId": "6234884302",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41974160177",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6234884302",
+             "swimlaneTitle": "Sobremesas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6234884302",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "ab79fc28-6a97-40af-b52b-6a5763b864e7",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "e3fd3ea2-61f7-4b97-b9a3-d1bc1ebe9f81",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41806982855,
+        "externalId": "f803fa22-8e8b-43b8-8e23-b53bb52ebf52",
+        "storeProductId": "fcc3a2bb-7e40-4e4e-b6ed-2d93e4f22dad",
+        "urn": "",
+        "name": "Cheesecake Frutos Vermelhos",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Cheescake caseiro de frutos vermelhos",
+        "price": 6,
+        "priceInfo": {
+         "amount": 6,
+         "currencyCode": "EUR",
+         "displayText": "6,00 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/c65a3d4a-4cbf-4340-94b4-06b21ded8134.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/c65a3d4a-4cbf-4340-94b4-06b21ded8134.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Sobremesas",
+         "subCategoryId": "6234884302",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41806982855",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6234884302",
+             "swimlaneTitle": "Sobremesas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6234884302",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "f803fa22-8e8b-43b8-8e23-b53bb52ebf52",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "fcc3a2bb-7e40-4e4e-b6ed-2d93e4f22dad",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6234884302
+     }
+    }
+   },
+   {
+    "id": "traquinas-s.6229130191",
+    "type": "LIST",
+    "data": {
+     "title": "Traquinas",
+     "slug": "traquinas-s.6229130191",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909752,
+        "externalId": "3cfd92d0-221b-4980-b3d9-6f3d8356114f",
+        "storeProductId": "a8c86b76-520f-4619-b7eb-9bd4d51f1855",
+        "urn": "",
+        "name": "Nuggets de frango",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Nuggets de frango acompanhados com batata frita artesanal",
+        "price": 9.8,
+        "priceInfo": {
+         "amount": 9.8,
+         "currencyCode": "EUR",
+         "displayText": "9,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/867f03c98b1e217575c47bef08c9797b4f464a73cd5d725f7653f4bab77fd07e",
+        "imageId": "dh:menus-glovo/products/867f03c98b1e217575c47bef08c9797b4f464a73cd5d725f7653f4bab77fd07e",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758203053755879861.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Traquinas",
+         "subCategoryId": "6229130191",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909752",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130191",
+             "swimlaneTitle": "Traquinas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130191",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "3cfd92d0-221b-4980-b3d9-6f3d8356114f",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "a8c86b76-520f-4619-b7eb-9bd4d51f1855",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6229130191
+     }
+    }
+   },
+   {
+    "id": "bebidas-s.6231121440",
+    "type": "LIST",
+    "data": {
+     "title": "Bebidas",
+     "slug": "bebidas-s.6231121440",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772522058,
+        "externalId": "7255008c-624d-4be6-b50e-90ce58561af8",
+        "storeProductId": "4bc85f26-1741-4c36-9728-6d04f0ce5409",
+        "urn": "",
+        "name": "Franziskaner",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 5,
+        "priceInfo": {
+         "amount": 5,
+         "currencyCode": "EUR",
+         "displayText": "5,00 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/cedd71d5-af9a-4244-a3d7-def0bd08df5c.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/cedd71d5-af9a-4244-a3d7-def0bd08df5c.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772522058",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "7255008c-624d-4be6-b50e-90ce58561af8",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4bc85f26-1741-4c36-9728-6d04f0ce5409",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772518316,
+        "externalId": "8b7079de-e15c-473f-acfd-d5f85a72bcb7",
+        "storeProductId": "39a0fb9c-38f5-4e2a-8c1d-74a2ce8755d4",
+        "urn": "",
+        "name": "Desperados ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 4,
+        "priceInfo": {
+         "amount": 4,
+         "currencyCode": "EUR",
+         "displayText": "4,00 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/638df10b-2877-4760-9cde-00dee19b896f.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/638df10b-2877-4760-9cde-00dee19b896f.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772518316",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8b7079de-e15c-473f-acfd-d5f85a72bcb7",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "39a0fb9c-38f5-4e2a-8c1d-74a2ce8755d4",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772527539,
+        "externalId": "73d35418-0b9d-4295-b546-5b5305e7d2c9",
+        "storeProductId": "58017c75-cca9-4345-817c-8de185f64056",
+        "urn": "",
+        "name": "Bandida Pomar Maçã Sidra",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 3.1,
+        "priceInfo": {
+         "amount": 3.1,
+         "currencyCode": "EUR",
+         "displayText": "3,10 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/5ec37048-da1d-4473-b2c6-83f887e966e9.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/5ec37048-da1d-4473-b2c6-83f887e966e9.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772527539",
+             "productIndex": "2",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "73d35418-0b9d-4295-b546-5b5305e7d2c9",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "58017c75-cca9-4345-817c-8de185f64056",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772527566,
+        "externalId": "38936593-d6a4-4e52-b37a-25a6e2977316",
+        "storeProductId": "229f2d66-702d-4d61-848a-590f39677f28",
+        "urn": "",
+        "name": "Bandida Pomar Frutos Vermelhos Sidra",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 3.1,
+        "priceInfo": {
+         "amount": 3.1,
+         "currencyCode": "EUR",
+         "displayText": "3,10 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/46499bc3-cbef-45aa-a210-ce22a5b7b114.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/46499bc3-cbef-45aa-a210-ce22a5b7b114.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772527566",
+             "productIndex": "3",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "38936593-d6a4-4e52-b37a-25a6e2977316",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "229f2d66-702d-4d61-848a-590f39677f28",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772510628,
+        "externalId": "1fdb4861-1cc0-4fd0-ad23-4ac2e3f8b975",
+        "storeProductId": "4bbc00ad-a98f-4586-8c44-fcefd9b3c85b",
+        "urn": "",
+        "name": "Heineken Zero Álcool ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Heineken zero",
+        "price": 2.8,
+        "priceInfo": {
+         "amount": 2.8,
+         "currencyCode": "EUR",
+         "displayText": "2,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/0a10a7e7-585d-4e7e-94d6-210e0d57e89e.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/0a10a7e7-585d-4e7e-94d6-210e0d57e89e.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772510628",
+             "productIndex": "4",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "1fdb4861-1cc0-4fd0-ad23-4ac2e3f8b975",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4bbc00ad-a98f-4586-8c44-fcefd9b3c85b",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772511370,
+        "externalId": "710eff15-9f60-42c0-9d5d-109f5dda56e5",
+        "storeProductId": "b24e5a45-1a5a-4073-8a0d-c8be6ea7ebc5",
+        "urn": "",
+        "name": "Super Bock Stout ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Stout super",
+        "price": 2.6,
+        "priceInfo": {
+         "amount": 2.6,
+         "currencyCode": "EUR",
+         "displayText": "2,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/81850d76-b6ee-4404-bfab-ba984e1db4fc.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/81850d76-b6ee-4404-bfab-ba984e1db4fc.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772511370",
+             "productIndex": "5",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "710eff15-9f60-42c0-9d5d-109f5dda56e5",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "b24e5a45-1a5a-4073-8a0d-c8be6ea7ebc5",
+             "eans": "5601164906471",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772487857,
+        "externalId": "b71b6fe4-eb97-4f48-93f8-4c6410efc338",
+        "storeProductId": "1e511156-88c7-4ed0-b3bb-c4d6c7812019",
+        "urn": "",
+        "name": "Coca cola",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/c3532c59-f8ab-48f8-9252-e146631e62d8.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/c3532c59-f8ab-48f8-9252-e146631e62d8.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772487857",
+             "productIndex": "6",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "b71b6fe4-eb97-4f48-93f8-4c6410efc338",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "1e511156-88c7-4ed0-b3bb-c4d6c7812019",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772504005,
+        "externalId": "d81aafc7-b235-475c-a1e3-6c2421a20e0a",
+        "storeProductId": "5156b2b0-b3d0-412f-9711-5c0cb52f2a5f",
+        "urn": "",
+        "name": "Coca cola Zero",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/76e03d31-d87d-43d8-9663-42eefbc6eb65.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/76e03d31-d87d-43d8-9663-42eefbc6eb65.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772504005",
+             "productIndex": "7",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d81aafc7-b235-475c-a1e3-6c2421a20e0a",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "5156b2b0-b3d0-412f-9711-5c0cb52f2a5f",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772504553,
+        "externalId": "2a4fdb58-e0c8-4d7e-92e3-a3bbe686fb10",
+        "storeProductId": "f947e9ff-9cc0-41f9-b211-939a48c909af",
+        "urn": "",
+        "name": "Sprite ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/7ca025c3-e09e-4eeb-a0a0-7a071c0aed41.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/7ca025c3-e09e-4eeb-a0a0-7a071c0aed41.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772504553",
+             "productIndex": "8",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "2a4fdb58-e0c8-4d7e-92e3-a3bbe686fb10",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "f947e9ff-9cc0-41f9-b211-939a48c909af",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772505248,
+        "externalId": "75635c51-a9dd-4a3c-a1b6-e2fe59a144aa",
+        "storeProductId": "24e798a8-36f7-4e17-b1c6-fc3cbe3b16f0",
+        "urn": "",
+        "name": "Fanta Laranja ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/683b59e4-765e-4b25-a330-2b6c9e756e3f.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/683b59e4-765e-4b25-a330-2b6c9e756e3f.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772505248",
+             "productIndex": "9",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "75635c51-a9dd-4a3c-a1b6-e2fe59a144aa",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "24e798a8-36f7-4e17-b1c6-fc3cbe3b16f0",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772506213,
+        "externalId": "7260d312-ca2a-4ba0-9261-b4e793daf3e8",
+        "storeProductId": "ada440a2-bf07-4fe7-b103-036595195108",
+        "urn": "",
+        "name": "Ice Tea Limão ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/63582bd2-7f44-4b70-b785-410722abf2ae.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/63582bd2-7f44-4b70-b785-410722abf2ae.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772506213",
+             "productIndex": "10",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "7260d312-ca2a-4ba0-9261-b4e793daf3e8",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "ada440a2-bf07-4fe7-b103-036595195108",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772506756,
+        "externalId": "91e07b97-8c75-4e10-bef3-6e76a29205bf",
+        "storeProductId": "81cc89de-41f2-4755-b353-b28191b2642c",
+        "urn": "",
+        "name": "Ice Tea Pêssego ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/bee15bfd-2f01-4637-9419-477f363d52e6.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/bee15bfd-2f01-4637-9419-477f363d52e6.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772506756",
+             "productIndex": "11",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "91e07b97-8c75-4e10-bef3-6e76a29205bf",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "81cc89de-41f2-4755-b353-b28191b2642c",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772508242,
+        "externalId": "121f34a7-6f23-4028-988a-b12666e06c7c",
+        "storeProductId": "d0f77d2e-694a-4231-97fe-08c084492253",
+        "urn": "",
+        "name": "Ice Tea Manga",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/54171bb1-4463-4d04-b291-8469bae5ba15.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/54171bb1-4463-4d04-b291-8469bae5ba15.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772508242",
+             "productIndex": "12",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "121f34a7-6f23-4028-988a-b12666e06c7c",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "d0f77d2e-694a-4231-97fe-08c084492253",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772508522,
+        "externalId": "ed13f887-9865-4bb1-96b7-1236e966e25b",
+        "storeProductId": "bfb9a904-f48e-4b80-8355-f831b40ded92",
+        "urn": "",
+        "name": "Compal Laranja ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/ca6c2c52-b3a6-4536-8242-cf071acffbb1.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/ca6c2c52-b3a6-4536-8242-cf071acffbb1.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772508522",
+             "productIndex": "13",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "ed13f887-9865-4bb1-96b7-1236e966e25b",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "bfb9a904-f48e-4b80-8355-f831b40ded92",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772508924,
+        "externalId": "d9542f31-dd3c-4742-9b10-77dc245b199b",
+        "storeProductId": "8e78ee15-96f8-4dea-b4ce-d43d52f92207",
+        "urn": "",
+        "name": "Compal Maçã ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/c30adf47-b185-4a91-97bc-05351a1357b6.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/c30adf47-b185-4a91-97bc-05351a1357b6.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772508924",
+             "productIndex": "14",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d9542f31-dd3c-4742-9b10-77dc245b199b",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "8e78ee15-96f8-4dea-b4ce-d43d52f92207",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772511367,
+        "externalId": "b658958f-ec64-42fb-91a6-1573a6197d6f",
+        "storeProductId": "46d74f28-7b11-4972-8535-4dba2ce9d1e5",
+        "urn": "",
+        "name": "Super Bock 0,33",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Cerveja",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/global-menu-service/GV_PT/vendor/873866/product/98673ca7-d3da-412c-a5dd-5bc679572181.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/98673ca7-d3da-412c-a5dd-5bc679572181.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772511367",
+             "productIndex": "15",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "b658958f-ec64-42fb-91a6-1573a6197d6f",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "46d74f28-7b11-4972-8535-4dba2ce9d1e5",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42359757846,
+        "externalId": "e7b89dd5-f335-4d09-b291-208e6e63f018",
+        "storeProductId": "9111dd8b-2817-44ee-b1e3-78c7f824f7f4",
+        "urn": "",
+        "name": "Fanta Guarana",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Refrigerante Fanta guarana",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/28be2dc0-d454-4498-ba3f-47a9d6e9f9fd.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/28be2dc0-d454-4498-ba3f-47a9d6e9f9fd.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42359757846",
+             "productIndex": "16",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "e7b89dd5-f335-4d09-b291-208e6e63f018",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "9111dd8b-2817-44ee-b1e3-78c7f824f7f4",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41772486459,
+        "externalId": "dda405b8-ec39-41c6-8bce-e914fdb37e93",
+        "storeProductId": "f211ce84-c6af-4e64-a65b-36c995099095",
+        "urn": "",
+        "name": "Água Alardo 0,33",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 1.5,
+        "priceInfo": {
+         "amount": 1.5,
+         "currencyCode": "EUR",
+         "displayText": "1,50 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/affc7ad7-4aeb-4b60-9ba1-ff38ba8eda24.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/affc7ad7-4aeb-4b60-9ba1-ff38ba8eda24.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Bebidas",
+         "subCategoryId": "6231121440",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41772486459",
+             "productIndex": "17",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6231121440",
+             "swimlaneTitle": "Bebidas",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6231121440",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "dda405b8-ec39-41c6-8bce-e914fdb37e93",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "f211ce84-c6af-4e64-a65b-36c995099095",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6231121440
+     }
+    }
+   },
+   {
+    "id": "extras-s.6229130164",
+    "type": "LIST",
+    "data": {
+     "title": "Extras",
+     "slug": "extras-s.6229130164",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909641,
+        "externalId": "76fa8381-da85-406d-9f09-6b1cec46d5e6",
+        "storeProductId": "015f6972-b475-4115-b21d-2c9aa480b7dd",
+        "urn": "",
+        "name": "160gr carne novilho ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Qualquer hamburguer com extra 160gr carne novilho ",
+        "price": 5.2,
+        "priceInfo": {
+         "amount": 5.2,
+         "currencyCode": "EUR",
+         "displayText": "5,20 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202715696391015.jpg",
+        "imageId": "dh:menus-glovo/products/a93b9cc05d0774498e6ef23cb963603c0dbc2f7a0836d77c13c8fafefaa17731",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909641",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "76fa8381-da85-406d-9f09-6b1cec46d5e6",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "015f6972-b475-4115-b21d-2c9aa480b7dd",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909638,
+        "externalId": "30308985-23d7-454b-9a3f-8c8be48fd46b",
+        "storeProductId": "06677620-78c2-480f-8c7c-4c2fa8e7b1da",
+        "urn": "",
+        "name": "Dose batata doce",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 3.8,
+        "priceInfo": {
+         "amount": 3.8,
+         "currencyCode": "EUR",
+         "displayText": "3,80 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758201048210625052.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909638",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "30308985-23d7-454b-9a3f-8c8be48fd46b",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "06677620-78c2-480f-8c7c-4c2fa8e7b1da",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909643,
+        "externalId": "9d0d4a45-0e86-41cd-85aa-21ca1ebedc8d",
+        "storeProductId": "7d473f8a-b41a-408f-a33b-4775324d6e5f",
+        "urn": "",
+        "name": "Molho cheddar",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "300gr",
+        "price": 3.3,
+        "priceInfo": {
+         "amount": 3.3,
+         "currencyCode": "EUR",
+         "displayText": "3,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202840183555499.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909643",
+             "productIndex": "2",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "9d0d4a45-0e86-41cd-85aa-21ca1ebedc8d",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "7d473f8a-b41a-408f-a33b-4775324d6e5f",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909629,
+        "externalId": "8b7613b6-a768-47a0-92ba-755298da9bcb",
+        "storeProductId": "85101f63-5d7b-432c-a9a4-9878cbdbb61b",
+        "urn": "",
+        "name": "Com Veggie Beyond ",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Qualquer hamburguer com carne Veggie Beyond - proteína de ervilha ",
+        "price": 3.25,
+        "priceInfo": {
+         "amount": 3.25,
+         "currencyCode": "EUR",
+         "displayText": "3,25 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202752576967754.jpg",
+        "imageId": "dh:menus-glovo/products/87b4cf6b83f529708e60c8088b241b95600785254c1dd2e88a5d9359293249bd",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909629",
+             "productIndex": "3",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8b7613b6-a768-47a0-92ba-755298da9bcb",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "85101f63-5d7b-432c-a9a4-9878cbdbb61b",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909642,
+        "externalId": "215e5d12-acc0-4c0b-89e7-12cc124b02be",
+        "storeProductId": "8e464a61-56fe-40e1-bf0e-5ef7fd9fb069",
+        "urn": "",
+        "name": "Com Peito Frango",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Qualquer hamburguer com peito de frango ",
+        "price": 2.6,
+        "priceInfo": {
+         "amount": 2.6,
+         "currencyCode": "EUR",
+         "displayText": "2,60 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202945394437525.jpg",
+        "imageId": "dh:menus-glovo/products/c4c19dd4a75ca6882b657388adbc991697596b0457a12f07d7bf7139b9fa72da",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909642",
+             "productIndex": "4",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "215e5d12-acc0-4c0b-89e7-12cc124b02be",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "8e464a61-56fe-40e1-bf0e-5ef7fd9fb069",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909639,
+        "externalId": "8dcbb653-62cb-4f32-a85b-4cf99a838d28",
+        "storeProductId": "98714852-f329-41cf-85ad-436e31e8f6b9",
+        "urn": "",
+        "name": "Dose batata artesanal",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.5,
+        "priceInfo": {
+         "amount": 2.5,
+         "currencyCode": "EUR",
+         "displayText": "2,50 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758201079348712089.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909639",
+             "productIndex": "5",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8dcbb653-62cb-4f32-a85b-4cf99a838d28",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "98714852-f329-41cf-85ad-436e31e8f6b9",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909633,
+        "externalId": "8ae94207-7af0-4f80-a60d-b46c3c198dd9",
+        "storeProductId": "7cadf552-dfb3-49d3-ad09-3fa37eafd970",
+        "urn": "",
+        "name": "Com pão sem glúten",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.4,
+        "priceInfo": {
+         "amount": 2.4,
+         "currencyCode": "EUR",
+         "displayText": "2,40 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202669388312720.jpg",
+        "imageId": "dh:menus-glovo/products/94a53828eb62fd6b5520eb15bb6dbd340983165263d22757b8777eb61cb8e27b",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909633",
+             "productIndex": "6",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "8ae94207-7af0-4f80-a60d-b46c3c198dd9",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "7cadf552-dfb3-49d3-ad09-3fa37eafd970",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909631,
+        "externalId": "7a0eb237-6e63-4689-b883-712b114e1a50",
+        "storeProductId": "b6ce5e99-8836-4532-aa00-f2a4c637525c",
+        "urn": "",
+        "name": "Com batata doce",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.2,
+        "priceInfo": {
+         "amount": 2.2,
+         "currencyCode": "EUR",
+         "displayText": "2,20 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758201062603907985.jpg",
+        "imageId": "dh:menus-glovo/products/5de39828558fdf964cd7147e020262e6f6afe3bbb856825aad01e8c7985ffda3",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909631",
+             "productIndex": "7",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "7a0eb237-6e63-4689-b883-712b114e1a50",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "b6ce5e99-8836-4532-aa00-f2a4c637525c",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909628,
+        "externalId": "6058267a-9fd8-4bd7-8d71-808d0fbb4e66",
+        "storeProductId": "da1b3a9a-2273-438c-99ff-eb1ff535a74c",
+        "urn": "",
+        "name": "Com pão brioche",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.1,
+        "priceInfo": {
+         "amount": 2.1,
+         "currencyCode": "EUR",
+         "displayText": "2,10 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202614907002630.jpg",
+        "imageId": "dh:menus-glovo/products/14083e3a79c6fd12588f42d0d2ac66d57be3df8be7075e72f653e94100cf918f",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909628",
+             "productIndex": "8",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "6058267a-9fd8-4bd7-8d71-808d0fbb4e66",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "da1b3a9a-2273-438c-99ff-eb1ff535a74c",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909634,
+        "externalId": "249ca9e5-d7db-46a4-bef0-120ed0b59d49",
+        "storeProductId": "174f2b1b-7fcd-463c-9b69-5aefde802634",
+        "urn": "",
+        "name": "Com bolo do caco",
+        "imageSize": "SMALL_RATIO_1_1",
+        "price": 2.1,
+        "priceInfo": {
+         "amount": 2.1,
+         "currencyCode": "EUR",
+         "displayText": "2,10 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202646122185163.jpg",
+        "imageId": "dh:menus-glovo/products/0ae3c16b4c3b449a95ed74b5cdf39a1a7c040f549b9d40e7b96920a057f173b2",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909634",
+             "productIndex": "9",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "249ca9e5-d7db-46a4-bef0-120ed0b59d49",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "174f2b1b-7fcd-463c-9b69-5aefde802634",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909854,
+        "externalId": "1652039e-6c48-41cb-bfd4-54cd818af7b0",
+        "storeProductId": "4913c78d-2c73-4092-bc2a-419a33abd739",
+        "urn": "",
+        "name": "Ingrediente extra",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Adiciona qualquer ingrediente ao teu hamburguer ",
+        "price": 1.7,
+        "priceInfo": {
+         "amount": 1.7,
+         "currencyCode": "EUR",
+         "displayText": "1,70 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758203183345188822.jpg",
+        "imageId": "dh:menus-glovo/products/034fc59b4d52779a57cf0b7fee9722a2ec027a48ef7fe4c7e828bab4c973b593",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909854",
+             "productIndex": "10",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "1652039e-6c48-41cb-bfd4-54cd818af7b0",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "4913c78d-2c73-4092-bc2a-419a33abd739",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41752909640,
+        "externalId": "d7a50ac6-98e3-499d-b1be-91b43464f8e1",
+        "storeProductId": "468aa0cd-7a79-470a-af7c-4ead7ea452fd",
+        "urn": "",
+        "name": "Maionese caseira extra",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Maionese caseira ",
+        "price": 1.4,
+        "priceInfo": {
+         "amount": 1.4,
+         "currencyCode": "EUR",
+         "displayText": "1,40 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/befcbad73dca083361259dda54eda996b4e6ab50c889755b17242da6fa3cadcd",
+        "imageId": "dh:menus-glovo/products/befcbad73dca083361259dda54eda996b4e6ab50c889755b17242da6fa3cadcd",
+        "images": [
+         {
+          "imageUrl": "https://glovo.dhmedia.io/image-nocache/vso-so-backend/GV_PT/HPYPWI/attachment__1758202797488333015.jpg"
+         }
+        ],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41752909640",
+             "productIndex": "11",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d7a50ac6-98e3-499d-b1be-91b43464f8e1",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "468aa0cd-7a79-470a-af7c-4ead7ea452fd",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 42186172442,
+        "externalId": "271bde8a-e021-4774-b7c4-19f017389913",
+        "storeProductId": "b608d7cb-ca7b-4f27-8761-ae6ec7e397a5",
+        "urn": "",
+        "name": "Maionese caseira malagueta picante",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Maionese malagueta seca picante",
+        "price": 1.4,
+        "priceInfo": {
+         "amount": 1.4,
+         "currencyCode": "EUR",
+         "displayText": "1,40 €"
+        },
+        "imageUrl": "https://images.deliveryhero.io/image/global-menu-service/GV_PT/vendor/873866/product/817d0cde-9dcb-414b-9868-f5f0d4df413a.jpg",
+        "imageId": "dh:global-menu-service/GV_PT/vendor/873866/product/817d0cde-9dcb-414b-9868-f5f0d4df413a.jpg",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Extras",
+         "subCategoryId": "6229130164",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "42186172442",
+             "productIndex": "12",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229130164",
+             "swimlaneTitle": "Extras",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229130164",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "271bde8a-e021-4774-b7c4-19f017389913",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "b608d7cb-ca7b-4f27-8761-ae6ec7e397a5",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6229130164
+     }
+    }
+   },
+   {
+    "id": "embalagens-s.6229401860",
+    "type": "LIST",
+    "data": {
+     "title": "Embalagens",
+     "slug": "embalagens-s.6229401860",
+     "elements": [
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41755805348,
+        "externalId": "11aeacc2-042f-460b-90db-9d60a0cf6d24",
+        "storeProductId": "3f308788-0c2a-4f88-8d55-8657756fa99f",
+        "urn": "",
+        "name": "Embalagem de Utilização Única",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Embalagem para transporte de alimentos",
+        "price": 0.3,
+        "priceInfo": {
+         "amount": 0.3,
+         "currencyCode": "EUR",
+         "displayText": "0,30 €"
+        },
+        "imageUrl": "https://glovo.dhmedia.io/image/menus-glovo/products/51ff92303000090bc4c1093e4282f6cc0001472af327be8667c02cca7f4e719e",
+        "imageId": "dh:menus-glovo/products/51ff92303000090bc4c1093e4282f6cc0001472af327be8667c02cca7f4e719e",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Embalagens",
+         "subCategoryId": "6229401860",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41755805348",
+             "productIndex": "0",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229401860",
+             "swimlaneTitle": "Embalagens",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229401860",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "11aeacc2-042f-460b-90db-9d60a0cf6d24",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "3f308788-0c2a-4f88-8d55-8657756fa99f",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      },
+      {
+       "type": "PRODUCT_ROW",
+       "data": {
+        "id": 41755802021,
+        "externalId": "d812e9c6-c738-4192-9c52-7e407e633f6a",
+        "storeProductId": "39ed2b71-dba4-41f9-aedd-ea0a6594cd18",
+        "urn": "",
+        "name": "Saco",
+        "imageSize": "SMALL_RATIO_1_1",
+        "description": "Saco para transporte do seu pedido",
+        "price": 0.1,
+        "priceInfo": {
+         "amount": 0.1,
+         "currencyCode": "EUR",
+         "displayText": "0,10 €"
+        },
+        "imageId": "dh:menus-glovo/products/97b6da89d553670a2e0602a01a159bf1790f29cc8b8034ab758d18180a304235",
+        "images": [],
+        "tags": [],
+        "attributeGroups": [],
+        "promotions": [],
+        "labels": [],
+        "indicators": [],
+        "sponsored": false,
+        "restricted": false,
+        "tracking": {
+         "increment": 1,
+         "productSaleType": "piece_piece",
+         "isWeightedProduct": false,
+         "subCategory": "Embalagens",
+         "subCategoryId": "6229401860",
+         "categoryId": "0",
+         "dietaryLabels": [],
+         "dietaryLabelsAvailable": false
+        },
+        "showQuantifiers": true,
+        "outOfStock": false
+       },
+       "actions": [
+        {
+         "trigger": "onImpression",
+         "data": {
+          "events": [
+           {
+            "name": "product_impressions.loaded",
+            "data": {
+             "_eventVersion": "107",
+             "screenType": "shop_details",
+             "screenName": "shop_details_screen",
+             "productSKU": "41755802021",
+             "productIndex": "1",
+             "categoryId": "0",
+             "eventOrigin": "store_page",
+             "shopId": "873866",
+             "subCategoryId": "2919886859",
+             "subCategoryName": "Menu",
+             "swimlaneRequestId": "6229401860",
+             "swimlaneTitle": "Embalagens",
+             "collectionGroupId": "0",
+             "collectionId": "2919886859",
+             "collectionSectionId": "6229401860",
+             "collectionType": "Catalogue",
+             "isSponsored": "false",
+             "productExternalId": "d812e9c6-c738-4192-9c52-7e407e633f6a",
+             "productSaleType": "PiecePiece",
+             "storeProductId": "39ed2b71-dba4-41f9-aedd-ea0a6594cd18",
+             "dietaryLabels": "",
+             "dietaryLabelsAvailable": "false",
+             "isOrderedBefore": "false",
+             "isOutOfStock": "false",
+             "isOrderedBeforeInCurrentStore": "false",
+             "isOrderedBeforeInAnyStore": "false"
+            },
+            "placeholders": []
+           }
+          ],
+          "actionType": "EVENT"
+         },
+         "type": "PERSEUS_EVENT"
+        }
+       ]
+      }
+     ],
+     "tracking": {
+      "collectionSectionId": 6229401860
+     }
+    }
+   }
+  ],
+  "tracking": {
+   "storeAddressId": 873866,
+   "storeId": 539100,
+   "collectionId": 2919886859,
+   "collectionSectionsIds": [
+    6229130191,
+    6231121440,
+    6229401860,
+    6229130192,
+    6229130163,
+    6229130164,
+    6234884302
+   ],
+   "layoutDisplayed": "Products",
+   "rootContent": "Products",
+   "layoutDesign": "LIST_VIEW",
+   "hasReturnPolicy": false,
+   "hasReturnPolicyLink": false,
+   "productCount": 62,
+   "storeVertical": "FOOD",
+   "categoryId": "2919886859"
+  },
+  "otcLabelsNavigationLinks": {}
+ }
+}

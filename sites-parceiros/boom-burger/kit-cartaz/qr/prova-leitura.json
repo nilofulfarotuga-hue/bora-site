@@ -1,0 +1,15 @@
+{
+ "url": "https://boraguarda.com/baixar?de=qr-boomburger",
+ "correcao": "M",
+ "versao_qr": 4,
+ "leituras": {
+  "1200": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "600": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "300": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "200": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "150": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "120": "https://boraguarda.com/baixar?de=qr-boomburger",
+  "svg": "https://boraguarda.com/baixar?de=qr-boomburger"
+ },
+ "todas_certas": true
+}

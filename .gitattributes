@@ -1,0 +1,5 @@
+# O Cloudflare Pages le o _redirects linha a linha: com fim de linha do Windows o
+# estado fica "200\r", a regra e descartada em silencio e /verificar/<token> dava 404
+# (apanhado a 24/09/2026). Estes dois ficheiros ficam sempre em LF.
+_redirects text eol=lf
+_headers   text eol=lf
