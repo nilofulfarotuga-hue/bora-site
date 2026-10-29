@@ -310,7 +310,6 @@ H = f'''<!doctype html>
         <li><b>Todas as manhãs</b><span>a carne moída na hora</span></li>
         <li><b>Frescos</b><span>legumes e fruta, todos os dias</span></li>
       </ul>
-      <p class="texto-2" style="margin-top:24px">E há o Boom! Serra da Estrela, com queijo da serra e chutney de abóbora.</p>
     </div>
     <div class="casa-foto revela">{pic('casa', 'Boom! Serra da Estrela com batata frita artesanal sobre mesa de madeira', '(max-width:900px) 92vw, 520px')}</div>
   </div>
