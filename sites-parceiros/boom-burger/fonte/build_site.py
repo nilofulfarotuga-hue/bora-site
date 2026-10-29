@@ -21,6 +21,7 @@ PEDIR = 'https://boraguarda.com/baixar?de=site-boomburger'
 APP_LOJA = 'https://app.boraguarda.com/#/loja/boom-burger-guarda'
 MAPS = 'https://maps.google.com/?cid=%d' % int('ad04313ae716a6eb', 16)
 FACEBOOK = 'https://www.facebook.com/people/Boom-Burger-Hamburgueria-Artesanal/61571813637975/'
+INSTAGRAM = 'https://www.instagram.com/boomburger.artesanal/'
 TEL, TEL_TXT = '+351923177918', '923 177 918'
 NOTA, N_AVAL = '4,7', 114
 SB = {'url': 'https://ojykpzwqrtusfeakzrna.supabase.co', 'loja': 'boom-burger-guarda'}
@@ -181,7 +182,7 @@ ld = {
     'address': {'@type': 'PostalAddress', 'streetAddress': 'R. Jardim dos Castelos Velhos', 'postalCode': '6300-397',
                 'addressLocality': 'Guarda', 'addressCountry': 'PT'},
     'geo': {'@type': 'GeoCoordinates', 'latitude': 40.5414484, 'longitude': -7.261693},
-    'hasMap': MAPS, 'hasMenu': URL + '/#menu', 'acceptsReservations': False, 'sameAs': [FACEBOOK],
+    'hasMap': MAPS, 'hasMenu': URL + '/#menu', 'acceptsReservations': False, 'sameAs': [FACEBOOK, INSTAGRAM],
     'openingHoursSpecification': [
         {'@type': 'OpeningHoursSpecification', 'dayOfWeek': 'Monday', 'opens': '19:00', 'closes': '22:30'},
         {'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], 'opens': '12:00', 'closes': '14:30'},
@@ -196,7 +197,7 @@ css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
 css = re.sub(r'\s*\n\s*', '', css)
 css = re.sub(r'\s*([{};,>])\s*', r'\1', css).replace(';}', '}')
 
-DESC = ('Boom! Burger, hamburgueria artesanal na Guarda: carne moída todas as manhãs, pão de forno a lenha. '
+DESC = ('Boom! Burger, hamburgueria artesanal na Guarda: carne moída todas as manhãs, pão de padaria artesanal. '
         'Menu completo e pedido pela app Bora.')
 H = f'''<!doctype html>
 <html lang="pt-PT">
@@ -211,7 +212,7 @@ H = f'''<!doctype html>
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:title" content="Boom! Burger — Hamburgueria Artesanal">
-<meta property="og:description" content="Carne moída todas as manhãs. Pão de forno a lenha. Na Guarda — pede pelo Bora.">
+<meta property="og:description" content="Carne moída todas as manhãs. Pão de padaria artesanal. Na Guarda — pede pelo Bora.">
 <meta property="og:url" content="{URL}/">
 <meta property="og:image" content="{URL}/assets/og-boomburger.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -248,7 +249,7 @@ H = f'''<!doctype html>
     <div class="heroi-conteudo">
       <p class="olho olho-heroi">Hamburgueria artesanal · Guarda</p>
       <div class="logo-monta">{logo_heroi}{ESTRONDO}</div>
-      <h1 id="t-heroi"><span class="so-leitor">Boom! Burger — </span><span class="l">Carne moída</span> <span class="l">todas as manhãs.</span> <span class="l ouro">Pão de forno a lenha.</span></h1>
+      <h1 id="t-heroi"><span class="so-leitor">Boom! Burger — </span><span class="l">Carne moída</span> <span class="l">todas as manhãs.</span> <span class="l ouro">Pão de padaria artesanal.</span></h1>
       <p class="heroi-sub">Hambúrgueres artesanais na Rua Jardim dos Castelos Velhos, Guarda.</p>
       <div class="heroi-acoes">{BTN}<a class="selo-google" href="{MAPS}" rel="noopener" target="_blank"><span class="estrelas" aria-hidden="true">★★★★★</span><span><b>{NOTA}</b> no Google · {N_AVAL} avaliações</span></a></div>
       <a class="link-sem-instalar" href="{APP_LOJA}">ou pede pelo site, sem instalar</a>
@@ -303,13 +304,13 @@ H = f'''<!doctype html>
     <div class="revela">
       <p class="olho">A casa</p>
       <h2 class="titulo" id="t-casa">Artesanal <em>a sério</em>.</h2>
-      <p class="casa-citacao">“Prezamos pela qualidade e frescura dos alimentos que utilizamos. O nosso pão é feito em padaria de forno a lenha, a carne é moída todos os dias pela manhã e os legumes e as frutas são frescos, todos os dias.”</p>
+      <p class="casa-citacao">“Prezamos pela qualidade e frescura dos alimentos que utilizamos. O nosso pão é de padaria artesanal, a carne é moída todos os dias pela manhã e os legumes e as frutas são frescos, todos os dias.”</p>
       <ul class="factos">
-        <li><b>Forno a lenha</b><span>o pão, de padaria</span></li>
+        <li><b>Padaria artesanal</b><span>o pão, feito em padaria</span></li>
         <li><b>Todas as manhãs</b><span>a carne moída na hora</span></li>
         <li><b>Frescos</b><span>legumes e fruta, todos os dias</span></li>
       </ul>
-      <p class="texto-2" style="margin-top:24px">Na sala há Wi-Fi grátis. E há o Boom! Serra da Estrela, com queijo da serra e chutney de abóbora.</p>
+      <p class="texto-2" style="margin-top:24px">E há o Boom! Serra da Estrela, com queijo da serra e chutney de abóbora.</p>
     </div>
     <div class="casa-foto revela">{pic('casa', 'Boom! Serra da Estrela com batata frita artesanal sobre mesa de madeira', '(max-width:900px) 92vw, 520px')}</div>
   </div>
@@ -390,7 +391,7 @@ H = f'''<!doctype html>
 <footer class="rodape">
   <div class="caixa">
     <div class="logo-monta logo-rodape">{logo_rodape}</div>
-    <div class="redes"><a href="{FACEBOOK}" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2.2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8h-3z"/></svg>Facebook</a></div>
+    <div class="redes"><a href="{FACEBOOK}" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2.2-4 4.3V8H8v3.5h2V22h4V11.5h2.7L17 8h-3z"/></svg>Facebook</a><a href="{INSTAGRAM}" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a></div>
     <small>© 2026 Boom! Burger — Hamburgueria Artesanal · R. Jardim dos Castelos Velhos, Guarda</small>
     <p class="oferta"><a href="https://boraguarda.com/?de=site-boomburger">Site oferecido pelo <b>Bora</b></a> · pedidos, entregas e serviços na Guarda</p>
   </div>
