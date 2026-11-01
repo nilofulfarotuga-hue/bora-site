@@ -3,3 +3,8 @@
 # URL acabado em .html para a versao limpa, e uma reescrita que aponta para .html
 # morre nesse redireccionamento (apanhado a 24/09/2026 — dava 404).
 /verificar/*  /verificar/  200
+
+# /pedir/boom — QR "Pede por WhatsApp" da Boom! Burger (29/10/2026). Aponta ao WhatsApp
+# da Bora até o Danilo dizer "troca"; depois muda-se aqui o número e o QR impresso
+# continua a valer.
+/pedir/boom  https://wa.me/351937501673?text=Ol%C3%A1%21+Quero+pedir+na+Boom%21+Burger  302
