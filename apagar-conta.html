@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="XH-OlVmaCAXTHNgvuSKs7YBpsB6Feyr96xJnFofQtgE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apagar a minha conta | Bora App</title>
+<meta name="description" content="Como apagar a tua conta do Bora App: na própria app (Perfil → Apagar conta) ou por email. O que é apagado e o que a lei obriga a guardar.">
+<link rel="canonical" href="https://boraguarda.com/apagar-conta">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bora App">
+<meta property="og:title" content="Apagar a minha conta | Bora App">
+<meta property="og:description" content="Como apagar a tua conta do Bora App e o que acontece aos teus dados.">
+<meta property="og:image" content="https://boraguarda.com/assets/img/og-image.png">
+<meta property="og:url" content="https://boraguarda.com/apagar-conta">
+<meta property="og:locale" content="pt_PT">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16A34A">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="text-gray-800">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="assets/img/bora_logo.png" alt="Bora App" class="h-9 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <a href="index.html#inicio" class="hover:text-[#16A34A] transition">Início</a>
+      <a href="index.html#categorias" class="hover:text-[#16A34A] transition">Categorias</a>
+      <a href="index.html#como-funciona" class="hover:text-[#16A34A] transition">Como Funciona</a>
+      <a href="parceiros.html" class="hover:text-[#16A34A] transition">Parceiros</a>
+      <a href="estafetas.html" class="hover:text-[#16A34A] transition">Estafetas</a>
+      <a href="faq.html" class="hover:text-[#16A34A] transition">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- CTA principal — nunca escondido, nem a 390px. -->
+      <a href="https://app.boraguarda.com" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-1.5 bg-[#16A34A] hover:bg-[#065F46] text-white font-bold text-sm sm:text-base px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition shadow-md shadow-green-600/25 whitespace-nowrap">
+        <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir pelo site
+      </a>
+      <a href="index.html#download" class="hidden sm:inline-flex items-center gap-2 border-2 border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A] hover:text-white font-semibold px-5 py-2 rounded-full transition">
+        📲 Baixar a App
+      </a>
+      <button id="menu-btn" class="md:hidden p-2" aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 md:hidden"></div>
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-xl md:hidden flex flex-col p-6">
+  <div class="flex justify-end">
+    <button id="drawer-close" aria-label="Fechar menu"><i data-lucide="x" class="w-6 h-6"></i></button>
+  </div>
+  <nav class="flex flex-col gap-6 mt-8 text-lg font-medium text-gray-800">
+    <a href="index.html#inicio">Início</a>
+    <a href="index.html#categorias">Categorias</a>
+    <a href="index.html#como-funciona">Como Funciona</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="estafetas.html">Estafetas</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://app.boraguarda.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#16A34A] text-white font-bold px-5 py-3 rounded-full mt-2">🛍️ Pedir pelo site</a>
+    <a href="index.html#download" class="inline-flex items-center justify-center gap-2 border-2 border-[#16A34A] text-[#16A34A] font-semibold px-5 py-3 rounded-full">📲 Baixar a App</a>
+  </nav>
+</div>
+
+<main class="pt-16">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#065F46] mb-2">Apagar a minha conta</h1>
+    <p class="text-sm text-gray-500 mb-10">Bora App (Bora — entregas e serviços na Guarda) · Última atualização: 2 de novembro de 2026</p>
+
+    <div class="prose prose-sm sm:prose-base max-w-none space-y-8 text-gray-700">
+
+      <div>
+        <h2 class="text-xl font-bold text-[#065F46] mb-2">1. Na própria app (o caminho mais rápido)</h2>
+        <ol class="list-decimal pl-6 space-y-1">
+          <li>Abre o Bora App e entra na tua conta.</li>
+          <li>Toca em <strong>Perfil</strong>.</li>
+          <li>Desce até ao fim e toca em <strong>Apagar conta</strong>.</li>
+          <li>Lê o resumo (por exemplo, o saldo de carteira e os tokens que se perdem) e confirma.</li>
+        </ol>
+        <p class="mt-2">A conta é apagada logo. Não precisas de nos contactar nem de esperar.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-[#065F46] mb-2">2. Por email (se já não tens a app)</h2>
+        <p>Envia um email para <a href="mailto:boraappbora@gmail.com?subject=Apagar%20a%20minha%20conta" class="text-[#16A34A] underline">boraappbora@gmail.com</a> com o assunto <strong>Apagar a minha conta</strong>, a partir do email com que te registaste (ou indica o número de telemóvel da conta). Respondemos e apagamos a conta no prazo máximo de 30 dias, como manda o RGPD.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-[#065F46] mb-2">3. O que é apagado</h2>
+        <p>O teu nome, o teu contacto, a tua morada, as tuas fotos e os documentos que tenhas enviado. O acesso é revogado de forma permanente &mdash; não voltas a poder entrar com esse email, e não há recuperação de palavra-passe possível.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-[#065F46] mb-2">4. O que fica guardado, e durante quanto tempo</h2>
+        <p>As faturas dos pedidos que já fizeste. A legislação fiscal portuguesa obriga a conservá-las durante <strong>10 anos</strong>. Esses registos ficam <strong>anonimizados</strong>: mantêm os valores e as datas, mas deixam de estar associados ao teu nome ou aos teus contactos.</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-[#065F46] mb-2">5. Antes de apagar</h2>
+        <p>Se tiveres um pedido, reserva ou viagem a decorrer, ou um acerto de contas por fechar, a aplicação diz-te qual é e pede que aguardes até esse ponto ficar resolvido. Saldo de carteira e tokens por usar perdem-se com a eliminação, e a aplicação mostra-te o valor antes de confirmares.</p>
+        <p class="mt-2">Mais detalhe na <a href="privacidade.html" class="text-[#16A34A] underline">Política de Privacidade</a>.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="bg-[#065F46] text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-10">
+    <div class="col-span-2 md:col-span-1">
+      <img src="assets/img/bora_logo.png" class="h-10 w-auto mb-4 brightness-0 invert" alt="Bora App" loading="lazy">
+      <p class="text-sm text-white/70">Tudo o que precisas, num só toque.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Categorias</h4>
+      <ul class="space-y-2 text-sm text-white/80">
+        <li><a href="index.html#categorias" class="hover:text-white">Restaurantes</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Supermercados</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Farmácia</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Viagens</a></li>
+        <li><a href="index.html#categorias" class="hover:text-white">Favores</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Bora</h4>
+      <ul class="space-y-2 text-sm text-white/80">
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+        <li><a href="termos.html" class="hover:text-white">Termos e Condições</a></li>
+        <li><a href="privacidade.html" class="hover:text-white">Privacidade</a></li>
+        <li><a href="parceiros.html" class="hover:text-white">Ser Parceiro</a></li>
+        <li><a href="estafetas.html" class="hover:text-white">Ser Estafeta</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Contacto</h4>
+      <p class="text-sm text-white/80"><a href="mailto:boraappbora@gmail.com?subject=Contacto%20Site%20Bora" class="hover:text-white">boraappbora@gmail.com</a></p>
+      <div class="flex gap-4 mt-4">
+        <a href="#" aria-label="Facebook" class="hover:text-white/70"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-white/70"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-xs text-white/60 mt-12 border-t border-white/10 pt-6">
+    <p>Bora App — serviço de entregas, viagens e reservas na cidade da Guarda, Portugal.</p>
+    <p class="mt-1">© 2026 Bora App · Guarda, Portugal · Todos os direitos reservados</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
