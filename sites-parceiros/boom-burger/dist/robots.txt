@@ -1,0 +1,4 @@
+# noindex ate o dono aprovar (meta robots em cada pagina)
+User-agent: *
+Allow: /
+Sitemap: https://boomburger.boraguarda.com/sitemap.xml

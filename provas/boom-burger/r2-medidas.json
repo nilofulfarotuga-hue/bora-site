@@ -1,0 +1,158 @@
+{
+ "390": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 56,
+  "barra_visivel": true,
+  "anima": true,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS\nMANHÃS. PÃO DE FORNO A\nLENHA.",
+  "mascara": "linha-mask pt=5.888px",
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 444,
+  "cls": 0,
+  "cls_fim": 0.009,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ },
+ "390-reduz": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 56,
+  "barra_visivel": true,
+  "anima": false,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA.",
+  "mascara": null,
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 304,
+  "cls": 0,
+  "cls_fim": 0,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ },
+ "360": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 56,
+  "barra_visivel": true,
+  "anima": true,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS\nMANHÃS. PÃO DE FORNO A\nLENHA.",
+  "mascara": "linha-mask pt=5.888px",
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 256,
+  "cls": 0,
+  "cls_fim": 0.011,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ },
+ "360-reduz": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 56,
+  "barra_visivel": true,
+  "anima": false,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA.",
+  "mascara": null,
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 252,
+  "cls": 0,
+  "cls_fim": 0,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ },
+ "1440": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 0,
+  "barra_visivel": false,
+  "anima": true,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS\nMANHÃS. PÃO DE FORNO A\nLENHA.",
+  "mascara": "linha-mask pt=11.264px",
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 296,
+  "cls": 0.011,
+  "cls_fim": 0.011,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ },
+ "1440-reduz": {
+  "scroll_lateral": 0,
+  "largos": [],
+  "alvos_pequenos": [
+   "Bora"
+  ],
+  "img_sem_alt": 0,
+  "barra_altura": 0,
+  "barra_visivel": false,
+  "anima": false,
+  "h1": "BOOM! BURGER —\nCARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA.",
+  "mascara": null,
+  "precos_sem": 56,
+  "precos": 56,
+  "lcp": 264,
+  "cls": 0.031,
+  "cls_fim": 0.031,
+  "video": {
+   "carregado": true,
+   "pausa": true,
+   "src": "na-chapa.mp4",
+   "rs": 4
+  },
+  "estado_agora": "Fechado agora · abre hoje às 12:00",
+  "erros": []
+ }
+}

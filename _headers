@@ -1,5 +1,10 @@
-
 # provas: páginas de trabalho — nunca guardar no navegador, senão o Danilo
 # vê a versão de ontem depois de um deploy novo (aconteceu a 2026-08-31)
 /provas/*
   Cache-Control: no-cache, must-revalidate
+
+# Secretário Virtual (missão 03/10 · bloco 5): fora do Google até o Danilo dizer.
+/secretario
+  X-Robots-Tag: noindex, nofollow
+/secretario.html
+  X-Robots-Tag: noindex, nofollow

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Provas — Loja Guarda FC (cópia de trabalho, 14–17 set 2026)</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #0d0d0d; color: #f5f5f5; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 16px 96px; }
+  h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 8px; line-height: 1.1; }
+  h2 { font-size: 22px; margin: 48px 0 12px; border-top: 1px solid #2a2a2a; padding-top: 24px; }
+  p, li { color: #cfcfcf; }
+  a { color: #f5c04a; }
+  video, img { max-width: 100%; height: auto; border-radius: 12px; display: block; background: #141414; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; color: #9d9d9d; margin-top: 6px; }
+  .tag { display: inline-block; padding: 4px 10px; border-radius: 99px; background: #8c0f22; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  td, th { border-bottom: 1px solid #2a2a2a; padding: 8px 6px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">Cópia de trabalho · sem palavra-passe · noindex</span>
+  <h1>Loja online do Guarda FC — provas da missão de 14–17 de setembro de 2026</h1>
+  <p>Pré-visualização a funcionar: <a href="https://guarda-fc-loja.pages.dev/loja/">guarda-fc-loja.pages.dev/loja/</a> · painel do clube: <a href="https://guarda-fc-loja.pages.dev/loja/admin/">/loja/admin/</a> (responde «painel por configurar» até o clube pôr a palavra-passe). O site vivo guardafcsad.com não foi tocado. Nenhuma imagem gerada por IA: as camisolas são os renders reais da proposta do fornecedor (UIN/Select) e o nome/número é composto por cima, no browser.</p>
+
+  <h2>Vídeo de 60 segundos — o ecrã tal como está</h2>
+  <video controls preload="metadata" poster="gfc-loja-60s-fotogramas.jpg" src="gfc-loja-60s.mp4"></video>
+  <p>Home com o nome e o número a aparecerem ao vivo → catálogo → ficha (frente, escudo, «a tua») → configurador com o PNG partilhável → carrinho → checkout a sério (Stripe em modo de teste, servidor falso em local) → a página da encomenda a passar sozinha de «à espera do pagamento» a «pago» quando o webhook chega → painel do clube (pedidos, detalhe, produtos) → muro dos adeptos → levantar no estádio.</p>
+
+  <h2>Primeiro ecrã: antes e depois da segunda ronda</h2>
+  <div class="grid">
+    <figure><img src="B6-antes-home-390.jpg" alt="Home a 390 antes: camisola pequena, três botões"><figcaption>Antes (390): camisola a 27 % do ecrã, três botões a competir, sem nome nem preço junto à camisola. Nota do fiscal: 76/100.</figcaption></figure>
+    <figure><img src="B6-depois-hero.jpg" alt="Home depois: camisola a ocupar o ecrã a 1440 e a 390"><figcaption>Depois: camisola a 63 % (1440) e ~62 % (390), «Loja oficial · Guarda FC · 2026/27 · Guarda, 1056 m», um só botão vermelho, legenda com nome e preço. Fiscal: 100/100.</figcaption></figure>
+  </div>
+
+  <h2>A camisola verdadeira, com o teu nome</h2>
+  <figure><img src="comparacao-1440.jpg" alt="Comparação lado a lado com lojas de referência"><figcaption>Lado a lado com as referências (Benfica, Nike): render real do fornecedor com o nome e o número compostos por cima — curvatura, luz do tecido, grão, contorno fino, sombra interior.</figcaption></figure>
+  <video controls preload="metadata" src="gravacao-personalizar-390.mp4" style="max-width:390px"></video>
+  <p>20 segundos no telemóvel: a escrever o nome e o número e a ver a camisola mudar.</p>
+
+  <h2>Comprar (bloco 3)</h2>
+  <div class="grid">
+    <figure><img src="B3-folha.jpg" alt="Carrinho, checkout e encomenda paga"><figcaption>Carrinho · checkout · encomenda a passar de pendente a paga (webhook assinado). Cartão e MB Way em modo de teste; sem chaves de teste ainda, responde 503 «pagamento por configurar».</figcaption></figure>
+    <figure><img src="B3-folha-lista.jpg" alt="Checkout em lista de espera"><figcaption>Lista de espera ligada no painel → o checkout guarda o contacto («Ficaste na lista. És o n.º 3»).</figcaption></figure>
+  </div>
+
+  <h2>Painel do clube (bloco 4)</h2>
+  <div class="grid">
+    <figure><img src="B4-folha-1.jpg" alt="Painel: login, pedidos, detalhe"><figcaption>Login · pedidos com resumo e separadores · detalhe da encomenda com ações (PT e EN).</figcaption></figure>
+    <figure><img src="B4-folha-produtos.jpg" alt="Painel: produtos"><figcaption>Produtos: preços por versão (adulto/criança), ativo, stock por tamanho, edição limitada — vale na loja no momento em que se grava.</figcaption></figure>
+  </div>
+
+  <h2>Primeiro mundo (bloco 5)</h2>
+  <div class="grid">
+    <figure><img src="B5-folha-1.jpg" alt="Pack pai e filho, muro, levantar no estádio"><figcaption>Pack pai e filho com o mesmo número · muro dos adeptos · levantar no estádio (jogo real, escudos, mapa).</figcaption></figure>
+    <figure><img src="B5-folha-2.jpg" alt="Pedido em grupo e PNG numerado"><figcaption>Pedido em grupo com um link só (2/2 pagos) · PNG numerado «Edição n.º 09/50».</figcaption></figure>
+    <figure><img src="B5-png-numerado-GFC-0015-mini.jpg" alt="PNG numerado" style="max-width:360px"><figcaption>O PNG partilhável de uma encomenda paga, com o selo da edição e a referência.</figcaption></figure>
+  </div>
+
+  <h2>Medições (fiscal visual, grelha 0–100 do livro de regras)</h2>
+  <table>
+    <tr><th>Página</th><th>Antes</th><th>Depois</th></tr>
+    <tr><td>Home</td><td>76</td><td><b>100</b> (0 defeitos; também online)</td></tr>
+    <tr><td>Ficha da camisola</td><td>76</td><td><b>94</b></td></tr>
+    <tr><td>Configurador</td><td>66 (não publicava)</td><td><b>94</b></td></tr>
+    <tr><td>Movimento reduzido</td><td>2 falhas</td><td><b>0</b></td></tr>
+    <tr><td>Origem das imagens</td><td>1 falha</td><td><b>0</b> (102 imagens, todas do clube ou do fornecedor)</td></tr>
+    <tr><td>Hindi a sério</td><td>86 nós em latim</td><td><b>10</b> (só o nome e o email do clube)</td></tr>
+  </table>
+
+  <h2>O que falta e só o clube/Danilo podem dar</h2>
+  <ul>
+    <li>Login na Cloudflare para criar a base D1 e pôr as variáveis (palavra-passe do painel, chaves de TESTE da Stripe, email, Telegram). Até lá a loja mostra tudo mas não fecha compras online.</li>
+    <li>Conta Stripe de teste do clube (as chaves vivas serão sempre as do clube — nunca da Bora).</li>
+    <li>Preços reais (os atuais são de demonstração e editam-se no painel), fotos do produto final quando as camisolas chegarem, e os textos legais revistos pela Dina.</li>
+  </ul>
+  <p style="margin-top:40px;font-size:13px;color:#9d9d9d">Relatório completo com todas as provas no repositório do site (loja/provas/). Página gerada a 17/09/2026.</p>
+</main>
+</body>
+</html>

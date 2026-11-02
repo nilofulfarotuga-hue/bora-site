@@ -1,0 +1,25 @@
+Demonstração na Boom! Burger — amanhã, quarta 28/10, às 11:00. Está pronta e testada hoje do princípio ao fim.
+
+Funciona só das 10:30 às 12:00. Fora dessa hora desliga-se sozinha, e os pedidos de demonstração que ficarem abertos fecham sem custo. Para toda a gente a loja continua "Em breve".
+
+TELEMÓVEL 1 — o cliente (faz o pedido)
+Abre esta página: https://boomburger.boraguarda.com/demo/
+Conta: demo.cliente.boomburger@bora.app
+Palavra-passe: {SENHA_CLIENTE}
+Escolhe os hambúrgueres e carrega em "Fazer o pedido". A página mostra o pedido a andar. Paga-se "em dinheiro", mas ninguém paga nada: é de teste.
+(Na app Bora normal este cliente não consegue pedir, porque a loja está "Em breve". Por isso usa-se esta página.)
+
+TELEMÓVEL 2 — a loja (o Emanuel)
+App Bora, entrada "Sou Parceiro", com a conta da loja boomburger@bora.app (a palavra-passe que já tens).
+Quando o pedido chega, carrega em "Aceitar pedido" e escolhe 10 min. Deixa a app autorizar as notificações, para tocar quando chega um pedido.
+
+TELEMÓVEL 3 — o estafeta
+App Bora, entrada "Sou Estafeta".
+Conta: demo.estafeta.boomburger@bora.app
+Palavra-passe: {SENHA_ESTAFETA}
+Liga o botão "Estás offline" no fundo do ecrã (fica online). A oferta aparece sozinha uns 2 minutos depois de a loja aceitar: carrega em "Aceitar". Depois: "Recolher pedido", "Iniciar entrega", "Concluir entrega". Se o pedido tiver cerveja, a app pede para confirmar a idade: carrega em "Vi o documento, tem 18 ou mais". O código de entrega (4 números) aparece no telemóvel 1.
+No fim o pedido fica como "demonstração concluída, sem custo".
+
+O que fica garantido: nenhum estafeta a sério é chamado, o estafeta de demonstração nunca recebe pedidos a sério, e nada entra nos ganhos, extratos, faturas, fecho semanal, tokens ou check-in. A oferta mostra "+4,00 €" e "cobrar em dinheiro" como num pedido real, mas é só o ecrã: não conta para nada.
+
+Estas palavras-passe são só tuas. Não as reenvies.

@@ -41,8 +41,16 @@ ALT_RODAPE = 700
 QR_OFFSET_Y = 40      # do topo do cartao do rodape ate' ao topo do QR
 QR_MARGEM_X = 54      # da margem do cartao ate' ao QR   # ver prova de leitura em verificar.py
 
-PLAY_URL = "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
-WEB_URL = "https://app.boraguarda.com/#/registo-cliente"
+# UM QR SO' (2026-09-21, missao link-unico-iphone): aponta a' pagina /baixar,
+# que manda o iPhone para a App Store, o Android para a Google Play e o
+# computador para as duas. Antes eram dois QR (Play Store + registo web) e o
+# iPhone caia no site. A origem "qr-flyer" e' a do papel (flyer, cartaz,
+# autocolante) e vem do gerador unico da casa, tools/qr/bora_qr.py.
+import sys as _sys
+_sys.path.insert(0, os.path.join(AQUI, "..", "qr"))
+from bora_qr import link_destino as _link_destino, endereco_curto as _endereco_curto
+BAIXAR_URL = _link_destino("qr-flyer")          # https://boraguarda.com/baixar?de=qr-flyer
+BAIXAR_CURTO = _endereco_curto()                # boraguarda.com/baixar
 
 # ------------------------------------------------------------------ fontes
 _FONTE = A("fonts", "Inter-VariableFont.ttf")
@@ -510,52 +518,53 @@ def montar():
     tela = _compor(tela, cam, cx_r0, y_rodape)
     d = ImageDraw.Draw(tela)
 
-    # Tres colunas: QR | app | QR. Ganha-se pela LARGURA, o que deixa os QR
-    # grandes (400px) sem roubar altura aos blocos. Com 268px os modulos ficavam
-    # a ~2,3px na prova de leitura e o descodificador via-os mas nao os lia.
+    # Duas colunas: QR | app. Um QR so' (ver BAIXAR_URL), grande (500px) a'
+    # esquerda, e a' direita o icone com o nome e as DUAS lojas. Com 268px os
+    # modulos ficavam a ~2,3px na prova de leitura e o descodificador via-os
+    # mas nao os lia; 500px provado em verificar.py.
     qr_lado = QR_LADO
     qy = y_rodape + QR_OFFSET_Y
     f_et = fonte(36, "Black")
     f_et2 = fonte(28, "Medium")
     margem_qr = 22
 
-    for i, (url, et, et2, cor) in enumerate([
-            (PLAY_URL, "ANDROID", "Play Store", VERDE),
-            (WEB_URL, "iPHONE / PC", "abre no browser", LARANJA)]):
-        qx = (CX0 + QR_MARGEM_X) if i == 0 else (CX1 - QR_MARGEM_X - qr_lado)
-        mw = qr_lado + 2 * margem_qr
-        moldura = camada(mw, mw)
-        ImageDraw.Draw(moldura).rounded_rectangle(
-            [0, 0, mw - 1, mw - 1],
-            radius=26, fill=(255, 255, 255, 255), outline=cor + (255,), width=5)
-        tela = _compor(tela, moldura, qx - margem_qr, qy - margem_qr)
-        tela.alpha_composite(fazer_qr(url, qr_lado), (int(qx), int(qy)))
-        d = ImageDraw.Draw(tela)
-        # etiquetas em claro: o rodape agora e' escuro
-        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 38, et, f_et,
-                       _lerp_cor(cor, (255, 255, 255), 0.35))
-        texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 84, et2, f_et2,
-                       (176, 190, 200))
+    qx = CX0 + QR_MARGEM_X
+    mw = qr_lado + 2 * margem_qr
+    moldura = camada(mw, mw)
+    ImageDraw.Draw(moldura).rounded_rectangle(
+        [0, 0, mw - 1, mw - 1],
+        radius=26, fill=(255, 255, 255, 255), outline=VERDE + (255,), width=5)
+    tela = _compor(tela, moldura, qx - margem_qr, qy - margem_qr)
+    tela.alpha_composite(fazer_qr(BAIXAR_URL, qr_lado), (int(qx), int(qy)))
+    d = ImageDraw.Draw(tela)
+    # etiquetas em claro: o rodape e' escuro
+    texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 38, "APONTA E INSTALA", f_et,
+                   _lerp_cor(VERDE, (255, 255, 255), 0.35))
+    texto_centrado(d, qx + qr_lado / 2, qy + qr_lado + 84, "iPhone e Android", f_et2,
+                   (176, 190, 200))
 
-    # coluna do meio: icone do aplicativo + nome
+    # coluna da direita: icone do aplicativo + nome + as duas lojas + morada
     ic_lado = 190
     ic = cantos_redondos(Image.open(A("brand", "apple-touch-icon.png"))
                          .convert("RGBA").resize((ic_lado, ic_lado), Image.LANCZOS),
                          int(ic_lado * 0.24))
-    cxm = W / 2
-    iy = qy + 40
+    cxm = (qx + qr_lado + margem_qr + CX1) / 2      # centro do que sobra a' direita do QR
+    iy = qy + 10
     tela = sombra(tela, (cxm - ic_lado / 2, iy, cxm + ic_lado / 2, iy + ic_lado),
                   int(ic_lado * 0.24), 16, 120, (0, 9))
     tela.alpha_composite(ic, (int(cxm - ic_lado / 2), int(iy)))
     d = ImageDraw.Draw(tela)
     f_app = fonte(54, "Black")
-    f_app2 = fonte(37, "SemiBold")
-    ty2 = iy + ic_lado + 26
+    f_app2 = fonte(40, "SemiBold")
+    f_app3 = fonte(44, "Bold")
+    ty2 = iy + ic_lado + 22
     texto_centrado(d, cxm, ty2, "BORA APP", f_app, BRANCO)
     texto_centrado(d, cxm, ty2 + 64, "GUARDA", f_app,
                    _lerp_cor(VERDE, (255, 255, 255), 0.35))
-    texto_centrado(d, cxm, ty2 + 134, "descarrega na Play Store", f_app2,
+    texto_centrado(d, cxm, ty2 + 140, "na App Store e na Google Play", f_app2,
                    (186, 199, 208))
+    texto_centrado(d, cxm, ty2 + 200, BAIXAR_CURTO, f_app3,
+                   _lerp_cor(LARANJA, (255, 255, 255), 0.25))
 
     # ---------------- margem branca da grafica (8mm)
     moldura = Image.new("RGBA", (W, H), (255, 255, 255, 255))

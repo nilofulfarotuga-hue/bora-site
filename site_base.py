@@ -42,7 +42,12 @@ DEFINES_FALLBACK = os.path.join(
 
 SITE = "https://boraguarda.com"
 APP = "https://app.boraguarda.com"
-PLAY = "https://play.google.com/store/apps/details?id=pt.boraapp.bora"
+# Descarregar a app: um link só, que manda o iPhone para a App Store, o Android
+# para a Google Play e mostra as duas lojas no computador (functions/baixar.js).
+# No www de propósito: no boraguarda.com sem www há uma regra de redireccionamento
+# da Cloudflare que manda o computador para a Play Store e não conta a visita
+# (medido a 15/10/2026). Nunca o link directo de uma loja só.
+BAIXAR = "https://www.boraguarda.com/baixar"
 EMAIL = "boraappbora@gmail.com"
 TELEFONE = "+351937501673"
 
@@ -221,7 +226,13 @@ def cabeca(titulo, descricao, caminho, imagem=None, extra=""):
 """
 
 
-def topo():
+def baixar(pagina):
+    """Link de descarregar com a origem medida: ?de=site-<pagina> (a função
+    só conta origens até 48 caracteres, [a-z0-9-])."""
+    return f"{BAIXAR}?de=" + ("site-" + pagina)[:48].rstrip("-")
+
+
+def topo(pagina):
     return f"""<header class="topo">
   <a class="marca" href="/">
     <img src="/assets/img/bora_logo.png" alt="Bora" width="40" height="40">
@@ -235,7 +246,7 @@ def topo():
     <a href="/mais">E ainda</a>
     <a href="/ser-parceiro">Ser parceiro</a>
   </nav>
-  <a class="btn btn-p pequeno" href="{PLAY}" rel="noopener">Instalar</a>
+  <a class="btn btn-p pequeno" href="{e(baixar(pagina))}" rel="noopener">Instalar</a>
 </header>
 """
 
@@ -300,12 +311,12 @@ def rodape():
 """
 
 
-def dois_botoes(tipo, ident, verbo):
+def dois_botoes(tipo, ident, verbo, pagina):
     """Os dois caminhos, com o mesmo peso: quem tem a app e quem não tem."""
     destino = f"{APP}/#/{tipo}/{urllib.parse.quote(str(ident))}"
     return f"""<div class="pedir">
   <a class="btn btn-p" href="{e(destino)}" rel="noopener">Tenho a app · {e(verbo)}</a>
-  <a class="btn btn-s" href="{PLAY}" rel="noopener">Não tenho · instalar</a>
+  <a class="btn btn-s" href="{e(baixar(pagina))}" rel="noopener">Não tenho · instalar</a>
   <p class="pedir-nota">ou <a href="{e(destino)}" rel="noopener">pede pelo site sem instalar nada</a></p>
 </div>
 """

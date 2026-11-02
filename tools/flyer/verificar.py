@@ -2,8 +2,9 @@
 """
 Prova do flyer antes de entregar. Falha ruidosamente — nao ha "assumido".
 
-1. Os dois QR leem-se na imagem REDUZIDA a 700px (simula o telemovel a apontar
-   para o papel a alguma distancia).
+1. O QR UNICO le'-se na imagem REDUZIDA a 700px (simula o telemovel a apontar
+   para o papel a alguma distancia) e aponta a' pagina /baixar com a origem
+   qr-flyer — nunca a' Play Store nem ao site directamente (2026-09-21).
 2. Cada nome de categoria aparece uma unica vez (a versao anterior do flyer
    trazia "SOBREMESAS" duas vezes).
 3. Nenhum bloco proibido entrou (Reservar Mesa, BeUnique, Pizza Hut, Lidl,
@@ -16,7 +17,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_flyer import BLOCOS, PLAY_URL, WEB_URL
+from build_flyer import BLOCOS, BAIXAR_URL
 
 from build_flyer import SAIDA as DOWN
 P_GRAFICA = os.path.join(DOWN, "flyer-bora-app-A4-grafica.png")
@@ -40,7 +41,7 @@ det = cv2.QRCodeDetector()
 
 
 def le_qr(imagem, largura):
-    """Reduz a pagina e tenta descodificar os dois QR."""
+    """Reduz a pagina e tenta descodificar o QR."""
     r = imagem.resize((largura, int(largura * imagem.height / imagem.width)), Image.LANCZOS)
     a = cv2.cvtColor(np.array(r.convert("RGB")), cv2.COLOR_RGB2BGR)
     rv, txts, _, _ = det.detectAndDecodeMulti(a)
@@ -49,12 +50,14 @@ def le_qr(imagem, largura):
 
 # (a) criterio pedido: pagina inteira reduzida a 700px
 lidos700 = le_qr(im, 700)
-ok(PLAY_URL in lidos700, "QR Android le' a 700px e aponta para a Play Store")
-ok(WEB_URL in lidos700, "QR iPhone/PC le' a 700px e aponta para o registo web")
+ok(BAIXAR_URL in lidos700, "QR unico le' a 700px e aponta a /baixar?de=qr-flyer")
+VELHOS = ("play.google.com", "app.boraguarda.com")
+ok(not any(v in t for t in lidos700 for v in VELHOS), "nenhum QR velho (Play/site) na pagina")
+ok(len(lidos700) == 1, "ha' UM QR so' na pagina", f"{len(lidos700)} lido(s)")
 
 # (b) na imagem que vai mesmo para o WhatsApp (JPG comprimido)
 wq = le_qr(Image.open(P_WHATS), 1080)
-ok({PLAY_URL, WEB_URL} <= wq, "os 2 QR leem-se no JPG do WhatsApp", f"{len(wq)}/2")
+ok(wq == {BAIXAR_URL}, "o QR unico le'-se no JPG do WhatsApp e e' o unico", f"{sorted(wq)}")
 
 # (c) prova realista: cada QR ISOLADO, como quem aponta a camara ao papel.
 #     E' o que o detetor "multi" nao consegue garantir numa pagina cheia — ele
@@ -62,10 +65,8 @@ ok({PLAY_URL, WEB_URL} <= wq, "os 2 QR leem-se no JPG do WhatsApp", f"{len(wq)}/
 from build_flyer import QR_LADO, BLEED, CX0, CX1, ALT_RODAPE, QR_OFFSET_Y, QR_MARGEM_X
 y_rod = im.height - BLEED - ALT_RODAPE
 qy, m = y_rod + QR_OFFSET_Y, 60
-zonas = [("Android", PLAY_URL,
-          (CX0 + QR_MARGEM_X - m, qy - m, CX0 + QR_MARGEM_X + QR_LADO + m, qy + QR_LADO + m)),
-         ("iPhone/PC", WEB_URL,
-          (CX1 - QR_MARGEM_X - QR_LADO - m, qy - m, CX1 - QR_MARGEM_X + m, qy + QR_LADO + m))]
+zonas = [("unico", BAIXAR_URL,
+          (CX0 + QR_MARGEM_X - m, qy - m, CX0 + QR_MARGEM_X + QR_LADO + m, qy + QR_LADO + m))]
 for nome, url, caixa in zonas:
     rec = im.crop(caixa)
     escalas = []
@@ -80,8 +81,8 @@ for nome, url, caixa in zonas:
 # (d) informativo: varredura da pagina inteira (o detetor multi e' irregular aqui)
 print("  --- informativo: pagina inteira, varias reducoes ---")
 for larg in (700, 760, 820, 900, 1080):
-    n = len(le_qr(im, larg) & {PLAY_URL, WEB_URL})
-    print(f"      {larg:>4}px: {n}/2")
+    n = len(le_qr(im, larg) & {BAIXAR_URL})
+    print(f"      {larg:>4}px: {n}/1")
 
 mm = QR_LADO / 300 * 25.4
 print(f"  --- QR impresso: {mm:.0f} mm de lado, {mm/37:.2f} mm por modulo (minimo pratico 0,4) ---")
@@ -106,6 +107,16 @@ for b in BLOCOS:
                                            "assets", "logos", lg + ".png")):
             falta.append(f'{b["nome"]}:{lg}')
 ok(not falta, "todos os logos referidos existem em disco", ", ".join(falta) if falta else "15/15")
+
+print()
+print("=" * 72)
+print("2b. Rodape — diz as duas lojas e a morada curta (por OCR nao ha; prova-se no build)")
+print("=" * 72)
+import build_flyer as _bf
+src = open(_bf.__file__, encoding="utf-8").read()
+ok("na App Store e na Google Play" in src, "o rodape escreve 'na App Store e na Google Play'")
+ok("descarrega na Play Store" not in src, "a frase velha 'descarrega na Play Store' saiu do gerador")
+ok("play.google.com" not in src and "app.boraguarda.com" not in src, "nenhum URL velho cravado no gerador")
 
 print()
 print("=" * 72)

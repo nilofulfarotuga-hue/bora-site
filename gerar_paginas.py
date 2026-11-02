@@ -25,8 +25,8 @@ import sys
 import urllib.parse
 
 from site_base import (
-    APP, CATEGORIAS, EMAIL, MINISITES, PLAY, RAIZ, SITE,
-    cabeca, dois_botoes, e, migalhas, recolher, rodape, saidas, topo,
+    APP, CATEGORIAS, EMAIL, MINISITES, RAIZ, SITE,
+    baixar, cabeca, dois_botoes, e, migalhas, recolher, rodape, saidas, topo,
 )
 
 
@@ -107,10 +107,11 @@ def pagina_parceiro(item, tipo):
     o_que = O_QUE.get(item.get("category"), "")
     resumo = (item.get("about_text") or item.get("description")
               or f"{nome}, na Guarda. {verbo} pelo Bora.")
+    pagina = f"loja-{item['slug']}"
 
     p = [cabeca(f"{nome} — {o_que or 'no Bora'} na Guarda",
                 resumo[:180], f"/loja/{item['slug']}", foto),
-         topo(), "<main>", '<div class="wrap">',
+         topo(pagina), "<main>", '<div class="wrap">',
          migalhas([("Início", "/"), (cat_nome, cat_href), (nome, None)]),
          "</div>"]
 
@@ -123,7 +124,7 @@ def pagina_parceiro(item, tipo):
       <h1>{e(nome)}</h1>
       {morada}
       {selo_em_breve(item)}
-      {dois_botoes(tipo, item['id'], verbo)}
+      {dois_botoes(tipo, item['id'], verbo, pagina)}
     </div>
     <div class="capa-foto">{bloco_foto(foto, nome)}</div>
   </div>
@@ -192,9 +193,9 @@ def pagina_parceiro(item, tipo):
 
     artigo = "o" if tipo == "loja" else "a"
     p.append(f'<section class="bloco fecho-pedir"><h2>{e(verbo)} n{artigo} {e(nome)}</h2>'
-             + dois_botoes(tipo, item["id"], verbo) + "</section>")
+             + dois_botoes(tipo, item["id"], verbo, pagina) + "</section>")
     p.append("</div></main>")
-    p.append(saidas(f"Voltar a {cat_nome}", cat_href, "Instalar o Bora", PLAY))
+    p.append(saidas(f"Voltar a {cat_nome}", cat_href, "Instalar o Bora", baixar(pagina)))
     p.append(rodape())
     return "".join(p)
 
@@ -232,7 +233,7 @@ def pagina_categoria(chave, dados):
     provedores = dados["provedores"]
 
     p = [cabeca(f"{c['titulo']} — Bora Guarda", c["frase"], "/" + chave),
-         topo(), "<main>", '<div class="wrap">',
+         topo(chave), "<main>", '<div class="wrap">',
          migalhas([("Início", "/"), (c["titulo"], None)]), "</div>",
          f"""<section class="cat-topo">
   <div class="wrap">
@@ -255,7 +256,7 @@ def pagina_categoria(chave, dados):
         p.append(_corpo_mais(lojas))
 
     p.append("</div></main>")
-    p.append(saidas("Voltar ao início", "/", "Instalar o Bora", PLAY))
+    p.append(saidas("Voltar ao início", "/", "Instalar o Bora", baixar(chave)))
     p.append(rodape())
     return "".join(p)
 
@@ -283,7 +284,7 @@ def _corpo_viagens():
                  "Escolhes na hora de confirmar. Quem prefere notas continua a pagar com notas."),
             ])
             + f'<div class="pedir"><a class="btn btn-p" href="{APP}" rel="noopener">Pedir uma viagem</a>'
-              f'<a class="btn btn-s" href="{PLAY}" rel="noopener">Instalar a app</a></div>'
+              f'<a class="btn btn-s" href="{baixar("viagens")}" rel="noopener">Instalar a app</a></div>'
             + "</section>")
 
 
@@ -362,7 +363,7 @@ def _corpo_mais(lojas):
                    + "".join(cartao_cadeia(l) for l in farmacias) + "</div></section>")
     out.append(f'<section class="bloco"><div class="pedir">'
                f'<a class="btn btn-p" href="{APP}" rel="noopener">Pedir pelo site</a>'
-               f'<a class="btn btn-s" href="{PLAY}" rel="noopener">Instalar a app</a></div></section>')
+               f'<a class="btn btn-s" href="{baixar("mais")}" rel="noopener">Instalar a app</a></div></section>')
     return "".join(out)
 
 
@@ -404,7 +405,7 @@ def pagina_ser_parceiro(dados):
                 "Entra sem pagar nada. A Bora só ganha quando vendes. "
                 "Montamos a tua loja e oferecemos o site do teu negócio.",
                 "/ser-parceiro"),
-         topo(), "<main>", '<div class="wrap">',
+         topo("ser-parceiro"), "<main>", '<div class="wrap">',
          migalhas([("Início", "/"), ("Ser parceiro", None)]), "</div>",
          f"""<section class="cat-topo" id="topo">
   <div class="wrap">

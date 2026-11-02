@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Botões das lojas — provas 15/10/2026</title>
+<style>body{margin:0;background:#0E1114;color:#EFEDE8;font-family:system-ui;padding:24px;max-width:900px}
+a{color:#CC9D4E} img{max-width:100%;border-radius:10px;margin:8px 0;display:block}
+li{margin:8px 0} small{color:#9AA0A6;word-break:break-all}</style>
+</head>
+<body>
+<h1>Botões de descarregar do site — provas de 15/10/2026</h1>
+<p>Endereço testado: https://boraguarda.com, depois de publicado. Em cada aparelho abriu-se a página inicial,
+a de Entregas e a de Viagens, e carregou-se em cada botão de descarregar que se vê. Cliques testados com destino
+certo: 31;
+errados: 0.</p>
+<p>No iPhone o destino lê-se pela cadeia de navegação: a página chega a apps.apple.com e o telemóvel abre a app
+App Store (itms-appss), por isso a captura fica na página de onde se carregou. QR da página inicial lido por OpenCV:
+<code>https://boraguarda.com/baixar?de=qr-site</code> (<a href="qr-publicado.png">ficheiro no ar</a>).</p>
+<p><a href="resultado.json">resultado.json</a> com tudo.</p>
+<h2>iPhone 15</h2>
+<p>Bloco «Descarrega o Bora agora»: aparelho detectado <b>ios</b>; selos por ordem: App Store 60 px de altura, Google Play 44 px de altura. QR: assets/img/qr-baixar-site.png.</p>
+<a href="iphone15-inicio-descarrega.jpg"><img src="iphone15-inicio-descarrega.jpg" alt="bloco descarrega iphone15"></a>
+<ul>
+<li>inicio · «Descarregar grátis» → <b>App Store</b> (certo) · <a href="iphone15-inicio-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>inicio · «Descarregar a app» → <b>App Store</b> (certo) · <a href="iphone15-inicio-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>inicio · «Página de descarga do Bora» → <b>App Store</b> (certo) · <a href="iphone15-inicio-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>inicio · «Descarregar na App Store» → <b>App Store</b> (certo) · <a href="iphone15-inicio-clique4.jpg">captura</a><br><small>https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>inicio · Obter no Google Play: selo da outra loja — não testado</li>
+<li>inicio · «Descarregar a app iPhone e Android» → <b>App Store</b> (certo) · <a href="iphone15-inicio-clique6.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>entregas · «Instalar» → <b>App Store</b> (certo) · <a href="iphone15-entregas-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>entregas · «Instalar o Bora» → <b>App Store</b> (certo) · <a href="iphone15-entregas-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>viagens · «Instalar» → <b>App Store</b> (certo) · <a href="iphone15-viagens-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>viagens · «Instalar a app» → <b>App Store</b> (certo) · <a href="iphone15-viagens-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+<li>viagens · «Instalar o Bora» → <b>App Store</b> (certo) · <a href="iphone15-viagens-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → itms-appss://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739</small></li>
+</ul>
+<h2>Pixel 7 (Android)</h2>
+<p>Bloco «Descarrega o Bora agora»: aparelho detectado <b>android</b>; selos por ordem: Google Play 60 px de altura, App Store 44 px de altura. QR: assets/img/qr-baixar-site.png.</p>
+<a href="pixel7-inicio-descarrega.jpg"><img src="pixel7-inicio-descarrega.jpg" alt="bloco descarrega pixel7"></a>
+<ul>
+<li>inicio · «Descarregar grátis» → <b>Google Play</b> (certo) · <a href="pixel7-inicio-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>inicio · «Descarregar a app» → <b>Google Play</b> (certo) · <a href="pixel7-inicio-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>inicio · «Página de descarga do Bora» → <b>Google Play</b> (certo) · <a href="pixel7-inicio-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>inicio · Descarregar na App Store: selo da outra loja — não testado</li>
+<li>inicio · «Obter no Google Play» → <b>Google Play</b> (certo) · <a href="pixel7-inicio-clique5.jpg">captura</a><br><small>https://play.google.com/store/apps/details?id=pt.boraapp.bora → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>inicio · «Descarregar a app iPhone e Android» → <b>Google Play</b> (certo) · <a href="pixel7-inicio-clique6.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-inicio%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>entregas · «Instalar» → <b>Google Play</b> (certo) · <a href="pixel7-entregas-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>entregas · «Instalar o Bora» → <b>Google Play</b> (certo) · <a href="pixel7-entregas-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-entregas%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>viagens · «Instalar» → <b>Google Play</b> (certo) · <a href="pixel7-viagens-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>viagens · «Instalar a app» → <b>Google Play</b> (certo) · <a href="pixel7-viagens-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+<li>viagens · «Instalar o Bora» → <b>Google Play</b> (certo) · <a href="pixel7-viagens-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens → https://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09 → intent://play.google.com/store/apps/details?id=pt.boraapp.bora&amp;referrer=utm_source%3Dsite-viagens%26utm_medium%3Dbora-redes%26utm_campaign%3Dguarda-2026-09&amp;pcampaignid=web_auto_redirect&amp;web_logged_in=0&amp;redirect_entry_point=dp</small></li>
+</ul>
+<h2>Computador (1366 px)</h2>
+<p>Bloco «Descarrega o Bora agora»: aparelho detectado <b>outro</b>; selos por ordem: App Store 56 px de altura, Google Play 56 px de altura. QR: assets/img/qr-baixar-site.png.</p>
+<a href="computador-inicio-descarrega.jpg"><img src="computador-inicio-descarrega.jpg" alt="bloco descarrega computador"></a>
+<ul>
+<li>inicio · «Descarregar a app» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-inicio-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio</small></li>
+<li>inicio · «Descarregar grátis» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-inicio-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio</small></li>
+<li>inicio · «Descarregar a app» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-inicio-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio</small></li>
+<li>inicio · «Página de descarga do Bora» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-inicio-clique4.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-inicio</small></li>
+<li>inicio · «Descarregar na App Store» → <b>App Store</b> (certo) · <a href="computador-inicio-clique5.jpg">captura</a><br><small>https://apps.apple.com/pt/app/bora-entregas-e-servicos/id6809954739 → https://apps.apple.com/pt/app/bora-entregas-e-servi%C3%A7os/id6809954739</small></li>
+<li>inicio · «Obter no Google Play» → <b>Google Play</b> (certo) · <a href="computador-inicio-clique6.jpg">captura</a><br><small>https://play.google.com/store/apps/details?id=pt.boraapp.bora</small></li>
+<li>entregas · «Instalar» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-entregas-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas</small></li>
+<li>entregas · «Instalar o Bora» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-entregas-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-entregas</small></li>
+<li>viagens · «Instalar» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-viagens-clique1.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens</small></li>
+<li>viagens · «Instalar a app» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-viagens-clique2.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens</small></li>
+<li>viagens · «Instalar o Bora» → <b>página /baixar com as duas lojas</b> (certo) · <a href="computador-viagens-clique3.jpg">captura</a><br><small>https://www.boraguarda.com/baixar?de=site-viagens</small></li>
+</ul>
+</body>
+</html>

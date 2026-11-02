@@ -1,2 +1,10 @@
-# /verificar/<token> — pagina publica de verificacao do motorista TVDE (a pagina le o token do endereco).
-/verificar/*  /verificar/index.html  200
+# /verificar/<token> — pagina publica de verificacao do motorista TVDE.
+# O alvo e a pasta, NAO o index.html: o Cloudflare Pages redireciona 308 qualquer
+# URL acabado em .html para a versao limpa, e uma reescrita que aponta para .html
+# morre nesse redireccionamento (apanhado a 24/09/2026 — dava 404).
+/verificar/*  /verificar/  200
+
+# /pedir/boom — link curto do QR dos cartazes da Boom! Burger (29/10/2026). Por agora vai
+# para o WhatsApp da Bora (robô em teste); quando o Danilo disser "troca", passa a ser o
+# número do dono da Boom e o QR impresso continua a valer.
+/pedir/boom  https://wa.me/351937501673?text=Ol%C3%A1!%20Quero%20pedir%20na%20Boom!%20Burger  302

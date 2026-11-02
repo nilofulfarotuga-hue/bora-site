@@ -1,0 +1,157 @@
+{
+ "glovo-boomburger": {
+  "url": "https://glovoapp.com/pt/pt/guarda/stores/boom-burger-hamburgueria-artesanal-grd",
+  "altura": 12744,
+  "botoes": [
+   "Agendar um pedido",
+   "Bebidas",
+   "Blogue",
+   "Burger King",
+   "Carreiras",
+   "Comida",
+   "Configurar os cookies",
+   "Conformidade",
+   "Contacta-nos",
+   "Diretiva Europeia da Acessibilidade",
+   "Embalagens",
+   "Entradas",
+   "Estafetas",
+   "Explora estabelecimentos perto de ti",
+   "Extras",
+   "Frango",
+   "Glovo Business",
+   "Glovo Prime",
+   "Guarda",
+   "Hambúrgueres",
+   "Hambúrgueres Artesanais",
+   "Iniciar sessão",
+   "Instagram",
+   "KFC",
+   "Mais vendidos",
+   "McDonald's",
+   "Perguntas Frequentes",
+   "Política de Cookies",
+   "Política de Privacidade",
+   "Registe a sua empresa",
+   "Regulamento dos Serviços Digitais",
+   "Saladas",
+   "Segurança",
+   "Sobre nós",
+   "Sobremesas",
+   "Telepizza",
+   "Termos e Condições",
+   "TikTok",
+   "Traquinas",
+   "Ver estabelecimentos abertos"
+  ],
+  "fontes": [
+   "\"Glovo Sans\", Helvetica, Arial, sans-serif"
+  ],
+  "titulo": "Guarda: entrega de Boom Burger - Hamburgueria Artesanal | Glovo"
+ },
+ "deleito": {
+  "url": "https://quierodeleito.com/",
+  "altura": 6713,
+  "botoes": [
+   "001\nCELESTIAL AIRLINES\n2025\n−",
+   "002\nMYKE TOWERS\n2024\n+",
+   "003\nDELEITO RACING TEAM\n2024\n+",
+   "004\nLA CAJA DE PANDORA\n2023\n+",
+   "005\nEL MUSEO DE CERA\n2023\n+",
+   "006\nCARBONARA TRUFADA BY RAFUEL\n2025\n+",
+   "01\nCarbonara Trufada\nBY RAFUEL\n13,95€",
+   "02\nBBQ Buyer\n13,95€",
+   "03\nCheeseburger\n9,95€",
+   "04\nBurgerfoie\n13,95€",
+   "05\nCarricheese Fries\n7,95€",
+   "06\nNocilla Burger\n4,50€",
+   "Aceptar todo",
+   "CAT",
+   "Canal de Denuncias",
+   "Configurar cookies",
+   "Contacta",
+   "Cookies",
+   "Deleito Zafiro",
+   "ES",
+   "Eventos",
+   "FAQs",
+   "Franquicias",
+   "La Carta",
+   "La Experiencia",
+   "Menú",
+   "Más info",
+   "Nuestra Carta",
+   "Nuestros Restaurantes",
+   "Pedir 13,95€",
+   "Personalizar",
+   "Pide Ahora",
+   "Pide Ahora\n→",
+   "Pide Ahora →",
+   "Privacidad",
+   "Rechazar todo",
+   "Restaurantes",
+   "Saltar al contenido",
+   "Trabaja con nosotros",
+   "Ver la campaña\n↗",
+   "Ver la campaña ↗",
+   "ÚNETE AQUÍ"
+  ],
+  "fontes": [
+   "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "Poppins, system-ui, sans-serif",
+   "\"Fragment Mono\", ui-monospace, monospace",
+   "\"Plus Jakarta Sans Variable\", \"Plus Jakarta Sans\", system-ui, sans-serif"
+  ],
+  "titulo": "Deleito · Hamburguesas de autor, en restaurante y a domicilio"
+ },
+ "thegoodburger-dgrees": {
+  "url": "https://dgrees.studio/works/the-good-burger/",
+  "altura": 1021,
+  "botoes": [
+   "Click to reveal",
+   "Cloudflare"
+  ],
+  "fontes": [
+   "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Helvetica Neue\", Arial, sans-serif"
+  ],
+  "titulo": "Attention Required! | Cloudflare"
+ },
+ "stack-contra": {
+  "url": "https://contra.com/p/sgF6BMkM-stack-burger-joint-website",
+  "altura": 900,
+  "botoes": [
+   "Back to home",
+   "Log In",
+   "Post a job",
+   "Shoot us a message.",
+   "Sign Up"
+  ],
+  "fontes": [
+   "\"GT Standard M\", Arial, sans-serif"
+  ],
+  "titulo": "STÄCK - Burger Joint Website by Karol Liwinski"
+ },
+ "crav": {
+  "url": "https://cravburgers.shop/",
+  "altura": 10429,
+  "botoes": [
+   "ABOUT",
+   "BURGERS\nBURGERS",
+   "CONTACT",
+   "CONTACT\nCONTACT",
+   "CRAV",
+   "HOME",
+   "HOME\nHOME",
+   "LOCATIONS",
+   "MENU\nMENU",
+   "ORDER NOW",
+   "OUR SPICES",
+   "SPICES\nSPICES"
+  ],
+  "fontes": [
+   "Modak, \"Modak Fallback\"",
+   "\"Mouse Memoirs\", \"Mouse Memoirs Fallback\""
+  ],
+  "titulo": "CRAV | Flipping"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "fonte": "recorte-u2net.png",
+ "largura_px": 900,
+ "altura_px": 622,
+ "proporcao": 1.4478,
+ "camadas": [
+  {
+   "n": 1,
+   "nome": "pao-cima",
+   "ficheiro": "camada-1-pao-cima.webp",
+   "top_pct": 0.0,
+   "altura_pct": 31.319
+  },
+  {
+   "n": 2,
+   "nome": "molho-cogumelos",
+   "ficheiro": "camada-2-molho-cogumelos.webp",
+   "top_pct": 25.824,
+   "altura_pct": 27.473
+  },
+  {
+   "n": 3,
+   "nome": "bacon-queijo",
+   "ficheiro": "camada-3-bacon-queijo.webp",
+   "top_pct": 47.802,
+   "altura_pct": 22.527
+  },
+  {
+   "n": 4,
+   "nome": "carne-agriao",
+   "ficheiro": "camada-4-carne-agriao.webp",
+   "top_pct": 64.835,
+   "altura_pct": 23.352
+  },
+  {
+   "n": 5,
+   "nome": "pao-baixo",
+   "ficheiro": "camada-5-pao-baixo.webp",
+   "top_pct": 82.692,
+   "altura_pct": 17.308
+  }
+ ],
+ "solida": "solida.webp"
+}

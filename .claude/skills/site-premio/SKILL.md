@@ -5,10 +5,10 @@ metadata:
   type: procedural
   zona: verde
   origem: missao site-premio-montra-bora, 2026-08-29
-  execucoes: 3
-  sucessos: 3
+  execucoes: 4
+  sucessos: 4
   falhas: 0
-  ultima_execucao: 2026-08-31
+  ultima_execucao: 2026-10-27
 ---
 
 # SITE PRÉMIO — o manual de construir sites que se vendem
@@ -367,6 +367,77 @@ denuncia barato ou IA). O fiscal dá a NOTA DA GRELHA 0-100 (função
 `pontuar` no fiscal.py): **mínimo 70 para publicar**, GRAVE encosta a 49,
 e o teste dos 3 segundos continua eliminatório à parte. Ler o livro antes
 do prompt longo; em conflito, o livro perde só para o veredito do Danilo.
+
+## 8d. LIÇÕES DA BOOM! BURGER (2026-10-27) — site de restaurante parceiro, Nível 3
+
+Site `boomburger.boraguarda.com`, fonte em `sites-parceiros/boom-burger/` (README lá dentro).
+Cada regra abaixo custou uma ronda nesse dia.
+
+**8d.1 Camadas reais: menos cortes, mais verdade.** O produto real recortado (rembg `u2net`,
+grátis e local) e fatiado com cortes DIREITOS em 5 faixas levou 67/100 do juiz independente:
+"parece uma imagem partida". Com 3 camadas — pão de cima pelo CONTORNO real, o recheio
+INTEIRO, pão de baixo pelo contorno (`tools/camadas/fatiar.py`, fronteiras `escuro-fim` e
+`escuro-inicio`) — passa a ler-se como hambúrguer a montar-se. Componente 14 do
+`components-premio/`. O `isnet-general-use` abriu buracos no queijo; o `u2net` é melhor em
+comida em prato. Secção com `overflow:clip`, senão as camadas afastadas espreitam no herói.
+
+**8d.2 Título do herói: um bloco só.** O SplitText com `mask:"lines"` corta os acentos das
+maiúsculas (Í, Ã) e, enquanto o GSAP não chega, mostrava acentos soltos no lugar do título
+durante segundos (apanhado pelo Claude.ai no ar). Título em PT anima-se INTEIRO, em CSS,
+completo antes de 1 s. Prova por vídeo: `fonte/prova_titulo.py`.
+
+**8d.3 Montagem do logótipo em CSS, por camadas SVG empilhadas.** Animar `<g>` dentro de um
+SVG redesenha tudo no processador a cada fotograma e atrasou o LCP. Partir o logótipo em 5
+`<svg>` sobrepostos (um por parte) e animar cada SVG inteiro com transform/opacity corre no
+compositor. Com `prefers-reduced-motion: reduce` o logótipo aparece inteiro.
+
+**8d.4 Desempenho num PC fraco (Celeron).** O Lighthouse multiplica a lentidão da máquina:
+o mesmo site deu 55 e 98. Mede-se 5 vezes e usa-se a MEDIANA. O que subiu de 74 para 92:
+fontes servidas pelo próprio site com `preload` (o CSS do Google Fonts bloqueava 1,6 s);
+GSAP só ao 1.º gesto (scroll real > 40 px, toque, tecla — o Lighthouse dispara um "scroll"
+falso); tarefas não urgentes (preços vivos, "aberto agora", abas, vídeo) cada uma no seu
+`requestIdleCallback`; `content-visibility:auto` nas secções abaixo da dobra; foto do herói
+em WebP (o AVIF descodifica devagar num processador fraco); grão SEM `mix-blend-mode`.
+
+**8d.5 Escala fechada, medida pelo fiscal.** 16 tamanhos de letra e 20 espaçamentos davam
+78/100 na grelha; escala 13/15/17/20/32/48/70/90 px e régua 4…128 px deu 100/100 sem mudar o
+desenho. Letra < 13 px no telemóvel é defeito médio.
+
+**8d.6 Telemóvel: um botão de pedir de cada vez.** A barra fixa em baixo só aparece quando o
+botão do herói sai do ecrã (IntersectionObserver); sem JS fica sempre. Um só momento de
+marca no topo: a marca pequena do cabeçalho só aparece quando o logótipo grande já passou.
+
+**8d.7 Ligação direta à loja na app.** Existe e é canónica: `https://app.boraguarda.com/#/loja/<restaurants.id>`
+(`DeepLinkStoreScreen`; mostra a loja "Em breve" a quem não tem sessão). O site da Goola não a
+usava. Pedir principal continua a ser `boraguarda.com/baixar?de=site-<parceiro>`.
+
+**8d.8 Preços no site = os da app.** `fonte/gerar_menu.py` lê `products.price` com a chave
+PÚBLICA no build; o browser refresca pela mesma API. Enquanto o dono não manda preços:
+"Preço na app". Preço da Glovo nunca entra no site.
+
+**8d.9 Juiz independente, sempre.** Quem construiu não dá a nota visual: um agente novo, sem
+contexto, abre as capturas e as referências e escreve `prova/3segundos/VEREDITO.md`. A
+nota do fiscal (geometria) e a do juiz (olho) são duas coisas — as duas contam.
+
+## 8e. GSAP — resumo das skills oficiais da GreenSock (github.com/greensock/gsap-skills, lidas 27/10/2026)
+
+Só leitura; não se instalou plugin nenhum. GSAP 3.13+ é grátis com todos os plugins.
+- **Core:** animar transform (`x`, `y`, `scale`, `rotation`) e `opacity`, nunca `width/height/top/left`.
+  `gsap.from()` aplica logo o estado inicial (`immediateRender`); em vários `from` no mesmo alvo,
+  `immediateRender:false` nos seguintes. `autoAlpha` em vez de `opacity` quando é para esconder.
+- **matchMedia:** `gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', fn)` — o que
+  se cria lá dentro desfaz-se sozinho quando a preferência muda. Não meter `gsap.context()` dentro.
+- **Timeline:** sequências com o parâmetro de posição (`'<'`, `'>-0.1'`, número absoluto) em vez de
+  `delay`; um `scrollTrigger` NA TIMELINE, nunca ScrollTriggers dentro de tweens da timeline.
+- **ScrollTrigger:** `pin:true` + `scrub` (número = suavidade) para cenas; `end:'+=N'` em píxeis;
+  `invalidateOnRefresh:true` + valores por função para recalcular ao redimensionar;
+  `ScrollTrigger.refresh()` depois de fontes/imagens mudarem alturas; criar os triggers de cima
+  para baixo (ou `refreshPriority`); `anticipatePin:1` evita o salto ao fixar; `markers` só a testar.
+- **Performance:** `will-change` só no que anima; `gsap.quickTo()` para seguir o rato;
+  `ScrollTrigger.batch()` para revelações em lote; matar animações fora do ecrã.
+- **SplitText:** `autoSplit:true` + animação devolvida no `onSplit` (refaz-se ao mudar a fonte);
+  ATENÇÃO à máscara de linhas e acentos portugueses (8d.2).
+- **Utils:** `gsap.utils.toArray`, `clamp`, `mapRange`, `snap`, `wrap` — usar em vez de reescrever.
 
 ## 9. COMO SE USA ISTO NUMA TAREFA
 

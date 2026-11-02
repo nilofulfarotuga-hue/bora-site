@@ -1,0 +1,324 @@
+{
+ "normal": {
+  "t_pagina_criada_s": 0.08,
+  "t_commit_s": 0.27,
+  "amostras": [
+   {
+    "t": 193,
+    "op": 0,
+    "partido": false,
+    "fonte": false,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 387,
+    "op": 0,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 491,
+    "op": 0,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 595,
+    "op": 0,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 700,
+    "op": 0.511161,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 804,
+    "op": 0.883121,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 908,
+    "op": 0.968116,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1013,
+    "op": 0.99606,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1117,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1223,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1328,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1434,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1537,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1640,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1743,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1847,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1950,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2053,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2156,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2259,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2362,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   }
+  ],
+  "quadros": [
+   "titulo-normal-0.3s.png",
+   "titulo-normal-0.6s.png",
+   "titulo-normal-1.0s.png",
+   "titulo-normal-1.5s.png",
+   "titulo-normal-3.0s.png",
+   "titulo-normal-6.0s.png"
+  ]
+ },
+ "reduz": {
+  "t_pagina_criada_s": 0.05,
+  "t_commit_s": 0.23,
+  "amostras": [
+   {
+    "t": 186,
+    "op": 1,
+    "partido": false,
+    "fonte": false,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 380,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 485,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 588,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 692,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 797,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 901,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1004,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1114,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1218,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1322,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1426,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1529,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1632,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1735,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1838,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 1941,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2044,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2149,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2252,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   },
+   {
+    "t": 2356,
+    "op": 1,
+    "partido": false,
+    "fonte": true,
+    "texto": "BOOM! BURGER — CARNE MOÍDA TODAS AS MANHÃS. PÃO DE FORNO A LENHA."
+   }
+  ],
+  "quadros": [
+   "titulo-reduz-0.3s.png",
+   "titulo-reduz-0.6s.png",
+   "titulo-reduz-1.0s.png",
+   "titulo-reduz-1.5s.png",
+   "titulo-reduz-3.0s.png",
+   "titulo-reduz-6.0s.png"
+  ]
+ }
+}

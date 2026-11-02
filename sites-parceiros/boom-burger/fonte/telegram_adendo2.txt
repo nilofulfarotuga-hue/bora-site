@@ -1,0 +1,10 @@
+Boom! Burger — preços e loja prontos.
+
+Fiz isto: pus os preços do dono nos 56 produtos da loja na app, todos com a mesma regra dos parceiros. Exemplos: Clássico 10,90 € na loja fica 12,72 € na app; Duplo Smash 15,90 € fica 18,55 €. Confirmei produto a produto que a parte da loja dá exatamente o preço dele. O site usa os mesmos preços da app.
+
+O Duplo Smash ficou com esse nome e a foto dele. O Terra e Mar (hambúrguer do mês) ficou de fora. O King Elvis está preparado com a foto que ele mandou, mas fora da loja até chegar o preço.
+
+A loja na app: https://app.boraguarda.com/#/loja/boom-burger-guarda
+O site: https://boomburger.boraguarda.com
+
+A loja continua "Em breve" até vocês decidirem abrir. A demonstração de amanhã às 11:00 está pronta (mandei-te há pouco a mensagem com as contas).

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camadas reais — componentes prémio Bora</title>
+<!--
+  ===========================================================================
+  14 — CAMADAS REAIS (o produto verdadeiro desmonta-se e monta-se ao descer)
+  ---------------------------------------------------------------------------
+  PARA QUE SERVE
+  A foto REAL do produto do cliente, recortada e partida nas suas camadas
+  verdadeiras, junta-se peça a peça com o scroll (pin + scrub). Hambúrguer,
+  pizza (massa / molho / cobertura), sushi (arroz / peixe / alga), açaí
+  (taça / creme / fruta), bolo em camadas, sanduíche. É ELEMENTO ASSINATURA:
+  um por site. Nasceu na missão boom-burger-2026-10-27 (Boom! Burger, Guarda).
+
+  A DIFERENÇA PARA O 01 (cena em scroll)
+  O 01 monta desenhos/ícones. O 14 monta PIXÉIS REAIS da foto do cliente:
+  nada é desenhado nem gerado. Encaixadas, as camadas reconstroem a foto.
+
+  COMO SE FAZ (receita provada)
+  1. Recorte do fundo, local e grátis:
+       python -c "from rembg import remove,new_session;from PIL import Image;
+       remove(Image.open('foto.jpg').crop(CAIXA),session=new_session('u2net')).save('recorte.png')"
+     (provado: u2net limpa melhor o prato que o isnet-general-use; corta antes à volta do produto)
+  2. Fatiar pelas fronteiras REAIS — bora-site/tools/camadas/fatiar.py:
+       python tools/camadas/fatiar.py recorte.png saida/ 380:pao-cima escuro-fim:590:recheio \
+              escuro-inicio:1015:pao-baixo 1108 --suave-contorno 8 --alisar 71
+     "escuro-fim"/"escuro-inicio" seguem o CONTORNO do pão (cinzento escuro, pouco saturado),
+     em vez de um corte direito. Escreve camada-N-*.webp, solida.webp e camadas.json.
+  3. Este HTML lê as camadas com top/altura em % e anima-as.
+
+  A LIÇÃO QUE CUSTOU UMA RONDA (27/10/2026)
+  1.ª versão: 5 fatias com cortes DIREITOS. O juiz independente deu 67/100:
+  "parece uma imagem partida". 2.ª versão: só 3 camadas — pão de cima pelo
+  contorno, o recheio INTEIRO (sem cortes no meio) e o pão de baixo pelo
+  contorno — e a coreografia do logótipo: o recheio aparece, os pães chegam
+  juntos. Menos cortes = mais verdade. Corte direito só onde não se vê.
+
+  QUANDO NÃO USAR
+  Produto sem camadas visíveis de lado; foto de cima (flat lay); público mais
+  velho (efeito que esconde informação = defeito).
+
+  ACESSIBILIDADE E DESEMPENHO
+  - Estado por omissão (sem JS ou prefers-reduced-motion: reduce): a FOTO
+    REAL INTEIRA e a lista dos ingredientes, sem pin. Nada escondido.
+  - O GSAP só se carrega ao 1.º gesto (scroll/toque/tecla): não pesa no LCP.
+    Um "scroll" sem a página descer (o Lighthouse dispara um) não conta.
+  - A secção leva overflow:clip, senão as camadas afastadas espreitam na
+    secção de cima.
+  - GSAP: transforms e opacity só; invalidateOnRefresh + y por função
+    (recalcula ao rodar o telemóvel); ScrollTrigger.refresh() depois das fontes.
+  ===========================================================================
+-->
+<style>
+  :root{--noite:#121110;--creme:#F6F0E2;--creme-2:#BFB6A6;--ouro:#DBB545;--brasa:#F97316;--linha:#3A3836}
+  *{box-sizing:border-box} body{margin:0;background:var(--noite);color:var(--creme);font:17px/1.6 Inter,system-ui,sans-serif}
+  .espaco{height:70vh;display:grid;place-items:center;color:var(--creme-2)}
+  .cr{padding:96px 24px;overflow:hidden;overflow:clip}
+  .cr-grelha{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .cr h2{font:400 clamp(2.4rem,6vw,4.4rem)/.9 Impact,'Bebas Neue',sans-serif;text-transform:uppercase;margin:0 0 24px}
+  .cr ol{list-style:none;margin:0 0 32px;padding:0}
+  .cr li{padding:12px 0;border-top:1px solid var(--linha);color:var(--creme-2)}
+  .cr li.ativa{color:var(--creme)}
+  .cr-palco{position:relative;width:100%;display:none}
+  .cr-palco img{position:absolute;left:0;width:100%;height:auto;will-change:transform}
+  .cr-palco .solida{top:0;opacity:0}
+  .cr-foto img{width:100%;border-radius:20px}
+  .js-cr .cr-palco{display:block}
+  .js-cr .cr-foto{position:absolute;inset:0;opacity:0;visibility:hidden}
+  .cr-visual{position:relative}
+  .btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--brasa);color:var(--noite);font-weight:800;text-decoration:none}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+  @media (max-width:900px){.cr-grelha{grid-template-columns:1fr}.cr-texto{order:2}}
+</style>
+</head>
+<body>
+<div class="espaco">Desce ↓</div>
+
+<!-- O MARCADOR. O build do site escreve as <img class="camada"> a partir do camadas.json
+     (top em %, largura e altura reais) e o aspect-ratio do palco = largura/altura do recorte. -->
+<section class="cr" id="camadas">
+  <div class="cr-grelha">
+    <div class="cr-texto">
+      <h2>Monta-se camada a camada.</h2>
+      <ol><li>Pão de feijão preto</li><li>Cogumelo portobello, cebola e trufa negra</li><li>Bacon e provolone fumado</li><li>160 g de novilho e agrião</li><li>E o pão de baixo fecha.</li></ol>
+      <a class="btn" href="#">Pedir</a>
+    </div>
+    <div class="cr-visual">
+      <div class="cr-palco" aria-hidden="true" style="aspect-ratio:900/622"></div>
+      <div class="cr-foto"><img src="../sites-parceiros/boom-burger/dist/assets/img/fecho-portobello-900.webp" alt="O hambúrguer inteiro, foto real" width="900" height="686"></div>
+    </div>
+  </div>
+</section>
+<div class="espaco">Fim</div>
+
+<script>
+/* camadas.json -> imagens (num site a sério isto faz-se no build, não no browser) */
+const PASTA = '../sites-parceiros/boom-burger/media/camadas/portobello-v3/';
+fetch(PASTA + 'camadas.json').then(r => r.json()).then(m => {
+  const palco = document.querySelector('.cr-palco');
+  palco.style.aspectRatio = m.largura_px + '/' + m.altura_px;
+  m.camadas.forEach(c => { const i = new Image(); i.className = 'camada'; i.src = PASTA + c.ficheiro; i.alt = ''; i.style.top = c.top_pct + '%'; palco.appendChild(i); });
+  const s = new Image(); s.className = 'solida'; s.src = PASTA + m.solida; s.alt = ''; palco.appendChild(s);
+  arma();
+});
+
+function arma() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;   // fica a foto inteira
+  const EV = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'];
+  let feito = false;
+  const vai = ev => {
+    if (feito || (ev && ev.type === 'scroll' && scrollY < 40)) return;
+    feito = true; EV.forEach(e => removeEventListener(e, vai, true));
+    const sc = src => new Promise((ok, ko) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = ko; document.head.appendChild(t); });
+    sc('https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js')
+      .then(() => sc('https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js')).then(inicia);
+  };
+  EV.forEach(e => addEventListener(e, vai, { capture: true, passive: true }));
+}
+
+function inicia() {
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add('js-cr');
+  const mm = gsap.matchMedia();
+  mm.add('(prefers-reduced-motion: no-preference)', () => {
+    const cena = document.querySelector('.cr'), palco = document.querySelector('.cr-palco');
+    const cam = gsap.utils.toArray('.cr-palco .camada'), n = cam.length, li = gsap.utils.toArray('.cr li');
+    const meio = i => i > 0 && i < n - 1;          // recheio: entra primeiro, sem rodar
+    const afasta = () => innerWidth < 900 ? 0.34 : 0.5;
+    const tl = gsap.timeline({ defaults: { ease: 'back.out(1.5)' }, scrollTrigger: {
+      trigger: cena, start: 'top top', end: () => '+=' + innerHeight * 2.2, pin: true, scrub: 0.8, anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onUpdate: st => li.forEach((x, k) => x.classList.toggle('ativa', k === Math.min(li.length - 1, Math.floor(st.progress * 1.25 * li.length)))) } });
+    cam.forEach((c, i) => tl.fromTo(c,
+      { y: () => (i - (n - 1) / 2) * palco.offsetHeight * afasta(), rotation: meio(i) ? 0 : (i ? 5 : -7), scale: meio(i) ? .9 : 1, autoAlpha: meio(i) ? .2 : .35 },
+      { y: 0, rotation: 0, scale: 1, autoAlpha: 1, duration: 1 }, meio(i) ? 0 : .45));
+    tl.to('.cr-palco .solida', { autoAlpha: 1, duration: .25, ease: 'none' }, '>-0.05')
+      .to(palco, { autoAlpha: 0, scale: .92, duration: .45, ease: 'power2.in' }, '>+0.25')
+      .fromTo('.cr-foto', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .5, ease: 'power2.out' }, '<0.15');
+    return () => document.documentElement.classList.remove('js-cr');
+  });
+}
+</script>
+</body>
+</html>
