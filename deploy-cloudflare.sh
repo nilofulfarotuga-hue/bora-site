@@ -35,7 +35,7 @@ STAGE="$STAGE_ROOT/site"
 mkdir -p "$STAGE"
 
 for f in index.html app.html estafetas.html faq.html parceiros.html privacidade.html termos.html \
-         viagens.html entregas.html beleza.html festas.html mais.html ser-parceiro.html \
+         entregas.html beleza.html festas.html mais.html ser-parceiro.html \
          trabalhos.html orcamento.html 404.html \
          baixar-pagina.html secretario.html apagar-conta.html \
          manifest.json robots.txt sitemap.xml; do

@@ -4,6 +4,13 @@
 # morre nesse redireccionamento (apanhado a 24/09/2026 — dava 404).
 /verificar/*  /verificar/  200
 
+# /viagens — o Bora Motorista (TVDE) fechou a 04/11/2026 (sem licenca do IMT).
+# A pagina viagens.html fica no repo mas sai do deploy; quem tiver o link antigo
+# vai para a pagina inicial. Para reabrir: tirar estas duas linhas e voltar a
+# pôr viagens.html na lista do deploy-cloudflare.sh.
+/viagens       /  301
+/viagens.html  /  301
+
 # /pedir/boom — link curto do QR dos cartazes da Boom! Burger (29/10/2026). Por agora vai
 # para o WhatsApp da Bora (robô em teste); quando o Danilo disser "troca", passa a ser o
 # número do dono da Boom e o QR impresso continua a valer.
